@@ -1,0 +1,3 @@
+[submodule "modules/geo_pipeline"]
+	path = modules/geo_pipeline
+	url = https://idrdex@bitbucket.org/idrdex/geo_pipeline.git
