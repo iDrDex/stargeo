@@ -5,7 +5,7 @@ import glob, os
 for filename in glob.glob('geo_mirror/DATA/SeriesMatrix/*'):
     gse_name = os.path.basename(filename)
     print gse_name
-    gse = Gse(gse_name, doData=False)
+    gse = Gse(gse_name, doData=False, sep=None)
     for gsm_name in gse.samples.index:
         gpl_name = gse.samples.ix[gsm_name].Sample_platform_id
         platform_rec = db(Platform.gpl_name == gpl_name).select().first() \
