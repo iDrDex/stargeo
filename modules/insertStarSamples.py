@@ -28,4 +28,5 @@ for filename in glob.glob('geo_mirror/DATA/SeriesMatrix/*'):
                                    or Sample_Attribute(Sample_Attribute.insert(sample_id=sample_rec.id,
                                                                                name=name,
                                                                                value=value))
+            db.commit()
             # print sample_attribute_rec
