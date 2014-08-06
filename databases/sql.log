@@ -1,4 +1,4 @@
-timestamp: 2014-08-05T11:48:25.336889
+timestamp: 2014-08-06T09:55:59.153898
 CREATE TABLE auth_user(
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(128),
@@ -10,21 +10,21 @@ CREATE TABLE auth_user(
     registration_id VARCHAR(512)
 );
 success!
-timestamp: 2014-08-05T11:48:25.346600
+timestamp: 2014-08-06T09:55:59.242657
 CREATE TABLE auth_group(
     id SERIAL PRIMARY KEY,
     role VARCHAR(512),
     description TEXT
 );
 success!
-timestamp: 2014-08-05T11:48:25.350534
+timestamp: 2014-08-06T09:55:59.358716
 CREATE TABLE auth_membership(
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
     group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE
 );
 success!
-timestamp: 2014-08-05T11:48:25.355892
+timestamp: 2014-08-06T09:55:59.480214
 CREATE TABLE auth_permission(
     id SERIAL PRIMARY KEY,
     group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE,
@@ -33,7 +33,7 @@ CREATE TABLE auth_permission(
     record_id INTEGER
 );
 success!
-timestamp: 2014-08-05T11:48:25.360219
+timestamp: 2014-08-06T09:55:59.592884
 CREATE TABLE auth_event(
     id SERIAL PRIMARY KEY,
     time_stamp TIMESTAMP,
@@ -43,7 +43,7 @@ CREATE TABLE auth_event(
     description TEXT
 );
 success!
-timestamp: 2014-08-05T11:48:25.364772
+timestamp: 2014-08-06T09:55:59.703514
 CREATE TABLE auth_cas(
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
@@ -53,13 +53,13 @@ CREATE TABLE auth_cas(
     renew CHAR(1)
 );
 success!
-timestamp: 2014-08-05T11:48:25.370943
+timestamp: 2014-08-06T09:55:59.847604
 CREATE TABLE series(
     id SERIAL PRIMARY KEY,
     gse_name VARCHAR(512)
 );
 success!
-timestamp: 2014-08-05T11:48:25.374660
+timestamp: 2014-08-06T09:55:59.961722
 CREATE TABLE series_attribute(
     id SERIAL PRIMARY KEY,
     series_id INTEGER REFERENCES series (id) ON DELETE CASCADE,
@@ -67,13 +67,13 @@ CREATE TABLE series_attribute(
     value TEXT
 );
 success!
-timestamp: 2014-08-05T11:48:25.378450
+timestamp: 2014-08-06T09:56:00.071257
 CREATE TABLE platform(
     id SERIAL PRIMARY KEY,
     gpl_name VARCHAR(512)
 );
 success!
-timestamp: 2014-08-05T11:48:25.383607
+timestamp: 2014-08-06T09:56:00.181740
 CREATE TABLE platform_attribute(
     id SERIAL PRIMARY KEY,
     platform_id INTEGER REFERENCES platform (id) ON DELETE CASCADE,
@@ -81,7 +81,7 @@ CREATE TABLE platform_attribute(
     value TEXT
 );
 success!
-timestamp: 2014-08-05T11:48:25.390003
+timestamp: 2014-08-06T09:56:00.315362
 CREATE TABLE sample(
     id SERIAL PRIMARY KEY,
     series_id INTEGER REFERENCES series (id) ON DELETE CASCADE,
@@ -89,7 +89,7 @@ CREATE TABLE sample(
     gsm_name VARCHAR(512)
 );
 success!
-timestamp: 2014-08-05T11:48:25.396205
+timestamp: 2014-08-06T09:56:00.426578
 CREATE TABLE sample_attribute(
     id SERIAL PRIMARY KEY,
     sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
@@ -97,7 +97,7 @@ CREATE TABLE sample_attribute(
     value TEXT
 );
 success!
-timestamp: 2014-08-05T11:48:25.403308
+timestamp: 2014-08-06T09:56:00.537682
 CREATE TABLE annotation(
     id SERIAL PRIMARY KEY,
     name VARCHAR(512) UNIQUE,
@@ -109,7 +109,7 @@ CREATE TABLE annotation(
     modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
 );
 success!
-timestamp: 2014-08-05T11:48:25.412021
+timestamp: 2014-08-06T09:56:00.655191
 CREATE TABLE series_annotation(
     id SERIAL PRIMARY KEY,
     series_id INTEGER REFERENCES series (id) ON DELETE CASCADE,
@@ -124,7 +124,7 @@ CREATE TABLE series_annotation(
     modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
 );
 success!
-timestamp: 2014-08-05T11:48:25.421337
+timestamp: 2014-08-06T09:56:00.790048
 CREATE TABLE sample_annotation(
     id SERIAL PRIMARY KEY,
     series_annotation_id INTEGER REFERENCES series_annotation (id) ON DELETE CASCADE,
@@ -137,7 +137,7 @@ CREATE TABLE sample_annotation(
     modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
 );
 success!
-timestamp: 2014-08-05T11:48:25.427223
+timestamp: 2014-08-06T09:56:00.930535
 CREATE TABLE search(
     id SERIAL PRIMARY KEY,
     query VARCHAR(512)
