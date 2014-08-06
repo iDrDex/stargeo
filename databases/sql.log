@@ -1,0 +1,145 @@
+timestamp: 2014-08-05T11:48:25.336889
+CREATE TABLE auth_user(
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(128),
+    last_name VARCHAR(128),
+    email VARCHAR(512),
+    password VARCHAR(512),
+    registration_key VARCHAR(512),
+    reset_password_key VARCHAR(512),
+    registration_id VARCHAR(512)
+);
+success!
+timestamp: 2014-08-05T11:48:25.346600
+CREATE TABLE auth_group(
+    id SERIAL PRIMARY KEY,
+    role VARCHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2014-08-05T11:48:25.350534
+CREATE TABLE auth_membership(
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-08-05T11:48:25.355892
+CREATE TABLE auth_permission(
+    id SERIAL PRIMARY KEY,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE,
+    name VARCHAR(512),
+    table_name VARCHAR(512),
+    record_id INTEGER
+);
+success!
+timestamp: 2014-08-05T11:48:25.360219
+CREATE TABLE auth_event(
+    id SERIAL PRIMARY KEY,
+    time_stamp TIMESTAMP,
+    client_ip VARCHAR(512),
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    origin VARCHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2014-08-05T11:48:25.364772
+CREATE TABLE auth_cas(
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    created_on TIMESTAMP,
+    service VARCHAR(512),
+    ticket VARCHAR(512),
+    renew CHAR(1)
+);
+success!
+timestamp: 2014-08-05T11:48:25.370943
+CREATE TABLE series(
+    id SERIAL PRIMARY KEY,
+    gse_name VARCHAR(512)
+);
+success!
+timestamp: 2014-08-05T11:48:25.374660
+CREATE TABLE series_attribute(
+    id SERIAL PRIMARY KEY,
+    series_id INTEGER REFERENCES series (id) ON DELETE CASCADE,
+    name VARCHAR(512),
+    value TEXT
+);
+success!
+timestamp: 2014-08-05T11:48:25.378450
+CREATE TABLE platform(
+    id SERIAL PRIMARY KEY,
+    gpl_name VARCHAR(512)
+);
+success!
+timestamp: 2014-08-05T11:48:25.383607
+CREATE TABLE platform_attribute(
+    id SERIAL PRIMARY KEY,
+    platform_id INTEGER REFERENCES platform (id) ON DELETE CASCADE,
+    name VARCHAR(512),
+    value TEXT
+);
+success!
+timestamp: 2014-08-05T11:48:25.390003
+CREATE TABLE sample(
+    id SERIAL PRIMARY KEY,
+    series_id INTEGER REFERENCES series (id) ON DELETE CASCADE,
+    platform_id INTEGER REFERENCES platform (id) ON DELETE CASCADE,
+    gsm_name VARCHAR(512)
+);
+success!
+timestamp: 2014-08-05T11:48:25.396205
+CREATE TABLE sample_attribute(
+    id SERIAL PRIMARY KEY,
+    sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
+    name VARCHAR(512),
+    value TEXT
+);
+success!
+timestamp: 2014-08-05T11:48:25.403308
+CREATE TABLE annotation(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(512) UNIQUE,
+    description VARCHAR(512),
+    is_active CHAR(1),
+    created_on TIMESTAMP,
+    created_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    modified_on TIMESTAMP,
+    modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-08-05T11:48:25.412021
+CREATE TABLE series_annotation(
+    id SERIAL PRIMARY KEY,
+    series_id INTEGER REFERENCES series (id) ON DELETE CASCADE,
+    platform_id INTEGER REFERENCES platform (id) ON DELETE CASCADE,
+    annotation_id INTEGER REFERENCES annotation (id) ON DELETE CASCADE,
+    col VARCHAR(512),
+    regex VARCHAR(512),
+    is_active CHAR(1),
+    created_on TIMESTAMP,
+    created_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    modified_on TIMESTAMP,
+    modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-08-05T11:48:25.421337
+CREATE TABLE sample_annotation(
+    id SERIAL PRIMARY KEY,
+    series_annotation_id INTEGER REFERENCES series_annotation (id) ON DELETE CASCADE,
+    sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
+    feature VARCHAR(512),
+    is_active CHAR(1),
+    created_on TIMESTAMP,
+    created_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    modified_on TIMESTAMP,
+    modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-08-05T11:48:25.427223
+CREATE TABLE search(
+    id SERIAL PRIMARY KEY,
+    query VARCHAR(512)
+);
+success!
