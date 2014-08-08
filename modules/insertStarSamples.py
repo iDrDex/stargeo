@@ -2,7 +2,8 @@ __author__ = 'dex'
 from geo_pipeline.Gse import *
 import glob, os
 
-lastGse = db(Series).select().last().gse_name
+lastGseRec = db(Series).select().last()
+lastGse = lastGseRec and lastGseRec.gse_name or None
 toSkip = True
 print lastGse
 for filename in glob.glob('geo_mirror/DATA/SeriesMatrix/*'):
