@@ -11,7 +11,14 @@ for filename in glob.glob('geo_mirror/DATA/SeriesMatrix/*'):
     toSkip = toSkip and gse_name <> lastGse
     if toSkip:
         continue
+    gse = Gse(gse_name, doData=False, doSamples=False)
+    if gse.Series_type!="Expression profiling by array":
+        continue
+    if gse.Series_sample_taxid != "9606":
+        continue
+
     gse = Gse(gse_name, doData=False, sep=None)
+
     for gsm_name in gse.samples.index:
         gpl_name = gse.samples.ix[gsm_name].Sample_platform_id
         platform_rec = db(Platform.gpl_name == gpl_name).select().first() \
