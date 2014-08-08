@@ -12,9 +12,9 @@ for filename in glob.glob('geo_mirror/DATA/SeriesMatrix/*'):
     if toSkip:
         continue
     gse = Gse(gse_name, doData=False, doSamples=False)
-    if gse.Series_type!="Expression profiling by array":
+    if gse.sereis.Series_type!="Expression profiling by array":
         continue
-    if gse.Series_sample_taxid != "9606":
+    if gse.series.Series_sample_taxid != "9606":
         continue
 
     gse = Gse(gse_name, doData=False, sep=None)
