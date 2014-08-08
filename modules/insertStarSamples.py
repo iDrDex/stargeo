@@ -2,9 +2,15 @@ __author__ = 'dex'
 from geo_pipeline.Gse import *
 import glob, os
 
+lastGse = db(Series).select().last().gse_name
+toSkip = True
+print lastGse
 for filename in glob.glob('geo_mirror/DATA/SeriesMatrix/*'):
     gse_name = os.path.basename(filename)
     print gse_name
+    toSkip = toSkip and gse_name is not lastGse
+    if toSkip:
+        continue
     gse = Gse(gse_name, doData=False, sep=None)
     for gsm_name in gse.samples.index:
         gpl_name = gse.samples.ix[gsm_name].Sample_platform_id
