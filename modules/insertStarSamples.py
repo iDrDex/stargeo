@@ -9,9 +9,10 @@ print lastGse
 for filename in glob.glob('geo_mirror/DATA/SeriesMatrix/*'):
     gse_name = os.path.basename(filename)
     print gse_name
-    toSkip = toSkip and gse_name <> lastGse
-    if toSkip:
-        continue
+    if lastGse:
+        toSkip = toSkip and gse_name <> lastGse
+        if toSkip:
+            continue
     gse = Gse(gse_name, doData=False, doSamples=False)
     if (gse.series.Series_type != "Expression profiling by array").any():
         continue
