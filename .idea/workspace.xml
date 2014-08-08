@@ -53,8 +53,8 @@
       <file leaf-file-name="insertStarSamples.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/insertStarSamples.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48730963" vertical-offset="0" max-vertical-offset="1500">
-              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.42639595" vertical-offset="0" max-vertical-offset="1500">
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
               <folding>
                 <element signature="e#19#49#0" expanded="true" />
               </folding>
@@ -507,7 +507,11 @@
       <created>1407538819119</created>
       <updated>1407538819119</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Filter for Expression by tiling array and humans">
+      <created>1407538879060</created>
+      <updated>1407538879060</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1260,8 +1264,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/insertStarSamples.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48730963" vertical-offset="0" max-vertical-offset="1500">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.42639595" vertical-offset="0" max-vertical-offset="1500">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding>
             <element signature="e#19#49#0" expanded="true" />
           </folding>
