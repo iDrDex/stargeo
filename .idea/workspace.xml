@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="03e461d2-b299-4d7d-a2e4-34a6b38f1fe2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/geo_pipeline/Gse.py" afterPath="$PROJECT_DIR$/modules/geo_pipeline/Gse.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/insertStarSamples.py" afterPath="$PROJECT_DIR$/modules/insertStarSamples.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="star.iws" />
@@ -51,21 +50,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="insertStarSamples.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="insertStarSamples.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/insertStarSamples.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30037546" vertical-offset="60" max-vertical-offset="1260">
-              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1260">
+              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gse.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Gse.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/geo_pipeline/Gse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="514" max-vertical-offset="9855">
-              <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.37046307" vertical-offset="4924" max-vertical-offset="9855">
+              <caret line="348" column="36" selection-start-line="348" selection-start-column="36" selection-end-line="348" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -90,7 +89,7 @@
   </component>
   <component name="Git.Settings">
     <option name="SYNC_SETTING" value="SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/modules/geo_pipeline" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -101,8 +100,8 @@
         <option value="$PROJECT_DIR$/modules/setupSamples.py" />
         <option value="$PROJECT_DIR$/models/db.py" />
         <option value="$PROJECT_DIR$/modules/geo_pipeline/my.py" />
-        <option value="$PROJECT_DIR$/modules/geo_pipeline/Gse.py" />
         <option value="$PROJECT_DIR$/modules/insertStarSamples.py" />
+        <option value="$PROJECT_DIR$/modules/geo_pipeline/Gse.py" />
       </list>
     </option>
   </component>
@@ -462,7 +461,15 @@
       <created>1407517049880</created>
       <updated>1407517049880</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed parsing sample_characteristics with uniCat for GSE48383*series_matrix">
+      <created>1407526676212</created>
+      <updated>1407526676212</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fixed parsing sample_characteristics with uniCat for GSE48383*series_matrix">
+      <created>1407526910559</created>
+      <updated>1407526910559</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -508,7 +515,8 @@
     </option>
     <MESSAGE value="updated to aws db" />
     <MESSAGE value="Fixed parsing mispaired sample_characteristics on GSE5938-GPL90_series_matrix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed parsing mispaired sample_characteristics on GSE5938-GPL90_series_matrix" />
+    <MESSAGE value="Fixed parsing sample_characteristics with uniCat for GSE48383*series_matrix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed parsing sample_characteristics with uniCat for GSE48383*series_matrix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1200,18 +1208,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/geo_pipeline/Gse.py">
+    <entry file="file://$PROJECT_DIR$/modules/insertStarSamples.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="514" max-vertical-offset="9855">
-          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1260">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/insertStarSamples.py">
+    <entry file="file://$PROJECT_DIR$/modules/geo_pipeline/Gse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30037546" vertical-offset="60" max-vertical-offset="1260">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.37046307" vertical-offset="4924" max-vertical-offset="9855">
+          <caret line="348" column="36" selection-start-line="348" selection-start-column="36" selection-end-line="348" selection-end-column="36" />
           <folding />
         </state>
       </provider>
