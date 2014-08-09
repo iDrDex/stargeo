@@ -14,7 +14,7 @@ for filename in glob.glob('geo_mirror/DATA/SeriesMatrix/*'):
         if toSkip:
             continue
     gse = Gse(gse_name, doData=False, doSamples=False)
-    if (gse.series.Series_type != "Expression profiling by array").any():
+    if ('Series_type' in gse.series.columns) and (gse.series.Series_type != "Expression profiling by array").any():
         continue
     if (gse.series.Series_sample_taxid != 9606).any():
         continue
