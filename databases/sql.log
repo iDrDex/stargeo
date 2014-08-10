@@ -151,3 +151,11 @@ ALTER TABLE sample_attribute ADD name TEXT;
 UPDATE sample_attribute SET name=name__tmp;
 ALTER TABLE sample_attribute DROP COLUMN name__tmp;
 success!
+timestamp: 2014-08-09T23:11:48.827889
+ALTER TABLE sample_attribute ADD name__tmp VARCHAR(660);
+UPDATE sample_attribute SET name__tmp=name;
+ALTER TABLE sample_attribute DROP COLUMN name;
+ALTER TABLE sample_attribute ADD name VARCHAR(660);
+UPDATE sample_attribute SET name=name__tmp;
+ALTER TABLE sample_attribute DROP COLUMN name__tmp;
+success!
