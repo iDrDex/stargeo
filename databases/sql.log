@@ -143,3 +143,11 @@ CREATE TABLE search(
     query VARCHAR(512)
 );
 success!
+timestamp: 2014-08-09T22:37:53.335387
+ALTER TABLE sample_attribute ADD name__tmp TEXT;
+UPDATE sample_attribute SET name__tmp=name;
+ALTER TABLE sample_attribute DROP COLUMN name;
+ALTER TABLE sample_attribute ADD name TEXT;
+UPDATE sample_attribute SET name=name__tmp;
+ALTER TABLE sample_attribute DROP COLUMN name__tmp;
+success!
