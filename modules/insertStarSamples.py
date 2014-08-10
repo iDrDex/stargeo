@@ -6,9 +6,11 @@ lastGseRec = db(Series).select().last()
 lastGse = lastGseRec and lastGseRec.gse_name or None
 toSkip = True
 print lastGse
-for filename in glob.glob('geo_mirror/DATA/SeriesMatrix/*'):
+filenames = sorted(glob.glob('geo_mirror/DATA/SeriesMatrix/*'))
+length = len(filenames)
+for i, filename in enumerate(filenames):
     gse_name = os.path.basename(filename)
-    print gse_name
+    print i, "/", length, gse_name
     if lastGse:
         toSkip = toSkip and gse_name <> lastGse
         if toSkip:
