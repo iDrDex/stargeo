@@ -1,5 +1,6 @@
 __author__ = 'dex'
 from geo_pipeline.Gse import *
+from psycopg2 import DataError
 import glob, os
 
 lastGseRec = db(Series).select().last()
