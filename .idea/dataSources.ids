@@ -21714,7 +21714,6 @@
       <column name="platform_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="gsm_name" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="sample_pkey" columns="id"/>
-      <exported-key name="sample_attribute_sample_id_fkey" table="sample_attribute" schema="public" catalog="star" columns="sample_id"/>
     </table>
     <table name="sample_annotation" schema="public" catalog="star" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2FtcGxlX2Fubm90YXRpb25faWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
@@ -21747,9 +21746,8 @@
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2FtcGxlX2F0dHJpYnV0ZV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
       <column name="sample_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="value" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="name" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="varchar" precision="750" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="sample_attribute_pkey" columns="id"/>
-      <foreign-key name="sample_attribute_sample_id_fkey" columns="sample_id" ref-table="sample" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <index name="sampleattribute_sampleid_name_idx" unique="true" columns="sample_id,name"/>
     </table>
     <table name="sample_attribute_id_seq" schema="public" catalog="star" type="SEQUENCE">

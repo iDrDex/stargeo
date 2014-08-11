@@ -8,6 +8,9 @@ toSkip = True
 print lastGse
 filenames = sorted(glob.glob('geo_mirror/DATA/SeriesMatrix/*'))
 length = len(filenames)
+
+errorFile=open('errors.err', 'w')
+
 for i, filename in enumerate(filenames):
     gse_name = os.path.basename(filename)
     print i, "/", length, gse_name
@@ -40,10 +43,16 @@ for i, filename in enumerate(filenames):
         attribute_name2value = gse.samples.ix[gsm_name].to_dict()
         for name in attribute_name2value:
             value = attribute_name2value[name]
-            sample_attribute_rec = db((Sample_Attribute.sample_id == sample_rec.id) & \
+            try:
+                sample_attribute_rec = db((Sample_Attribute.sample_id == sample_rec.id) & \
                                       (Sample_Attribute.name == name)).select().first() \
                                    or Sample_Attribute(Sample_Attribute.insert(sample_id=sample_rec.id,
                                                                                name=name,
                                                                                value=value))
+            except DataError:
+                print "ERROR", sample_rec.id, name, value
+                print >>errorFile, sample_rec.id, name, value
+                errorFile.flush()
+
             db.commit()
             # print sample_attribute_rec
