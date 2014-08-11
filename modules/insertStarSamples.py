@@ -10,7 +10,7 @@ print lastGse
 filenames = sorted(glob.glob('geo_mirror/DATA/SeriesMatrix/*'))
 length = len(filenames)
 
-errorFile=open('errors.err', 'w')
+errorFile=open('errors.err', 'a')
 
 for i, filename in enumerate(filenames):
     gse_name = os.path.basename(filename)
