@@ -39,7 +39,7 @@ Sample = db.define_table('sample',
 
 Sample_Attribute = db.define_table('sample_attribute',
                                    Field('sample_id', 'reference sample'),
-                                   Field('name', 'string', 660),
+                                   Field('name', 'string', 750),
                                    Field('value', 'text'),
                                    format='%(name)s_%(value)s',
                                    migrate='sample_attribute.table'
