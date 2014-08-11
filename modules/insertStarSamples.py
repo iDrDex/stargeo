@@ -50,9 +50,9 @@ for i, filename in enumerate(filenames):
                                    or Sample_Attribute(Sample_Attribute.insert(sample_id=sample_rec.id,
                                                                                name=name,
                                                                                value=value))
-            except DataError:
-                print "ERROR", sample_rec.id, name, value
-                print >>errorFile, sample_rec.id, name, value
+            except Exception as exce:
+                print exce, sample_rec.id, name, value
+                print >>errorFile, exce, sample_rec.id, name, value
                 errorFile.flush()
 
             db.commit()
