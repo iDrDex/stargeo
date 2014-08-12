@@ -1,139 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="03e461d2-b299-4d7d-a2e4-34a6b38f1fe2" name="Default" comment="Error handeling for Memory Error GSE39654">
+    <list default="true" id="03e461d2-b299-4d7d-a2e4-34a6b38f1fe2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/facebook.png" afterPath="$PROJECT_DIR$/static/images/facebook.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/favicon.ico" afterPath="$PROJECT_DIR$/static/images/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/favicon.png" afterPath="$PROJECT_DIR$/static/images/favicon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/generic.pdf" afterPath="$PROJECT_DIR$/views/generic.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/geo_pipeline" afterPath="$PROJECT_DIR$/modules/geo_pipeline" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/glyphicons-halflings-white.png" afterPath="$PROJECT_DIR$/static/images/glyphicons-halflings-white.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/glyphicons-halflings.png" afterPath="$PROJECT_DIR$/static/images/glyphicons-halflings.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/gplus-32.png" afterPath="$PROJECT_DIR$/static/images/gplus-32.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/geo_pipeline/refMrna.fa" afterPath="$PROJECT_DIR$/modules/geo_pipeline/refMrna.fa" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/images/twitter.png" afterPath="$PROJECT_DIR$/static/images/twitter.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitmodules" afterPath="$PROJECT_DIR$/.gitmodules" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-07-11.09-37-53.9c99f4a8-fd2a-4199-8dda-3d55e33f4564" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-07-11.09-37-53.9c99f4a8-fd2a-4199-8dda-3d55e33f4564" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-07-11.09-39-38.2a1b595d-b0ab-4b43-a03a-f014004531e9" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-07-11.09-39-38.2a1b595d-b0ab-4b43-a03a-f014004531e9" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-07-11.12-17-35.72bbd46a-a2cd-4b3b-b21d-e5fd60a386c1" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-07-11.12-17-35.72bbd46a-a2cd-4b3b-b21d-e5fd60a386c1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-07-11.12-19-18.747e9f71-0f7a-405b-80e6-fbb07176012b" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-07-11.12-19-18.747e9f71-0f7a-405b-80e6-fbb07176012b" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-07-11.12-50-27.a0b0b721-188c-4b21-a89f-d3e641770cf9" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-07-11.12-50-27.a0b0b721-188c-4b21-a89f-d3e641770cf9" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-07-11.14-20-36.140da838-9fb6-4a6d-8db6-f03392adea98" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-07-11.14-20-36.140da838-9fb6-4a6d-8db6-f03392adea98" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-07-11.14-20-42.66d1788d-cf76-4e25-9aeb-4c84d8be000b" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-07-11.14-20-42.66d1788d-cf76-4e25-9aeb-4c84d8be000b" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-48-02.64b3eb4d-3495-43a7-8771-74281c61ea4a" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-48-02.64b3eb4d-3495-43a7-8771-74281c61ea4a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-49-57.38af094e-b4a3-4144-b52f-8a223b73a921" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-49-57.38af094e-b4a3-4144-b52f-8a223b73a921" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-50-29.7713bf10-19fb-410a-899c-021b3a487132" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-50-29.7713bf10-19fb-410a-899c-021b3a487132" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-52-10.3117e165-9965-4c26-b920-4d95d09ef20e" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-52-10.3117e165-9965-4c26-b920-4d95d09ef20e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-53-38.38170504-d481-4de3-9a6a-8cff5f9cebb5" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-53-38.38170504-d481-4de3-9a6a-8cff5f9cebb5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-55-38.e5df3e02-9950-4cb6-ba6c-ab0e58f1a0d8" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-55-38.e5df3e02-9950-4cb6-ba6c-ab0e58f1a0d8" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-56-43.ac87b587-6849-473d-b535-f7d775e88590" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-56-43.ac87b587-6849-473d-b535-f7d775e88590" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-57-16.29c7ff8e-3f57-4c98-8676-9c4e5195173f" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-57-16.29c7ff8e-3f57-4c98-8676-9c4e5195173f" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-59-00.11253a32-ce89-4cc5-a172-1d0ce20d0e7d" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-59-00.11253a32-ce89-4cc5-a172-1d0ce20d0e7d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-59-48.377e4109-9f6d-4ade-9093-a384a6a95d1c" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.10-59-48.377e4109-9f6d-4ade-9093-a384a6a95d1c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.11-00-36.5bfe305d-ee14-4143-a9e8-c13ffe7dbc89" afterPath="$PROJECT_DIR$/errors/127.0.0.1.2014-08-05.11-00-36.5bfe305d-ee14-4143-a9e8-c13ffe7dbc89" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/403.html" afterPath="$PROJECT_DIR$/static/403.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/404.html" afterPath="$PROJECT_DIR$/static/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/500.html" afterPath="$PROJECT_DIR$/static/500.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ABOUT" afterPath="$PROJECT_DIR$/ABOUT" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/geo_pipeline/GSE.ipynb" afterPath="$PROJECT_DIR$/modules/geo_pipeline/GSE.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/geo_pipeline/GSE12102.my.R" afterPath="$PROJECT_DIR$/modules/geo_pipeline/GSE12102.my.R" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/geo_pipeline/Gse.py" afterPath="$PROJECT_DIR$/modules/geo_pipeline/Gse.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/geo_pipeline/MappingProbes.ipynb" afterPath="$PROJECT_DIR$/modules/geo_pipeline/MappingProbes.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/geo_pipeline/Medulloblastoma.py" afterPath="$PROJECT_DIR$/modules/geo_pipeline/Medulloblastoma.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/geo_pipeline/Unbalanced.ipynb" afterPath="$PROJECT_DIR$/modules/geo_pipeline/Unbalanced.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Web2Py_Library.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Web2Py_Library.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/__init__.py" afterPath="$PROJECT_DIR$/modules/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/__init__.py" afterPath="$PROJECT_DIR$/views/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/analytics.min.js" afterPath="$PROJECT_DIR$/static/js/analytics.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/annotation.table" afterPath="$PROJECT_DIR$/databases/annotation.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/appadmin.html" afterPath="$PROJECT_DIR$/views/appadmin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/appadmin.py" afterPath="$PROJECT_DIR$/controllers/appadmin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_cas.table" afterPath="$PROJECT_DIR$/databases/auth_cas.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_event.table" afterPath="$PROJECT_DIR$/databases/auth_event.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_group.table" afterPath="$PROJECT_DIR$/databases/auth_group.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_membership.table" afterPath="$PROJECT_DIR$/databases/auth_membership.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_permission.table" afterPath="$PROJECT_DIR$/databases/auth_permission.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_user.table" afterPath="$PROJECT_DIR$/databases/auth_user.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/bootstrap-responsive.min.css" afterPath="$PROJECT_DIR$/static/css/bootstrap-responsive.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/calendar.css" afterPath="$PROJECT_DIR$/static/css/calendar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/calendar.js" afterPath="$PROJECT_DIR$/static/js/calendar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cron/crontab.example" afterPath="$PROJECT_DIR$/cron/crontab.example" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cron/crontab" afterPath="$PROJECT_DIR$/cron/crontab" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/cs.py" afterPath="$PROJECT_DIR$/languages/cs.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/dd_belatedpng.js" afterPath="$PROJECT_DIR$/static/js/dd_belatedpng.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/default.py" afterPath="$PROJECT_DIR$/languages/default.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/es.py" afterPath="$PROJECT_DIR$/languages/es.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/fr-ca.py" afterPath="$PROJECT_DIR$/languages/fr-ca.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/fr.py" afterPath="$PROJECT_DIR$/languages/fr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/generic.html" afterPath="$PROJECT_DIR$/views/generic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/generic.ics" afterPath="$PROJECT_DIR$/views/generic.ics" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/generic.json" afterPath="$PROJECT_DIR$/views/generic.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/generic.jsonp" afterPath="$PROJECT_DIR$/views/generic.jsonp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/generic.load" afterPath="$PROJECT_DIR$/views/generic.load" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/generic.map" afterPath="$PROJECT_DIR$/views/generic.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/generic.rss" afterPath="$PROJECT_DIR$/views/generic.rss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/generic.xml" afterPath="$PROJECT_DIR$/views/generic.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/hi.py" afterPath="$PROJECT_DIR$/languages/hi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/hu.py" afterPath="$PROJECT_DIR$/languages/hu.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/id.py" afterPath="$PROJECT_DIR$/languages/id.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/default/index.html" afterPath="$PROJECT_DIR$/views/default/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/insertStarSamples.py" afterPath="$PROJECT_DIR$/modules/insertStarSamples.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/it.py" afterPath="$PROJECT_DIR$/languages/it.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/jquery.js" afterPath="$PROJECT_DIR$/static/js/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.html" afterPath="$PROJECT_DIR$/views/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/menu.py" afterPath="$PROJECT_DIR$/models/menu.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/modernizr.custom.js" afterPath="$PROJECT_DIR$/static/js/modernizr.custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/my.py" afterPath="$PROJECT_DIR$/languages/my.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/nl.py" afterPath="$PROJECT_DIR$/languages/nl.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/pl.py" afterPath="$PROJECT_DIR$/languages/pl.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/platform.table" afterPath="$PROJECT_DIR$/databases/platform.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/platform_attribute.table" afterPath="$PROJECT_DIR$/databases/platform_attribute.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/plural-cs.py" afterPath="$PROJECT_DIR$/languages/plural-cs.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/plural-en.py" afterPath="$PROJECT_DIR$/languages/plural-en.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/plural-es.py" afterPath="$PROJECT_DIR$/languages/plural-es.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/plural-ru.py" afterPath="$PROJECT_DIR$/languages/plural-ru.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/plural-uk.py" afterPath="$PROJECT_DIR$/languages/plural-uk.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/progress.log" afterPath="$PROJECT_DIR$/progress.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/pt-br.py" afterPath="$PROJECT_DIR$/languages/pt-br.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/pt.py" afterPath="$PROJECT_DIR$/languages/pt.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ro.py" afterPath="$PROJECT_DIR$/languages/ro.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes.example.py" afterPath="$PROJECT_DIR$/routes.example.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/ru.py" afterPath="$PROJECT_DIR$/languages/ru.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sample.table" afterPath="$PROJECT_DIR$/databases/sample.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sample_annotation.table" afterPath="$PROJECT_DIR$/databases/sample_annotation.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sample_attribute.table" afterPath="$PROJECT_DIR$/databases/sample_attribute.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/search.table" afterPath="$PROJECT_DIR$/databases/search.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/series.table" afterPath="$PROJECT_DIR$/databases/series.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/series_annotation.table" afterPath="$PROJECT_DIR$/databases/series_annotation.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/series_attribute.table" afterPath="$PROJECT_DIR$/databases/series_attribute.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/share.js" afterPath="$PROJECT_DIR$/static/js/share.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/sk.py" afterPath="$PROJECT_DIR$/languages/sk.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sql.log" afterPath="$PROJECT_DIR$/databases/sql.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/star.iml" afterPath="$PROJECT_DIR$/.idea/star.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/tr.py" afterPath="$PROJECT_DIR$/languages/tr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/uk.py" afterPath="$PROJECT_DIR$/languages/uk.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/default/user.html" afterPath="$PROJECT_DIR$/views/default/user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/web2py.css" afterPath="$PROJECT_DIR$/static/css/web2py.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/web2py.js" afterPath="$PROJECT_DIR$/static/js/web2py.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/web2py_ajax.html" afterPath="$PROJECT_DIR$/views/web2py_ajax.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/web2py_bootstrap.css" afterPath="$PROJECT_DIR$/static/css/web2py_bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/web2py_bootstrap.js" afterPath="$PROJECT_DIR$/static/js/web2py_bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/web2py_bootstrap_nojs.css" afterPath="$PROJECT_DIR$/static/css/web2py_bootstrap_nojs.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/zh-cn.py" afterPath="$PROJECT_DIR$/languages/zh-cn.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/zh-tw.py" afterPath="$PROJECT_DIR$/languages/zh-tw.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/zh.py" afterPath="$PROJECT_DIR$/languages/zh.py" />
     </list>
     <ignored path="star.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -184,8 +57,8 @@
       <file leaf-file-name="insertStarSamples.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/insertStarSamples.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26645768" vertical-offset="0" max-vertical-offset="1020">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.41909197" vertical-offset="0" max-vertical-offset="1005">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -194,8 +67,8 @@
       <file leaf-file-name="Gse.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/geo_pipeline/Gse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="9654" max-vertical-offset="11010">
-              <caret line="682" column="17" selection-start-line="682" selection-start-column="9" selection-end-line="682" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="9354" max-vertical-offset="10980">
+              <caret line="648" column="19" selection-start-line="648" selection-start-column="19" selection-end-line="648" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -204,8 +77,8 @@
       <file leaf-file-name="PostgreSQL - star@dexter-db-star.cd8zgucpvgtu.us-west-2.rds.amazonaws.com" pinned="false" current="false" current-in-tab="false">
         <entry file="dbDummy://db-console:/ca7a5962/072ca1ce-f5e3-462a-b5bb-c6ef14792d8d/">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-              <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+            <state vertical-scroll-proportion="-3.6206896" vertical-offset="0" max-vertical-offset="195">
+              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -251,9 +124,9 @@
         <option value="$PROJECT_DIR$/modules/geo_pipeline/my.py" />
         <option value="$PROJECT_DIR$/models/my_db.py" />
         <option value="$PROJECT_DIR$/controllers/default.py" />
-        <option value="db-console:/ca7a5962/072ca1ce-f5e3-462a-b5bb-c6ef14792d8d/" />
         <option value="db-console:/ca7a5962/fc2fdc70-c16a-489c-a4fe-cdd00b51f354/" />
         <option value="$PROJECT_DIR$/modules/geo_pipeline/Gse.py" />
+        <option value="db-console:/ca7a5962/072ca1ce-f5e3-462a-b5bb-c6ef14792d8d/" />
         <option value="$PROJECT_DIR$/modules/insertStarSamples.py" />
       </list>
     </option>
@@ -295,6 +168,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="star" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -723,31 +600,35 @@
       <created>1407821123885</created>
       <updated>1407821123885</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Error handeling for Memory Error GSE39654">
+      <created>1407860868304</created>
+      <updated>1407860868304</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2560" height="1414" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290469" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994455" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933578" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1350278" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.121916845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26965845" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39543268" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39574468" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2560423" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902032" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32909605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994455" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.121916845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26965845" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25642964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994455" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1544,24 +1425,24 @@
     </entry>
     <entry file="dbDummy://db-console:/ca7a5962/072ca1ce-f5e3-462a-b5bb-c6ef14792d8d/">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+        <state vertical-scroll-proportion="-3.6206896" vertical-offset="0" max-vertical-offset="195">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/geo_pipeline/Gse.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9654" max-vertical-offset="11010">
-          <caret line="682" column="17" selection-start-line="682" selection-start-column="9" selection-end-line="682" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="9639" max-vertical-offset="10980">
+          <caret line="648" column="19" selection-start-line="648" selection-start-column="19" selection-end-line="648" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/insertStarSamples.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26645768" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.41909197" vertical-offset="0" max-vertical-offset="1005">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
