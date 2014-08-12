@@ -11,7 +11,7 @@ filenames = sorted(glob.glob('geo_mirror/DATA/SeriesMatrix/*'))
 length = len(filenames)
 
 p = re.compile("GSE\d+")
-errors = set(p.findall(open(errors.err).read()))
+errors = set(p.findall(open('errors.err').read()))
 print errors
 1/0
 errorFile=open('errors.err', 'a')
