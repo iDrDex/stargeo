@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="03e461d2-b299-4d7d-a2e4-34a6b38f1fe2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/geo_pipeline" afterPath="$PROJECT_DIR$/modules/geo_pipeline" />
+    <list default="true" id="03e461d2-b299-4d7d-a2e4-34a6b38f1fe2" name="Default" comment="Error handeling for Memory Error GSE39655!">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/geo_pipeline/Gse.py" afterPath="$PROJECT_DIR$/modules/geo_pipeline/Gse.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/insertStarSamples.py" afterPath="$PROJECT_DIR$/modules/insertStarSamples.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="star.iws" />
@@ -20,7 +17,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/star$web2py.coverage" NAME="web2py Coverage Results" MODIFIED="1407792439356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
     <SUITE FILE_PATH="coverage/star$star.coverage" NAME="gse Coverage Results" MODIFIED="1407359250862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules/geo_pipeline" />
-    <SUITE FILE_PATH="coverage/star$gse.coverage" NAME="gse Coverage Results" MODIFIED="1407860482334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules/geo_pipeline" />
+    <SUITE FILE_PATH="coverage/star$gse.coverage" NAME="gse Coverage Results" MODIFIED="1407870339248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules/geo_pipeline" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -54,21 +51,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="insertStarSamples.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="insertStarSamples.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/insertStarSamples.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41909197" vertical-offset="0" max-vertical-offset="1005">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gse.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Gse.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/geo_pipeline/Gse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="9354" max-vertical-offset="10980">
-              <caret line="648" column="19" selection-start-line="648" selection-start-column="19" selection-end-line="648" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.33333334" vertical-offset="2651" max-vertical-offset="11205">
+              <caret line="198" column="28" selection-start-line="198" selection-start-column="28" selection-end-line="198" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -77,7 +74,7 @@
       <file leaf-file-name="PostgreSQL - star@dexter-db-star.cd8zgucpvgtu.us-west-2.rds.amazonaws.com" pinned="false" current="false" current-in-tab="false">
         <entry file="dbDummy://db-console:/ca7a5962/072ca1ce-f5e3-462a-b5bb-c6ef14792d8d/">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.6206896" vertical-offset="0" max-vertical-offset="195">
+            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
               <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
               <folding />
             </state>
@@ -113,7 +110,7 @@
   </component>
   <component name="Git.Settings">
     <option name="SYNC_SETTING" value="SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/modules/geo_pipeline" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -124,10 +121,10 @@
         <option value="$PROJECT_DIR$/modules/geo_pipeline/my.py" />
         <option value="$PROJECT_DIR$/models/my_db.py" />
         <option value="$PROJECT_DIR$/controllers/default.py" />
+        <option value="$PROJECT_DIR$/modules/insertStarSamples.py" />
+        <option value="db-console:/ca7a5962/072ca1ce-f5e3-462a-b5bb-c6ef14792d8d/" />
         <option value="db-console:/ca7a5962/fc2fdc70-c16a-489c-a4fe-cdd00b51f354/" />
         <option value="$PROJECT_DIR$/modules/geo_pipeline/Gse.py" />
-        <option value="db-console:/ca7a5962/072ca1ce-f5e3-462a-b5bb-c6ef14792d8d/" />
-        <option value="$PROJECT_DIR$/modules/insertStarSamples.py" />
       </list>
     </option>
   </component>
@@ -354,6 +351,9 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -375,9 +375,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -604,34 +601,38 @@
       <created>1407860868304</created>
       <updated>1407860868304</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Error handeling for Memory Error GSE39655!">
+      <created>1407862805523</created>
+      <updated>1407862805523</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2560" height="1414" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290469" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994455" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933578" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1350278" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39543268" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39574468" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902032" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994455" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1350278" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.121916845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26965845" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25642964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27164418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39543268" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39574468" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2560423" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902032" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290469" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994455" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -659,7 +660,8 @@
     <MESSAGE value="DataError handling for GSE31631" />
     <MESSAGE value="Error handeling for GSE39655" />
     <MESSAGE value="Error handeling for Memory Error GSE39654" />
-    <option name="LAST_COMMIT_MESSAGE" value="Error handeling for Memory Error GSE39654" />
+    <MESSAGE value="Error handeling for Memory Error GSE39655!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Error handeling for Memory Error GSE39655!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -892,8 +894,8 @@
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_permission</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.platform_attribute</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_annotation</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_cas</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_attribute</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_cas</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.platform</node>
           </nodes>
           <notes />
@@ -965,8 +967,8 @@
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_annotation</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.annotation</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series_annotation</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_user</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series_annotation</node>
           </nodes>
           <notes />
           <edges />
@@ -989,11 +991,11 @@
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.platform_attribute</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_annotation</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.annotation</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.platform</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.annotation</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series_annotation</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_user</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series_annotation</node>
           </nodes>
           <notes />
           <edges />
@@ -1041,14 +1043,14 @@
           <ID>DATABASE</ID>
           <OriginalElement>fc2fdc70-c16a-489c-a4fe-cdd00b51f354</OriginalElement>
           <nodes>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.user_mappings</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_extension</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_timezone_abbrevs</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_extension</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.user_mappings</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_user_indexes</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_amop</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_namespace</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_foreign_table</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_namespace</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_ts_dict</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.columns</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_timezone_names</node>
@@ -1065,22 +1067,22 @@
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_rewrite</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_replication</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_am</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.character_sets</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_inherits</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.character_sets</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.constraint_column_usage</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sql_sizing</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.collations</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sql_sizing</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema._pg_user_mappings</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.information_schema_catalog_name</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_views</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.information_schema_catalog_name</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_db_role_setting</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_user_mapping</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_default_acl</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.domain_constraints</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_membership</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_constraint</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_shadow</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_membership</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.domain_constraints</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_sys_tables</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_shadow</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_seclabels</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_user_tables</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_database</node>
@@ -1139,19 +1141,19 @@
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.parameters</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_all_sequences</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_permission</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_foreign_data_wrapper</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_locks</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_foreign_data_wrapper</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.constraint_table_usage</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_matviews</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.triggers</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_matviews</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.table_privileges</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_activity</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series_attribute</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_available_extension_versions</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statistic</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.foreign_servers</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sql_languages</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_enum</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sql_languages</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.role_table_grants</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.usage_privileges</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_sys_indexes</node>
@@ -1159,66 +1161,66 @@
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.domains</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_group</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.foreign_tables</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_user_sequences</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.views</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_attribute</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.views</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_user_sequences</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_user</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.column_privileges</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_database</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_indexes</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.platform</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_indexes</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_database</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_attribute</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_proc</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_pltemplate</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_authid</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_all_indexes</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_ts_template</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_all_indexes</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_prepared_xacts</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.view_column_usage</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_prepared_statements</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.domain_udt_usage</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.user_defined_types</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.search</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.domain_udt_usage</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_prepared_statements</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_user_indexes</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_sys_sequences</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.search</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.element_types</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.foreign_table_options</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_sys_sequences</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sql_parts</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.foreign_table_options</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_xact_all_tables</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_largeobject_metadata</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema._pg_foreign_tables</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_largeobject</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sql_sizing_profiles</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_largeobject</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.collation_character_set_applicability</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.foreign_data_wrappers</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_xact_user_functions</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_shseclabel</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_xact_user_functions</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.foreign_data_wrappers</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_event_trigger</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.routine_privileges</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema._pg_foreign_table_columns</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.column_options</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_user_mappings</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_opclass</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.column_options</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema._pg_foreign_table_columns</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.applicable_roles</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_opclass</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.check_constraints</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stats</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sequences</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_all_indexes</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_cursors</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_all_indexes</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_foreign_server</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_amproc</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.role_routine_grants</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_amproc</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.referential_constraints</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_event</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_tables</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_tablespace</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_rules</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_user_functions</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_tablespace</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sql_implementation_info</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_user_functions</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.data_type_privileges</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sql_features</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_user_tables</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.foreign_data_wrapper_options</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_user_tables</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sql_features</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema._pg_foreign_data_wrappers</node>
           </nodes>
           <notes />
@@ -1252,8 +1254,8 @@
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_permission</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.platform_attribute</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_annotation</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_attribute</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_cas</node>
+            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_attribute</node>
             <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.platform</node>
           </nodes>
           <notes />
@@ -1334,17 +1336,17 @@
               <point x="386.22222222222223" y="257.0" />
               <point x="25.333333333333314" y="103.5" />
             </edge>
-            <edge source="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.annotation" target="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_user">
-              <point x="-57.0" y="-103.5" />
-              <point x="57.0" y="227.0" />
-              <point x="259.5555555555556" y="227.0" />
-              <point x="-101.33333333333331" y="103.5" />
-            </edge>
             <edge source="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_permission" target="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_group">
               <point x="0.0" y="-70.5" />
               <point x="939.0" y="257.0" />
               <point x="893.3111111111111" y="257.0" />
               <point x="32.0" y="48.5" />
+            </edge>
+            <edge source="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.annotation" target="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_user">
+              <point x="-57.0" y="-103.5" />
+              <point x="57.0" y="227.0" />
+              <point x="259.5555555555556" y="227.0" />
+              <point x="-101.33333333333331" y="103.5" />
             </edge>
             <edge source="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.series_annotation" target="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_user">
               <point x="0.0" y="-136.5" />
@@ -1425,24 +1427,24 @@
     </entry>
     <entry file="dbDummy://db-console:/ca7a5962/072ca1ce-f5e3-462a-b5bb-c6ef14792d8d/">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6206896" vertical-offset="0" max-vertical-offset="195">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
           <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/geo_pipeline/Gse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9639" max-vertical-offset="10980">
-          <caret line="648" column="19" selection-start-line="648" selection-start-column="19" selection-end-line="648" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/insertStarSamples.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41909197" vertical-offset="0" max-vertical-offset="1005">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/geo_pipeline/Gse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="2651" max-vertical-offset="11205">
+          <caret line="198" column="28" selection-start-line="198" selection-start-column="28" selection-end-line="198" selection-end-column="28" />
           <folding />
         </state>
       </provider>
