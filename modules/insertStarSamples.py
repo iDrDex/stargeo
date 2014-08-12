@@ -17,13 +17,14 @@ errorFile=open('errors.err', 'a')
 for i, filename in enumerate(filenames):
     gse_name = os.path.basename(filename)
     print i, "/", length, gse_name
-    if lastGse:
-        toSkip = toSkip and gse_name <> lastGse
-        if toSkip:
-            continue
-    if gse_name in errors:
-        print gse_name, errors
-        continue
+    # if lastGse:
+    #     toSkip = toSkip and gse_name <> lastGse
+    #     if toSkip:
+    #         continue
+    # if gse_name in errors:
+    #     print gse_name, errors
+    #     continue
+    if gse_name <> 'GSE31375': continue
     gse = Gse(gse_name, doData=False, doSamples=False)
     if ('Series_type' not in gse.series.columns) or (gse.series.Series_type != "Expression profiling by array").any():
         continue
