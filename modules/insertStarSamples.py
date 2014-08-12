@@ -18,6 +18,7 @@ for i, filename in enumerate(filenames):
     gse_name = os.path.basename(filename)
     print i, "/", length, gse_name
     if gse_name in errors:
+        print gse_name, errors
         continue
     if lastGse:
         toSkip = toSkip and gse_name <> lastGse
