@@ -12,13 +12,13 @@ length = len(filenames)
 
 p = re.compile("GSE\d+")
 errors = set(p.findall(open('errors.err').read()))
-print errors
-1/0
 errorFile=open('errors.err', 'a')
 
 for i, filename in enumerate(filenames):
     gse_name = os.path.basename(filename)
     print i, "/", length, gse_name
+    if gse_name in errors:
+        continue
     if lastGse:
         toSkip = toSkip and gse_name <> lastGse
         if toSkip:
@@ -56,7 +56,7 @@ for i, filename in enumerate(filenames):
                                                                                value=value))
             except Exception as exce:
                 print exce, sample_rec.id, name, value
-                print >>errorFile, exce, sample_rec.id, name, value
+                print >>errorFile, exce, gse_name, sample_rec.id, name, value
                 errorFile.flush()
 
             db.commit()
