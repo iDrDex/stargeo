@@ -23,6 +23,22 @@ def index():
     grid = SQLFORM.grid(Sample_Attribute)
     return dict(grid=grid)
 
+@request.restful()
+def api():
+    response.view = 'generic.' + request.extension
+
+    def GET(*args, **vars):
+        patterns = 'auto'
+        parser = db.parse_as_rest(patterns, args, vars)
+        if parser.status == 200:
+            return dict(content=parser.response)
+        else:
+            raise HTTP(parser.status, parser.error)
+
+    def POST(table_name, **vars):
+        return db[table_name].validate_and_insert(**vars)
+
+    return locals()
 
 def user():
     """

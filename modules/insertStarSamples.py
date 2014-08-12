@@ -1,7 +1,7 @@
 __author__ = 'dex'
 from geo_pipeline.Gse import *
 from psycopg2 import DataError
-import glob, os
+import glob, os, re
 
 lastGseRec = db(Series).select().last()
 lastGse = lastGseRec and lastGseRec.gse_name or None
@@ -10,6 +10,10 @@ print lastGse
 filenames = sorted(glob.glob('geo_mirror/DATA/SeriesMatrix/*'))
 length = len(filenames)
 
+p = re.compile("GSE\d+")
+errors = set(p.findall(open(errors.err).read()))
+print errors
+1/0
 errorFile=open('errors.err', 'a')
 
 for i, filename in enumerate(filenames):
