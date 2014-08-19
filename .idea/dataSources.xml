@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="969714330">
-    <data-source source="LOCAL" name="PostgreSQL - star@localhost" uuid="fc2fdc70-c16a-489c-a4fe-cdd00b51f354">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/star</jdbc-url>
-      <user-name>web2py</user-name>
-      <user-password>dfd8dfcfdfc4dfcedfcfdfd0</user-password>
-      <libraries />
-    </data-source>
+  <component name="DataSourceManagerImpl" format="xml" hash="201684281">
     <data-source source="LOCAL" name="PostgreSQL - star@dexter-db-star.cd8zgucpvgtu.us-west-2.rds.amazonaws.com" uuid="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://dexter-db-star.cd8zgucpvgtu.us-west-2.rds.amazonaws.com:5432/star</jdbc-url>
+      <user-name>star</user-name>
+      <user-password>dfd8dfcfdfc4dfcedfcfdfd0</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - star@localhost" uuid="ae54ce3c-97e8-4254-9178-104d16fb071b">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/star</jdbc-url>
       <user-name>star</user-name>
       <user-password>dfd8dfcfdfc4dfcedfcfdfd0</user-password>
       <libraries />

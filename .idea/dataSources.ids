@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="PostgreSQL - star@localhost" uuid="fc2fdc70-c16a-489c-a4fe-cdd00b51f354">
-    <database-info product="PostgreSQL" version="9.3.4" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.3 JDBC4 (build 1100)">
+  <data-source source="LOCAL" name="PostgreSQL - star@dexter-db-star.cd8zgucpvgtu.us-west-2.rds.amazonaws.com" uuid="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d">
+    <database-info product="PostgreSQL" version="9.3.3" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.3 JDBC4 (build 1100)">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
@@ -2492,16 +2492,13 @@
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncGxhdGZvcm1faWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
       <column name="gpl_name" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="platform_pkey" columns="id"/>
-      <exported-key name="platform_attribute_platform_id_fkey" table="platform_attribute" schema="public" catalog="star" columns="platform_id"/>
-      <exported-key name="series_annotation_platform_id_fkey" table="series_annotation" schema="public" catalog="star" columns="platform_id"/>
     </table>
     <table name="platform_attribute" schema="public" catalog="star" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncGxhdGZvcm1fYXR0cmlidXRlX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
       <column name="platform_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="name" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
-      <column name="value" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
+      <column name="value" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="platform_attribute_pkey" columns="id"/>
-      <foreign-key name="platform_attribute_platform_id_fkey" columns="platform_id" ref-table="platform" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
     </table>
     <table name="platform_attribute_id_seq" schema="public" catalog="star" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -2529,10 +2526,10 @@
     </table>
     <table name="sample" schema="public" catalog="star" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2FtcGxlX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="series_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="platform_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="gsm_name" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="sample_pkey" columns="id"/>
-      <exported-key name="sample_annotation_sample_id_fkey" table="sample_annotation" schema="public" catalog="star" columns="sample_id"/>
-      <exported-key name="sample_attribute_sample_id_fkey" table="sample_attribute" schema="public" catalog="star" columns="sample_id"/>
     </table>
     <table name="sample_annotation" schema="public" catalog="star" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2FtcGxlX2Fubm90YXRpb25faWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
@@ -2547,7 +2544,6 @@
       <primary-key name="sample_annotation_pkey" columns="id"/>
       <foreign-key name="sample_annotation_created_by_fkey" columns="created_by" ref-table="auth_user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <foreign-key name="sample_annotation_modified_by_fkey" columns="modified_by" ref-table="auth_user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
-      <foreign-key name="sample_annotation_sample_id_fkey" columns="sample_id" ref-table="sample" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <foreign-key name="sample_annotation_series_annotation_id_fkey" columns="series_annotation_id" ref-table="series_annotation" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
     </table>
     <table name="sample_annotation_id_seq" schema="public" catalog="star" type="SEQUENCE">
@@ -2565,10 +2561,11 @@
     <table name="sample_attribute" schema="public" catalog="star" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2FtcGxlX2F0dHJpYnV0ZV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
       <column name="sample_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="name" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
-      <column name="value" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
+      <column name="value" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="varchar" precision="750" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="sample_attribute_pkey" columns="id"/>
-      <foreign-key name="sample_attribute_sample_id_fkey" columns="sample_id" ref-table="sample" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <index name="sampleattribute_sampleid_name_idx" unique="true" columns="sample_id,name"/>
+      <index name="sample_attribute_idx" unique="false" columns="to_tsvector(&apos;simple&apos;::regconfig,(((name)::text || &apos; &apos;::text) || value))"/>
     </table>
     <table name="sample_attribute_id_seq" schema="public" catalog="star" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -2615,8 +2612,6 @@
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2VyaWVzX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
       <column name="gse_name" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="series_pkey" columns="id"/>
-      <exported-key name="series_annotation_series_id_fkey" table="series_annotation" schema="public" catalog="star" columns="series_id"/>
-      <exported-key name="series_attribute_series_id_fkey" table="series_attribute" schema="public" catalog="star" columns="series_id"/>
     </table>
     <table name="series_annotation" schema="public" catalog="star" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2VyaWVzX2Fubm90YXRpb25faWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
@@ -2634,8 +2629,6 @@
       <foreign-key name="series_annotation_annotation_id_fkey" columns="annotation_id" ref-table="annotation" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <foreign-key name="series_annotation_created_by_fkey" columns="created_by" ref-table="auth_user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <foreign-key name="series_annotation_modified_by_fkey" columns="modified_by" ref-table="auth_user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
-      <foreign-key name="series_annotation_platform_id_fkey" columns="platform_id" ref-table="platform" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
-      <foreign-key name="series_annotation_series_id_fkey" columns="series_id" ref-table="series" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <exported-key name="sample_annotation_series_annotation_id_fkey" table="sample_annotation" schema="public" catalog="star" columns="series_annotation_id"/>
     </table>
     <table name="series_annotation_id_seq" schema="public" catalog="star" type="SEQUENCE">
@@ -2654,9 +2647,8 @@
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2VyaWVzX2F0dHJpYnV0ZV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
       <column name="series_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="name" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
-      <column name="value" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
+      <column name="value" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="series_attribute_pkey" columns="id"/>
-      <foreign-key name="series_attribute_series_id_fkey" columns="series_id" ref-table="series" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
     </table>
     <table name="series_attribute_id_seq" schema="public" catalog="star" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -19184,8 +19176,8 @@
       </prototype>
     </procedure>
   </data-source>
-  <data-source source="LOCAL" name="PostgreSQL - star@dexter-db-star.cd8zgucpvgtu.us-west-2.rds.amazonaws.com" uuid="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d">
-    <database-info product="PostgreSQL" version="9.3.3" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.3 JDBC4 (build 1100)">
+  <data-source source="LOCAL" name="PostgreSQL - star@localhost" uuid="ae54ce3c-97e8-4254-9178-104d16fb071b">
+    <database-info product="PostgreSQL" version="9.3.4" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.3 JDBC4 (build 1100)">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
@@ -21676,6 +21668,9 @@
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncGxhdGZvcm1faWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
       <column name="gpl_name" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="platform_pkey" columns="id"/>
+      <exported-key name="platform_attribute_platform_id_fkey" table="platform_attribute" schema="public" catalog="star" columns="platform_id"/>
+      <exported-key name="sample_platform_id_fkey" table="sample" schema="public" catalog="star" columns="platform_id"/>
+      <exported-key name="series_annotation_platform_id_fkey" table="series_annotation" schema="public" catalog="star" columns="platform_id"/>
     </table>
     <table name="platform_attribute" schema="public" catalog="star" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncGxhdGZvcm1fYXR0cmlidXRlX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
@@ -21683,6 +21678,7 @@
       <column name="name" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
       <column name="value" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="platform_attribute_pkey" columns="id"/>
+      <foreign-key name="platform_attribute_platform_id_fkey" columns="platform_id" ref-table="platform" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
     </table>
     <table name="platform_attribute_id_seq" schema="public" catalog="star" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -21714,6 +21710,10 @@
       <column name="platform_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="gsm_name" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="sample_pkey" columns="id"/>
+      <foreign-key name="sample_platform_id_fkey" columns="platform_id" ref-table="platform" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <foreign-key name="sample_series_id_fkey" columns="series_id" ref-table="series" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <exported-key name="sample_annotation_sample_id_fkey" table="sample_annotation" schema="public" catalog="star" columns="sample_id"/>
+      <exported-key name="sample_attribute_sample_id_fkey" table="sample_attribute" schema="public" catalog="star" columns="sample_id"/>
     </table>
     <table name="sample_annotation" schema="public" catalog="star" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2FtcGxlX2Fubm90YXRpb25faWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
@@ -21728,6 +21728,7 @@
       <primary-key name="sample_annotation_pkey" columns="id"/>
       <foreign-key name="sample_annotation_created_by_fkey" columns="created_by" ref-table="auth_user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <foreign-key name="sample_annotation_modified_by_fkey" columns="modified_by" ref-table="auth_user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <foreign-key name="sample_annotation_sample_id_fkey" columns="sample_id" ref-table="sample" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <foreign-key name="sample_annotation_series_annotation_id_fkey" columns="series_annotation_id" ref-table="series_annotation" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
     </table>
     <table name="sample_annotation_id_seq" schema="public" catalog="star" type="SEQUENCE">
@@ -21745,9 +21746,10 @@
     <table name="sample_attribute" schema="public" catalog="star" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2FtcGxlX2F0dHJpYnV0ZV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
       <column name="sample_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="varchar" precision="256" scale="0" nullable="true" jdbcType="12"/>
       <column name="value" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="name" sqlType="varchar" precision="750" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="sample_attribute_pkey" columns="id"/>
+      <foreign-key name="sample_attribute_sample_id_fkey" columns="sample_id" ref-table="sample" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <index name="sampleattribute_sampleid_name_idx" unique="true" columns="sample_id,name"/>
     </table>
     <table name="sample_attribute_id_seq" schema="public" catalog="star" type="SEQUENCE">
@@ -21795,6 +21797,9 @@
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2VyaWVzX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
       <column name="gse_name" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="series_pkey" columns="id"/>
+      <exported-key name="sample_series_id_fkey" table="sample" schema="public" catalog="star" columns="series_id"/>
+      <exported-key name="series_annotation_series_id_fkey" table="series_annotation" schema="public" catalog="star" columns="series_id"/>
+      <exported-key name="series_attribute_series_id_fkey" table="series_attribute" schema="public" catalog="star" columns="series_id"/>
     </table>
     <table name="series_annotation" schema="public" catalog="star" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2VyaWVzX2Fubm90YXRpb25faWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
@@ -21812,6 +21817,8 @@
       <foreign-key name="series_annotation_annotation_id_fkey" columns="annotation_id" ref-table="annotation" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <foreign-key name="series_annotation_created_by_fkey" columns="created_by" ref-table="auth_user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <foreign-key name="series_annotation_modified_by_fkey" columns="modified_by" ref-table="auth_user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <foreign-key name="series_annotation_platform_id_fkey" columns="platform_id" ref-table="platform" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <foreign-key name="series_annotation_series_id_fkey" columns="series_id" ref-table="series" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <exported-key name="sample_annotation_series_annotation_id_fkey" table="sample_annotation" schema="public" catalog="star" columns="series_annotation_id"/>
     </table>
     <table name="series_annotation_id_seq" schema="public" catalog="star" type="SEQUENCE">
@@ -21832,6 +21839,7 @@
       <column name="name" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
       <column name="value" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="series_attribute_pkey" columns="id"/>
+      <foreign-key name="series_attribute_series_id_fkey" columns="series_id" ref-table="series" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
     </table>
     <table name="series_attribute_id_seq" schema="public" catalog="star" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>

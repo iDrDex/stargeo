@@ -37,13 +37,18 @@ Sample = db.define_table('sample',
                          migrate='sample.table'
 )
 
+
 Sample_Attribute = db.define_table('sample_attribute',
                                    Field('sample_id', 'reference sample'),
-                                   Field('name', 'string', 750),
+                                   Field('name', 'string', 256),
                                    Field('value', 'text'),
                                    format='%(name)s_%(value)s',
                                    migrate='sample_attribute.table'
 )
+
+# from plugin_haystack import Haystack, SolrBackend
+# sample_attribute_index = Haystack(Sample_Attribute, backend=SolrBackend,url='http://localhost:8983/solr')
+# sample_attribute_index.indexes('name','value')
 
 Annotation = db.define_table('annotation',
                              Field('name', unique=True),
