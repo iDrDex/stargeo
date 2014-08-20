@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="201684281">
+  <component name="DataSourceManagerImpl" format="xml" hash="3530475660">
     <data-source source="LOCAL" name="PostgreSQL - star@dexter-db-star.cd8zgucpvgtu.us-west-2.rds.amazonaws.com" uuid="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>

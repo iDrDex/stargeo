@@ -21764,6 +21764,18 @@
       <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
       <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
     </table>
+    <table name="sample_attribute_search" schema="public" catalog="star" type="MATERIALIZED VIEW">
+      <column name="id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="sample_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="series_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="platform_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="gse_name" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
+      <column name="gpl_name" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
+      <column name="gsm_name" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="varchar" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <column name="value" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="doc" sqlType="tsvector" precision="2147483647" scale="0" nullable="true" jdbcType="1111"/>
+    </table>
     <table name="sample_id_seq" schema="public" catalog="star" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
