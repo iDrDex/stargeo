@@ -12,7 +12,7 @@
 if not request.env.web2py_runtime_gae:
     ## if NOT running on Google App Engine use SQLite or other DB
     # db = DAL('sqlite://storage.sqlite',pool_size=1,check_reserved=['all'])
-    db = DAL("postgres://star:rendez@localhost/star2")
+    db = DAL("postgres://star:rendez@localhost/star")
 
 else:
     ## connect to Google BigTable (optional 'google:datastore://namespace')
