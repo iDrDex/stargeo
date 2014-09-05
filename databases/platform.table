@@ -4,7 +4,7 @@ p2
 (dp3
 S'length'
 p4
-I512
+I32768
 sS'unique'
 p5
 I00
@@ -13,14 +13,14 @@ p6
 I2
 sS'sql'
 p7
-S'VARCHAR(512)'
+S'TEXT'
 p8
 sS'notnull'
 p9
 I00
 sS'type'
 p10
-S'string'
+S'text'
 p11
 ssS'id'
 p12

@@ -1,16 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="03e461d2-b299-4d7d-a2e4-34a6b38f1fe2" name="Default" comment="Error handeling for Memory Error GSE39655!">
+    <list default="true" id="54201dcf-c4ae-4e7e-b412-69c9d7403aae" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitmodules" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/star.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/annotation.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/sample_annotation.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/search.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/series_annotation.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/geo_pipeline" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/insertStarSamples.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/geo_pipeline" afterPath="$PROJECT_DIR$/modules/geo_pipeline" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Web2Py_Library.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Web2Py_Library.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/appadmin.py" afterPath="$PROJECT_DIR$/controllers/appadmin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_cas.table" afterPath="$PROJECT_DIR$/databases/auth_cas.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_event.table" afterPath="$PROJECT_DIR$/databases/auth_event.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_group.table" afterPath="$PROJECT_DIR$/databases/auth_group.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_membership.table" afterPath="$PROJECT_DIR$/databases/auth_membership.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_permission.table" afterPath="$PROJECT_DIR$/databases/auth_permission.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_user.table" afterPath="$PROJECT_DIR$/databases/auth_user.table" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/db.py" afterPath="$PROJECT_DIR$/models/db.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/default.py" afterPath="$PROJECT_DIR$/controllers/default.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/insertStarSamples.py" afterPath="$PROJECT_DIR$/modules/insertStarSamples.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/my_db.py" afterPath="$PROJECT_DIR$/models/my_db.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/platform.table" afterPath="$PROJECT_DIR$/databases/platform.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/platform_attribute.table" afterPath="$PROJECT_DIR$/databases/platform_attribute.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/progress.log" afterPath="$PROJECT_DIR$/progress.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sample.table" afterPath="$PROJECT_DIR$/databases/sample.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sample_attribute.table" afterPath="$PROJECT_DIR$/databases/sample_attribute.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/series.table" afterPath="$PROJECT_DIR$/databases/series.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/series_attribute.table" afterPath="$PROJECT_DIR$/databases/series_attribute.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sql.log" afterPath="$PROJECT_DIR$/databases/sql.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/web2py_bootstrap.css" afterPath="$PROJECT_DIR$/static/css/web2py_bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/web2py_bootstrap_nojs.css" afterPath="$PROJECT_DIR$/static/css/web2py_bootstrap_nojs.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <ignored path="star.iws" />
+    <ignored path="star2.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,10 +51,9 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/star$insertStarSamples.coverage" NAME="insertStarSamples Coverage Results" MODIFIED="1408377810306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
-    <SUITE FILE_PATH="coverage/star$web2py.coverage" NAME="web2py Coverage Results" MODIFIED="1408568243891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
-    <SUITE FILE_PATH="coverage/star$star.coverage" NAME="gse Coverage Results" MODIFIED="1407359250862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules/geo_pipeline" />
-    <SUITE FILE_PATH="coverage/star$gse.coverage" NAME="gse Coverage Results" MODIFIED="1408380741811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules/geo_pipeline" />
+    <SUITE FILE_PATH="coverage/star2$web2py.coverage" NAME="web2py Coverage Results" MODIFIED="1409906420070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
+    <SUITE FILE_PATH="coverage/star2$star2.coverage" NAME="web2py Coverage Results" MODIFIED="1409078221417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
+    <SUITE FILE_PATH="coverage/star2$setup_db.coverage" NAME="setup_db Coverage Results" MODIFIED="1409682677276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Run" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -33,119 +63,51 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="star" />
+    <favorites_list name="star2" />
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="default.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/default.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.032223415" vertical-offset="1245" max-vertical-offset="3405">
-              <caret line="85" column="43" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.3537736" vertical-offset="1320" max-vertical-offset="3480">
+              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
               <folding>
-                <marker date="1408570112000" expanded="true" signature="1449:1604" placeholder="SELECT gse_n..sample_attribute_search..." />
+                <marker date="1409905821000" expanded="true" signature="1206:1374" placeholder="INSERT INTO ..." />
+                <marker date="1409905821000" expanded="true" signature="1240:1369" placeholder="SELECT id, s..sample_view_fts..." />
+                <marker date="1409905821000" expanded="true" signature="2006:2310" placeholder="SELECT * fro..sample_attribute..." />
+                <marker date="1409905821000" expanded="true" signature="2986:3282" placeholder="SELECT disti..sample_attribute..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dal.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../gluon/dal.py">
+      <file leaf-file-name="globals.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../gluon/globals.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="138002" max-vertical-offset="170850">
-              <caret line="9242" column="8" selection-start-line="9242" selection-start-column="8" selection-end-line="9242" selection-end-column="8" />
-              <folding>
-                <marker date="1394962542000" expanded="true" signature="38008:38043" placeholder="CREATE TABLE..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="38234:38261" placeholder="CREATE TABLE..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="42285:42307" placeholder="ALTER TABLE missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="43328:43340" placeholder="ALTER TABLE missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="43498:43510" placeholder="ALTER TABLE missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="44316:44328" placeholder="ALTER TABLE missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="44396:44408" placeholder="ALTER TABLE missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="44494:44516" placeholder="ALTER TABLE missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="44611:44628" placeholder="UPDATE missi..." />
-                <marker date="1394962542000" expanded="true" signature="44862:44884" placeholder="ALTER TABLE missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="45000:45017" placeholder="UPDATE missi..." />
-                <marker date="1394962542000" expanded="true" signature="48529:48540" placeholder="DROP TABLE m..." />
-                <marker date="1394962542000" expanded="true" signature="49305:49335" placeholder="INSERT INTO ..." />
-                <marker date="1394962542000" expanded="true" signature="49480:49509" placeholder="INSERT INTO ..." />
-                <marker date="1394962542000" expanded="true" signature="59695:59709" placeholder="UPDATE missi..." />
-                <marker date="1394962542000" expanded="true" signature="60535:60547" placeholder="DELETE FROM ..." />
-                <marker date="1394962542000" expanded="true" signature="69592:69610" placeholder="SELECT missi..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="71904:71935" placeholder="SELECT count..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="72000:72021" placeholder="SELECT count..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="93151:93163" placeholder="DELETE FROM ..." />
-                <marker date="1394962542000" expanded="true" signature="93198:93241" placeholder="DELETE FROM ..." />
-                <marker date="1394962542000" expanded="true" signature="102310:102321" placeholder="DROP TABLE m..." />
-                <marker date="1394962542000" expanded="true" signature="102439:102470" placeholder="INSERT INTO ..." />
-                <marker date="1394962542000" expanded="true" signature="115878:115911" placeholder="DROP TABLE m..." />
-                <marker date="1394962542000" expanded="true" signature="121392:121406" placeholder="DROP TABLE m..." />
-                <marker date="1394962542000" expanded="true" signature="121787:121894" placeholder="SELECT missi..*..." />
-                <marker date="1394962542000" expanded="true" signature="121806:121884" placeholder="SELECT w_tmp..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="121841:121856" placeholder="SELECT missi..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="121991:122009" placeholder="SELECT missi..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="126309:126336" placeholder="SELECT missi..dual..." />
-                <marker date="1394962542000" expanded="true" signature="129889:129907" placeholder="SELECT missi..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="135910:135928" placeholder="SELECT missi..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="136462:136580" placeholder="SELECT missi..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="136481:136501" placeholder="SELECT missi..." />
-                <marker date="1394962542000" expanded="true" signature="136683:136701" placeholder="SELECT missi..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="137661:137679" placeholder="SELECT missi..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="140869:140887" placeholder="SELECT missi..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="147130:147144" placeholder="DROP TABLE m..." />
-                <marker date="1394962542000" expanded="true" signature="147430:147448" placeholder="SELECT missi..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="147554:147566" placeholder="DELETE FROM ..." />
-                <marker date="1394962542000" expanded="true" signature="150100:150138" placeholder="SELECT gen_i..rdb$database..." />
-                <marker date="1394962542000" expanded="true" signature="154017:154035" placeholder="SELECT missi..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="156803:156821" placeholder="SELECT missi..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="158701:158719" placeholder="SELECT missi..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="160207:160249" placeholder="SELECT DISTI..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="162953:162971" placeholder="SELECT missi..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="163114:163132" placeholder="DELETE FROM ..." />
-                <marker date="1394962542000" expanded="true" signature="165437:165455" placeholder="SELECT missi..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="171296:171314" placeholder="SELECT missi..missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="171606:171662" placeholder="ALTER TABLE missing_value..." />
-                <marker date="1394962542000" expanded="true" signature="173438:173465" placeholder="select missi..dual..." />
-                <marker date="1394962542000" expanded="true" signature="176095:176211" placeholder="CREATE TABLE..IF..." />
-                <marker date="1394962542000" expanded="true" signature="176302:176399" placeholder="CREATE TABLE..IF..." />
-                <marker date="1394962542000" expanded="true" signature="176590:176643" placeholder="SELECT conte..web2py_filesystem..." />
-                <marker date="1394962542000" expanded="true" signature="177619:177664" placeholder="DELETE FROM ..." />
-                <marker date="1394962542000" expanded="true" signature="177704:177766" placeholder="INSERT INTO ..." />
-                <marker date="1394962542000" expanded="true" signature="178099:178149" placeholder="SELECT path ..web2py_filesystem..." />
-                <marker date="1394962542000" expanded="true" signature="178946:178991" placeholder="DELETE FROM ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostgreSQL - star@dexter-db-star.cd8zgucpvgtu.us-west-2.rds.amazonaws.com" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://db-console:/ca7a5962/072ca1ce-f5e3-462a-b5bb-c6ef14792d8d/">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="510">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="4410" max-vertical-offset="17625">
+              <caret line="294" column="0" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostgreSQL - star@localhost" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://db-console:/ca7a5962/ae54ce3c-97e8-4254-9178-104d16fb071b/">
+      <file leaf-file-name="db.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.0" vertical-offset="58" max-vertical-offset="1845">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1380">
+              <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sqlhtml.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../gluon/sqlhtml.py">
+      <file leaf-file-name="my_db.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/my_db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.884615" vertical-offset="15793" max-vertical-offset="49020">
-              <caret line="1091" column="0" selection-start-line="1091" selection-start-column="0" selection-end-line="1091" selection-end-column="0" />
-              <folding>
-                <marker date="1394962544000" expanded="true" signature="74816:74846" placeholder="select count..missing_value..." />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1875">
+              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -158,28 +120,28 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
-    <option name="SYNC_SETTING" value="SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/databases/sql.log" />
-        <option value="$PROJECT_DIR$/modules/setupSamples.py" />
+        <option value="dbtable:/84d0d310/4070435a-eb72-464a-95f6-8198cc3a22dc/star2.public.series" />
+        <option value="dbtable:/84d0d310/4070435a-eb72-464a-95f6-8198cc3a22dc/star2.public.platform" />
         <option value="$PROJECT_DIR$/models/db.py" />
-        <option value="db-console:/ca7a5962/fc2fdc70-c16a-489c-a4fe-cdd00b51f354/" />
-        <option value="dbtable:/ca7a5962/ae54ce3c-97e8-4254-9178-104d16fb071b/star.public.series_attribute" />
-        <option value="dbtable:/ca7a5962/ae54ce3c-97e8-4254-9178-104d16fb071b/star.public.series" />
-        <option value="$PROJECT_DIR$/../../insertStarSamples.py" />
-        <option value="$PROJECT_DIR$/modules/geo_pipeline/Gse.py" />
-        <option value="$PROJECT_DIR$/controllers/appadmin.py" />
-        <option value="dbtable:/ca7a5962/ae54ce3c-97e8-4254-9178-104d16fb071b/star.public.sample_attribute" />
-        <option value="$PROJECT_DIR$/modules/geo_pipeline/my.py" />
-        <option value="$PROJECT_DIR$/models/my_db.py" />
-        <option value="$PROJECT_DIR$/modules/insertStarSamples.py" />
-        <option value="db-console:/ca7a5962/ae54ce3c-97e8-4254-9178-104d16fb071b/" />
-        <option value="db-console:/ca7a5962/072ca1ce-f5e3-462a-b5bb-c6ef14792d8d/" />
+        <option value="$PROJECT_DIR$/views/list_items.html" />
+        <option value="$PROJECT_DIR$/views/list_dogs.html" />
+        <option value="$PROJECT_DIR$/views/default/list_items.html" />
+        <option value="$PROJECT_DIR$/views/default/list_dogs.html" />
         <option value="$PROJECT_DIR$/../../gluon/sqlhtml.py" />
+        <option value="$USER_HOME$/Run/setup_db.py" />
+        <option value="$PROJECT_DIR$/modules/setup_db.py" />
+        <option value="dbtable:/84d0d310/4070435a-eb72-464a-95f6-8198cc3a22dc/star2.public.sample_attribute" />
+        <option value="dbtable:/84d0d310/4070435a-eb72-464a-95f6-8198cc3a22dc/star2.public.sample_view_fts" />
+        <option value="dbtable:/84d0d310/4070435a-eb72-464a-95f6-8198cc3a22dc/star2.public.sample_view" />
+        <option value="dbtable:/84d0d310/4070435a-eb72-464a-95f6-8198cc3a22dc/star2.public.sample" />
+        <option value="$PROJECT_DIR$/models/my_db.py" />
+        <option value="dbtable:/84d0d310/4070435a-eb72-464a-95f6-8198cc3a22dc/star2.public.sample_filter" />
+        <option value="db-console:/84d0d310/4070435a-eb72-464a-95f6-8198cc3a22dc/" />
         <option value="$PROJECT_DIR$/controllers/default.py" />
       </list>
     </option>
@@ -187,7 +149,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="2037" />
-    <option name="height" value="1374" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -219,46 +181,18 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="star" />
+              <option name="myItemId" value="star2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="star" />
+              <option name="myItemId" value="star2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="star" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="star" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="star" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="star" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="star" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -271,35 +205,25 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rendez" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Run" />
     <property name="recentsLimit" value="5" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="262" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="264" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="267" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1060" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="265" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="267" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="270" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1064" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
-    <property name="SearchEverywhereHistoryKey" value="unicat&#9;null&#9;null" />
+    <property name="dynamic.classpath" value="false" />
     <property name="Console.TableResult.DefaultCopyAction" value="Comma-separated Values (CSV)" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings />
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/views/default" />
+      <recent name="$PROJECT_DIR$/modules" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.web2py">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -313,7 +237,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="star" />
+      <module name="star2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="TARGET" value="" />
       <option name="SETTINGS_FILE" value="" />
@@ -331,7 +255,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="star" />
+      <module name="star2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
@@ -356,7 +280,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="star" />
+      <module name="star2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
@@ -380,7 +304,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="star" />
+      <module name="star2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
@@ -398,7 +322,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="star" />
+      <module name="star2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
@@ -421,7 +345,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="star" />
+      <module name="star2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
@@ -441,7 +365,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="star" />
+      <module name="star2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
@@ -458,27 +382,6 @@
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <configuration default="false" name="gse" type="PythonConfigurationType" factoryName="Python" singleton="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/anaconda/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/modules/geo_pipeline" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="star" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/modules/geo_pipeline/Gse.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
     <configuration default="false" name="web2py" type="PythonConfigurationType" factoryName="Python" singleton="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -490,7 +393,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="star" />
+      <module name="star2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../web2py.py" />
       <option name="PARAMETERS" value="" />
@@ -500,210 +403,68 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="insertStarSamples" type="PythonConfigurationType" factoryName="Python">
+    <configuration default="false" name="setup_db" type="PythonConfigurationType" factoryName="Python" singleton="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="$USER_HOME$/anaconda/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../.." />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Run" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="star" />
+      <module name="star2" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../web2py.py" />
-      <option name="PARAMETERS" value="-S star -M -R insertStarSamples.py" />
+      <option name="PARAMETERS" value="-S star2 -M -R $USER_HOME$/Run/setup_db.py" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Python.gse" />
-      <item index="1" class="java.lang.String" itemvalue="Python.web2py" />
-      <item index="2" class="java.lang.String" itemvalue="Python.insertStarSamples" />
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Python.web2py" />
+      <item index="1" class="java.lang.String" itemvalue="Python.setup_db" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="StructureViewFactory">
-    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="03e461d2-b299-4d7d-a2e4-34a6b38f1fe2" name="Default" comment="" />
-      <created>1405096730504</created>
-      <updated>1405096730504</updated>
+      <changelist id="54201dcf-c4ae-4e7e-b412-69c9d7403aae" name="Default" comment="" />
+      <created>1409005716816</created>
+      <updated>1409005716816</updated>
     </task>
-    <task id="LOCAL-00001" summary="updated to aws db">
-      <created>1407344467635</created>
-      <updated>1407344467635</updated>
-    </task>
-    <task id="LOCAL-00002" summary="updated to aws db">
-      <created>1407345336897</created>
-      <updated>1407345336897</updated>
-    </task>
-    <task id="LOCAL-00003" summary="updated to aws db">
-      <created>1407345471470</created>
-      <updated>1407345471470</updated>
-    </task>
-    <task id="LOCAL-00004" summary="updated to aws db">
-      <created>1407346047936</created>
-      <updated>1407346047936</updated>
-    </task>
-    <task id="LOCAL-00005" summary="updated to aws db">
-      <created>1407346637018</created>
-      <updated>1407346637018</updated>
-    </task>
-    <task id="LOCAL-00006" summary="updated to aws db">
-      <created>1407516828156</created>
-      <updated>1407516828156</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Fixed parsing mispaired sample_characteristics on GSE5938-GPL90_series_matrix">
-      <created>1407517049880</created>
-      <updated>1407517049880</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Fixed parsing sample_characteristics with uniCat for GSE48383*series_matrix">
-      <created>1407526676212</created>
-      <updated>1407526676212</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Fixed parsing sample_characteristics with uniCat for GSE48383*series_matrix">
-      <created>1407526910559</created>
-      <updated>1407526910559</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Fixed parsing sample_characteristics with uniCat for GSE48383*series_matrix">
-      <created>1407526979103</created>
-      <updated>1407526979103</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Filter for Expression by tiling array and humans">
-      <created>1407538596392</created>
-      <updated>1407538596392</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Filter for Expression by tiling array and humans">
-      <created>1407538766636</created>
-      <updated>1407538766636</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Filter for Expression by tiling array and humans">
-      <created>1407538819119</created>
-      <updated>1407538819119</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Filter for Expression by tiling array and humans">
-      <created>1407538879060</created>
-      <updated>1407538879060</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Filter for Expression by tiling array and humans">
-      <created>1407538946224</created>
-      <updated>1407538946224</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Filter for Expression by tiling array and humans">
-      <created>1407539537962</created>
-      <updated>1407539537962</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Filter for Expression by tiling array and humans">
-      <created>1407539653664</created>
-      <updated>1407539653664</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Filter for Expression by tiling array and humans GSE32450">
-      <created>1407562545559</created>
-      <updated>1407562545559</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Fixed to deal with GSE31375 missing data">
-      <created>1407614540794</created>
-      <updated>1407614540794</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Fixed to deal with GSE31375 missing data">
-      <created>1407650280603</created>
-      <updated>1407650280604</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Made sample name text to deal with GSE48383">
-      <created>1407650373753</created>
-      <updated>1407650373753</updated>
-    </task>
-    <task id="LOCAL-00022" summary="DataError handling for GSE31631">
-      <created>1407740020154</created>
-      <updated>1407740020154</updated>
-    </task>
-    <task id="LOCAL-00023" summary="DataError handling for GSE31631">
-      <created>1407741309038</created>
-      <updated>1407741309038</updated>
-    </task>
-    <task id="LOCAL-00024" summary="DataError handling for GSE31631">
-      <created>1407741819476</created>
-      <updated>1407741819476</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Error handeling for GSE39655">
-      <created>1407818604219</created>
-      <updated>1407818604219</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Error handeling for Memory Error GSE39654">
-      <created>1407820717407</created>
-      <updated>1407820717407</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Error handeling for Memory Error GSE39654">
-      <created>1407820832987</created>
-      <updated>1407820832988</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Error handeling for Memory Error GSE39654">
-      <created>1407821034545</created>
-      <updated>1407821034545</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Error handeling for Memory Error GSE39654">
-      <created>1407821123885</created>
-      <updated>1407821123885</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Error handeling for Memory Error GSE39654">
-      <created>1407860868304</created>
-      <updated>1407860868304</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Error handeling for Memory Error GSE39655!">
-      <created>1407862805523</created>
-      <updated>1407862805523</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Error handeling for Memory Error GSE39655!">
-      <created>1407870378898</created>
-      <updated>1407870378898</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Error handeling for Memory Error GSE39655!">
-      <created>1407910718256</created>
-      <updated>1407910718256</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Added annoying ^M fix when reading samples">
-      <created>1408464960201</created>
-      <updated>1408464960201</updated>
-    </task>
-    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="2037" height="1374" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="22" width="2037" height="878" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994455" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933578" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288201" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13433585" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14586467" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16290727" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25213033" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31278196" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34633386" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1764411" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39440203" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39574468" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2519501" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902032" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3269565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42639595" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32569975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288201" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899305" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994455" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -721,701 +482,351 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="updated to aws db" />
-    <MESSAGE value="Fixed parsing mispaired sample_characteristics on GSE5938-GPL90_series_matrix" />
-    <MESSAGE value="Fixed parsing sample_characteristics with uniCat for GSE48383*series_matrix" />
-    <MESSAGE value="Filter for Expression by tiling array and humans" />
-    <MESSAGE value="Filter for Expression by tiling array and humans GSE32450" />
-    <MESSAGE value="Fixed to deal with GSE31375 missing data" />
-    <MESSAGE value="Made sample name text to deal with GSE48383" />
-    <MESSAGE value="DataError handling for GSE31631" />
-    <MESSAGE value="Error handeling for GSE39655" />
-    <MESSAGE value="Error handeling for Memory Error GSE39654" />
-    <MESSAGE value="Error handeling for Memory Error GSE39655!" />
-    <MESSAGE value="Added annoying ^M fix when reading samples" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added annoying ^M fix when reading samples" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/../../insertStarSamples.py</url>
-          <line>100</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/modules/geo_pipeline/Gse.py</url>
-          <line>368</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/../../gluon/sqlhtml.py</url>
-          <line>2276</line>
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/../../gluon/sqlhtml.py</url>
-          <line>2275</line>
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/../../gluon/sqlhtml.py</url>
-          <line>2994</line>
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/../../gluon/dal.py</url>
-          <line>11104</line>
-          <option name="timeStamp" value="93" />
+          <line>2254</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/controllers/default.py</url>
-          <line>63</line>
-          <option name="timeStamp" value="98" />
+          <line>109</line>
+          <option name="timeStamp" value="78" />
         </line-breakpoint>
       </breakpoints>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-      <option name="time" value="101" />
+      <option name="time" value="79" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://db-console:/ca7a5962/072ca1ce-f5e3-462a-b5bb-c6ef14792d8d/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="450">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/pandas/core/generic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="27525" max-vertical-offset="54600">
-          <caret line="1835" column="0" selection-start-line="1835" selection-start-column="0" selection-end-line="1835" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/pandas/io/parsers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="13200" max-vertical-offset="33645">
-          <caret line="880" column="0" selection-start-line="880" selection-start-column="0" selection-end-line="880" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/pandas/core/frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="71565" max-vertical-offset="72765">
-          <caret line="4771" column="0" selection-start-line="4771" selection-start-column="0" selection-end-line="4771" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/my_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1680">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1395">
-          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/my_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1680">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1395">
-          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/my_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1680">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1395">
-          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/my_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1680">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1380">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/my_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1680">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1380">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/my_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1680">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1380">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/fc2fdc70-c16a-489c-a4fe-cdd00b51f354.schema:star.public">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>fc2fdc70-c16a-489c-a4fe-cdd00b51f354.schema:star.public</OriginalElement>
-          <nodes>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series_attribute</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_membership</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_group</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.annotation</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series_annotation</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.search</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_user</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_event</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_permission</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.platform_attribute</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_annotation</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_attribute</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_cas</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.platform</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.6422823701536211" x="980.0" y="1030.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/my_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1380">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/my_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1275">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1380">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/default.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1260">
-          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3420">
+          <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+          <folding>
+            <marker date="1409905821000" expanded="true" signature="1206:1374" placeholder="INSERT INTO ..." />
+            <marker date="1409905821000" expanded="true" signature="1240:1369" placeholder="SELECT id, s..sample_view_fts..." />
+            <marker date="1409905821000" expanded="true" signature="2006:2310" placeholder="SELECT * fro..sample_attribute..." />
+            <marker date="1409905821000" expanded="true" signature="2986:3282" placeholder="SELECT disti..sample_attribute..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../gluon/globals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4410" max-vertical-offset="17625">
+          <caret line="294" column="0" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1410">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/my_db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
-          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1425">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="uml://DATABASE/fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_annotation">
+    <entry file="file://$PROJECT_DIR$/../../gluon/shell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3975" max-vertical-offset="7530">
+          <caret line="265" column="0" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="25980" max-vertical-offset="26085">
+          <caret line="1732" column="0" selection-start-line="1732" selection-start-column="0" selection-end-line="1733" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="415" max-vertical-offset="1380">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../gluon/shell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3975" max-vertical-offset="7530">
+          <caret line="265" column="0" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="25980" max-vertical-offset="26085">
+          <caret line="1732" column="0" selection-start-line="1732" selection-start-column="0" selection-end-line="1733" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="415" max-vertical-offset="1380">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../gluon/shell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3975" max-vertical-offset="7530">
+          <caret line="265" column="0" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="25980" max-vertical-offset="26085">
+          <caret line="1732" column="0" selection-start-line="1732" selection-start-column="0" selection-end-line="1733" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="415" max-vertical-offset="1380">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../gluon/shell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3975" max-vertical-offset="7530">
+          <caret line="265" column="0" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="25980" max-vertical-offset="26085">
+          <caret line="1732" column="0" selection-start-line="1732" selection-start-column="0" selection-end-line="1733" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="415" max-vertical-offset="1380">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../gluon/shell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3975" max-vertical-offset="7530">
+          <caret line="265" column="0" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="415" max-vertical-offset="1380">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="24517" max-vertical-offset="25110">
+          <caret line="1732" column="0" selection-start-line="1732" selection-start-column="0" selection-end-line="1733" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../gluon/shell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3523" max-vertical-offset="7275">
+          <caret line="265" column="0" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_cas">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
           <ID>DATABASE</ID>
-          <OriginalElement>fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_annotation</OriginalElement>
+          <OriginalElement>4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_cas</OriginalElement>
           <nodes>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_annotation</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.annotation</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_user</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series_annotation</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.45565217391304347" x="409.0" y="385.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.platform">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.platform</OriginalElement>
-          <nodes>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.platform_attribute</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_annotation</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.platform</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.annotation</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_user</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series_annotation</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.4669491525423729" x="544.0" y="551.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/pandas/io/parsers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="11853" max-vertical-offset="33330">
-          <caret line="820" column="0" selection-start-line="820" selection-start-column="0" selection-end-line="820" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/pandas/core/generic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="26583" max-vertical-offset="54210">
-          <caret line="1807" column="0" selection-start-line="1807" selection-start-column="0" selection-end-line="1807" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/pandas/core/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9903" max-vertical-offset="55185">
-          <caret line="686" column="0" selection-start-line="686" selection-start-column="0" selection-end-line="686" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/pandas/core/internals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="57272" max-vertical-offset="60270">
-          <caret line="3865" column="0" selection-start-line="3865" selection-start-column="0" selection-end-line="3865" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/fc2fdc70-c16a-489c-a4fe-cdd00b51f354">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>fc2fdc70-c16a-489c-a4fe-cdd00b51f354</OriginalElement>
-          <nodes>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_timezone_abbrevs</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_extension</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.user_mappings</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_user_indexes</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_amop</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_foreign_table</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_namespace</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_ts_dict</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.columns</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_timezone_names</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_all_tables</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_annotation</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_cas</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.view_table_usage</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.schemata</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_settings</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_sys_tables</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_ts_config_map</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_depend</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_opfamily</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_rewrite</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_replication</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_am</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_inherits</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.character_sets</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.constraint_column_usage</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.collations</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sql_sizing</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema._pg_user_mappings</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_views</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.information_schema_catalog_name</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_db_role_setting</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_user_mapping</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_default_acl</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_constraint</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_membership</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.domain_constraints</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_sys_tables</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_shadow</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_seclabels</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_user_tables</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_database</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.table_constraints</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.role_usage_grants</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_ts_parser</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.attributes</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_seclabel</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_aggregate</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_description</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_cast</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_all_tables</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.tables</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_range</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_collation</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_group</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_type</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_trigger</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_index</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.role_udt_grants</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_user</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_xact_user_tables</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_auth_members</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_sys_indexes</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_roles</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.udt_privileges</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema._pg_foreign_servers</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sql_packages</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.platform_attribute</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_available_extensions</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_conversion</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_class</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_operator</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_shdepend</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_attrdef</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.enabled_roles</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.triggered_update_columns</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.administrable_role_authorizations</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_ts_config</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.foreign_server_options</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_bgwriter</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.view_routine_usage</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.key_column_usage</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_shdescription</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.role_column_grants</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_database_conflicts</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_xact_sys_tables</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.user_mapping_options</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.annotation</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.column_domain_usage</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.check_constraint_routine_usage</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series_annotation</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.column_udt_usage</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.routines</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.parameters</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_all_sequences</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_permission</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_locks</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_foreign_data_wrapper</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.constraint_table_usage</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.triggers</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_matviews</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.table_privileges</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_activity</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series_attribute</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_available_extension_versions</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statistic</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.foreign_servers</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_enum</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sql_languages</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.role_table_grants</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.usage_privileges</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_sys_indexes</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_language</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.domains</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_group</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.foreign_tables</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_attribute</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.views</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_user_sequences</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_user</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.column_privileges</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.platform</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_indexes</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_database</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_attribute</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_proc</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_pltemplate</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_authid</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_ts_template</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_all_indexes</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_prepared_xacts</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.view_column_usage</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.user_defined_types</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.domain_udt_usage</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_prepared_statements</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_user_indexes</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.search</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.element_types</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_sys_sequences</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sql_parts</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.foreign_table_options</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_xact_all_tables</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_largeobject_metadata</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema._pg_foreign_tables</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sql_sizing_profiles</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_largeobject</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.collation_character_set_applicability</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_shseclabel</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_xact_user_functions</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.foreign_data_wrappers</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_event_trigger</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.routine_privileges</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_user_mappings</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.column_options</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema._pg_foreign_table_columns</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.applicable_roles</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_opclass</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.check_constraints</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stats</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sequences</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_cursors</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_statio_all_indexes</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_foreign_server</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.role_routine_grants</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_amproc</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.referential_constraints</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_event</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_tables</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_rules</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_tablespace</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sql_implementation_info</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_user_functions</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.data_type_privileges</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.foreign_data_wrapper_options</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.pg_catalog.pg_stat_user_tables</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema.sql_features</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.information_schema._pg_foreign_data_wrappers</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.11947206033596161" x="2745.0" y="2794.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/fc2fdc70-c16a-489c-a4fe-cdd00b51f354.schema:star.public">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>fc2fdc70-c16a-489c-a4fe-cdd00b51f354.schema:star.public</OriginalElement>
-          <nodes>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series_attribute</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_membership</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_group</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.annotation</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.search</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series_annotation</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_user</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.series</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_event</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_permission</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.platform_attribute</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_annotation</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.auth_cas</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.sample_attribute</node>
-            <node x="" y="">fc2fdc70-c16a-489c-a4fe-cdd00b51f354.table:star.public.platform</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.4313820602909953" x="1398.0" y="778.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/pandas/core/groupby.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="21934" max-vertical-offset="51510">
-          <caret line="1511" column="0" selection-start-line="1511" selection-start-column="0" selection-end-line="1511" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/pandas/tools/merge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="10894" max-vertical-offset="16140">
-          <caret line="767" column="0" selection-start-line="767" selection-start-column="0" selection-end-line="767" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/pandas/core/frame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="67492" max-vertical-offset="72765">
-          <caret line="4510" column="0" selection-start-line="4510" selection-start-column="0" selection-end-line="4510" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.annotation">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.annotation</OriginalElement>
-          <nodes>
-            <node x="579.0" y="1131.0">072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.search</node>
-            <node x="0.0" y="1131.0">072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.sample</node>
-            <node x="246.8888888888889" y="0.0">072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_user</node>
-            <node x="488.6055555555556" y="857.0">072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.sample_annotation</node>
-            <node x="732.0" y="1131.0">072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.platform</node>
-            <node x="468.0" y="299.0">072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_cas</node>
-            <node x="0.0" y="277.0">072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.annotation</node>
-            <node x="72.93611111111113" y="534.0">072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.series_annotation</node>
-            <node x="260.0" y="299.0">072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_event</node>
-            <node x="193.0" y="1131.0">072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.sample_attribute</node>
-            <node x="688.0" y="332.0">072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_membership</node>
-            <node x="1068.0" y="0.0">072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.platform_attribute</node>
-            <node x="386.0" y="1131.0">072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.series_attribute</node>
-            <node x="885.0" y="1131.0">072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.series</node>
-            <node x="797.3111111111111" y="55.0">072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_group</node>
-            <node x="855.0" y="310.0">072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_permission</node>
+            <node x="168.0" y="1318.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.sample_attribute</node>
+            <node x="1906.0" y="405.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_rating_aux</node>
+            <node x="1957.75" y="33.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_rating</node>
+            <node x="189.0" y="416.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_membership</node>
+            <node x="168.0" y="1149.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.sample</node>
+            <node x="983.0" y="0.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_user</node>
+            <node x="1242.0" y="383.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_cas</node>
+            <node x="0.0" y="1149.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.series_attribute</node>
+            <node x="1450.0" y="361.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_tag</node>
+            <node x="0.0" y="394.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_permission</node>
+            <node x="336.0" y="1149.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.platform_attribute</node>
+            <node x="973.0" y="350.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_comment</node>
+            <node x="1698.0" y="383.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_event</node>
+            <node x="685.0" y="339.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_attachment</node>
+            <node x="1490.0" y="761.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_link</node>
+            <node x="439.26365546218483" y="662.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_page_archive</node>
+            <node x="85.5" y="1024.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.series</node>
+            <node x="356.0" y="317.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_page</node>
+            <node x="290.75" y="1024.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.platform</node>
+            <node x="120.14075630252103" y="55.0">4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_group</node>
           </nodes>
           <notes />
           <edges>
-            <edge source="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_event" target="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_user">
-              <point x="0.0" y="-81.5" />
-              <point x="354.0" y="257.0" />
-              <point x="360.8888888888889" y="257.0" />
-              <point x="0.0" y="103.5" />
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_page_archive" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_group">
+              <point x="-123.0" y="-158.5" />
+              <point x="480.26365546218483" y="637.0" />
+              <point x="178.5" y="637.0" />
+              <point x="178.5" y="297.0" />
+              <point x="168.14075630252103" y="297.0" />
+              <point x="-16.0" y="48.5" />
             </edge>
-            <edge source="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_cas" target="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_user">
-              <point x="0.0" y="-81.5" />
-              <point x="562.0" y="257.0" />
-              <point x="386.22222222222223" y="257.0" />
-              <point x="25.333333333333314" y="103.5" />
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.sample_attribute" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.sample">
+              <point x="0.0" y="-59.5" />
+              <point x="0.0" y="59.5" />
             </edge>
-            <edge source="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_permission" target="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_group">
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_permission" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_group">
               <point x="0.0" y="-70.5" />
-              <point x="939.0" y="257.0" />
-              <point x="893.3111111111111" y="257.0" />
-              <point x="32.0" y="48.5" />
+              <point x="84.0" y="297.0" />
+              <point x="136.14075630252103" y="297.0" />
+              <point x="-48.0" y="48.5" />
             </edge>
-            <edge source="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.annotation" target="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_user">
-              <point x="-57.0" y="-103.5" />
-              <point x="57.0" y="227.0" />
-              <point x="259.5555555555556" y="227.0" />
-              <point x="-101.33333333333331" y="103.5" />
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_attachment" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_user">
+              <point x="-67.0" y="-125.5" />
+              <point x="752.0" y="277.0" />
+              <point x="1056.2857142857142" y="277.0" />
+              <point x="-40.71428571428578" y="103.5" />
             </edge>
-            <edge source="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.series_annotation" target="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_user">
-              <point x="0.0" y="-136.5" />
-              <point x="216.93611111111113" y="509.0" />
-              <point x="238.5" y="509.0" />
-              <point x="238.5" y="247.0" />
-              <point x="310.22222222222223" y="247.0" />
-              <point x="-50.666666666666686" y="103.5" />
-            </edge>
-            <edge source="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_membership" target="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_user">
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_membership" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_group">
               <point x="-36.75" y="-48.5" />
-              <point x="724.75" y="227.0" />
-              <point x="462.2222222222222" y="227.0" />
-              <point x="101.33333333333326" y="103.5" />
+              <point x="225.75" y="297.0" />
+              <point x="200.14075630252103" y="297.0" />
+              <point x="16.0" y="48.5" />
             </edge>
-            <edge source="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.sample_annotation" target="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_user">
-              <point x="0.0" y="-114.5" />
-              <point x="612.6055555555556" y="832.0" />
-              <point x="666.5" y="832.0" />
-              <point x="666.5" y="247.0" />
-              <point x="411.55555555555554" y="247.0" />
-              <point x="50.66666666666663" y="103.5" />
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_rating_aux" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_user">
+              <point x="-45.25" y="-59.5" />
+              <point x="1951.25" y="237.0" />
+              <point x="1202.8571428571427" y="237.0" />
+              <point x="105.85714285714266" y="103.5" />
             </edge>
-            <edge source="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.sample_annotation" target="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.series_annotation">
-              <point x="-82.66666666666674" y="-114.5" />
-              <point x="529.9388888888889" y="832.0" />
-              <point x="216.93611111111113" y="832.0" />
-              <point x="0.0" y="136.5" />
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.sample" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.platform">
+              <point x="37.0" y="-59.5" />
+              <point x="279.0" y="1124.0" />
+              <point x="317.75" y="1124.0" />
+              <point x="-27.0" y="37.5" />
             </edge>
-            <edge source="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_membership" target="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.auth_group">
-              <point x="36.75" y="-48.5" />
-              <point x="798.25" y="257.0" />
-              <point x="829.3111111111111" y="257.0" />
-              <point x="-32.0" y="48.5" />
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_event" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_user">
+              <point x="0.0" y="-81.5" />
+              <point x="1792.0" y="247.0" />
+              <point x="1186.5714285714284" y="247.0" />
+              <point x="89.57142857142844" y="103.5" />
             </edge>
-            <edge source="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.series_annotation" target="072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.annotation">
-              <point x="-96.0" y="-136.5" />
-              <point x="120.93611111111113" y="509.0" />
-              <point x="114.0" y="509.0" />
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_page" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_group">
+              <point x="-102.66666666666669" y="-147.5" />
+              <point x="407.33333333333326" y="227.0" />
+              <point x="232.14075630252103" y="227.0" />
+              <point x="48.0" y="48.5" />
+            </edge>
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_link" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_tag">
+              <point x="0.0" y="-59.5" />
               <point x="0.0" y="103.5" />
+            </edge>
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_comment" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_user">
+              <point x="-62.0" y="-114.5" />
+              <point x="1035.0" y="297.0" />
+              <point x="1088.857142857143" y="297.0" />
+              <point x="-8.14285714285711" y="103.5" />
+            </edge>
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.series_attribute" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.series">
+              <point x="0.0" y="-59.5" />
+              <point x="74.0" y="1124.0" />
+              <point x="112.5" y="1124.0" />
+              <point x="-27.0" y="37.5" />
+            </edge>
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_tag" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_user">
+              <point x="57.0" y="-103.5" />
+              <point x="1621.0" y="257.0" />
+              <point x="1170.2857142857142" y="257.0" />
+              <point x="73.28571428571422" y="103.5" />
+            </edge>
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_page_archive" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_page">
+              <point x="-41.0" y="-158.5" />
+              <point x="562.2636554621848" y="637.0" />
+              <point x="510.0" y="637.0" />
+              <point x="0.0" y="147.5" />
+            </edge>
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_membership" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_user">
+              <point x="36.75" y="-48.5" />
+              <point x="299.25" y="237.0" />
+              <point x="991.1428571428571" y="237.0" />
+              <point x="-105.85714285714289" y="103.5" />
+            </edge>
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_rating_aux" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_rating">
+              <point x="45.25" y="-59.5" />
+              <point x="0.0" y="70.5" />
+            </edge>
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.sample" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.series">
+              <point x="-37.0" y="-59.5" />
+              <point x="205.0" y="1124.0" />
+              <point x="166.5" y="1124.0" />
+              <point x="27.0" y="37.5" />
+            </edge>
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_cas" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_user">
+              <point x="0.0" y="-81.5" />
+              <point x="1336.0" y="277.0" />
+              <point x="1137.7142857142858" y="277.0" />
+              <point x="40.71428571428578" y="103.5" />
+            </edge>
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.platform_attribute" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.platform">
+              <point x="0.0" y="-59.5" />
+              <point x="410.5" y="1124.0" />
+              <point x="371.75" y="1124.0" />
+              <point x="27.0" y="37.5" />
+            </edge>
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_page_archive" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_user">
+              <point x="41.0" y="-158.5" />
+              <point x="644.2636554621848" y="637.0" />
+              <point x="674.5" y="637.0" />
+              <point x="674.5" y="267.0" />
+              <point x="1040.0" y="267.0" />
+              <point x="-57.0" y="103.5" />
+            </edge>
+            <edge source="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.plugin_wiki_page" target="4070435a-eb72-464a-95f6-8198cc3a22dc.table:star2.public.auth_user">
+              <point x="0.0" y="-147.5" />
+              <point x="510.0" y="247.0" />
+              <point x="1007.4285714285714" y="247.0" />
+              <point x="-89.57142857142856" y="103.5" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="609.0" y="625.0" />
-          <SelectedNodes>
-            <node>072ca1ce-f5e3-462a-b5bb-c6ef14792d8d.table:star.public.annotation</node>
-          </SelectedNodes>
+          <settings layout="Hierarchic Group" zoom="0.6491146318732526" x="360.0" y="333.0" />
+          <SelectedNodes />
           <Categories>
             <Category>Columns</Category>
             <Category>Key columns</Category>
@@ -1424,199 +835,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/subprocess.py">
+    <entry file="file://$PROJECT_DIR$/../../gluon/restricted.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7558" max-vertical-offset="24405">
-          <caret line="521" column="0" selection-start-line="521" selection-start-column="0" selection-end-line="521" selection-end-column="0" />
+        <state vertical-scroll-proportion="5.5594406" vertical-offset="0" max-vertical-offset="4935">
+          <caret line="221" column="13" selection-start-line="221" selection-start-column="13" selection-end-line="221" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/ca7a5962/ae54ce3c-97e8-4254-9178-104d16fb071b/star.public.series_attribute">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="195">
+    <entry file="file://$PROJECT_DIR$/../../gluon/custom_import.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33277312" vertical-offset="477" max-vertical-offset="3060">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2175">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/ca7a5962/ae54ce3c-97e8-4254-9178-104d16fb071b/star.public.series">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/appadmin.py">
+    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/pandas/core/frame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4477612" vertical-offset="0" max-vertical-offset="10095">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3324468" vertical-offset="2710" max-vertical-offset="72765">
+          <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/ca7a5962/ae54ce3c-97e8-4254-9178-104d16fb071b/star.public.sample_attribute">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/geo_pipeline/Gse.py">
+    <entry file="file://$USER_HOME$/Run/setup_db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="11550">
-          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
-          <folding />
+        <state vertical-scroll-proportion="0.10813492" vertical-offset="2051" max-vertical-offset="3705">
+          <caret line="145" column="57" selection-start-line="145" selection-start-column="57" selection-end-line="145" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../insertStarSamples.py">
+    <entry file="file://$PROJECT_DIR$/../../gluon/sqlhtml.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18843284" vertical-offset="724" max-vertical-offset="1290">
-          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/ca7a5962/072ca1ce-f5e3-462a-b5bb-c6ef14792d8d/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="450">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="1410">
-          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/my_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="521" max-vertical-offset="1350">
-          <caret line="84" column="1" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="26414" max-vertical-offset="49020">
+          <caret line="1804" column="13" selection-start-line="1804" selection-start-column="13" selection-end-line="1804" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../gluon/globals.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5121" max-vertical-offset="17205">
-          <caret line="384" column="0" selection-start-line="384" selection-start-column="0" selection-end-line="384" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3791" max-vertical-offset="17205">
+          <caret line="294" column="0" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://db-console:/ca7a5962/ae54ce3c-97e8-4254-9178-104d16fb071b/">
+    <entry file="file://$PROJECT_DIR$/models/db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0" vertical-offset="58" max-vertical-offset="1845">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1380">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/insertStarSamples.py">
+    <entry file="file://$PROJECT_DIR$/models/my_db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1860">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-          <folding>
-            <marker date="1408553343000" expanded="true" signature="-1:-1" placeholder="select count..pg_class..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../gluon/sqlhtml.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.884615" vertical-offset="15793" max-vertical-offset="49020">
-          <caret line="1091" column="0" selection-start-line="1091" selection-start-column="0" selection-end-line="1091" selection-end-column="0" />
-          <folding>
-            <marker date="1394962544000" expanded="true" signature="74816:74846" placeholder="select count..missing_value..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../gluon/dal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="138002" max-vertical-offset="170850">
-          <caret line="9242" column="8" selection-start-line="9242" selection-start-column="8" selection-end-line="9242" selection-end-column="8" />
-          <folding>
-            <marker date="1394962542000" expanded="true" signature="38008:38043" placeholder="CREATE TABLE..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="38234:38261" placeholder="CREATE TABLE..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="42285:42307" placeholder="ALTER TABLE missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="43328:43340" placeholder="ALTER TABLE missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="43498:43510" placeholder="ALTER TABLE missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="44316:44328" placeholder="ALTER TABLE missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="44396:44408" placeholder="ALTER TABLE missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="44494:44516" placeholder="ALTER TABLE missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="44611:44628" placeholder="UPDATE missi..." />
-            <marker date="1394962542000" expanded="true" signature="44862:44884" placeholder="ALTER TABLE missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="45000:45017" placeholder="UPDATE missi..." />
-            <marker date="1394962542000" expanded="true" signature="48529:48540" placeholder="DROP TABLE m..." />
-            <marker date="1394962542000" expanded="true" signature="49305:49335" placeholder="INSERT INTO ..." />
-            <marker date="1394962542000" expanded="true" signature="49480:49509" placeholder="INSERT INTO ..." />
-            <marker date="1394962542000" expanded="true" signature="59695:59709" placeholder="UPDATE missi..." />
-            <marker date="1394962542000" expanded="true" signature="60535:60547" placeholder="DELETE FROM ..." />
-            <marker date="1394962542000" expanded="true" signature="69592:69610" placeholder="SELECT missi..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="71904:71935" placeholder="SELECT count..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="72000:72021" placeholder="SELECT count..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="93151:93163" placeholder="DELETE FROM ..." />
-            <marker date="1394962542000" expanded="true" signature="93198:93241" placeholder="DELETE FROM ..." />
-            <marker date="1394962542000" expanded="true" signature="102310:102321" placeholder="DROP TABLE m..." />
-            <marker date="1394962542000" expanded="true" signature="102439:102470" placeholder="INSERT INTO ..." />
-            <marker date="1394962542000" expanded="true" signature="115878:115911" placeholder="DROP TABLE m..." />
-            <marker date="1394962542000" expanded="true" signature="121392:121406" placeholder="DROP TABLE m..." />
-            <marker date="1394962542000" expanded="true" signature="121787:121894" placeholder="SELECT missi..*..." />
-            <marker date="1394962542000" expanded="true" signature="121806:121884" placeholder="SELECT w_tmp..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="121841:121856" placeholder="SELECT missi..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="121991:122009" placeholder="SELECT missi..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="126309:126336" placeholder="SELECT missi..dual..." />
-            <marker date="1394962542000" expanded="true" signature="129889:129907" placeholder="SELECT missi..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="135910:135928" placeholder="SELECT missi..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="136462:136580" placeholder="SELECT missi..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="136481:136501" placeholder="SELECT missi..." />
-            <marker date="1394962542000" expanded="true" signature="136683:136701" placeholder="SELECT missi..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="137661:137679" placeholder="SELECT missi..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="140869:140887" placeholder="SELECT missi..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="147130:147144" placeholder="DROP TABLE m..." />
-            <marker date="1394962542000" expanded="true" signature="147430:147448" placeholder="SELECT missi..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="147554:147566" placeholder="DELETE FROM ..." />
-            <marker date="1394962542000" expanded="true" signature="150100:150138" placeholder="SELECT gen_i..rdb$database..." />
-            <marker date="1394962542000" expanded="true" signature="154017:154035" placeholder="SELECT missi..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="156803:156821" placeholder="SELECT missi..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="158701:158719" placeholder="SELECT missi..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="160207:160249" placeholder="SELECT DISTI..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="162953:162971" placeholder="SELECT missi..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="163114:163132" placeholder="DELETE FROM ..." />
-            <marker date="1394962542000" expanded="true" signature="165437:165455" placeholder="SELECT missi..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="171296:171314" placeholder="SELECT missi..missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="171606:171662" placeholder="ALTER TABLE missing_value..." />
-            <marker date="1394962542000" expanded="true" signature="173438:173465" placeholder="select missi..dual..." />
-            <marker date="1394962542000" expanded="true" signature="176095:176211" placeholder="CREATE TABLE..IF..." />
-            <marker date="1394962542000" expanded="true" signature="176302:176399" placeholder="CREATE TABLE..IF..." />
-            <marker date="1394962542000" expanded="true" signature="176590:176643" placeholder="SELECT conte..web2py_filesystem..." />
-            <marker date="1394962542000" expanded="true" signature="177619:177664" placeholder="DELETE FROM ..." />
-            <marker date="1394962542000" expanded="true" signature="177704:177766" placeholder="INSERT INTO ..." />
-            <marker date="1394962542000" expanded="true" signature="178099:178149" placeholder="SELECT path ..web2py_filesystem..." />
-            <marker date="1394962542000" expanded="true" signature="178946:178991" placeholder="DELETE FROM ..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="1875">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/default.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.032223415" vertical-offset="1245" max-vertical-offset="3405">
-          <caret line="85" column="43" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.3537736" vertical-offset="1320" max-vertical-offset="3480">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding>
-            <marker date="1408570112000" expanded="true" signature="1449:1604" placeholder="SELECT gse_n..sample_attribute_search..." />
+            <marker date="1409905821000" expanded="true" signature="1206:1374" placeholder="INSERT INTO ..." />
+            <marker date="1409905821000" expanded="true" signature="1240:1369" placeholder="SELECT id, s..sample_view_fts..." />
+            <marker date="1409905821000" expanded="true" signature="2006:2310" placeholder="SELECT * fro..sample_attribute..." />
+            <marker date="1409905821000" expanded="true" signature="2986:3282" placeholder="SELECT disti..sample_attribute..." />
           </folding>
         </state>
       </provider>

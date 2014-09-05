@@ -9,128 +9,149 @@
 # # - call exposes all registered services (none by default)
 # ########################################################################
 
+import time, glob, re
 
 
-#
-# def search_form(self, url):
-# form = FORM('',
-#
-# INPUT(_name='keywords', _value=request.get_vars.keywords,
-#                       _style='width:200px;',
-#                       _id='keywords'),
-#                 INPUT(_type='submit', _value=T('Search')),
-#                 INPUT(_type='submit', _value=T('Clear'),
-#                       _onclick="jQuery('#keywords').val('');"),
-#                 _method="GET", _action=url)
-#
-#     return form
+def search_form(self, url):
+    form = FORM(INPUT(_name='keywords',
+                      _value=request.get_vars.keywords,
+                      # _style='width:200px;',
+                      _id='keywords'),
+                INPUT(_name='filter', _type='checkbox', _value="on", _checked=request.get_vars.filter),
+                INPUT(_type='submit', _value=T('Search')),
+                INPUT(_type='submit', _value=T('Clear'),
+                      _onclick="jQuery('#keywords').val('');"),
+                _method="GET", _action=url)
+    return form
 
 
-import pandas as pd, re
+def setSampleFilter(fts_query):
+    Sample_Filter.truncate()
+    sqlQuery = """
+        INSERT INTO sample_filter
+        SELECT id, sample_id
+        FROM sample_view_fts
+        JOIN sample_view using (id)
+        WHERE to_tsquery('english', '%s') @@ doc
+    """ % fts_query
+    # print sqlQuery
+    start_time = time.time()
+    db.executesql(sqlQuery)
+    print "\t--- %s seconds --- to FTS sample_view" % (time.time() - start_time)
+    db.commit()
 
+def getSampleFieldsSerially(fts_query):
+    if not session.all_field_names:
+        session.all_field_names = sorted([row.attribute_name
+                                          for row in db().select(Sample_Attribute.attribute_name, distinct=True)])
 
-def test():
-    fields = [Field('gsm_name'), Field('gse_name')]
-    temp_db = DAL('sqlite:memory').define_table('mytable', *fields)._db
-    temp_db.mytable.truncate()
-    temp_db.mytable.bulk_insert([
-        dict(gsm_name="aaa", gse_name="bbb"),
-        dict(gsm_name="ccc", gse_name="ddd"),
-    ])
-    query = temp_db.mytable.id > 0
-    return dict(grid=SQLFORM.grid(query))
+    fts_query = "|" \
+        .join(set(fts_query \
+                  .replace("&", " ") \
+                  .replace("|", " ") \
+                  .split()))
 
-
-def getSearchDf(words):
     sql = """
-            SELECT gse_name, gpl_name, gsm_name, name, value
-            from sample_attribute_search
-            WHERE
-              doc @@ to_tsquery('simple', '%s');"""
+        SELECT *
+        from sample_attribute
+        join sample_filter using (sample_id)
+        WHERE
+          attribute_name = '%s'
+          AND
+          to_tsquery('english', '%s') @@
+          (to_tsvector('english', attribute_name) ||
+          to_tsvector('english', attribute_value))
+        LIMIT 1;"""
+    start_time = time.time()
+    # print sql % (session.all_field_names[0], fts_query)
+    field_names = [field_name for field_name in session.all_field_names
+                   if db.executesql(sql % (field_name, fts_query))]
 
-    wordsDf = pd.DataFrame()
-    for word in words:
-        sqlQuery = sql % word
-        rows = db.executesql(sqlQuery, as_dict=True)
-        df = pd.DataFrame.from_records(rows, columns=["gse_name gpl_name gsm_name name value".split()])
-        df['word'] = word
-        df.to_csv("%s.csv" % word)
-        wordsDf = pd.concat([df, wordsDf])
-    return wordsDf
+    print "\t--- %s seconds --- to filter FTS sample_attribute" % (time.time() - start_time)
+    return field_names
 
 
-def getQuery(keywords):
-    p = re.compile('[\W_]+', re.UNICODE)
-    keywords = set(keywords.split() if keywords else [])
-    print "querying db"
-    df = getSearchDf(keywords)
-    query = Sample_Attribute.id < 0
-    if not df.empty:
-        print "unstacking %s records" % len(df.index)
-        df['name'] = df['name'] \
-            .astype(str) \
-            .apply(lambda x: p.sub("_", x)) \
-            .str.lower()
-        unstacked = df.groupby('gsm_name').filter(lambda row: len(pd.Series.unique(row['word'])) == len(keywords)) \
-            .drop_duplicates(subset=['gsm_name', 'name']) \
-            .set_index(['gsm_name', 'gse_name', 'gpl_name', 'name'])[['value']] \
-            .unstack() \
-            .reset_index()
-        unstacked.columns = list(unstacked.columns.get_level_values(0)[:3]) \
-                            + list(unstacked.columns.get_level_values(1)[3:])
-                            # + ["col%s"%i for i in range(len(unstacked.columns[3:]))]
-        # unstacked = unstacked[list(set(unstacked.columns))]
-        unstacked = unstacked.T.drop_duplicates().T
-        colOrder = sorted(unstacked.columns.tolist(), key = lambda x: len(unstacked[x].dropna()), reverse=True)
-        rowOrder = sorted(unstacked.T.columns.tolist(), key = lambda x: len(unstacked.T[x].dropna()), reverse=True)
-        unstacked = unstacked.T[rowOrder].T[colOrder]
-        unstacked = unstacked.fillna("")
-        unstacked.to_csv('unstacked.csv')
-        recs = unstacked.T.to_dict().values()
+def getSampleFields(fts_query):
+    fts_query = "|" \
+        .join(set(fts_query \
+                  .replace("&", " ") \
+                  .replace("|", " ") \
+                  .split()))
 
-        print "inserting %s records" % len(recs)
-        levels = unstacked.columns.get_level_values(1)
-        # Fields to extract from the summary
-        fields = [Field('gsm_name'), Field('gse_name')] \
-                 + [Field('%s' % level) for level in levels]
+    filename = "%s.fields.txt"%fts_query
+    start_time = time.time()
+    if not glob.glob(filename):
+        sqlQuery = """
+        SELECT distinct attribute_name
+        from sample_attribute
+        join sample_filter using (sample_id)
+        WHERE
+          to_tsquery('english', '%s') @@
+          (to_tsvector('english', attribute_name) ||
+          to_tsvector('english', attribute_value))
+        ORDER BY attribute_name;""" % fts_query
+        field_names = [row[0] for row in db.executesql(sqlQuery)]
+        open(filename, "w").write("\n".join(field_names))
+    field_names = open(filename).read().split()
+    print "\t--- %s seconds --- to FTS sample_attribute" % (time.time() - start_time)
+    return field_names
 
-        temp_db = DAL('sqlite:memory').define_table('mytable', *fields)._db
-        temp_db.mytable.truncate()
-        temp_db.mytable.bulk_insert(recs)
-        query = temp_db.mytable.id > 0
-        print "done"
+
+def searchable(sfields=None, fts_query=""):
+    if not fts_query:
+        return Sample_View.id > 0
+    query = Sample_View.id == Sample_Filter.id
+    # query = Sample_View.id.belongs(session.sample_ids)
     return query
 
+def get_fts_query(search_text):
+    fts_query = re.sub(r'\s+',
+                       r' ',
+                       search_text)
 
-QUERY = None
+    fts_query = re.sub(r'\s?\|\s? ',
+                       r'|',
+                       fts_query)
 
-
-def searchable(sfields=None, keywords=""):
-    return QUERY
-
+    fts_query = re.sub(r' ',
+                       r'&',
+                       fts_query)
+    return fts_query
 
 def search():
-    """
-    example action using the internationalization operator T and flash
-    rendered by views/default/index.html or views/generic.html
+    print "***", request.vars.keywords, "***"
+    start_time = time.time()
+    fts_query = get_fts_query(request.vars.keywords)
+    flash = False
+    if fts_query <> session.fts_query:
+        setSampleFilter(fts_query)
+        session.fts_query = fts_query
+        session.field_names = None
+        flash = True
 
-    if you need a simple wiki simply replace the two lines below with:
-    return auth.wiki()
-    """
-    # response.flash = T("Welcome to web2py!")
-    # return dict(message=T('Hello World'))
+    query = searchable(fts_query=fts_query)
 
-    keywords = request.get_vars.keywords
-    QUERY = getQuery(keywords)
-
-    dashboard = SQLFORM.grid(query=QUERY,
+    fields = None
+    if request.vars.filter:
+        session.field_names = session.field_names or getSampleFields(fts_query)
+        fields = [Sample_View[field_name] for field_name in session.field_names]
+    # fields = sorted(set(Sample_View[field]
+    # for field_list in [row.attribute_names
+    # for row in db().select(Sample_Filter.attribute_names, distinct=True)]
+    # for field in field_list))    fields = None
+    dashboard = SQLFORM.grid(query=query,
                              # deletable=False,
                              # editable=False,
                              # create=False,
+                             search_widget=search_form,
                              searchable=searchable,
-                             # field_id = 'mytable.id'
-    )
-    return (dict(dashboard=dashboard))
+                             fields=fields,
+                             buttons_placement='left')
+    if flash:
+        response.flash = T("Found %s samples in %.2f seconds" % (db(query).count(), time.time() - start_time))
+
+    return dict(dashboard=dashboard)
+    # return response.render(d)
 
 
 def index():
@@ -141,29 +162,13 @@ def index():
     if you need a simple wiki simply replace the two lines below with:
     return auth.wiki()
     """
-    # response.flash = T("Welcome to web2py!")
-    # return dict(message=T('Hello World'))
-
-    grid = SQLFORM.grid(Sample_Attribute.id < 0)
-    return dict(grid=grid)
-
-
-@request.restful()
-def api():
-    response.view = 'generic.' + request.extension
-
-    def GET(*args, **vars):
-        patterns = 'auto'
-        parser = db.parse_as_rest(patterns, args, vars)
-        if parser.status == 200:
-            return dict(content=parser.response)
-        else:
-            raise HTTP(parser.status, parser.error)
-
-    def POST(table_name, **vars):
-        return db[table_name].validate_and_insert(**vars)
-
-    return locals()
+    query = Sample_View
+    Sample_View.series_id.requires = \
+        Sample_View.platform_id.requires = \
+        Sample_View.sample_id.requires = None  # Speed
+    return dict(grid=SQLFORM.grid(query,
+                                  editable=False,
+                                  deletable=False))
 
 
 def user():

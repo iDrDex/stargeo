@@ -1,4 +1,4 @@
-timestamp: 2014-08-15T13:39:26.684040
+timestamp: 2014-08-29T20:41:55.638795
 CREATE TABLE auth_user(
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(128),
@@ -10,21 +10,21 @@ CREATE TABLE auth_user(
     registration_id VARCHAR(512)
 );
 success!
-timestamp: 2014-08-15T13:39:26.694716
+timestamp: 2014-08-29T20:41:55.648562
 CREATE TABLE auth_group(
     id SERIAL PRIMARY KEY,
     role VARCHAR(512),
     description TEXT
 );
 success!
-timestamp: 2014-08-15T13:39:26.698965
+timestamp: 2014-08-29T20:41:55.654532
 CREATE TABLE auth_membership(
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
     group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE
 );
 success!
-timestamp: 2014-08-15T13:39:26.704321
+timestamp: 2014-08-29T20:41:55.663903
 CREATE TABLE auth_permission(
     id SERIAL PRIMARY KEY,
     group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE,
@@ -33,7 +33,7 @@ CREATE TABLE auth_permission(
     record_id INTEGER
 );
 success!
-timestamp: 2014-08-15T13:39:26.709066
+timestamp: 2014-08-29T20:41:55.673783
 CREATE TABLE auth_event(
     id SERIAL PRIMARY KEY,
     time_stamp TIMESTAMP,
@@ -43,7 +43,7 @@ CREATE TABLE auth_event(
     description TEXT
 );
 success!
-timestamp: 2014-08-15T13:39:26.713664
+timestamp: 2014-08-29T20:41:55.683217
 CREATE TABLE auth_cas(
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
@@ -53,93 +53,387 @@ CREATE TABLE auth_cas(
     renew CHAR(1)
 );
 success!
-timestamp: 2014-08-15T13:39:26.720537
+timestamp: 2014-08-29T20:41:55.696159
 CREATE TABLE series(
     id SERIAL PRIMARY KEY,
-    gse_name VARCHAR(512)
+    gse_name TEXT
 );
 success!
-timestamp: 2014-08-15T13:39:26.725643
+timestamp: 2014-08-29T20:41:55.703837
 CREATE TABLE series_attribute(
     id SERIAL PRIMARY KEY,
     series_id INTEGER REFERENCES series (id) ON DELETE CASCADE,
-    name VARCHAR(512),
-    value TEXT
+    attribute_name TEXT,
+    attribute_value TEXT
 );
 success!
-timestamp: 2014-08-15T13:39:26.729893
+timestamp: 2014-08-29T20:41:55.710866
 CREATE TABLE platform(
     id SERIAL PRIMARY KEY,
-    gpl_name VARCHAR(512)
+    gpl_name TEXT
 );
 success!
-timestamp: 2014-08-15T13:39:26.734231
+timestamp: 2014-08-29T20:41:55.718162
 CREATE TABLE platform_attribute(
     id SERIAL PRIMARY KEY,
     platform_id INTEGER REFERENCES platform (id) ON DELETE CASCADE,
-    name VARCHAR(512),
-    value TEXT
+    attribute_name TEXT,
+    attribute_value TEXT
 );
 success!
-timestamp: 2014-08-15T13:39:26.740700
+timestamp: 2014-08-29T20:41:55.727784
 CREATE TABLE sample(
     id SERIAL PRIMARY KEY,
     series_id INTEGER REFERENCES series (id) ON DELETE CASCADE,
     platform_id INTEGER REFERENCES platform (id) ON DELETE CASCADE,
-    gsm_name VARCHAR(512)
+    gsm_name TEXT
 );
 success!
-timestamp: 2014-08-15T13:39:26.747771
+timestamp: 2014-08-29T20:41:55.737226
 CREATE TABLE sample_attribute(
     id SERIAL PRIMARY KEY,
     sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
-    name VARCHAR(256),
-    value TEXT
+    attribute_name VARCHAR(256),
+    attribute_value TEXT
 );
 success!
-timestamp: 2014-08-15T13:39:26.754128
-CREATE TABLE annotation(
+timestamp: 2014-09-02T23:10:25.586737
+CREATE TABLE sample_filter(
     id SERIAL PRIMARY KEY,
-    name VARCHAR(512) UNIQUE,
-    description VARCHAR(512),
-    is_active CHAR(1),
-    created_on TIMESTAMP,
-    created_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
-    modified_on TIMESTAMP,
-    modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
-);
-success!
-timestamp: 2014-08-15T13:39:26.762847
-CREATE TABLE series_annotation(
-    id SERIAL PRIMARY KEY,
-    series_id INTEGER REFERENCES series (id) ON DELETE CASCADE,
-    platform_id INTEGER REFERENCES platform (id) ON DELETE CASCADE,
-    annotation_id INTEGER REFERENCES annotation (id) ON DELETE CASCADE,
-    col VARCHAR(512),
-    regex VARCHAR(512),
-    is_active CHAR(1),
-    created_on TIMESTAMP,
-    created_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
-    modified_on TIMESTAMP,
-    modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
-);
-success!
-timestamp: 2014-08-15T13:39:26.773278
-CREATE TABLE sample_annotation(
-    id SERIAL PRIMARY KEY,
-    series_annotation_id INTEGER REFERENCES series_annotation (id) ON DELETE CASCADE,
     sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
-    feature VARCHAR(512),
-    is_active CHAR(1),
-    created_on TIMESTAMP,
-    created_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
-    modified_on TIMESTAMP,
-    modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
+    attribute_name TEXT
 );
 success!
-timestamp: 2014-08-15T13:39:26.781922
-CREATE TABLE search(
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+TRUNCATE TABLE sample_filter ;
+timestamp: 2014-09-03T00:20:27.955601
+CREATE TABLE sample_filter(
     id SERIAL PRIMARY KEY,
-    query VARCHAR(512)
+    sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
+    attribute_name TEXT
 );
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+timestamp: 2014-09-03T00:34:06.302345
+ALTER TABLE sample_filter ADD attribute_names TEXT;
+timestamp: 2014-09-03T00:34:06.310952
+ALTER TABLE sample_filter DROP COLUMN attribute_name;
+success!
+timestamp: 2014-09-03T00:35:10.670849
+CREATE TABLE sample_filter(
+    id SERIAL PRIMARY KEY,
+    sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
+    attribute_names TEXT
+);
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+timestamp: 2014-09-03T09:06:51.790034
+CREATE TABLE sample_filter(
+    id SERIAL PRIMARY KEY,
+    sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
+    attribute_names TEXT
+);
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+timestamp: 2014-09-04T12:17:08.441983
+CREATE TABLE sample_filter(
+    id SERIAL PRIMARY KEY,
+    sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE
+);
+timestamp: 2014-09-04T12:17:43.530252
+CREATE TABLE sample_filter(
+    id SERIAL PRIMARY KEY,
+    sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE
+);
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+TRUNCATE TABLE sample_filter ;
+success!
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
 success!
