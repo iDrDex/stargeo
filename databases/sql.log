@@ -437,3 +437,265 @@ TRUNCATE TABLE sample_filter ;
 success!
 TRUNCATE TABLE sample_filter ;
 success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+timestamp: 2014-09-08T11:06:34.884913
+CREATE TABLE sample_signature(
+    id SERIAL PRIMARY KEY,
+    sample_source_name_ch2 TEXT,
+    sample_contact_country TEXT,
+    sample_contact_name TEXT,
+    sample_organism_ch2 TEXT,
+    sample_contact_email TEXT,
+    sample_contact_city TEXT,
+    sample_molecule_ch2 TEXT,
+    sample_treatment_protocol_ch1 TEXT,
+    sample_submission_date TEXT,
+    sample_contact_department TEXT,
+    sample_extract_protocol_ch1 TEXT,
+    sample_contact_phone TEXT,
+    sample_organism_ch1 TEXT,
+    sample_description TEXT,
+    sample_contact_web_link TEXT,
+    sample_supplementary_file_5 TEXT,
+    sample_geo_accession TEXT,
+    sample_library_strategy TEXT,
+    sample_contact_fax TEXT,
+    sample_taxid_ch2 TEXT,
+    sample_supplementary_file TEXT,
+    sample_molecule_ch1 TEXT,
+    sample_instrument_model TEXT,
+    sample_contact_state TEXT,
+    sample_channel_count TEXT,
+    sample_supplementary_file_1 TEXT,
+    sample_biomaterial_provider_ch1 TEXT,
+    sample_growth_protocol_ch2 TEXT,
+    sample_contact_address TEXT,
+    sample_extract_protocol_ch2 TEXT,
+    sample_type TEXT,
+    sample_data_row_count TEXT,
+    sample_label_ch2 TEXT,
+    sample_contact_zip_postal_code TEXT,
+    sample_characteristics_ch1 TEXT,
+    sample_library_source TEXT,
+    sample_contact_laboratory TEXT,
+    sample_treatment_protocol_ch2 TEXT,
+    sample_platform_id TEXT,
+    sample_label_protocol_ch2 TEXT,
+    sample_supplementary_file_2 TEXT,
+    sample_data_processing TEXT,
+    sample_growth_protocol_ch1 TEXT,
+    sample_supplementary_file_4 TEXT,
+    sample_taxid_ch1 TEXT,
+    sample_last_update_date TEXT,
+    sample_scan_protocol TEXT,
+    sample_library_selection TEXT,
+    sample_supplementary_file_3 TEXT,
+    sample_source_name_ch1 TEXT,
+    sample_hyb_protocol TEXT,
+    sample_label_protocol_ch1 TEXT,
+    sample_label_ch1 TEXT,
+    sample_biomaterial_provider_ch2 TEXT,
+    sample_contact_institute TEXT,
+    sample_relation TEXT,
+    sample_status TEXT,
+    sample_characteristics_ch2 TEXT
+);
+success!
+timestamp: 2014-09-08T11:12:35.751714
+CREATE TABLE series_signature(
+    id SERIAL PRIMARY KEY,
+    series_citation TEXT,
+    series_contact_address TEXT,
+    series_contact_city TEXT,
+    series_contact_country TEXT,
+    series_contact_department TEXT,
+    series_contact_email TEXT,
+    series_contact_fax TEXT,
+    series_contact_institute TEXT,
+    series_contact_laboratory TEXT,
+    series_contact_name TEXT,
+    series_contact_phone TEXT,
+    series_contact_state TEXT,
+    series_contact_web_link TEXT,
+    series_contact_zip_postal_code TEXT,
+    series_contributor TEXT,
+    series_geo_accession TEXT,
+    series_last_update_date TEXT,
+    series_overall_design TEXT,
+    series_platform_id TEXT,
+    series_platform_taxid TEXT,
+    series_pubmed_id TEXT,
+    series_relation TEXT,
+    series_sample_id TEXT,
+    series_sample_taxid TEXT,
+    series_status TEXT,
+    series_submission_date TEXT,
+    series_summary TEXT,
+    series_supplementary_file TEXT,
+    series_type TEXT,
+    series_web_link TEXT
+);
+success!
+timestamp: 2014-09-08T11:12:35.764165
+CREATE TABLE series_filter(
+    id SERIAL PRIMARY KEY,
+    series_id INTEGER REFERENCES series (id) ON DELETE CASCADE
+);
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+timestamp: 2014-09-09T09:03:51.605189
+CREATE TABLE series_filter(
+    id SERIAL PRIMARY KEY
+);
+success!
+timestamp: 2014-09-09T09:03:51.847010
+CREATE TABLE sample_filter(
+    id SERIAL PRIMARY KEY
+);
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
