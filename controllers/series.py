@@ -28,10 +28,11 @@ def setFilter(series_fts_query):
     print "\t--- %s seconds --- to FTS series_view" % (time.time() - start_time)
     db.commit()
 
+
 # def getSeriesFieldsSerially(series_fts_query):
-#     if not session.all_series_field_names:
-#         session.all_series_field_names = sorted([row.attribute_name
-#                                           for row in db().select(Series_Attribute.attribute_name, distinct=True)])
+# if not session.all_series_field_names:
+# session.all_series_field_names = sorted([row.attribute_name
+# for row in db().select(Series_Attribute.attribute_name, distinct=True)])
 #
 #     series_fts_query = "|" \
 #         .join(set(series_fts_query \
@@ -66,7 +67,7 @@ def getFields(series_fts_query):
                   .replace("|", " ") \
                   .split()))
 
-    filename = "%s.fields.txt"%series_fts_query
+    filename = "%s.fields.txt" % series_fts_query
     start_time = time.time()
     if not glob.glob(filename):
         sqlQuery = """
@@ -90,27 +91,26 @@ def searchable(sfields=None, series_fts_query=""):
         return Series_View.id > 0
     return Series_View.id == Series_Filter.id
 
+
 def get_series_fts_query(search_text):
     search_text = search_text or ""
     series_fts_query = re.sub(r'\s+',
-                       r' ',
-                       search_text)
+                              r' ',
+                              search_text)
 
     series_fts_query = re.sub(r'\s?\|\s? ',
-                       r'|',
-                       series_fts_query)
+                              r'|',
+                              series_fts_query)
 
     series_fts_query = re.sub(r' ',
-                       r'&',
-                       series_fts_query)
+                              r'&',
+                              series_fts_query)
     return series_fts_query
+
 
 def index():
     # return dict(grid=SQLFORM.grid(Series_View.id > 0, search_widget=None))
-    # return dict(grid=SQLFORM.grid(Series_View,left=Series_Filter.on(Series_View.id == Series_Filter.id), search_widget=None))
-
-
-    print "***", request.vars.keywords, "***"
+    # return dict(grid=SQLFORM.grid(Series_View,left=Series_Filter.on(Series_View.id == Series_Filter.id), search_widget=None))    print "***", request.vars.keywords, "***"
     start_time = time.time()
     series_fts_query = get_series_fts_query(request.vars.keywords)
     flash = False
@@ -138,7 +138,15 @@ def index():
                              search_widget=search_form,
                              searchable=searchable,
                              fields=fields,
-                             buttons_placement='left')
+                             buttons_placement='left',
+                             links=[lambda row: A(BUTTON('Tag'), _href=URL("tag", "index",
+                                                                                # args=row.series_view.series_id,
+                                                                                vars=dict(
+                                                                                    series_id=row.series_view.series_id
+                                                                                    if 'series_view' in row
+                                                                                    else row.series_id
+                                                                                )))]
+    )
     if flash:
         response.flash = T("Found %s series in %.2f seconds" % (db(query).count(), time.time() - start_time))
 

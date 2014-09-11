@@ -166,12 +166,14 @@ def getSeriesCrossTab():
                                   orderby=Series_Attribute.attribute_name,
                                   distinct=True)
     print "creating view"
+    sql = 'CREATE SEQUENCE series_attribute_sequence;'
+    print sql
+    db.executesql(sql)
     attributesSql = "," \
         .join(["""string_agg(CASE attribute_name WHEN '%s' THEN attribute_value END, '|||') as %s \n""" \
                % (row['attribute_name'], row['attribute_name'])
                for row in attribute_names])
-    sql = """CREATE SEQUENCE series_attribute_sequence;
-             CREATE MATERIALIZED VIEW series_view AS
+    sql = """CREATE MATERIALIZED VIEW series_view AS
              SELECT NEXTVAL('series_attribute_sequence') as id, series_id, """ \
           + attributesSql \
           + """ FROM series_attribute

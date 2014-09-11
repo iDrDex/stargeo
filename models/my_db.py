@@ -20,9 +20,20 @@ session.all_series_field_names = session.all_series_field_names or [row.attribut
                                                             db().select(Series_Attribute.attribute_name,
                                                                         distinct=True,
                                                                         orderby=Series_Attribute.attribute_name)]
+def listed(text):
+    return text or ""
+    # if text:
+    #     fields = text.split("|||")
+    #     if len(fields) > 1:
+    #         text = UL(*[LI(field)
+    #                   for field in fields])
+    # else: text = ""
+    # return text
+
 Series_View = db.define_table('series_view',
                               Field('series_id', 'reference series'),
-                              *[Field(field, 'text')
+                              *[Field(field, 'text',
+                                      represent = lambda value,row: listed(value))
                                 for field in session.all_series_field_names],
                               migrate=False)
 
@@ -52,7 +63,7 @@ Sample = db.define_table('sample',
 )
 
 Sample_Attribute = db.define_table('sample_attribute',
-                                   Field('sample_id', 'reference sample'),
+                                   Field('sample_id', 'reference sample', requires=None),
                                    Field('attribute_name', 'string', 256),
                                    Field('attribute_value', 'text', 'text'),
                                    format='%(attribute_name)s_%(attribute_value)s',
@@ -69,9 +80,38 @@ Sample_View = db.define_table('sample_view',
                               Field('series_id', 'reference series'),
                               Field('platform_id', 'reference platform'),
                               Field('sample_id', 'reference sample'),
-                              *[Field(field, 'text')
+                              *[Field(field, 'text',
+                                      represent = lambda value,row:listed(value))
                                 for field in session.all_sample_field_names],
                               migrate=False)
 
 Sample_Filter = db.define_table('sample_filter',
                                 migrate='sample_filter.table')
+
+
+
+Tag = db.define_table('tag',
+                             Field('tag_name', unique=True),
+                             Field('description'),
+                             format='%(tag_name)s',
+                             migrate='tag.table'
+)
+
+Series_Tag = db.define_table('series_tag',
+                                   Field('series_id', 'reference series'),
+                                   Field('platform_id', 'reference platform'),
+                                   Field('tag_id', 'reference tag'),
+                                   Field('header'),
+                                   Field('regex', requires=IS_NOT_EMPTY()),
+                                   Field('show_invariant', 'boolean'),
+                                   format='%(series.name)s_%(platform.name)s',
+                                   migrate="series_tag.table"
+)
+
+# Sample_Tag = db.define_table('sample_tag',
+#                                     Field('series_tag_id', 'reference series_tag'),
+#                                    Field('sample_id', 'reference sample'),
+#                                     Field('tag_value'),
+#                                     format='%(series_tag)s',
+#                                     migrate="sample_tag.table"
+# )

@@ -31,8 +31,8 @@ def setFilter(sample_fts_query):
 
 # def getSampleFieldsSerially(sample_fts_query):
 # if not session.all_sample_field_names:
-#         session.all_sample_field_names = sorted([row.attribute_name
-#                                           for row in db().select(Sample_Attribute.attribute_name, distinct=True)])
+# session.all_sample_field_names = sorted([row.attribute_name
+# for row in db().select(Sample_Attribute.attribute_name, distinct=True)])
 #
 #     sample_fts_query = "|" \
 #         .join(set(sample_fts_query \
@@ -137,7 +137,15 @@ def index():
                              search_widget=search_form,
                              searchable=searchable,
                              fields=fields,
-                             buttons_placement='left')
+                             buttons_placement='left',
+                             links=[lambda row: A(BUTTON('Tag'), _href=URL("tag", "index",
+                                                                                # args=row.series_view.series_id,
+                                                                                vars=dict(
+                                                                                    series_id=row.sample_view.series_id
+                                                                                    if 'sample_view' in row
+                                                                                    else row.series_id
+                                                                                )))]
+    )
     if flash:
         response.flash = T("Found %s samples in %.2f seconds" % (db(query).count(), time.time() - start_time))
 

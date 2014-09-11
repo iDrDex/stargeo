@@ -2,20 +2,289 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb5f306f-932a-4a9c-b1cd-9bc04b97cbde" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/sample.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/databases/sample_filter.table" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/series.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/databases/series_filter.table" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/setup_db.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/markitup/images/bg-container.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/markitup/images/bg-editor-bbcode.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/markitup/images/bg-editor-dotclear.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/markitup/images/bg-editor-html.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/markitup/images/bg-editor-json.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/markitup/images/bg-editor-markdown.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/markitup/images/bg-editor-textile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/markitup/images/bg-editor-wiki.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/markitup/images/bg-editor-xml.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/markitup/images/bg-editor.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/default/images/bold.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markdown/images/bold.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markmin/images/bold.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/default/images/clean.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markdown/images/code.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markmin/images/code.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/rating/delete.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/images/eldirtree.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/images/elrte-custom-toolbar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/images/elrte-toolbar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/images/elrte-toolbar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markdown/images/h1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markmin/images/h1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markdown/images/h2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markmin/images/h2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markdown/images/h3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markmin/images/h3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markdown/images/h4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markmin/images/h4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markdown/images/h5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markmin/images/h5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markdown/images/h6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markmin/images/h6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/markitup/images/handle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/simple/images/handle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/default/images/image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/default/images/italic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markdown/images/italic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markmin/images/italic.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/default/images/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markdown/images/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markmin/images/link.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markdown/images/list-bullet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markmin/images/list-bullet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markdown/images/list-numeric.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markmin/images/list-numeric.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/images/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/images/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/mediaplayer.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/markitup/images/menu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/simple/images/menu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/default/images/picture.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markdown/images/picture.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markmin/images/picture.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/default/images/preview.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markdown/images/preview.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markmin/images/preview.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markdown/images/quotes.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markmin/images/quotes.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/rating/star-left.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/rating/star-right.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/rating/star.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/default/images/stroke.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/markitup/images/submenu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/simple/images/submenu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/images/swf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_flat_0_aaaaaa_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_flat_15_cd0a0a_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_flat_30_cccccc_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_flat_50_5c5c5c_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_flat_55_fbec88_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_flat_75_ffffff_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_flat_75_ffffff_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_glass_20_555555_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_glass_40_0078a3_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_glass_40_ffc73d_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_glass_75_d0e5f5_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_75_dadada_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_75_dadada_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_glass_85_dfeffc_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_95_fef1ec_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_glass_95_fef1ec_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_95_fef1ec_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_gloss-wave_25_333333_500x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-hard_70_000000_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-soft_100_deedf7_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_inset-soft_25_000000_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_inset-soft_30_f58400_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_217bc0_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_222222_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_222222_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_222222_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_2694e8_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_2e83ff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_2e83ff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_2e83ff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_2e83ff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_3d80b3_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_454545_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_454545_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_469bdd_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_4b8e0b_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_6da8d5_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_72a7cf_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_888888_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_888888_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_a83300_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_cccccc_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_cd0a0a_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_cd0a0a_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_cd0a0a_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_d8e7f3_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_f9bd01_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_ffffff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_ffffff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/Changelog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/anchor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/multiselect/apply_web2py.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/blockquote.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/copy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/css.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/div.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/docstructure.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.DOM.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.filter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.history.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.options.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.selection.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.w3cRange.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elcolorpicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elcommon.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/eldialogform.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/eldialogform.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/elfinder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/eli18n.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elpaddinginput.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elreset.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/css/elrte-inner.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/css/elrte-inner.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/css/elrte.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/i18n/elrte.de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/i18n/elrte.de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/css/elrte.full.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/elrte.full.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/elrte.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/elrte.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/i18n/elrte.ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/i18n/elrte.ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte.src.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/i18n/elrte.ua.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/i18n/elrte.ua.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elselect.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/flash.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/fontname.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/fontsize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/forecolor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/formatblock.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/fullscreen.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-bg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-bg1251.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-cat.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-cn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-dk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-he.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-is.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-no.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-pt-br.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-sp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-sv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/i18n/grid.locale-ua.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/horizontalrule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/image.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/indent.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/tag/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/jquery-1.3.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/jquery-ui-1.7.2.custom.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/jquery-ui-1.8.1.custom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/jquery-ui-1.8.5.custom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/jquery-ui-1.8.5.custom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/jquery-ui-1.8.5.custom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/js/jquery-ui-1.8.5.custom.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/jquery-ui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/slideshow/jquery.cycle.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elborderselect.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elcolorpicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elpaddinginput.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elselect.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/jquery.jqGrid.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/jquery.markitup.pack.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/multiselect/jquery.multiselect.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/multiselect/jquery.multiselect.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/rating/jquery.rating.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/rating/jquery.rating.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/justifyleft.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/link.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/nbsp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/outdent.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/pasteformattext.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/pastetext.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/post.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/save.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/databases/series_tag.table" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/default/set.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markdown/set.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markmin/set.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/stopfloat.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/default/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markdown/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/sets/markmin/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/markitup/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/skins/simple/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/table.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tablerm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/tag.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/databases/tag.table" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcellprops.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcellsmerge.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcellsplit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcollbefore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcolrm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbrowbefore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbrowrm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.accordion.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.all.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.core.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.datepicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.dialog.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/ui.jqgrid.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.progressbar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.resizable.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.slider.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.tabs.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/undo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/unlink.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/default.py" afterPath="$PROJECT_DIR$/controllers/default.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.html" afterPath="$PROJECT_DIR$/views/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/menu.py" afterPath="$PROJECT_DIR$/models/menu.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/my_db.py" afterPath="$PROJECT_DIR$/models/my_db.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/sample.py" afterPath="$PROJECT_DIR$/controllers/sample.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/series.py" afterPath="$PROJECT_DIR$/controllers/series.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/setup_db.py" afterPath="$PROJECT_DIR$/modules/setup_db.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sql.log" afterPath="$PROJECT_DIR$/databases/sql.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -28,6 +297,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/star$star.coverage" NAME="star Coverage Results" MODIFIED="1410467657300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
+    <SUITE FILE_PATH="coverage/star$setup_db.coverage" NAME="setup_db Coverage Results" MODIFIED="1410418398570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -38,6 +311,120 @@
   <component name="FavoritesManager">
     <favorites_list name="star" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="default.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/default.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1335">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="series.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/series.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1961" max-vertical-offset="2415">
+              <caret line="141" column="61" selection-start-line="141" selection-start-column="61" selection-end-line="141" selection-end-column="61" />
+              <folding>
+                <marker date="1410457514000" expanded="true" signature="669:790" placeholder="INSERT INTO ..." />
+                <marker date="1410457514000" expanded="true" signature="703:785" placeholder="SELECT id FR..series_view_fts..." />
+                <marker date="1410457514000" expanded="true" signature="2512:2808" placeholder="SELECT disti..series_attribute..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tag.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/tag.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.47136563" vertical-offset="791" max-vertical-offset="1245">
+              <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sqlhtml.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../gluon/sqlhtml.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="14474" max-vertical-offset="49020">
+              <caret line="996" column="0" selection-start-line="996" selection-start-column="0" selection-end-line="996" selection-end-column="0" />
+              <folding>
+                <marker date="1394962544000" expanded="true" signature="74816:74846" placeholder="select count..missing_value..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="globals.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../gluon/globals.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="5760" max-vertical-offset="17625">
+              <caret line="384" column="0" selection-start-line="384" selection-start-column="0" selection-end-line="384" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/tag/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.8076925" vertical-offset="0" max-vertical-offset="495">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my_db.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/my_db.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.648148" vertical-offset="1309" max-vertical-offset="1845">
+              <caret line="104" column="73" selection-start-line="104" selection-start-column="73" selection-end-line="104" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sample.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/sample.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1946" max-vertical-offset="2400">
+              <caret line="140" column="61" selection-start-line="140" selection-start-column="61" selection-end-line="140" selection-end-column="61" />
+              <folding>
+                <marker date="1410457514000" expanded="true" signature="669:790" placeholder="INSERT INTO ..." />
+                <marker date="1410457514000" expanded="true" signature="703:785" placeholder="SELECT id FR..sample_view_fts..." />
+                <marker date="1410457514000" expanded="true" signature="2512:2808" placeholder="SELECT disti..sample_attribute..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup_db.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/setup_db.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2520" max-vertical-offset="4515">
+              <caret line="168" column="54" selection-start-line="168" selection-start-column="54" selection-end-line="168" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PostgreSQL - star@localhost" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://db-console:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="180">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="true" />
@@ -46,8 +433,30 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.annotation" />
+        <option value="$PROJECT_DIR$/static/my.js" />
+        <option value="$PROJECT_DIR$/views/default/a.html" />
+        <option value="$PROJECT_DIR$/controllers/default.py" />
+        <option value="$PROJECT_DIR$/views/annotate/a.html" />
+        <option value="dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.series_attribute" />
+        <option value="$PROJECT_DIR$/modules/setup_db.py" />
+        <option value="db-console:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/" />
+        <option value="$PROJECT_DIR$/models/my_db.py" />
+        <option value="$PROJECT_DIR$/controllers/annotate.py" />
+        <option value="$PROJECT_DIR$/views/annotate/index.html" />
+        <option value="$PROJECT_DIR$/controllers/series.py" />
+        <option value="$PROJECT_DIR$/controllers/sample.py" />
+        <option value="$PROJECT_DIR$/views/tag/index.html" />
+        <option value="$PROJECT_DIR$/controllers/tag.py" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="28" />
+    <option name="x" value="935" />
+    <option name="y" value="143" />
     <option name="width" value="1555" />
     <option name="height" value="949" />
   </component>
@@ -106,7 +515,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="databases" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -120,7 +529,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cron" />
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="star" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="star" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="star" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="star" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -143,13 +580,31 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../web2py.py" />
     <property name="recentsLimit" value="5" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="FullScreen" value="false" />
+    <property name="LayoutCode.rearrangeEntriesPostgreSQL" value="false" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings />
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/views/default" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/views/annotate" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.star">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -302,13 +757,19 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="false" name="star" type="PythonConfigurationType" factoryName="Python" singleton="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../.." />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -317,44 +778,80 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../web2py.py" />
       <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="1">
+    <configuration default="false" name="setup_db" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="star" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../web2py.py" />
+      <option name="PARAMETERS" value="-S star -M -R $PROJECT_DIR$/modules/setup_db.py" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Python.star" />
+      <item index="1" class="java.lang.String" itemvalue="Python.setup_db" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="bb5f306f-932a-4a9c-b1cd-9bc04b97cbde" name="Default" comment="" />
       <created>1410280065425</created>
       <updated>1410280065425</updated>
     </task>
+    <task id="LOCAL-00001" summary="Updated studies and samples searches.  Updated branding and menus.">
+      <created>1410280298436</created>
+      <updated>1410280298436</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="28" width="1555" height="949" extended-state="0" />
+    <frame x="935" y="143" width="1555" height="949" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22009254" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21414408" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2214144" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39556593" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32672113" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32692307" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -372,9 +869,479 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Updated studies and samples searches.  Updated branding and menus." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated studies and samples searches.  Updated branding and menus." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/controllers/tag.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="39" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/series.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1993" max-vertical-offset="2475">
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+          <folding>
+            <marker date="1410457514000" expanded="true" signature="669:790" placeholder="INSERT INTO ..." />
+            <marker date="1410457514000" expanded="true" signature="703:785" placeholder="SELECT id FR..series_view_fts..." />
+            <marker date="1410457514000" expanded="true" signature="2512:2808" placeholder="SELECT disti..series_attribute..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2490">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/tag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="1035">
+          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/tag/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="300">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="615">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/generic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/my_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1545" max-vertical-offset="1845">
+          <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2175" max-vertical-offset="2415">
+          <caret line="145" column="99" selection-start-line="145" selection-start-column="99" selection-end-line="145" selection-end-column="99" />
+          <folding>
+            <marker date="1410457514000" expanded="true" signature="669:790" placeholder="INSERT INTO ..." />
+            <marker date="1410457514000" expanded="true" signature="703:785" placeholder="SELECT id FR..sample_view_fts..." />
+            <marker date="1410457514000" expanded="true" signature="2512:2808" placeholder="SELECT disti..sample_attribute..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/series.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1993" max-vertical-offset="2475">
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+          <folding>
+            <marker date="1410457514000" expanded="true" signature="669:790" placeholder="INSERT INTO ..." />
+            <marker date="1410457514000" expanded="true" signature="703:785" placeholder="SELECT id FR..series_view_fts..." />
+            <marker date="1410457514000" expanded="true" signature="2512:2808" placeholder="SELECT disti..series_attribute..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2490">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/tag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="511" max-vertical-offset="1035">
+          <caret line="43" column="75" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/tag/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="300">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="615">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/generic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/my_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1545" max-vertical-offset="1845">
+          <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1964" max-vertical-offset="2415">
+          <caret line="145" column="99" selection-start-line="145" selection-start-column="99" selection-end-line="145" selection-end-column="99" />
+          <folding>
+            <marker date="1410457514000" expanded="true" signature="669:790" placeholder="INSERT INTO ..." />
+            <marker date="1410457514000" expanded="true" signature="703:785" placeholder="SELECT id FR..sample_view_fts..." />
+            <marker date="1410457514000" expanded="true" signature="2512:2808" placeholder="SELECT disti..sample_attribute..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/series.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1755" max-vertical-offset="2475">
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+          <folding>
+            <marker date="1410457514000" expanded="true" signature="669:790" placeholder="INSERT INTO ..." />
+            <marker date="1410457514000" expanded="true" signature="703:785" placeholder="SELECT id FR..series_view_fts..." />
+            <marker date="1410457514000" expanded="true" signature="2512:2808" placeholder="SELECT disti..series_attribute..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2490">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/tag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="975">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/tag/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="240">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="615">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/generic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/my_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="1830">
+          <caret line="101" column="76" selection-start-line="101" selection-start-column="76" selection-end-line="101" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1964" max-vertical-offset="2415">
+          <caret line="145" column="99" selection-start-line="145" selection-start-column="99" selection-end-line="145" selection-end-column="99" />
+          <folding>
+            <marker date="1410457514000" expanded="true" signature="669:790" placeholder="INSERT INTO ..." />
+            <marker date="1410457514000" expanded="true" signature="703:785" placeholder="SELECT id FR..sample_view_fts..." />
+            <marker date="1410457514000" expanded="true" signature="2512:2808" placeholder="SELECT disti..sample_attribute..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/series.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1755" max-vertical-offset="2475">
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+          <folding>
+            <marker date="1410457514000" expanded="true" signature="669:790" placeholder="INSERT INTO ..." />
+            <marker date="1410457514000" expanded="true" signature="703:785" placeholder="SELECT id FR..series_view_fts..." />
+            <marker date="1410457514000" expanded="true" signature="2512:2808" placeholder="SELECT disti..series_attribute..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2490">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/tag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="975">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/tag/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="240">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="615">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/generic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/my_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="1830">
+          <caret line="101" column="76" selection-start-line="101" selection-start-column="76" selection-end-line="101" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1964" max-vertical-offset="2415">
+          <caret line="145" column="99" selection-start-line="145" selection-start-column="99" selection-end-line="145" selection-end-column="99" />
+          <folding>
+            <marker date="1410457514000" expanded="true" signature="669:790" placeholder="INSERT INTO ..." />
+            <marker date="1410457514000" expanded="true" signature="703:785" placeholder="SELECT id FR..sample_view_fts..." />
+            <marker date="1410457514000" expanded="true" signature="2512:2808" placeholder="SELECT disti..sample_attribute..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.annotation">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/generic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="464">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2490">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.series_attribute">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/setup_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2455" max-vertical-offset="4500">
+          <caret line="168" column="54" selection-start-line="168" selection-start-column="54" selection-end-line="168" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="180">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../gluon/globals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5215" max-vertical-offset="17205">
+          <caret line="384" column="0" selection-start-line="384" selection-start-column="0" selection-end-line="384" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="615">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/my_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.648148" vertical-offset="1309" max-vertical-offset="1845">
+          <caret line="104" column="73" selection-start-line="104" selection-start-column="73" selection-end-line="104" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../gluon/sqlhtml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="14474" max-vertical-offset="49020">
+          <caret line="996" column="0" selection-start-line="996" selection-start-column="0" selection-end-line="996" selection-end-column="0" />
+          <folding>
+            <marker date="1394962544000" expanded="true" signature="74816:74846" placeholder="select count..missing_value..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/series.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1961" max-vertical-offset="2415">
+          <caret line="141" column="61" selection-start-line="141" selection-start-column="61" selection-end-line="141" selection-end-column="61" />
+          <folding>
+            <marker date="1410457514000" expanded="true" signature="669:790" placeholder="INSERT INTO ..." />
+            <marker date="1410457514000" expanded="true" signature="703:785" placeholder="SELECT id FR..series_view_fts..." />
+            <marker date="1410457514000" expanded="true" signature="2512:2808" placeholder="SELECT disti..series_attribute..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1946" max-vertical-offset="2400">
+          <caret line="140" column="61" selection-start-line="140" selection-start-column="61" selection-end-line="140" selection-end-column="61" />
+          <folding>
+            <marker date="1410457514000" expanded="true" signature="669:790" placeholder="INSERT INTO ..." />
+            <marker date="1410457514000" expanded="true" signature="703:785" placeholder="SELECT id FR..sample_view_fts..." />
+            <marker date="1410457514000" expanded="true" signature="2512:2808" placeholder="SELECT disti..sample_attribute..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/tag/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8076925" vertical-offset="0" max-vertical-offset="495">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/tag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47136563" vertical-offset="791" max-vertical-offset="1245">
+          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
 
