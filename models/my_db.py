@@ -1,5 +1,6 @@
 # coding: utf8
-# response.generic_patterns = ['.html']
+response.generic_patterns = ['.html']
+
 
 Series = db.define_table('series',
                          Field('gse_name', 'text'),
