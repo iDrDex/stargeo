@@ -35,28 +35,28 @@ def getDfFromStream(stream):
     df.columns = getCleanColumns(df.columns)
     return df
 
-
-def create_unique_indices_on_postgres(indices):
-    # Modified from http://osdir.com/ml/web2py/2010-09/msg00952.html
-    '''Creates a set of indices if they do not exist'''
-    # # Edit this list of table columns to index
-    # # The format is [('table', 'column1, column2, ...'),...]
-    print "checking indicies:"
-    for table, columns in indices:
-        relname = "%s_%s_idx" % (table.replace("_", ""),
-                                 columns.replace(" ", "") \
-                                 .replace("_", "") \
-                                 .replace(",", "_"))
-        print "\t%s" % relname,
-        index_exists = \
-            db.executesql("select count(*) from pg_class where relname = '%s';" % relname)[0][0] == 1
-        if not index_exists:
-            print "CREATING"
-            db.executesql('create unique index %s on %s (%s);'
-                          % (relname, table, columns))
-        db.commit()
-        print "OK"
-    print "Done!"
+#
+# def create_unique_indices_on_postgres(indices):
+#     # Modified from http://osdir.com/ml/web2py/2010-09/msg00952.html
+#     '''Creates a set of indices if they do not exist'''
+#     # # Edit this list of table columns to index
+#     # # The format is [('table', 'column1, column2, ...'),...]
+#     print "checking indicies:"
+#     for table, columns in indices:
+#         relname = "%s_%s_idx" % (table.replace("_", ""),
+#                                  columns.replace(" ", "") \
+#                                  .replace("_", "") \
+#                                  .replace(",", "_"))
+#         print "\t%s" % relname,
+#         index_exists = \
+#             db.executesql("select count(*) from pg_class where relname = '%s';" % relname)[0][0] == 1
+#         if not index_exists:
+#             print "CREATING"
+#             db.executesql('create unique index %s on %s (%s);'
+#                           % (relname, table, columns))
+#         db.commit()
+#         print "OK"
+#     print "Done!"
 
 
 def create_indices_on_postgres(indices, unique=True):
@@ -105,33 +105,6 @@ def getEntity2stream(filename, entities):
     return entity2stream
 
 
-def getSampleTagCrossTab():
-    print "reading tag names"
-    tag_names = db().select(Tag.tag_name,
-                            orderby=Tag.tag_name,
-                            distinct=True)
-    # CREATE VIEW
-    print "creating view"
-    db.executesql("DROP SEQUENCE IF EXISTS sample_tag_sequence CASCADE;")
-    db.executesql("CREATE SEQUENCE sample_tag_sequence;")
-    db.executesql("DROP MATERIALIZED VIEW IF EXISTS sample_tag_view ;")
-
-    # print "creating view"
-    tagsSql = "," \
-        .join(["""string_agg(CASE tag_name WHEN '%s' THEN annotation END, '|||') as %s \n""" \
-               % (row['tag_name'], row['tag_name'])
-               for row in tag_names])
-    sql = """CREATE MATERIALIZED VIEW sample_tag_view AS
-             SELECT NEXTVAL('sample_tag_sequence') as id, series_id, platform_id, sample_id,""" \
-          + tagsSql \
-          + """ FROM sample_tag
-                 JOIN series_tag ON sample_tag.series_tag_id = series_tag.id
-                 JOIN tag ON tag.id = tag_id
-               GROUP BY series_id, platform_id, sample_id;"""
-    print sql
-    db.executesql(sql)
-    db.commit()
-
 
 def getSampleCrossTab():
     print "reading attribute names"
@@ -140,6 +113,13 @@ def getSampleCrossTab():
                                   distinct=True)
     # CREATE VIEW
     print "creating view"
+
+    create_indices_on_postgres([('sample_attribute', 'sample_id, attribute_name')])
+
+    db.executesql("DROP SEQUENCE IF EXISTS sample_sequence CASCADE;")
+    db.executesql("CREATE SEQUENCE sample_sequence;")
+    db.executesql("DROP MATERIALIZED VIEW IF EXISTS sample_view ;")
+
     attributesSql = "," \
         .join(["""string_agg(CASE attribute_name WHEN '%s' THEN attribute_value END, '|||') as %s \n""" \
                % (row['attribute_name'], row['attribute_name'])
@@ -155,17 +135,18 @@ def getSampleCrossTab():
                GROUP BY series_id, platform_id, sample_id;"""
     print sql
     db.executesql(sql)
-    db.executesql("CREATE UNIQUE INDEX sample_view_key ON sample_view (id);")
+    create_indices_on_postgres([('sample_view', 'id')])
+    # db.executesql("CREATE UNIQUE INDEX sample_view_key ON sample_view (id);")
 
     # CREATE FTS
     print "creating FTS"
     attributesSql = "||" \
-        .join(["""to_tsvector(coalesce(%s, ''))""" % row['attribute_name']
+        .join(["""to_tsvector('english', coalesce(%s, ''))""" % row['attribute_name']
                for row in attribute_names])
     sql = """CREATE MATERIALIZED VIEW sample_view_fts AS
                 SELECT sample_view.id,
                     (
-                      to_tsvector(gse_name)||%s
+                      to_tsvector('english', gse_name)||%s
                     ) AS doc
                 FROM sample_view
                 JOIN series ON series_id = series.id;""" % attributesSql
@@ -188,12 +169,26 @@ def getSampleCrossTab():
     db.commit()
 
 
+
 def getSeriesCrossTab():
+
     print "reading attribute names"
     attribute_names = db().select(Series_Attribute.attribute_name,
                                   orderby=Series_Attribute.attribute_name,
                                   distinct=True)
+
+
+
     print "creating view"
+
+    create_indices_on_postgres([('series_attribute', 'series_id, attribute_name')])
+
+    db.executesql("DROP SEQUENCE IF EXISTS series_sequence CASCADE;")
+    db.executesql("CREATE SEQUENCE series_sequence;")
+    db.executesql("DROP MATERIALIZED VIEW IF EXISTS series_view ;")
+
+    create_indices_on_postgres([('sample_attribute', 'sample_id, attribute_name')])
+
     sql = 'CREATE SEQUENCE series_attribute_sequence;'
     print sql
     db.executesql(sql)
@@ -208,18 +203,20 @@ def getSeriesCrossTab():
                GROUP BY series_id;"""
     print sql
     db.executesql(sql)
-    db.executesql("CREATE UNIQUE INDEX series_view_key ON series_view (id);")
+    create_indices_on_postgres([('series_view', 'id')])
+
+    # db.executesql("CREATE UNIQUE INDEX series_view_key ON series_view (id);")
 
 
     print "creating FTS"
     # CREATE FTS
     attributesSql = "||" \
-        .join(["""to_tsvector(coalesce(%s, ''))""" % row['attribute_name']
+        .join(["""to_tsvector('english', coalesce(%s, ''))""" % row['attribute_name']
                for row in attribute_names])
     sql = """CREATE MATERIALIZED VIEW series_view_fts AS
                 SELECT series_view.id,
                     (
-                      to_tsvector(gse_name)||%s
+                      to_tsvector('english', gse_name)||%s
                     ) AS doc
                 FROM series_view
                 JOIN series ON series_id = series.id;""" % attributesSql
@@ -240,18 +237,7 @@ def getSeriesCrossTab():
     """)
     db.commit()
 
-
-if __name__ == '__main__':
-    getSampleTagCrossTab()
-    1/0
-
-    # create_indices_on_postgres([('sample_attribute', 'sample_id, attribute_name')])
-    # create_indices_on_postgres([('sample_view', 'sample_id')], unique=False)
-    getSeriesCrossTab()
-    1 / 0
-    getSampleCrossTab()
-    1 / 0
-
+def insertAttributes():
     isLast = lastGse = False
     row = db.executesql("select gse_name from series order by id desc limit 1;")
     if row:
@@ -324,4 +310,7 @@ if __name__ == '__main__':
                                                                                        attribute_value=attribute_value))
         db.commit()
 
+if __name__ == '__main__':
+    getSeriesCrossTab()
+    getSampleCrossTab()
 
