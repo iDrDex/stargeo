@@ -1618,3 +1618,18 @@ TRUNCATE TABLE sample_filter ;
 success!
 TRUNCATE TABLE sample_filter ;
 success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+TRUNCATE TABLE sample_view_annotation_filter ;
+timestamp: 2014-09-18T09:17:46.440465
+CREATE TABLE sample_view_annotation_filter(
+    id SERIAL PRIMARY KEY,
+    sample_view_id VARCHAR(512),
+    annotation TEXT
+);
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
