@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb5f306f-932a-4a9c-b1cd-9bc04b97cbde" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/databases/sample_tag.table" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/databases/sample_view_annotation_filter.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/setup_db.py" afterPath="$PROJECT_DIR$/modules/setup_db.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="star.iws" />
@@ -64,13 +63,13 @@
       <file leaf-file-name="setup_db.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/setup_db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5890603" vertical-offset="2655" max-vertical-offset="4830">
-              <caret line="205" column="40" selection-start-line="205" selection-start-column="40" selection-end-line="205" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.22159888" vertical-offset="1642" max-vertical-offset="4830">
+              <caret line="120" column="71" selection-start-line="120" selection-start-column="71" selection-end-line="120" selection-end-column="71" />
               <folding>
                 <element signature="e#20#70#0" expanded="true" />
-                <marker date="1411028912000" expanded="true" signature="1712:1762" placeholder="select count..pg_class..." />
-                <marker date="1411028912000" expanded="true" signature="2700:2750" placeholder="select count..pg_class..." />
-                <marker date="1411028912000" expanded="true" signature="8522:8574" placeholder="select gse_n..series..." />
+                <marker date="1411029848000" expanded="true" signature="1712:1762" placeholder="select count..pg_class..." />
+                <marker date="1411029848000" expanded="true" signature="2700:2750" placeholder="select count..pg_class..." />
+                <marker date="1411029848000" expanded="true" signature="8537:8589" placeholder="select gse_n..series..." />
               </folding>
             </state>
           </provider>
@@ -604,12 +603,16 @@
       <created>1411028921383</created>
       <updated>1411028921383</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added tag display views and improved performance">
+      <created>1411029652964</created>
+      <updated>1411029652964</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="352" y="112" width="2081" height="1222" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32477877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -623,7 +626,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25208434" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18293281" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18293281" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32389382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1164,13 +1167,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/setup_db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5890603" vertical-offset="2655" max-vertical-offset="4830">
-          <caret line="205" column="40" selection-start-line="205" selection-start-column="40" selection-end-line="205" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.22159888" vertical-offset="1642" max-vertical-offset="4830">
+          <caret line="120" column="71" selection-start-line="120" selection-start-column="71" selection-end-line="120" selection-end-column="71" />
           <folding>
             <element signature="e#20#70#0" expanded="true" />
-            <marker date="1411028912000" expanded="true" signature="1712:1762" placeholder="select count..pg_class..." />
-            <marker date="1411028912000" expanded="true" signature="2700:2750" placeholder="select count..pg_class..." />
-            <marker date="1411028912000" expanded="true" signature="8522:8574" placeholder="select gse_n..series..." />
+            <marker date="1411029848000" expanded="true" signature="1712:1762" placeholder="select count..pg_class..." />
+            <marker date="1411029848000" expanded="true" signature="2700:2750" placeholder="select count..pg_class..." />
+            <marker date="1411029848000" expanded="true" signature="8537:8589" placeholder="select gse_n..series..." />
           </folding>
         </state>
       </provider>
