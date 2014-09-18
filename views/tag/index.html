@@ -13,16 +13,17 @@
     //    }
     $("#series_tag_show_invariant").click(function () {
         $('#series_tag_header').val("")
-        $("input[name='toSubmit']").val("")
+        $("input[name='_formkey']").val("")
         $('#form').submit()
     });
     $("#series_tag_header").change(function () {
-        $("input[name='toSubmit']").val("")
+        $('#series_tag_show_invariant').val("")
+        $("input[name='_formkey']").val("")
         $('#form').submit()
     });
-    $(".submit").click(function () {
-        alert("clicked!")
-        $("input[name='toSubmit']").val(true)
+//    $(".submit").click(function () {
+//        alert("clicked!")
+//        $("input[name='toSubmit']").val(true)
 //        $('#form').submit()
-    });
+//    });
 </script>

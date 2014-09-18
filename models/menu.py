@@ -39,9 +39,10 @@ response.google_analytics_id = "UA-42964640-3"
 # ########################################################################
 
 response.menu = [
-    (T('Studies'), (request.function == 'index'), URL('series', 'index', vars=request.vars)),
+    (T('Series'), (request.function == 'index'), URL('series', 'index', vars=request.vars)),
     (T('Samples'), (request.function == 'index'), URL('sample', 'index', vars=request.vars)),
-    (T('Annotations'), (request.function == 'index'), URL('annotation', 'index', vars=request.vars)),
+    (T('Summary'), (request.function == 'index'), URL('summary', 'index')),
+    (T('Annotations'), (request.function == 'index'), URL('annotation', 'index')),
 ]
 
 DEVELOPMENT_MENU = False

@@ -984,3 +984,637 @@ TRUNCATE TABLE sample_filter ;
 success!
 TRUNCATE TABLE series_filter ;
 success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+timestamp: 2014-09-11T15:55:31.194495
+CREATE TABLE sample_tag(
+    id SERIAL PRIMARY KEY,
+    sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
+    tag_id INTEGER REFERENCES tag (id) ON DELETE CASCADE,
+    annotation TEXT
+);
+success!
+timestamp: 2014-09-11T15:55:31.872066
+CREATE TABLE sample_tag_Editor(
+    id SERIAL PRIMARY KEY,
+    sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
+    tag_id INTEGER REFERENCES tag (id) ON DELETE CASCADE,
+    annotation TEXT
+);
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+TRUNCATE TABLE sample_tag_Editor ;
+timestamp: 2014-09-11T16:07:14.077046
+CREATE TABLE sample_tag_Editor(
+    id SERIAL PRIMARY KEY,
+    sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
+    tag_id INTEGER REFERENCES tag (id) ON DELETE CASCADE,
+    annotation TEXT
+);
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+timestamp: 2014-09-11T21:41:01.521142
+CREATE TABLE sample_tag_Editor(
+    id SERIAL PRIMARY KEY,
+    sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
+    tag_id INTEGER REFERENCES tag (id) ON DELETE CASCADE,
+    annotation TEXT
+);
+timestamp: 2014-09-11T21:41:45.269570
+CREATE TABLE tag(
+    id SERIAL PRIMARY KEY,
+    tag_name VARCHAR(512) UNIQUE,
+    description VARCHAR(512)
+);
+success!
+timestamp: 2014-09-11T21:41:45.283286
+CREATE TABLE sample_tag_Editor(
+    id SERIAL PRIMARY KEY,
+    sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
+    tag_id INTEGER REFERENCES tag (id) ON DELETE CASCADE,
+    annotation TEXT
+);
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+timestamp: 2014-09-11T23:39:53.540332
+CREATE TABLE person(
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(60),
+    second_name VARCHAR(60),
+    is_happy CHAR(1),
+    home_state VARCHAR(512)
+);
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+TRUNCATE TABLE sample_tag_Editor ;
+success!
+timestamp: 2014-09-12T00:11:40.102511
+CREATE TABLE sample_tag_editor(
+    id SERIAL PRIMARY KEY,
+    sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
+    tag_id INTEGER REFERENCES tag (id) ON DELETE CASCADE,
+    annotation TEXT
+);
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+TRUNCATE TABLE sample_tag_editor ;
+success!
+timestamp: 2014-09-12T07:45:11.714331
+CREATE TABLE sample_view_annotation_filter(
+    id SERIAL PRIMARY KEY,
+    annotation TEXT
+);
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+timestamp: 2014-09-12T08:28:01.400586
+ALTER TABLE sample_view_annotation_filter ADD sample_view_id INTEGER REFERENCES sample_view (id) ON DELETE CASCADE;
+timestamp: 2014-09-12T08:30:04.280742
+ALTER TABLE sample_view_annotation_filter ADD sample_view_id VARCHAR(512);
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+TRUNCATE TABLE sample_filter ;
+success!
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+timestamp: 2014-09-12T09:47:46.715797
+CREATE TABLE sample_view_annotation_filter(
+    id SERIAL PRIMARY KEY,
+    sample_view_id VARCHAR(512),
+    annotation TEXT
+);
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+timestamp: 2014-09-12T11:11:26.398561
+ALTER TABLE sample_tag ADD series_tag_id INTEGER REFERENCES series_tag (id) ON DELETE CASCADE;
+timestamp: 2014-09-12T11:11:29.397589
+ALTER TABLE sample_tag ADD series_tag_id INTEGER REFERENCES series_tag (id) ON DELETE CASCADE;
+timestamp: 2014-09-12T11:11:47.590618
+CREATE TABLE sample_tag(
+    id SERIAL PRIMARY KEY,
+    sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
+    series_tag_id INTEGER REFERENCES series_tag (id) ON DELETE CASCADE,
+    annotation TEXT
+);
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+timestamp: 2014-09-12T12:38:15.343160
+CREATE TABLE series_tag(
+    id SERIAL PRIMARY KEY,
+    series_id INTEGER REFERENCES series (id) ON DELETE CASCADE,
+    platform_id INTEGER REFERENCES platform (id) ON DELETE CASCADE,
+    tag_id INTEGER REFERENCES tag (id) ON DELETE CASCADE,
+    header VARCHAR(512),
+    regex VARCHAR(512),
+    show_invariant CHAR(1)
+);
+success!
+timestamp: 2014-09-12T12:38:38.710727
+CREATE TABLE sample_tag(
+    id SERIAL PRIMARY KEY,
+    sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
+    series_tag_id INTEGER REFERENCES series_tag (id) ON DELETE CASCADE,
+    annotation TEXT
+);
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+TRUNCATE TABLE sample_view_annotation_filter ;
+TRUNCATE TABLE sample_view_annotation_filter ;
+TRUNCATE TABLE sample_view_annotation_filter ;
+TRUNCATE TABLE sample_view_annotation_filter ;
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+success!
+success!
+success!
+success!
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!

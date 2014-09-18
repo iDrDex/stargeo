@@ -10,13 +10,34 @@ def add():
 
 
 def index():
+    # SERIES ID
     series_id = request.vars.series_id or request.env.http_referrer and redirect(request.env.http_referrer)
+    # if type(series_id) == list:
+    # series_id = series_id[0]
     # Series_Tag.series_id.default = series_id
+    # Series_Tag.series_id.requires = None
     Series_Tag.series_id.writable = False
+
+    # PLATFORM
     ids = [row.platform_id for row in db(Sample.series_id == series_id) \
         .select(Sample.platform_id, distinct=True)]
     labels = [Platform[id].gpl_name for id in ids]
     Series_Tag.platform_id.requires = IS_IN_SET([""] + ids, labels=["all"] + labels, zero=None)
+
+    # TAGS
+    query = (Series_Tag.series_id == series_id) & (Tag.id == Series_Tag.tag_id)
+    if request.vars.platform_id:
+        query &= (Series_Tag.platform_id == request.vars.platform_id)
+    tag_ids = set(row.id
+                  for row in
+                  db(query).select(Tag.id, distinct=True))
+    # print db._lastsql
+    ids = [row.id for row in db(Tag).select(Tag.id, distinct=True) if row.id not in tag_ids]
+    # print db._lastsql
+    labels = [Tag[id].tag_name for id in ids]
+    Series_Tag.tag_id.requires = IS_IN_SET(ids, labels=labels)
+
+    # HEADERS
     query = Sample_View.series_id == series_id
 
     sql = """SELECT
@@ -42,27 +63,27 @@ def index():
 
     Series_Tag.header.requires = IS_IN_SET([""] + headers, labels=["all"] + headers, zero=None)
 
-    fields = [Sample_View[header] for header in headers]
-    if request.vars.header:
-        fields = [Sample_View[request.vars.header]]
-    else:
-        fields = [Sample_View[header] for header in headers]
-
     fields = [Sample_View['sample_id'],
-              Sample_View['platform_id']] + fields
+              Sample_View['platform_id']] + \
+             ([Sample_View[request.vars.header]] if request.vars.header \
+                  else [Sample_View[header] for header in headers])
+
     for field in Series_Tag.fields:
-        Series_Tag[field].default = request.get_vars[field] \
-            if field in request.get_vars \
+        Series_Tag[field].default = request.vars[field][0] \
+            if type(request.vars[field]) == list \
             else request.vars[field]
 
-    form = SQLFORM(Series_Tag, _id='form', hidden=dict(toSubmit=True))
+    form = SQLFORM(Series_Tag,
+                   _id='form')
 
     form.custom.submit['_class'] = 'submit'  # have to use _class for jquery because _name or _id breaks the grid view
     form.add_button('+', URL('add', vars=request.get_vars))
 
-    if request.vars.toSubmit:
-        if form.validate(formname='form'):
-            redirect(URL('annotate', 'index'))
+    if form.validate(formname='form'):
+        form.vars.series_id = series_id
+        # return annotate(fields)
+        session.headers = headers
+        redirect(URL('annotate', 'index', vars=form.vars))
 
     # print field_names
     return dict(form=form,
@@ -71,8 +92,3 @@ def index():
                                   maxtextlength=1000,
                                   formname='form')
     )
-    # request.vars.series_id
-
-
-def a():
-    return dict(a="adsf")

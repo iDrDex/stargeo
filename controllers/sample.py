@@ -34,14 +34,14 @@ def setFilter(sample_fts_query):
 # session.all_sample_field_names = sorted([row.attribute_name
 # for row in db().select(Sample_Attribute.attribute_name, distinct=True)])
 #
-#     sample_fts_query = "|" \
-#         .join(set(sample_fts_query \
-#                   .replace("&", " ") \
-#                   .replace("|", " ") \
-#                   .split()))
+# sample_fts_query = "|" \
+# .join(set(sample_fts_query \
+# .replace("&", " ") \
+# .replace("|", " ") \
+# .split()))
 #
-#     sql = """
-#         SELECT *
+# sql = """
+# SELECT *
 #         from sample_attribute
 #         join sample_filter using (sample_id)
 #         WHERE
@@ -108,6 +108,51 @@ def get_sample_fts_query(search_text):
     return sample_fts_query
 
 
+#
+#
+# def getTags(row):
+#     sample_id = row.sample_view.sample_id if 'sample_view' in row else row.sample_id
+#     series_id = row.sample_view.series_id if 'sample_view' in row else row.series_id
+#     platform_id = row.sample_view.platform_id if 'sample_view' in row else row.platform_id
+#     tags = [row.sample_view.tag_name
+#             if 'sample_view' in row
+#             else row.tag_name
+#             for row in db((Series_Tag.series_id == series_id) &
+#                           (Series_Tag.platform_id == platform_id) &
+#                           (Series_Tag.tag_id == Tag.id) &
+#                           (Sample_Tag.series_tag_id == Series_Tag.id) &
+#                           (Sample_Tag.sample_id == sample_id)).select(Tag.tag_name,
+#                                                                       distinct=Series_Tag.tag_id)]
+#     return DIV([DIV(tag, _class="badge") for tag in tags])
+#
+
+
+
+
+def getTags(row):
+    series_id = row.sample_view.series_id if 'sample_view' in row else row.series_id
+    tags = [row.sample_view.tag_name
+            if 'sample_view' in row
+            else row.tag_name
+            for row in db((Series_Tag.series_id == series_id) &
+                          # (Series_Tag.platform_id == row.platform_id) &
+                          (Series_Tag.tag_id == Tag.id)).select(Tag.tag_name,
+                                                                distinct=Series_Tag.tag_id)]
+    return DIV([DIV(tag, _class="badge") for tag in tags])
+
+
+
+
+def getButton(row):
+    return A(BUTTON('Tag'), _href=URL("tag", "index",
+                                      # args=row.series_view.series_id,
+                                      vars=dict(
+                                          series_id=row.sample_view.series_id
+                                          if 'sample_view' in row
+                                          else row.series_id
+                                      )))
+
+
 def index():
     print "***", request.vars.keywords, "***"
     start_time = time.time()
@@ -138,13 +183,8 @@ def index():
                              searchable=searchable,
                              fields=fields,
                              buttons_placement='left',
-                             links=[lambda row: A(BUTTON('Tag'), _href=URL("tag", "index",
-                                                                                # args=row.series_view.series_id,
-                                                                                vars=dict(
-                                                                                    series_id=row.sample_view.series_id
-                                                                                    if 'sample_view' in row
-                                                                                    else row.series_id
-                                                                                )))]
+                             links=[lambda row: getTags(row),
+                                    lambda row: getButton(row)]
     )
     if flash:
         response.flash = T("Found %s samples in %.2f seconds" % (db(query).count(), time.time() - start_time))

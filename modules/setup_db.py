@@ -105,6 +105,34 @@ def getEntity2stream(filename, entities):
     return entity2stream
 
 
+def getSampleTagCrossTab():
+    print "reading tag names"
+    tag_names = db().select(Tag.tag_name,
+                            orderby=Tag.tag_name,
+                            distinct=True)
+    # CREATE VIEW
+    print "creating view"
+    db.executesql("DROP SEQUENCE IF EXISTS sample_tag_sequence CASCADE;")
+    db.executesql("CREATE SEQUENCE sample_tag_sequence;")
+    db.executesql("DROP MATERIALIZED VIEW IF EXISTS sample_tag_view ;")
+
+    # print "creating view"
+    tagsSql = "," \
+        .join(["""string_agg(CASE tag_name WHEN '%s' THEN annotation END, '|||') as %s \n""" \
+               % (row['tag_name'], row['tag_name'])
+               for row in tag_names])
+    sql = """CREATE MATERIALIZED VIEW sample_tag_view AS
+             SELECT NEXTVAL('sample_tag_sequence') as id, series_id, platform_id, sample_id,""" \
+          + tagsSql \
+          + """ FROM sample_tag
+                 JOIN series_tag ON sample_tag.series_tag_id = series_tag.id
+                 JOIN tag ON tag.id = tag_id
+               GROUP BY series_id, platform_id, sample_id;"""
+    print sql
+    db.executesql(sql)
+    db.commit()
+
+
 def getSampleCrossTab():
     print "reading attribute names"
     attribute_names = db().select(Sample_Attribute.attribute_name,
@@ -116,18 +144,18 @@ def getSampleCrossTab():
         .join(["""string_agg(CASE attribute_name WHEN '%s' THEN attribute_value END, '|||') as %s \n""" \
                % (row['attribute_name'], row['attribute_name'])
                for row in attribute_names])
-    sql = """CREATE SEQUENCE sample_attribute_sequence;
-             CREATE MATERIALIZED VIEW sample_view AS
+    db.executesql("""CREATE SEQUENCE sample_attribute_sequence;""")
+    sql = """CREATE MATERIALIZED VIEW sample_view AS
              SELECT NEXTVAL('sample_attribute_sequence') as id, series_id, platform_id, sample_id,""" \
           + attributesSql \
           + """ FROM sample
                  JOIN sample_attribute ON sample.id = sample_id
                  JOIN series ON series.id = series_id
                  JOIN platform ON platform.id = platform_id
-               GROUP BY series_id, platform_id, sample_id;
-               DROP SEQUENCE sample_attribute_sequence;"""
+               GROUP BY series_id, platform_id, sample_id;"""
     print sql
     db.executesql(sql)
+    db.executesql("CREATE UNIQUE INDEX sample_view_key ON sample_view (id);")
 
     # CREATE FTS
     print "creating FTS"
@@ -180,6 +208,8 @@ def getSeriesCrossTab():
                GROUP BY series_id;"""
     print sql
     db.executesql(sql)
+    db.executesql("CREATE UNIQUE INDEX series_view_key ON series_view (id);")
+
 
     print "creating FTS"
     # CREATE FTS
@@ -212,6 +242,8 @@ def getSeriesCrossTab():
 
 
 if __name__ == '__main__':
+    getSampleTagCrossTab()
+    1/0
 
     # create_indices_on_postgres([('sample_attribute', 'sample_id, attribute_name')])
     # create_indices_on_postgres([('sample_view', 'sample_id')], unique=False)

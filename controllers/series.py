@@ -34,16 +34,16 @@ def setFilter(series_fts_query):
 # session.all_series_field_names = sorted([row.attribute_name
 # for row in db().select(Series_Attribute.attribute_name, distinct=True)])
 #
-#     series_fts_query = "|" \
-#         .join(set(series_fts_query \
-#                   .replace("&", " ") \
-#                   .replace("|", " ") \
-#                   .split()))
+# series_fts_query = "|" \
+# .join(set(series_fts_query \
+# .replace("&", " ") \
+# .replace("|", " ") \
+# .split()))
 #
-#     sql = """
-#         SELECT *
-#         from series_attribute
-#         join series_filter using (series_id)
+# sql = """
+# SELECT *
+# from series_attribute
+# join series_filter using (series_id)
 #         WHERE
 #           attribute_name = '%s'
 #           AND
@@ -107,6 +107,27 @@ def get_series_fts_query(search_text):
                               series_fts_query)
     return series_fts_query
 
+def getTags(row):
+    series_id = row.series_view.series_id if 'series_view' in row else row.series_id
+    tags = [row.series_view.tag_name
+            if 'series_view' in row
+            else row.tag_name
+            for row in db((Series_Tag.series_id == series_id) &
+                          # (Series_Tag.platform_id == row.platform_id) &
+                          (Series_Tag.tag_id == Tag.id)).select(Tag.tag_name,
+                                                                distinct=Series_Tag.tag_id)]
+    return DIV([DIV(tag, _class="badge") for tag in tags])
+
+
+def getButton(row):
+    return A(BUTTON('Tag'), _href=URL("tag", "index",
+                                      # args=row.series_view.series_id,
+                                      vars=dict(
+                                          series_id=row.series_view.series_id
+                                          if 'series_view' in row
+                                          else row.series_id
+                                      )))
+
 
 def index():
     # return dict(grid=SQLFORM.grid(Series_View.id > 0, search_widget=None))
@@ -139,13 +160,8 @@ def index():
                              searchable=searchable,
                              fields=fields,
                              buttons_placement='left',
-                             links=[lambda row: A(BUTTON('Tag'), _href=URL("tag", "index",
-                                                                                # args=row.series_view.series_id,
-                                                                                vars=dict(
-                                                                                    series_id=row.series_view.series_id
-                                                                                    if 'series_view' in row
-                                                                                    else row.series_id
-                                                                                )))]
+                             links=[lambda row: getTags(row),
+                                    lambda row: getButton(row)]
     )
     if flash:
         response.flash = T("Found %s series in %.2f seconds" % (db(query).count(), time.time() - start_time))
