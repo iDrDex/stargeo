@@ -116,7 +116,7 @@ def getSampleCrossTab():
 
     create_indices_on_postgres([('sample_attribute', 'sample_id, attribute_name')])
 
-    db.executesql("DROP SEQUENCE IF EXISTS sample_sequence CASCADE;")
+    db.executesql("DROP SEQUENCE IF EXISTS sample_attribute_sequence CASCADE;")
     db.executesql("CREATE SEQUENCE sample_sequence;")
     db.executesql("DROP MATERIALIZED VIEW IF EXISTS sample_view CASCADE;")
 
@@ -183,7 +183,7 @@ def getSeriesCrossTab():
 
     create_indices_on_postgres([('series_attribute', 'series_id, attribute_name')])
 
-    db.executesql("DROP SEQUENCE IF EXISTS series_sequence CASCADE;")
+    db.executesql("DROP SEQUENCE IF EXISTS series_attribute_sequence CASCADE;")
     db.executesql("CREATE SEQUENCE series_sequence;")
     db.executesql("DROP MATERIALIZED VIEW IF EXISTS series_view CASCADE ;")
 

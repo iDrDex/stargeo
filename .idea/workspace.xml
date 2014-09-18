@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb5f306f-932a-4a9c-b1cd-9bc04b97cbde" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/db.py" afterPath="$PROJECT_DIR$/models/db.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/setup_db.py" afterPath="$PROJECT_DIR$/modules/setup_db.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -60,26 +61,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setup_db.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="setup_db.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/setup_db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22159888" vertical-offset="1642" max-vertical-offset="4830">
-              <caret line="120" column="71" selection-start-line="120" selection-start-column="71" selection-end-line="120" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2347" max-vertical-offset="4830">
+              <caret line="185" column="68" selection-start-line="185" selection-start-column="68" selection-end-line="185" selection-end-column="68" />
               <folding>
                 <element signature="e#20#70#0" expanded="true" />
-                <marker date="1411029848000" expanded="true" signature="1712:1762" placeholder="select count..pg_class..." />
-                <marker date="1411029848000" expanded="true" signature="2700:2750" placeholder="select count..pg_class..." />
-                <marker date="1411029848000" expanded="true" signature="8537:8589" placeholder="select gse_n..series..." />
+                <marker date="1411030190000" expanded="true" signature="1712:1762" placeholder="select count..pg_class..." />
+                <marker date="1411030190000" expanded="true" signature="2700:2750" placeholder="select count..pg_class..." />
+                <marker date="1411030190000" expanded="true" signature="8557:8609" placeholder="select gse_n..series..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="summary.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/summary.py">
+      <file leaf-file-name="db.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="600">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.12622721" vertical-offset="135" max-vertical-offset="1395">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -168,7 +169,6 @@
         <option value="dbtable:/ca7a5962/13e1bc5f-11a7-4390-a574-b36b36c4c5de/star.public.series_view" />
         <option value="dbtable:/ca7a5962/13e1bc5f-11a7-4390-a574-b36b36c4c5de/star.public.sample_filter" />
         <option value="dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.sample_filter" />
-        <option value="$PROJECT_DIR$/models/db.py" />
         <option value="$PROJECT_DIR$/controllers/test.py" />
         <option value="$PROJECT_DIR$/controllers/editable.py" />
         <option value="dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.sample_tag" />
@@ -193,6 +193,7 @@
         <option value="db-console:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/" />
         <option value="db-console:/ca7a5962/13e1bc5f-11a7-4390-a574-b36b36c4c5de/" />
         <option value="$PROJECT_DIR$/modules/setup_db.py" />
+        <option value="$PROJECT_DIR$/models/db.py" />
       </list>
     </option>
   </component>
@@ -607,7 +608,11 @@
       <created>1411029652964</created>
       <updated>1411029652964</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added tag display views and improved performance">
+      <created>1411030015305</created>
+      <updated>1411030015305</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -916,13 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.sample_view_annotation_filter">
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
@@ -1167,14 +1165,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/setup_db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22159888" vertical-offset="1642" max-vertical-offset="4830">
-          <caret line="120" column="71" selection-start-line="120" selection-start-column="71" selection-end-line="120" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2347" max-vertical-offset="4830">
+          <caret line="185" column="68" selection-start-line="185" selection-start-column="68" selection-end-line="185" selection-end-column="68" />
           <folding>
             <element signature="e#20#70#0" expanded="true" />
-            <marker date="1411029848000" expanded="true" signature="1712:1762" placeholder="select count..pg_class..." />
-            <marker date="1411029848000" expanded="true" signature="2700:2750" placeholder="select count..pg_class..." />
-            <marker date="1411029848000" expanded="true" signature="8537:8589" placeholder="select gse_n..series..." />
+            <marker date="1411030190000" expanded="true" signature="1712:1762" placeholder="select count..pg_class..." />
+            <marker date="1411030190000" expanded="true" signature="2700:2750" placeholder="select count..pg_class..." />
+            <marker date="1411030190000" expanded="true" signature="8557:8609" placeholder="select gse_n..series..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12622721" vertical-offset="135" max-vertical-offset="1395">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
