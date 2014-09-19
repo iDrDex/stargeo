@@ -16,8 +16,7 @@ response.logo = DIV(
     DIV(A(I(_class="fa fa-star"),
           B("GEO" if not session.query else ""),
           _href=URL('default',
-                    'index',
-                    vars=dict(toClear=True))),
+                    'index')),
         _class="brand"),
 
     A(B(session.query or ""),
