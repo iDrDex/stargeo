@@ -19,14 +19,25 @@ def index():
     if you need a simple wiki simply replace the two lines below with:
     return auth.wiki()
     """
-    query = Sample_View
-    Sample_View.series_id.requires = \
-        Sample_View.platform_id.requires = \
-        Sample_View.sample_id.requires = None  # Speed
-    return dict(grid=SQLFORM.grid(query,
-                                  editable=False,
-                                  deletable=False))
+    session.platform_count = session.platform_count or db(Platform).count()
+    session.tag_count = session.tag_count or db(Tag).count()
 
+    session.sample_count = session.sample_count or db(Sample).count()
+    session.sample_attribute_count = session.sample_attribute_count or db(Sample_Attribute).count()
+    session.sample_tag_count = session.sample_tag_count or db(Sample_Tag).count()
+
+    session.series_count = session.series_count or db(Series).count()
+    session.series_attribute_count = session.series_attribute_count or db(Series_Attribute).count()
+    session.series_tag_count = session.series_tag_count or db(Series_Tag).count()
+    return dict(sample_count = session.sample_count,
+                sample_attribute_count = session.sample_attribute_count,
+                sample_tag_count = session.sample_tag_count,
+                series_count = session.series_count,
+                series_attribute_count = session.series_attribute_count,
+                series_tag_count = session.series_tag_count,
+                platform_count = session.platform_count,
+                tag_count = session.tag_count,
+    )
 
 def user():
     """
