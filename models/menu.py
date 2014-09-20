@@ -40,8 +40,8 @@ response.google_analytics_id = "UA-42964640-3"
 response.menu = [
     (T('Series'), (request.function == 'index'), URL('series', 'index', vars=request.vars)),
     (T('Samples'), (request.function == 'index'), URL('sample', 'index', vars=request.vars)),
-    (DIV(I(_class="fa fa-star"),T('Series Tags')), (request.function == 'index'), URL('summary', 'index')),
-    (DIV(I(_class="fa fa-star"),T('Sample Tags')), (request.function == 'index'), URL('annotation', 'index')),
+    (T('Series Tags'), (request.function == 'index'), URL('summary', 'index')),
+    (T('Sample Tags'), (request.function == 'index'), URL('annotation', 'index')),
 ]
 
 DEVELOPMENT_MENU = False
