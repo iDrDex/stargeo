@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb5f306f-932a-4a9c-b1cd-9bc04b97cbde" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/tag/index.html" afterPath="$PROJECT_DIR$/views/tag/index.html.old" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/default.py" afterPath="$PROJECT_DIR$/controllers/default.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/default/index.html" afterPath="$PROJECT_DIR$/views/default/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sql.log" afterPath="$PROJECT_DIR$/databases/sql.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/tag.py" afterPath="$PROJECT_DIR$/controllers/tag.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="star.iws" />
@@ -54,22 +50,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.old" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/tag/index.html.old">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.25" vertical-offset="75" max-vertical-offset="510">
-              <caret line="23" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <marker date="1410810161000" expanded="true" signature="53:857" placeholder="..." />
-                <marker date="1410810161000" expanded="true" signature="59:340" placeholder="//..." />
-                <marker date="1410810161000" expanded="true" signature="395:514" placeholder="{...}" />
-                <marker date="1410810161000" expanded="true" signature="564:691" placeholder="{...}" />
-                <marker date="1410810161000" expanded="true" signature="694:848" placeholder="//..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="my_db.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/my_db.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -110,21 +90,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/default/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7619048" vertical-offset="18" max-vertical-offset="300">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.53846157" vertical-offset="18" max-vertical-offset="300">
+              <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="default.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/default.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1800">
-              <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.09090909" vertical-offset="405" max-vertical-offset="1800">
+              <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -187,8 +167,8 @@
         <option value="$PROJECT_DIR$/models/my_db.py" />
         <option value="$PROJECT_DIR$/controllers/annotate.py" />
         <option value="$PROJECT_DIR$/controllers/tag.py" />
-        <option value="$PROJECT_DIR$/controllers/default.py" />
         <option value="$PROJECT_DIR$/views/default/index.html" />
+        <option value="$PROJECT_DIR$/controllers/default.py" />
       </list>
     </option>
   </component>
@@ -252,24 +232,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="star" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="star" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tag" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -670,7 +632,15 @@
       <created>1411286280334</created>
       <updated>1411286280334</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="mobile layout added">
+      <created>1411340615670</created>
+      <updated>1411340615670</updated>
+    </task>
+    <task id="LOCAL-00023" summary="mobile layout added">
+      <created>1411340665940</created>
+      <updated>1411340665940</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -763,20 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/tag/index.html.old">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="240">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/default/index.old.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="615">
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/generic.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
@@ -824,20 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="975">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/tag/index.html.old">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="240">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/default/index.old.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="615">
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1295,14 +1237,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/default/index.old.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="615">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/sample.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2265" max-vertical-offset="3000">
@@ -1335,20 +1269,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/tag/index.html.old">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.25" vertical-offset="75" max-vertical-offset="510">
-          <caret line="23" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <marker date="1410810161000" expanded="true" signature="53:857" placeholder="..." />
-            <marker date="1410810161000" expanded="true" signature="59:340" placeholder="//..." />
-            <marker date="1410810161000" expanded="true" signature="395:514" placeholder="{...}" />
-            <marker date="1410810161000" expanded="true" signature="564:691" placeholder="{...}" />
-            <marker date="1410810161000" expanded="true" signature="694:848" placeholder="//..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/tag.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="853" max-vertical-offset="1740">
@@ -1357,18 +1277,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+    <entry file="file://$PROJECT_DIR$/views/default/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1800">
-          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+        <state vertical-scroll-proportion="-0.53846157" vertical-offset="18" max-vertical-offset="300">
+          <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/default/index.html">
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7619048" vertical-offset="18" max-vertical-offset="300">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.09090909" vertical-offset="405" max-vertical-offset="1800">
+          <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
           <folding />
         </state>
       </provider>

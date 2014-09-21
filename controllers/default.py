@@ -27,7 +27,7 @@ def index():
     session.sample_tag_count = session.sample_tag_count or db(Sample_Tag).count()
     import locale
 
-    locale.setlocale(locale.LC_ALL, 'en_US')
+    locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
     session.series_count = session.series_count or db(Series).count()
     session.series_attribute_count = session.series_attribute_count or db(Series_Attribute).count()
     session.series_tag_count = session.series_tag_count or db(Series_Tag).count()
