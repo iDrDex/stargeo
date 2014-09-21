@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bb5f306f-932a-4a9c-b1cd-9bc04b97cbde" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/default.py" afterPath="$PROJECT_DIR$/controllers/default.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/default/index.html" afterPath="$PROJECT_DIR$/views/default/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="star.iws" />
@@ -90,21 +91,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/default/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.53846157" vertical-offset="18" max-vertical-offset="300">
-              <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
+            <state vertical-scroll-proportion="1.0714285" vertical-offset="0" max-vertical-offset="405">
+              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="default.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/default.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.09090909" vertical-offset="405" max-vertical-offset="1800">
-              <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+            <state vertical-scroll-proportion="-4.5555553" vertical-offset="249" max-vertical-offset="1785">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -167,8 +168,8 @@
         <option value="$PROJECT_DIR$/models/my_db.py" />
         <option value="$PROJECT_DIR$/controllers/annotate.py" />
         <option value="$PROJECT_DIR$/controllers/tag.py" />
-        <option value="$PROJECT_DIR$/views/default/index.html" />
         <option value="$PROJECT_DIR$/controllers/default.py" />
+        <option value="$PROJECT_DIR$/views/default/index.html" />
       </list>
     </option>
   </component>
@@ -640,7 +641,11 @@
       <created>1411340665940</created>
       <updated>1411340665940</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Styled the  homepage.  Pulled mobile layout">
+      <created>1411341152465</created>
+      <updated>1411341152465</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -692,7 +697,8 @@
     <MESSAGE value="Updated index and menues" />
     <MESSAGE value="New home page with stats and latest annotations" />
     <MESSAGE value="mobile layout added" />
-    <option name="LAST_COMMIT_MESSAGE" value="mobile layout added" />
+    <MESSAGE value="Styled the  homepage.  Pulled mobile layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Styled the  homepage.  Pulled mobile layout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1277,18 +1283,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/default/index.html">
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.53846157" vertical-offset="18" max-vertical-offset="300">
-          <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
+        <state vertical-scroll-proportion="-4.5555553" vertical-offset="249" max-vertical-offset="1785">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+    <entry file="file://$PROJECT_DIR$/views/default/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09090909" vertical-offset="405" max-vertical-offset="1800">
-          <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+        <state vertical-scroll-proportion="1.0714285" vertical-offset="0" max-vertical-offset="405">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding />
         </state>
       </provider>

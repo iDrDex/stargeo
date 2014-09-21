@@ -34,29 +34,28 @@ def index():
     stats = UL(LI(A(locale.format_string("%d tags", session.tag_count, grouping=True))),
                LI(A(locale.format_string("%d samples", session.sample_count, grouping=True))),
                LI(A(locale.format_string("%d attributes", session.sample_attribute_count, grouping=True),
-                    _style="""padding-left: 1em""")),
+                    _style="""margin-left: 1em""")),
                LI(A(locale.format_string("%d tag annotations", session.sample_tag_count, grouping=True),
-                    _style="""padding-left: 1em""")),
+                    _style="""margin-left: 1em""")),
                LI(A(locale.format_string("%d series", session.series_count, grouping=True))),
                LI(A(locale.format_string("%d attributes", session.series_attribute_count, grouping=True),
-                    _style="""padding-left: 1em""")),
+                    _style="""margin-left: 1em""")),
                LI(A(locale.format_string("%d tag annotations", session.series_tag_count, grouping=True),
-                  _style="""padding-left: 1em""")),
+                  _style="""margin-left: 1em""")),
                LI(A(locale.format_string("%d platforms", session.platform_count, grouping=True))),
                 _class = "nav"
             )
 
-    fields = Tag.id, Sample_Tag.id.count(), Series_Tag.id.count()
-    query = Series_Tag
-    tags = SQLFORM.grid(query, searchable=False, csv=False, orderby=~Series_Tag.id, paginate=10)
-    tags.element('.web2py_counter', replace=None)
+    tags = SQLFORM.grid(Tag, searchable=False, csv=False, orderby=~Tag.id)
+    annotations = SQLFORM.grid(Series_Tag, searchable=False, csv=False, orderby=~Series_Tag.id)
 
     response.files += ["https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css",
     "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css",
     "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"]
 
     return dict(stats=stats,
-                tags=tags)
+                tags=tags,
+                annotations=annotations)
 
 
 def user():

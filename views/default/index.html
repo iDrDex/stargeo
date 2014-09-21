@@ -1,14 +1,22 @@
 {{extend 'layout.html'}}
 
-        <div class="col-sm-3">
-            <div class="panel panel-default">
-                <div class="panel-heading">All STAR statistics</div>
-            {{=stats}}
-            </div>
+<div class="container-fluid">
+    <div class="col-sm-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">All STAR statistics</div>
+        {{=stats}}
         </div>
-        <div class="col-sm-9">
-            <div class="panel panel-default">
-                <div class="panel-heading">Latest Annotations</div>
-            {{=tags}}
-            </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">Latest Tags</div>
+        {{=tags}}
         </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">Latest Annotations</div>
+        {{=annotations}}
+        </div>
+    </div>
+</div>
