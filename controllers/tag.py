@@ -85,10 +85,26 @@ def index():
         session.headers = headers
         redirect(URL('annotate', 'index', vars=form.vars))
 
+    grid = SQLFORM.grid(query, search_widget=None,
+                        fields=fields,
+                        maxtextlength=1000,
+                        formname='form')
+    grid = DIV(grid,
+               SCRIPT('''   $("#series_tag_show_invariant").click(function () {
+                                $('#series_tag_header').val("")
+                                $("input[name='_formkey']").val("")
+                                $('#form').submit()
+                            });
+               '''),
+               SCRIPT('''   $("#series_tag_header").change(function () {
+                                $('#series_tag_show_invariant').val("")
+                                $("input[name='_formkey']").val("")
+                                $('#form').submit()
+                            });'''
+               ),
+    )
+
     # print field_names
     return dict(form=form,
-                grid=SQLFORM.grid(query, search_widget=None,
-                                  fields=fields,
-                                  maxtextlength=1000,
-                                  formname='form')
+                grid=grid
     )

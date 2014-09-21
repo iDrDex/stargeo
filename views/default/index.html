@@ -1,39 +1,14 @@
 {{extend 'layout.html'}}
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-<div class="panel panel-default">
-    <div class="row">
+        <div class="col-sm-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">All STAR statistics</div>
+            {{=stats}}
+            </div>
+        </div>
         <div class="col-sm-9">
             <div class="panel panel-default">
                 <div class="panel-heading">Latest Annotations</div>
-                {{=tags}}
+            {{=tags}}
             </div>
         </div>
-        <div class="col-sm-3">
-            <div class="panel panel-default">
-                <div class="panel-heading">STAR statistics</div>
-                <ul class="list-group">
-                    <li class="list-group-item">{{=stats['tag_count']}} tags</li>
-                    <li class="list-group-item">{{=stats['sample_count']}} samples</li>
-                    <ul class="list-group">
-                        <li class="list-group-item">{{=stats['sample_attribute_count']}} attributes</li>
-                        <li class="list-group-item">{{=stats['sample_tag_count']}} tag annotations</li>
-                    </ul>
-                    <li class="list-group-item">{{=stats['series_count']}} series</li>
-                    <ul class="list-group">
-                        <li class="list-group-item">{{=stats['series_attribute_count']}} attributes</li>
-                        <li class="list-group-item">{{=stats['series_tag_count']}} tag annotations</li>
-                    </ul>
-                    <li class="list-group-item">{{=stats['platform_count']}} platforms</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>

@@ -25,27 +25,38 @@ def index():
     session.sample_count = session.sample_count or db(Sample).count()
     session.sample_attribute_count = session.sample_attribute_count or db(Sample_Attribute).count()
     session.sample_tag_count = session.sample_tag_count or db(Sample_Tag).count()
+    import locale
 
+    locale.setlocale(locale.LC_ALL, 'en_US')
     session.series_count = session.series_count or db(Series).count()
     session.series_attribute_count = session.series_attribute_count or db(Series_Attribute).count()
     session.series_tag_count = session.series_tag_count or db(Series_Tag).count()
-    stats = dict(sample_count=session.sample_count,
-                 sample_attribute_count=session.sample_attribute_count,
-                 sample_tag_count=session.sample_tag_count,
-                 series_count=session.series_count,
-                 series_attribute_count=session.series_attribute_count,
-                 series_tag_count=session.series_tag_count,
-                 platform_count=session.platform_count,
-                 tag_count=session.tag_count)
+    stats = UL(LI(A(locale.format_string("%d tags", session.tag_count, grouping=True))),
+               LI(A(locale.format_string("%d samples", session.sample_count, grouping=True))),
+               LI(A(locale.format_string("%d attributes", session.sample_attribute_count, grouping=True),
+                    _style="""padding-left: 1em""")),
+               LI(A(locale.format_string("%d tag annotations", session.sample_tag_count, grouping=True),
+                    _style="""padding-left: 1em""")),
+               LI(A(locale.format_string("%d series", session.series_count, grouping=True))),
+               LI(A(locale.format_string("%d attributes", session.series_attribute_count, grouping=True),
+                    _style="""padding-left: 1em""")),
+               LI(A(locale.format_string("%d tag annotations", session.series_tag_count, grouping=True),
+                  _style="""padding-left: 1em""")),
+               LI(A(locale.format_string("%d platforms", session.platform_count, grouping=True))),
+                _class = "nav"
+            )
+
     fields = Tag.id, Sample_Tag.id.count(), Series_Tag.id.count()
     query = Series_Tag
-    tags = SQLFORM.grid(query, searchable=False, csv=False, orderby=~Series_Tag.id)
+    tags = SQLFORM.grid(query, searchable=False, csv=False, orderby=~Series_Tag.id, paginate=10)
     tags.element('.web2py_counter', replace=None)
 
-    return dict(stats=stats,
-                tags=tags
+    response.files += ["https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css",
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css",
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"]
 
-)
+    return dict(stats=stats,
+                tags=tags)
 
 
 def user():
