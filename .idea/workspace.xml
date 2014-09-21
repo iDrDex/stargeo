@@ -1,8 +1,216 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb5f306f-932a-4a9c-b1cd-9bc04b97cbde" name="Default" comment="">
+    <list default="true" id="bb5f306f-932a-4a9c-b1cd-9bc04b97cbde" name="Default" comment="New home page with stats and latest annotations">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/views/default/index.html" afterPath="$PROJECT_DIR$/views/default/index.old.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/images/eldirtree.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/images/eldirtree.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/images/elrte-custom-toolbar.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/images/elrte-custom-toolbar.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/images/elrte-toolbar.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/images/elrte-toolbar.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/images/elrte-toolbar.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/images/elrte-toolbar.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/images/loading.gif" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/images/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/images/loading.gif" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/images/loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/mediaplayer.swf" afterPath="$PROJECT_DIR$/static/plugin_wiki/mediaplayer.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/images/swf.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/images/swf.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_flat_0_aaaaaa_40x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_flat_15_cd0a0a_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_flat_15_cd0a0a_40x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_flat_30_cccccc_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_flat_30_cccccc_40x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_flat_50_5c5c5c_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_flat_50_5c5c5c_40x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_flat_55_fbec88_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_flat_55_fbec88_40x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_flat_75_ffffff_40x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_flat_75_ffffff_40x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_glass_20_555555_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_glass_20_555555_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_glass_40_0078a3_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_glass_40_0078a3_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_glass_40_ffc73d_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_glass_40_ffc73d_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_glass_75_d0e5f5_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_glass_75_d0e5f5_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_75_dadada_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_75_dadada_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_75_dadada_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_75_dadada_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_glass_85_dfeffc_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_glass_85_dfeffc_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_95_fef1ec_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_glass_95_fef1ec_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_95_fef1ec_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_gloss-wave_25_333333_500x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_gloss-wave_25_333333_500x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-hard_70_000000_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-hard_70_000000_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-soft_100_deedf7_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-soft_100_deedf7_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-soft_25_ffef8f_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_highlight-soft_80_eeeeee_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_inset-hard_100_fcfdfd_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_inset-soft_25_000000_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_inset-soft_25_000000_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_inset-soft_30_f58400_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_inset-soft_30_f58400_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_217bc0_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_217bc0_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_222222_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_222222_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_222222_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_2694e8_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_2694e8_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_2e83ff_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_2e83ff_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_2e83ff_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_2e83ff_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_3d80b3_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_3d80b3_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_454545_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_454545_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_454545_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_454545_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_469bdd_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_469bdd_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_4b8e0b_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_4b8e0b_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_6da8d5_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_6da8d5_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_72a7cf_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_72a7cf_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_888888_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_888888_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_888888_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_888888_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_a83300_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_a83300_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_cccccc_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_cccccc_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_cd0a0a_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_cd0a0a_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_cd0a0a_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_cd0a0a_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_cd0a0a_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_cd0a0a_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_d8e7f3_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_d8e7f3_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_f9bd01_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_f9bd01_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_ffffff_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_ffffff_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_ffffff_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_ffffff_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/Changelog" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/Changelog" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/Makefile" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/README" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/README" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Web2Py_Library.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Web2Py_Library.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/anchor.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/anchor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/multiselect/apply_web2py.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/multiselect/apply_web2py.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_cas.table" afterPath="$PROJECT_DIR$/databases/auth_cas.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_event.table" afterPath="$PROJECT_DIR$/databases/auth_event.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_group.table" afterPath="$PROJECT_DIR$/databases/auth_group.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_membership.table" afterPath="$PROJECT_DIR$/databases/auth_membership.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_permission.table" afterPath="$PROJECT_DIR$/databases/auth_permission.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_user.table" afterPath="$PROJECT_DIR$/databases/auth_user.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/blockquote.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/blockquote.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/copy.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/copy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/css.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/css.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/default.py" afterPath="$PROJECT_DIR$/controllers/default.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/div.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/div.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/docstructure.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/docstructure.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.DOM.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.DOM.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.filter.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.filter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.history.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.history.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.options.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.selection.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.selection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.ui.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.ui.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.utils.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.w3cRange.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.w3cRange.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elcolorpicker.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elcolorpicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elcommon.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elcommon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/eldialogform.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/eldialogform.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/eldialogform.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/eldialogform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/elfinder.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/elfinder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/eli18n.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/eli18n.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elpaddinginput.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elpaddinginput.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elreset.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elreset.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/css/elrte-inner.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/css/elrte-inner.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/css/elrte-inner.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/css/elrte-inner.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/css/elrte.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/css/elrte.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/i18n/elrte.de.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/i18n/elrte.de.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/i18n/elrte.de.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/i18n/elrte.de.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/css/elrte.full.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/css/elrte.full.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/elrte.full.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/elrte.full.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/elrte.html" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/elrte.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/elrte.min.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/elrte.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/i18n/elrte.ru.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/i18n/elrte.ru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/i18n/elrte.ru.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/i18n/elrte.ru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte.src.html" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte.src.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/i18n/elrte.ua.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/i18n/elrte.ua.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/i18n/elrte.ua.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/i18n/elrte.ua.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elselect.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elselect.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/flash.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/flash.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/fontname.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/fontname.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/fontsize.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/fontsize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/forecolor.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/forecolor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/formatblock.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/formatblock.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/fullscreen.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/fullscreen.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/horizontalrule.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/horizontalrule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/image.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/image.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/indent.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/indent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/default/index.html" afterPath="$PROJECT_DIR$/views/default/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/jquery-1.3.2.min.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/jquery-1.3.2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/jquery-ui-1.7.2.custom.min.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/jquery-ui-1.7.2.custom.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/jquery-ui-1.8.1.custom.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/jquery-ui-1.8.1.custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/jquery-ui-1.8.5.custom.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/jquery-ui-1.8.5.custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/jquery-ui-1.8.5.custom.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/jquery-ui-1.8.5.custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/jquery-ui-1.8.5.custom.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/jquery-ui-1.8.5.custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/js/jquery-ui-1.8.5.custom.min.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/js/jquery-ui-1.8.5.custom.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/jquery-ui.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/jquery-ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/slideshow/jquery.cycle.min.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/slideshow/jquery.cycle.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elborderselect.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elborderselect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elcolorpicker.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elcolorpicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elpaddinginput.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elpaddinginput.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elselect.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elselect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/jquery.jqGrid.min.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/jquery.jqGrid.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/markitup/jquery.markitup.pack.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/jquery.markitup.pack.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/multiselect/jquery.multiselect.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/multiselect/jquery.multiselect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/justifyleft.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/justifyleft.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/link.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/link.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/menu.py" afterPath="$PROJECT_DIR$/models/menu.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/my_db.py" afterPath="$PROJECT_DIR$/models/my_db.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/nbsp.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/nbsp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/outdent.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/outdent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/pasteformattext.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/pasteformattext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/pastetext.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/pastetext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/platform.table" afterPath="$PROJECT_DIR$/databases/platform.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/platform_attribute.table" afterPath="$PROJECT_DIR$/databases/platform_attribute.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/post.php" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/post.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/progress.log" afterPath="$PROJECT_DIR$/progress.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sample.table" afterPath="$PROJECT_DIR$/databases/sample.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sample_attribute.table" afterPath="$PROJECT_DIR$/databases/sample_attribute.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sample_filter.table" afterPath="$PROJECT_DIR$/databases/sample_filter.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sample_tag.table" afterPath="$PROJECT_DIR$/databases/sample_tag.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sample_view_annotation_filter.table" afterPath="$PROJECT_DIR$/databases/sample_view_annotation_filter.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/save.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/save.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/series.table" afterPath="$PROJECT_DIR$/databases/series.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/series_attribute.table" afterPath="$PROJECT_DIR$/databases/series_attribute.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/series_tag.table" afterPath="$PROJECT_DIR$/databases/series_tag.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sql.log" afterPath="$PROJECT_DIR$/databases/sql.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/stopfloat.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/stopfloat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/table.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/table.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tablerm.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tablerm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/tag.table" afterPath="$PROJECT_DIR$/databases/tag.table" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcellprops.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcellprops.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcellsmerge.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcellsmerge.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcellsplit.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcellsplit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcollbefore.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcollbefore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcolrm.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcolrm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbrowbefore.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbrowbefore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbrowrm.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbrowrm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.accordion.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.accordion.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.all.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.all.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.base.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.base.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.core.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.core.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.datepicker.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.datepicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.dialog.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/ui.jqgrid.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/ui.jqgrid.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.progressbar.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.progressbar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.resizable.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.resizable.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.slider.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.slider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.tabs.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.tabs.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.theme.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/undo.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/undo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/unlink.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/unlink.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/web2py_bootstrap.css" afterPath="$PROJECT_DIR$/static/css/web2py_bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/web2py_bootstrap_nojs.css" afterPath="$PROJECT_DIR$/static/css/web2py_bootstrap_nojs.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="star.iws" />
@@ -15,8 +223,8 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/star$star.coverage" NAME="star Coverage Results" MODIFIED="1411284279286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
     <SUITE FILE_PATH="coverage/star$setup_db.coverage" NAME="setup_db Coverage Results" MODIFIED="1410844870510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
-    <SUITE FILE_PATH="coverage/star$star.coverage" NAME="star Coverage Results" MODIFIED="1411149246434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -33,8 +241,8 @@
       <file leaf-file-name="annotate.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/annotate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="733" max-vertical-offset="2085">
-              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1935" max-vertical-offset="2085">
+              <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -43,23 +251,9 @@
       <file leaf-file-name="my_db.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/my_db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="2505">
-              <caret line="126" column="64" selection-start-line="126" selection-start-column="49" selection-end-line="126" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1423" max-vertical-offset="2520">
+              <caret line="114" column="78" selection-start-line="114" selection-start-column="78" selection-end-line="114" selection-end-column="78" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setup_db.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/setup_db.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2347" max-vertical-offset="4830">
-              <caret line="185" column="68" selection-start-line="185" selection-start-column="68" selection-end-line="185" selection-end-column="68" />
-              <folding>
-                <marker date="1411030190000" expanded="true" signature="1712:1762" placeholder="select count..pg_class..." />
-                <marker date="1411030190000" expanded="true" signature="2700:2750" placeholder="select count..pg_class..." />
-                <marker date="1411030190000" expanded="true" signature="8557:8609" placeholder="select gse_n..series..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -77,8 +271,8 @@
       <file leaf-file-name="PostgreSQL - star@dexter-db-star.cd8zgucpvgtu.us-west-2.rds.amazonaws.com" pinned="false" current="false" current-in-tab="false">
         <entry file="dbDummy://db-console:/ca7a5962/13e1bc5f-11a7-4390-a574-b36b36c4c5de/">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="225">
-              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -87,8 +281,8 @@
       <file leaf-file-name="PostgreSQL - star@localhost" pinned="false" current="false" current-in-tab="false">
         <entry file="dbDummy://db-console:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="2115">
-              <caret line="108" column="39" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="150">
+              <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -99,18 +293,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="36135" max-vertical-offset="49335">
               <caret line="2409" column="30" selection-start-line="2409" selection-start-column="30" selection-end-line="2409" selection-end-column="30" />
-              <folding>
-                <marker date="1411026290000" expanded="true" signature="74816:74846" placeholder="select count..missing_value..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="menu.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3892922" vertical-offset="216" max-vertical-offset="2490">
-              <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="615" max-vertical-offset="2490">
+              <caret line="41" column="93" selection-start-line="41" selection-start-column="93" selection-end-line="41" selection-end-column="93" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/default/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.26455027" vertical-offset="60" max-vertical-offset="675">
+              <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -119,8 +321,18 @@
       <file leaf-file-name="default.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/default.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1500">
-              <caret line="36" column="49" selection-start-line="34" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+            <state vertical-scroll-proportion="-7.8" vertical-offset="900" max-vertical-offset="1635">
+              <caret line="73" column="7" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sample.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/sample.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2265" max-vertical-offset="3000">
+              <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -162,7 +374,6 @@
         <option value="dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.series_tag_view" />
         <option value="dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.series_view" />
         <option value="$PROJECT_DIR$/controllers/series.py" />
-        <option value="$PROJECT_DIR$/models/my_db.py" />
         <option value="$PROJECT_DIR$/controllers/summary.py" />
         <option value="$PROJECT_DIR$/controllers/annotation.py" />
         <option value="$PROJECT_DIR$/controllers/annotate.py" />
@@ -170,18 +381,19 @@
         <option value="$PROJECT_DIR$/controllers/sample.py" />
         <option value="$PROJECT_DIR$/modules/setup_db.py" />
         <option value="$PROJECT_DIR$/models/db.py" />
-        <option value="$PROJECT_DIR$/controllers/default.py" />
         <option value="db-console:/ca7a5962/13e1bc5f-11a7-4390-a574-b36b36c4c5de/" />
-        <option value="db-console:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/" />
         <option value="$PROJECT_DIR$/models/menu.py" />
+        <option value="db-console:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/" />
+        <option value="$PROJECT_DIR$/controllers/default.py" />
+        <option value="$PROJECT_DIR$/models/my_db.py" />
+        <option value="$PROJECT_DIR$/views/default/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="352" />
-    <option name="y" value="112" />
-    <option name="width" value="2081" />
-    <option name="height" value="1222" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="797" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -197,7 +409,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -208,7 +420,89 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="star" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="star" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="star" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="star" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="star" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="star" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="star" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="star" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="star" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="star" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="star" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -323,9 +617,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -347,6 +638,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -510,31 +804,35 @@
       <created>1411251934103</created>
       <updated>1411251934103</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Updated index and menues">
+      <created>1411252011497</created>
+      <updated>1411252011497</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="352" y="112" width="2081" height="1222" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="797" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13094655" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39134276" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13055556" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25208434" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15289913" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12014134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15208334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39134276" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11813187" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32477877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -573,15 +871,17 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/controllers/default.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1335">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="615" max-vertical-offset="1335">
+          <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/series.py">
+    <entry file="file://$PROJECT_DIR$/controllers/sample.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1755" max-vertical-offset="2475">
-          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="2400">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="1" selection-end-line="127" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -606,7 +906,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/default/index.html">
+    <entry file="file://$PROJECT_DIR$/views/default/index.old.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="615">
           <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
@@ -670,7 +970,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/default/index.html">
+    <entry file="file://$PROJECT_DIR$/views/default/index.old.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="615">
           <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
@@ -700,13 +1000,13 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.annotation">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/generic.html">
@@ -717,70 +1017,63 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.series_attribute">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/default/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="615">
-          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-        </state>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/ca7a5962/13e1bc5f-11a7-4390-a574-b36b36c4c5de/star.public.series_view">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/ca7a5962/13e1bc5f-11a7-4390-a574-b36b36c4c5de/star.public.sample_filter">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.sample_filter">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.sample_view_annotation_filter">
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
       </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.sample_view_annotation_filter">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.sample_tag">
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
       </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.sample_tag">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="uml://DATABASE/ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.auth_cas">
@@ -805,7 +1098,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_tag" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.platform">
+            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_tag" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.tag">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -813,7 +1106,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_tag" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.tag">
+            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_tag" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.platform">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -829,7 +1122,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_attribute" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series">
+            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.platform_attribute" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.platform">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -837,7 +1130,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.platform_attribute" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.platform">
+            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_attribute" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -860,33 +1153,33 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.series_tag">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.series_view">
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
       </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.series_view">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.sample_tag_view">
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
       </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.sample_tag_view">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../gluon/globals.py">
@@ -897,26 +1190,19 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.tag">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/annotation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
           <caret line="35" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/summary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -934,45 +1220,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/sample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1537" max-vertical-offset="3000">
-          <caret line="110" column="0" selection-start-line="110" selection-start-column="1" selection-end-line="127" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/setup_db.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2347" max-vertical-offset="4830">
           <caret line="185" column="68" selection-start-line="185" selection-start-column="68" selection-end-line="185" selection-end-column="68" />
-          <folding>
-            <marker date="1411030190000" expanded="true" signature="1712:1762" placeholder="select count..pg_class..." />
-            <marker date="1411030190000" expanded="true" signature="2700:2750" placeholder="select count..pg_class..." />
-            <marker date="1411030190000" expanded="true" signature="8557:8609" placeholder="select gse_n..series..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/my_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="2505">
-          <caret line="126" column="64" selection-start-line="126" selection-start-column="49" selection-end-line="126" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://db-console:/ca7a5962/13e1bc5f-11a7-4390-a574-b36b36c4c5de/">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="225">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/annotate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="733" max-vertical-offset="2085">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1935" max-vertical-offset="2085">
+          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -981,9 +1247,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="35340" max-vertical-offset="49020">
           <caret line="2409" column="30" selection-start-line="2409" selection-start-column="30" selection-end-line="2409" selection-end-column="30" />
-          <folding>
-            <marker date="1411026290000" expanded="true" signature="74816:74846" placeholder="select count..missing_value..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1017,7 +1281,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_tag" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.tag">
+            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_tag" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.platform">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1025,7 +1289,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_tag" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.platform">
+            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_tag" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.tag">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1041,7 +1305,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.sample_attribute" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.sample">
+            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_attribute" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1049,7 +1313,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_attribute" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series">
+            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.sample_attribute" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.sample">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1074,18 +1338,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/default.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500">
-          <caret line="36" column="49" selection-start-line="34" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://db-console:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="2115">
-          <caret line="108" column="39" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="150">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1112,7 +1368,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_tag" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.platform">
+            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_tag" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.tag">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1120,7 +1376,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_tag" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.tag">
+            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_tag" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.platform">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1136,7 +1392,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.sample_attribute" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.sample">
+            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.platform_attribute" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.platform">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1144,7 +1400,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.platform_attribute" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.platform">
+            <edge source="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.sample_attribute" target="ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.sample">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1177,8 +1433,8 @@
             <node x="" y="">ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_tag</node>
             <node x="" y="">ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.sample</node>
             <node x="" y="">ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.sample_tag_view</node>
-            <node x="" y="">ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.sample_view</node>
             <node x="" y="">ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.sample_filter</node>
+            <node x="" y="">ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.sample_view</node>
             <node x="" y="">ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_view</node>
             <node x="" y="">ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.series_tag_view</node>
             <node x="" y="">ff44c2f4-aa40-4015-9804-581a68ea31c9.table:star.public.tag</node>
@@ -1196,10 +1452,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/index.old.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="615">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2265" max-vertical-offset="3000">
+          <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8" vertical-offset="900" max-vertical-offset="1635">
+          <caret line="73" column="7" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3892922" vertical-offset="216" max-vertical-offset="2490">
-          <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="2490">
+          <caret line="41" column="93" selection-start-line="41" selection-start-column="93" selection-end-line="41" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/my_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1423" max-vertical-offset="2520">
+          <caret line="114" column="78" selection-start-line="114" selection-start-column="78" selection-end-line="114" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26455027" vertical-offset="60" max-vertical-offset="675">
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
           <folding />
         </state>
       </provider>

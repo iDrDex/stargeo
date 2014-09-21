@@ -26,7 +26,7 @@ response.logo = DIV(
 
 # # read more at http://dev.w3.org/html5/markup/meta.name.html
 response.meta.author = 'Dexter Hadley <dexter@stanford.edu>'
-response.meta.keywords = 'web2py, python, framework, metaanalysis, microarray, public data, croudsourced'
+response.meta.keywords = 'web2py, python, framework, metaanalysis, microarray, public data, crowdsource, gene signature, big data, translational'
 response.meta.generator = 'Sample Tagging and Annotation Resource'
 
 # # your http://google.com/analytics id

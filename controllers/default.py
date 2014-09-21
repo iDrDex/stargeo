@@ -29,15 +29,24 @@ def index():
     session.series_count = session.series_count or db(Series).count()
     session.series_attribute_count = session.series_attribute_count or db(Series_Attribute).count()
     session.series_tag_count = session.series_tag_count or db(Series_Tag).count()
-    return dict(sample_count = session.sample_count,
-                sample_attribute_count = session.sample_attribute_count,
-                sample_tag_count = session.sample_tag_count,
-                series_count = session.series_count,
-                series_attribute_count = session.series_attribute_count,
-                series_tag_count = session.series_tag_count,
-                platform_count = session.platform_count,
-                tag_count = session.tag_count,
-    )
+    stats = dict(sample_count=session.sample_count,
+                 sample_attribute_count=session.sample_attribute_count,
+                 sample_tag_count=session.sample_tag_count,
+                 series_count=session.series_count,
+                 series_attribute_count=session.series_attribute_count,
+                 series_tag_count=session.series_tag_count,
+                 platform_count=session.platform_count,
+                 tag_count=session.tag_count)
+    fields = Tag.id, Sample_Tag.id.count(), Series_Tag.id.count()
+    query = Series_Tag
+    tags = SQLFORM.grid(query, searchable=False, csv=False, orderby=~Series_Tag.id)
+    tags.element('.web2py_counter', replace=None)
+
+    return dict(stats=stats,
+                tags=tags
+
+)
+
 
 def user():
     """

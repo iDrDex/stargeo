@@ -106,12 +106,13 @@ Tag = db.define_table('tag',
 )
 
 Series_Tag = db.define_table('series_tag',
+                             Field('id', 'id', readable=False, writable=False),
                              Field('series_id', 'reference series'),
                              Field('platform_id', 'reference platform'),
                              Field('tag_id', 'reference tag'),
                              Field('header'),
                              Field('regex', requires=IS_NOT_EMPTY()),
-                             Field('show_invariant', 'boolean'),
+                             Field('show_invariant', 'boolean', readable=False),
                              format='%(tag_id.tag_name)s_%(series_id.gse_name)s_%(platform_id.gpl_name)s',
                              migrate="series_tag.table"
 )
