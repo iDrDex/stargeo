@@ -1,19 +1,19 @@
 {{extend 'layout.html'}}
 
-
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="row">
 
     <div class="jumbotron col-lg-8">
         <div class="container">
             <p><b>STAR</b>: The <i>Search Tag & Analyze Resource</i> for collaborative annotation and
-                interpretation of open digital samples.</p>
+                interpretation of disease from open digital samples.</p>
         </div>
         <div class="container">
             <ul id="myTab" class="nav nav-tabs" role="tablist">
                 <li class="active"><a href="#search" role="tab" data-toggle="tab">Search</a></li>
                 <li class=""><a href="#tag" role="tab" data-toggle="tab">Tag</a></li>
                 <li class=""><a href="#analyze" role="tab" data-toggle="tab">Analyze</a></li>
+                <li class=""><a href="#resource" role="tab" data-toggle="tab">Resource</a></li>
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="search">
@@ -33,6 +33,11 @@
                     <p>STAR enables meta-analysis of digitally tagged samples for robust gene signatures
                         across {{=session.platform_count}} platforms. Meta-effects are calculated by standard
                         fixed and random models of effect sizes and visualized by Forrest plots for each gene.</p>
+                </div>
+                <div class="tab-pane fade" id="resource">
+                    <p>STAR represents an annotation layer built on open public data provided by GEO. Tt is provided as an open
+                        resource for the scientific community as a tool to derive robust gene signatures from public
+                        functional genomics data.</p>
                 </div>
             </div>
         </div>
@@ -92,7 +97,7 @@
     <div class="panel-heading">Latest Annotations</div>
 {{
 Series_Tag.tag_id.represent = lambda name, row: DIV(row.tag_id.tag_name, _class = "badge")
-annotations = SQLFORM.grid(Series_Tag, searchable=False, csv=False, orderby=~Series_Tag.id, paginate=7,)
+annotations = SQLFORM.grid(Series_Tag, searchable=False, csv=False, orderby=~Series_Tag.id, paginate=7, maxtextlength=100)
 annotations.element('.web2py_console', replace=None)
 annotations.element('.web2py_paginator', replace=None)
 =annotations}}

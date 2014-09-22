@@ -9,9 +9,8 @@
 # response.title = request.application.replace('_',' ').title()
 # response.subtitle = ''
 
-# response.logo = A(B(SPAN('!'), 'Rendez'),XML('&trade;&nbsp;'),
-# _class="brand",_href="http://rendez.no-ip.org/")
-
+response.title   = "STAR"
+response.subtitle   = "Redefining the meaning of disease... Together!"
 response.logo = DIV(
     DIV(A(I(_class="fa fa-star"),
           B("GEO" if not session.query else ""),
@@ -38,8 +37,8 @@ response.google_analytics_id = "UA-42964640-3"
 # ########################################################################
 
 response.menu = [
-    (T('Series'), (request.function == 'index'), URL('series', 'index', vars=request.vars)),
-    (T('Samples'), (request.function == 'index'), URL('sample', 'index', vars=request.vars)),
+    (T('Series'), (request.function == 'index'), URL('series', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
+    (T('Samples'), (request.function == 'index'), URL('sample', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
     (T('SeriesTags'), (request.function == 'index'), URL('summary', 'index')),
     (T('SampleTags'), (request.function == 'index'), URL('annotation', 'index')),
 ]
