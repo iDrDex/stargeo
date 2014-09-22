@@ -31,30 +31,11 @@ def index():
     session.series_count = session.series_count or db(Series).count()
     session.series_attribute_count = session.series_attribute_count or db(Series_Attribute).count()
     session.series_tag_count = session.series_tag_count or db(Series_Tag).count()
-    stats = UL(LI(A(locale.format_string("%d tags", session.tag_count, grouping=True))),
-               LI(A(locale.format_string("%d samples", session.sample_count, grouping=True))),
-               LI(A(locale.format_string("%d attributes", session.sample_attribute_count, grouping=True),
-                    _style="""margin-left: 1em""")),
-               LI(A(locale.format_string("%d tag annotations", session.sample_tag_count, grouping=True),
-                    _style="""margin-left: 1em""")),
-               LI(A(locale.format_string("%d series", session.series_count, grouping=True))),
-               LI(A(locale.format_string("%d attributes", session.series_attribute_count, grouping=True),
-                    _style="""margin-left: 1em""")),
-               LI(A(locale.format_string("%d tag annotations", session.series_tag_count, grouping=True),
-                  _style="""margin-left: 1em""")),
-               LI(A(locale.format_string("%d platforms", session.platform_count, grouping=True))),
-                _class = "nav"
-            )
 
     tags = SQLFORM.grid(Tag, searchable=False, csv=False, orderby=~Tag.id)
     annotations = SQLFORM.grid(Series_Tag, searchable=False, csv=False, orderby=~Series_Tag.id)
 
-    response.files += ["https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css",
-    "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css",
-    "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"]
-
-    return dict(stats=stats,
-                tags=tags,
+    return dict(tags=tags,
                 annotations=annotations)
 
 

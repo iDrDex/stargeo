@@ -1,22 +1,35 @@
 {{extend 'layout.html'}}
 
 <div class="container-fluid">
-    <div class="col-sm-2">
+    <div class="col-sm-3">
         <div class="panel panel-default">
-            <div class="panel-heading">All STAR statistics</div>
-        {{=stats}}
+            <div class="panel-heading">All STAR stats</div>
+        {{import locale}}
+            <ul class="nav">
+                <li>{{=locale.format("%d", session.tag_count, grouping=True)}} tags</li>
+                <li>{{=locale.format("%d", session.sample_count, grouping=True)}} samples</li>
+                <li style="margin-left: 1em">{{=locale.format("%d", session.sample_attribute_count, grouping=True)}} attributes</li>
+                <li style="margin-left: 1em">{{=locale.format("%d", session.sample_tag_count, grouping=True)}} tag annotations</li>
+                <li>{{=locale.format("%d", session.series_count, grouping=True)}} series</li>
+                <li style="margin-left: 1em">{{=locale.format("%d", session.series_attribute_count, grouping=True)}} attributes</li>
+                <li style="margin-left: 1em">{{=locale.format("%d", session.series_tag_count, grouping=True)}} tag annotations</li>
+                <li>{{=locale.format("%d", session.platform_count, grouping=True)}} platforms</li>
+            </ul>
         </div>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-9">
         <div class="panel panel-default">
-            <div class="panel-heading">Latest Tags</div>
+            <div class="panel-heading">Latest Annotations</div>
         {{=tags}}
         </div>
     </div>
-    <div class="col-sm-6">
-        <div class="panel panel-default">
-            <div class="panel-heading">Latest Annotations</div>
-        {{=annotations}}
-        </div>
-    </div>
 </div>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
