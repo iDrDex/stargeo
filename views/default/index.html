@@ -1,29 +1,112 @@
 {{extend 'layout.html'}}
+{{import locale}}
 
-<div class="container-fluid">
-    <div class="col-sm-3">
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="row">
+
+    <div class="jumbotron col-lg-8">
+        <div class="container">
+            <p><b>STAR</b>: The online <i>Search Tag & Analyze Resource</i> to crowd-source genomic analysis and interpretation
+                of open digital samples.</p>
+        </div>
+        <div class="container">
+            <ul id="myTab" class="nav nav-tabs" role="tablist">
+                <li class="active"><a href="#search" role="tab" data-toggle="tab">Search</a></li>
+                <li class=""><a href="#tag" role="tab" data-toggle="tab">Tag</a></li>
+                <li class=""><a href="#analyze" role="tab" data-toggle="tab">Analyze</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade active in" id="search">
+                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
+                        retro
+                        synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+                        butcher
+                        nisi qui.</p>
+                </div>
+                <div class="tab-pane fade" id="tag">
+                    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
+                        Exercitation
+                        +1
+                        cillum
+                        wes
+                        anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel.
+                        Art
+                        party
+                        scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+                </div>
+                <div class="tab-pane fade" id="analyze">
+                    <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo
+                        retro
+                        fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer,
+                        iphone
+                        vinyl
+                        craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-lg-4">
         <div class="panel panel-default">
             <div class="panel-heading">All STAR stats</div>
-        {{import locale}}
             <ul class="nav">
-                <li>{{=locale.format("%d", session.tag_count, grouping=True)}} tags</li>
-                <li>{{=locale.format("%d", session.sample_count, grouping=True)}} samples</li>
-                <li style="margin-left: 1em">{{=locale.format("%d", session.sample_attribute_count, grouping=True)}} attributes</li>
-                <li style="margin-left: 1em">{{=locale.format("%d", session.sample_tag_count, grouping=True)}} tag annotations</li>
-                <li>{{=locale.format("%d", session.series_count, grouping=True)}} series</li>
-                <li style="margin-left: 1em">{{=locale.format("%d", session.series_attribute_count, grouping=True)}} attributes</li>
-                <li style="margin-left: 1em">{{=locale.format("%d", session.series_tag_count, grouping=True)}} tag annotations</li>
-                <li>{{=locale.format("%d", session.platform_count, grouping=True)}} platforms</li>
+                <li>
+                    <a>Tags
+                        <span class="badge pull-right">{{=locale.format("%d", session.tag_count, grouping=True)}}</span>
+                    </a>
+                </li>
+                <li>
+                    <a>Samples
+                        <span class="badge pull-right">{{=locale.format("%d", session.sample_count, grouping=True)}}</span>
+                    </a>
+                </li>
+                <li style="margin-left: 1em">
+                    <a> Attributes
+                        <span class="badge pull-right">{{=locale.format("%d", session.sample_attribute_count, grouping=True)}}</span>
+                    </a>
+                </li>
+                <li style="margin-left: 1em">
+                    <a>Annotations
+                        <span class="badge pull-right">{{=locale.format("%d", session.sample_tag_count, grouping=True)}}</span>
+                    </a>
+                </li>
+                <li>
+                    <a>Series
+                        <span class="badge pull-right">{{=locale.format("%d", session.series_count, grouping=True)}}</span>
+                    </a>
+                </li>
+                <li style="margin-left: 1em">
+                    <a>Attributes
+                        <span class="badge pull-right">{{=locale.format("%d", session.series_attribute_count, grouping=True)}}</span>
+                    </a>
+                </li>
+                <li style="margin-left: 1em">
+                    <a>Annotations
+                        <span class="badge pull-right">{{=locale.format("%d", session.series_tag_count, grouping=True)}}</span>
+                    </a>
+                </li>
+                <li>
+                    <a>Platforms
+                        <span class="badge pull-right">{{=locale.format("%d", session.platform_count, grouping=True)}}</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
-    <div class="col-sm-9">
-        <div class="panel panel-default">
-            <div class="panel-heading">Latest Annotations</div>
-        {{=tags}}
-        </div>
-    </div>
+
 </div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Latest Annotations</div>
+{{
+Series_Tag.tag_id.represent = lambda name, row: DIV(row.tag_id.tag_name, _class = "badge")
+annotations = SQLFORM.grid(Series_Tag, searchable=False, csv=False, orderby=~Series_Tag.id, paginate=7,)
+annotations.element('.web2py_console', replace=None)
+annotations.element('.web2py_paginator', replace=None)
+=annotations}}
+</div>
+
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">

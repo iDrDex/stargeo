@@ -32,11 +32,9 @@ def index():
     session.series_attribute_count = session.series_attribute_count or db(Series_Attribute).count()
     session.series_tag_count = session.series_tag_count or db(Series_Tag).count()
 
-    tags = SQLFORM.grid(Tag, searchable=False, csv=False, orderby=~Tag.id)
-    annotations = SQLFORM.grid(Series_Tag, searchable=False, csv=False, orderby=~Series_Tag.id)
+    # tags = SQLFORM.grid(Tag, searchable=False, csv=False, orderby=~Tag.id)
 
-    return dict(tags=tags,
-                annotations=annotations)
+    return dict()
 
 
 def user():

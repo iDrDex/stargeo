@@ -1661,3 +1661,5 @@ TRUNCATE TABLE sample_filter ;
 success!
 TRUNCATE TABLE series_filter ;
 success!
+TRUNCATE TABLE sample_filter ;
+success!
