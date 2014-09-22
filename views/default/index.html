@@ -1,5 +1,4 @@
 {{extend 'layout.html'}}
-{{import locale}}
 
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -7,8 +6,8 @@
 
     <div class="jumbotron col-lg-8">
         <div class="container">
-            <p><b>STAR</b>: The online <i>Search Tag & Analyze Resource</i> to crowd-source genomic analysis and interpretation
-                of open digital samples.</p>
+            <p><b>STAR</b>: The <i>Search Tag & Analyze Resource</i> for collaborative annotation and
+                interpretation of open digital samples.</p>
         </div>
         <div class="container">
             <ul id="myTab" class="nav nav-tabs" role="tablist">
@@ -18,30 +17,22 @@
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="search">
-                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
-                        retro
-                        synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
-                        butcher
-                        nisi qui.</p>
+                    <p>STAR provides a powerful search engine across samples, experiments, and atributes from GEO. In
+                        all, {{=session.sample_attribute_count}} attributes
+                        of {{=session.sample_count}} digital samples drawn
+                        from {{=session.series_count}} experiments characterized
+                        by {{=session.series_attribute_count}} attributes are available.</p>
                 </div>
                 <div class="tab-pane fade" id="tag">
-                    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
-                        Exercitation
-                        +1
-                        cillum
-                        wes
-                        anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel.
-                        Art
-                        party
-                        scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+                    <p>STAR uses an annotation engine based on a symantic network of crowd-sourced tags that
+                        that represent biological annotations. In all, {{=session.tag_count}} tags have been used
+                        to make  {{=session.series_tag_count}} annotations of digital experiments
+                        representing {{=session.sample_tag_count}} annotations of digital samples.</p>
                 </div>
                 <div class="tab-pane fade" id="analyze">
-                    <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo
-                        retro
-                        fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer,
-                        iphone
-                        vinyl
-                        craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+                    <p>STAR enables meta-analysis of digitally tagged samples for robust gene signatures
+                        across {{=session.platform_count}} platforms. Meta-effects are calculated by standard
+                        fixed and random models of effect sizes and visualized by Forrest plots for each gene.</p>
                 </div>
             </div>
         </div>
@@ -53,42 +44,42 @@
             <ul class="nav">
                 <li>
                     <a>Tags
-                        <span class="badge pull-right">{{=locale.format("%d", session.tag_count, grouping=True)}}</span>
+                        <span class="badge pull-right">{{=session.tag_count}}</span>
                     </a>
                 </li>
                 <li>
                     <a>Samples
-                        <span class="badge pull-right">{{=locale.format("%d", session.sample_count, grouping=True)}}</span>
+                        <span class="badge pull-right">{{=session.sample_count}}</span>
                     </a>
                 </li>
                 <li style="margin-left: 1em">
                     <a> Attributes
-                        <span class="badge pull-right">{{=locale.format("%d", session.sample_attribute_count, grouping=True)}}</span>
+                        <span class="badge pull-right">{{=session.sample_attribute_count}}</span>
                     </a>
                 </li>
                 <li style="margin-left: 1em">
                     <a>Annotations
-                        <span class="badge pull-right">{{=locale.format("%d", session.sample_tag_count, grouping=True)}}</span>
+                        <span class="badge pull-right">{{=session.sample_tag_count}}</span>
                     </a>
                 </li>
                 <li>
                     <a>Series
-                        <span class="badge pull-right">{{=locale.format("%d", session.series_count, grouping=True)}}</span>
+                        <span class="badge pull-right">{{=session.series_count}}</span>
                     </a>
                 </li>
                 <li style="margin-left: 1em">
                     <a>Attributes
-                        <span class="badge pull-right">{{=locale.format("%d", session.series_attribute_count, grouping=True)}}</span>
+                        <span class="badge pull-right">{{=session.series_attribute_count}}</span>
                     </a>
                 </li>
                 <li style="margin-left: 1em">
                     <a>Annotations
-                        <span class="badge pull-right">{{=locale.format("%d", session.series_tag_count, grouping=True)}}</span>
+                        <span class="badge pull-right">{{=session.series_tag_count}}</span>
                     </a>
                 </li>
                 <li>
                     <a>Platforms
-                        <span class="badge pull-right">{{=locale.format("%d", session.platform_count, grouping=True)}}</span>
+                        <span class="badge pull-right">{{=session.platform_count}}</span>
                     </a>
                 </li>
             </ul>
