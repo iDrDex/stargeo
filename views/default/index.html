@@ -17,14 +17,14 @@
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="search">
-                    <p>STAR provides a powerful search engine across samples, experiments, and atributes from GEO. In
-                        all, {{=session.sample_attribute_count}} attributes
-                        of {{=session.sample_count}} digital samples drawn
-                        from {{=session.series_count}} experiments characterized
-                        by {{=session.series_attribute_count}} attributes are available.</p>
+                    <p>STAR provides a powerful search engine across samples, experiments, and attributes from GEO.
+                        In all, {{=session.sample_count}} digital samples
+                        described by {{=session.sample_attribute_count}} attributes that are
+                        drawn from {{=session.series_count}} experiments
+                        described by {{=session.series_attribute_count}} attributes are available.</p>
                 </div>
                 <div class="tab-pane fade" id="tag">
-                    <p>STAR uses an annotation engine based on a symantic network of crowd-sourced tags that
+                    <p>STAR uses an annotation engine based on a semantic network of crowd-sourced tags that
                         that represent biological annotations. In all, {{=session.tag_count}} tags have been used
                         to make  {{=session.series_tag_count}} annotations of digital experiments
                         representing {{=session.sample_tag_count}} annotations of digital samples.</p>
@@ -35,7 +35,8 @@
                         fixed and random models of effect sizes and visualized by Forrest plots for each gene.</p>
                 </div>
                 <div class="tab-pane fade" id="resource">
-                    <p>STAR represents an annotation layer built on open public data provided by GEO. Tt is provided as an open
+                    <p>STAR represents an annotation layer built on open public data provided by GEO. It is provided as
+                        an open
                         resource for the scientific community as a tool to derive robust gene signatures from public
                         functional genomics data.</p>
                 </div>
@@ -112,3 +113,29 @@ annotations.element('.web2py_paginator', replace=None)
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!--http://stackoverflow.com/questions/18606773/automatic-bootstrap-tabs-->
+<script>var tabChange = function () {
+    var tabs = $('.nav-tabs > li');
+    var active = tabs.filter('.active');
+    var next = active.next('li').length ? active.next('li').find('a') : tabs.filter(':first-child').find('a');
+    // Use the Bootsrap tab show method
+    next.tab('show');
+};
+// Tab Cycle function
+var tabCycle = setInterval(tabChange, 6000);
+
+// Tab click event handler
+$('a').on('click', function (e) {
+    e.preventDefault();
+    // Stop the cycle
+    clearInterval(tabCycle);
+    // Show the clicked tabs associated tab-pane
+    $(this).tab('show');
+    // Start the cycle again in a predefined amount of time
+    setTimeout(function () {
+        //tabCycle = setInterval(tabChange, 5000);
+    }, 15000);
+});
+
+</script>

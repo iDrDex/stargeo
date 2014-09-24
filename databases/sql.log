@@ -1707,3 +1707,5 @@ TRUNCATE TABLE series_filter ;
 success!
 TRUNCATE TABLE sample_view_annotation_filter ;
 success!
+TRUNCATE TABLE sample_filter ;
+success!
