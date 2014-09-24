@@ -37,10 +37,10 @@ response.google_analytics_id = "UA-42964640-3"
 # ########################################################################
 
 response.menu = [
-    (T('Series'), (request.function == 'index'), URL('series', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
-    (T('Samples'), (request.function == 'index'), URL('sample', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
-    (T('SeriesTags'), (request.function == 'index'), URL('summary', 'index')),
-    (T('SampleTags'), (request.function == 'index'), URL('annotation', 'index')),
+    (T('Series'), (request.function == 'index'), URL('series', 'index', f=True, vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
+    (T('Samples'), (request.function == 'index'), URL('sample', 'index', f=True, vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
+    (T('SeriesTags'), (request.function == 'index'), URL('summary', 'index', f=True)),
+    (T('SampleTags'), (request.function == 'index'), URL('annotation', 'index', f=True)),
 ]
 
 DEVELOPMENT_MENU = False

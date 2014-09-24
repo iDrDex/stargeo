@@ -126,7 +126,7 @@ annotations.element('.web2py_paginator', replace=None)
 var tabCycle = setInterval(tabChange, 6000);
 
 // Tab click event handler
-$('a').on('click', function (e) {
+$('#nav li a').on('click', function (e) {
     e.preventDefault();
     // Stop the cycle
     clearInterval(tabCycle);

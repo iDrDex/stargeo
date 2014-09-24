@@ -11,12 +11,7 @@ def add():
 
 def index():
     # SERIES ID
-    series_id = request.vars.series_id or request.env.http_referrer and redirect(request.env.http_referrer)
-    # if type(series_id) == list:
-    # series_id = series_id[0]
-    # Series_Tag.series_id.default = series_id
-    # Series_Tag.series_id.requires = None
-    Series_Tag.series_id.writable = False
+    series_id = session.series_id or request.env.http_referrer and redirect(request.env.http_referrer)
 
     # PLATFORM
     ids = [row.platform_id for row in db(Sample.series_id == series_id) \
