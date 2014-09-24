@@ -9,8 +9,8 @@
 # response.title = request.application.replace('_',' ').title()
 # response.subtitle = ''
 
-response.title   = "STAR"
-response.subtitle   = "Redefining the meaning of disease... Together!"
+response.title = "STAR"
+response.subtitle = "Redefining the meaning of disease... Together!"
 response.logo = DIV(
     DIV(A(I(_class="fa fa-star"),
           B("GEO" if not session.query else ""),
@@ -37,10 +37,16 @@ response.google_analytics_id = "UA-42964640-3"
 # ########################################################################
 
 response.menu = [
-    (T('Series'), (request.controller == 'series'), URL('series', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
-    (T('Samples'), (request.controller == 'sample'), URL('sample', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
-    (T('SeriesTags'), (request.controller == 'summary'), URL('summary', 'index')),
-    (T('SampleTags'), (request.controller == 'annotation'), URL('annotation', 'index')),
+    (T('Home'), (request.controller == 'default'),
+     URL('default', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
+    (T('Series'), (request.controller == 'series'),
+     URL('series', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
+    (T('Samples'), (request.controller == 'sample'),
+     URL('sample', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
+    (T('SeriesTags'), (request.controller == 'summary'),
+     URL('summary', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
+    (T('SampleTags'), (request.controller == 'annotation'),
+     URL('annotation', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
 ]
 
 DEVELOPMENT_MENU = False
