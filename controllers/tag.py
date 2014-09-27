@@ -11,7 +11,7 @@ def add():
 
 def index():
     # SERIES ID
-    series_id = session.series_id or request.env.http_referrer and redirect(request.env.http_referrer)
+    series_id = request.get_vars.series_id or redirect(URL('default', 'index', vars=None))
 
     # PLATFORM
     ids = [row.platform_id for row in db(Sample.series_id == series_id) \
@@ -21,8 +21,8 @@ def index():
 
     # TAGS
     query = (Series_Tag.series_id == series_id) & (Tag.id == Series_Tag.tag_id)
-    if request.vars.platform_id:
-        query &= (Series_Tag.platform_id == request.vars.platform_id)
+    if request.get_vars.platform_id:
+        query &= (Series_Tag.platform_id == request.get_vars.platform_id)
     tag_ids = set(row.id
                   for row in
                   db(query).select(Tag.id, distinct=True))
@@ -60,7 +60,7 @@ def index():
 
     fields = [Sample_View['sample_id'],
               Sample_View['platform_id']] + \
-             ([Sample_View[request.vars.header]] if request.vars.header \
+             ([Sample_View[request.get_vars.header]] if request.get_vars.header \
                   else [Sample_View[header] for header in headers])
 
     for field in Series_Tag.fields:

@@ -10,13 +10,13 @@
 # response.subtitle = ''
 
 response.title = "STAR"
+# response.subtitle = "The Search Tag & Analyze Resource for collaborative annotation and interpretation of disease from open digital samples."
 response.subtitle = "Redefining the meaning of disease... Together!"
 response.logo = DIV(
     DIV(A(I(_class="fa fa-star"),
-          B("GEO" if not session.query else ""),
-          _href=URL('default',
-                    'index')),
-        _class="brand"),
+          B("GEO"),
+          _href=URL('default', 'index'))
+        , _class="brand"),
 
     A(B(session.query or ""),
       _href=URL('default',
@@ -43,10 +43,10 @@ response.menu = [
      URL('series', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
     (T('Samples'), (request.controller == 'sample'),
      URL('sample', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
-    (T('SeriesTags'), (request.controller == 'summary'),
-     URL('summary', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
-    (T('SampleTags'), (request.controller == 'annotation'),
-     URL('annotation', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
+    (T('Series Annotations'), (request.controller == 'summary'),
+     URL('summary', 'index')),
+    (T('Sample Tags'), (request.controller == 'annotation'),
+     URL('annotation', 'index')),
 ]
 
 DEVELOPMENT_MENU = False

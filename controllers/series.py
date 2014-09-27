@@ -1,19 +1,5 @@
 import time, glob, re
 
-
-def search_form(self, url):
-    form = FORM(INPUT(_name='keywords',
-                      _value=request.get_vars.keywords,
-                      # _style='width:200px;',
-                      _id='keywords'),
-                INPUT(_name='filter', _type='checkbox', _value="on", _checked=request.get_vars.filter),
-                INPUT(_type='submit', _value=T('Search')),
-                INPUT(_type='submit', _value=T('Clear'),
-                      _onclick="jQuery('#keywords').val('');"),
-                _method="GET", _action=url)
-    return form
-
-
 def setFilter(series_fts_query):
     Series_Filter.truncate()
     sqlQuery = """

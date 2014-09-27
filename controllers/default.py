@@ -11,8 +11,12 @@
 
 
 
+import locale
+
+locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
+
+
 def index():
-    import locale
     """
     example action using the internationalization operator T and flash
     rendered by views/default/index.html or views/generic.html
@@ -20,32 +24,27 @@ def index():
     if you need a simple wiki simply replace the two lines below with:
     return auth.wiki()
     """
-    import locale
-    locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 
     session.platform_count = session.platform_count or locale.format("%d", db(Platform).count(), grouping=True)
     session.tag_count = session.tag_count or locale.format("%d", db(Tag).count(), grouping=True)
-
     session.sample_count = session.sample_count or locale.format("%d", db(Sample).count(), grouping=True)
-    session.sample_attribute_count = session.sample_attribute_count or locale.format("%d", db(Sample_Attribute).count(), grouping=True)
+    session.sample_attribute_count = session.sample_attribute_count or locale.format("%d", db(Sample_Attribute).count(),
+                                                                                     grouping=True)
     session.sample_tag_count = session.sample_tag_count or locale.format("%d", db(Sample_Tag).count(), grouping=True)
-
     session.series_count = session.series_count or locale.format("%d", db(Series).count(), grouping=True)
-    session.series_attribute_count = session.series_attribute_count or locale.format("%d", db(Series_Attribute).count(), grouping=True)
+    session.series_attribute_count = session.series_attribute_count or locale.format("%d", db(Series_Attribute).count(),
+                                                                                     grouping=True)
     session.series_tag_count = session.series_tag_count or locale.format("%d", db(Series_Tag).count(), grouping=True)
 
+    form = search_form(None, None)
+    # form.attributes['_method'] = "POST" #Hack needed to make it form.process.accept work
+
+    if 'keywords' in request.vars:
+        redirect(URL('series', 'index',
+                     vars=dict(keywords=request.vars.keywords)))
 
 
-
-    # session.sample_attribute_count = session.sample_attribute_count or db(Sample_Attribute).count()
-    # session.sample_tag_count = session.sample_tag_count or db(Sample_Tag).count()
-    # session.series_count = session.series_count or db(Series).count()
-    # session.series_attribute_count = session.series_attribute_count or db(Series_Attribute).count()
-    # session.series_tag_count = session.series_tag_count or db(Series_Tag).count()
-
-    # tags = SQLFORM.grid(Tag, searchable=False, csv=False, orderby=~Tag.id)
-
-    return dict()
+    return dict(form=form)
 
 
 def user():

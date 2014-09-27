@@ -106,7 +106,9 @@ def save():
         Sample_Tag.bulk_insert(rows)
     # from setup_db import getSampleTagCrossTab
     getSampleTagCrossTab()
-    redirect(URL('tag', 'index', vars=dict(series_id=request.vars.series_id)))
+    redirect(URL('tag', 'index', vars=dict(series_id=request.vars.series_id,
+                                           platform_id=request.vars.platform_id,
+                                           header = request.vars.header)))
 
 
 def edit():
@@ -117,9 +119,9 @@ def edit():
              ] + \
              ([Sample_View[request.vars.header]] if request.vars.header \
                   else [Sample_View[header] for header in headers])
-    series_id = request.vars.series_id
+
     return dict(form=DIV(A(BUTTON('Save'), _href=URL('save', vars=request.get_vars)),
-                         A(BUTTON('Cancel'), _href=URL('tag', 'index', vars=dict(series_id=series_id)))),
+                         A(BUTTON('Cancel'), _href=URL('tag', 'index', vars=request.vars))),
                 grid=SQLFORM.grid(Sample_View_Annotation_Filter.sample_view_id == Sample_View.id,
                                   search_widget=None,
                                   details=False,

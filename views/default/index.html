@@ -1,8 +1,7 @@
 {{extend 'layout.html'}}
-
+        {{=form}}
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="row">
-
     <div class="jumbotron col-lg-8">
         <div class="container">
             <p><b>STAR</b>: The <i>Search Tag & Analyze Resource</i> for collaborative annotation and
@@ -10,10 +9,10 @@
         </div>
         <div class="container">
             <ul id="myTab" class="nav nav-tabs" role="tablist">
-                <li class="active"><a href="#search" role="tab" data-toggle="tab">Search</a></li>
-                <li class=""><a href="#tag" role="tab" data-toggle="tab">Tag</a></li>
-                <li class=""><a href="#analyze" role="tab" data-toggle="tab">Analyze</a></li>
-                <li class=""><a href="#resource" role="tab" data-toggle="tab">Resource</a></li>
+                <li class="active"><a href="#search" role="tab" data-toggle="tab"><b>Search</b></a></li>
+                <li class=""><a href="#tag" role="tab" data-toggle="tab"><b>Tag</b></a></li>
+                <li class=""><a href="#analyze" role="tab" data-toggle="tab"><b>Analyze</b></a></li>
+                <li class=""><a href="#resource" role="tab" data-toggle="tab"><b>Resource</b></a></li>
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="search">
@@ -49,44 +48,44 @@
             <div class="panel-heading">All STAR stats</div>
             <ul class="nav">
                 <li>
-                    <a>Tags
+                    <a><b>Tags
                         <span class="badge pull-right">{{=session.tag_count}}</span>
-                    </a>
+                    </b></a>
                 </li>
                 <li>
-                    <a>Samples
+                    <a><b>Samples
                         <span class="badge pull-right">{{=session.sample_count}}</span>
-                    </a>
+                    </b></a>
                 </li>
                 <li style="margin-left: 1em">
-                    <a> Attributes
+                    <a><b> Attributes
                         <span class="badge pull-right">{{=session.sample_attribute_count}}</span>
-                    </a>
+                    </b></a>
                 </li>
                 <li style="margin-left: 1em">
-                    <a>Annotations
+                    <a><b>Annotations
                         <span class="badge pull-right">{{=session.sample_tag_count}}</span>
-                    </a>
+                    </b></a>
                 </li>
                 <li>
-                    <a>Series
+                    <a><b>Series
                         <span class="badge pull-right">{{=session.series_count}}</span>
-                    </a>
+                    </b></a>
                 </li>
                 <li style="margin-left: 1em">
-                    <a>Attributes
+                    <a><b>Attributes
                         <span class="badge pull-right">{{=session.series_attribute_count}}</span>
-                    </a>
+                    </b></a>
                 </li>
                 <li style="margin-left: 1em">
-                    <a>Annotations
+                    <a><b>Annotations
                         <span class="badge pull-right">{{=session.series_tag_count}}</span>
-                    </a>
+                    </b></a>
                 </li>
                 <li>
-                    <a>Platforms
+                    <a><b>Platforms
                         <span class="badge pull-right">{{=session.platform_count}}</span>
-                    </a>
+                    </b></a>
                 </li>
             </ul>
         </div>
@@ -105,15 +104,6 @@ annotations.element('.web2py_paginator', replace=None)
 </div>
 
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
 <!--http://stackoverflow.com/questions/18606773/automatic-bootstrap-tabs-->
 <script>var tabChange = function () {
     var tabs = $('.nav-tabs > li');
@@ -123,10 +113,10 @@ annotations.element('.web2py_paginator', replace=None)
     next.tab('show');
 };
 // Tab Cycle function
-var tabCycle = setInterval(tabChange, 6000);
+var tabCycle = setInterval(tabChange, 10000);
 
 // Tab click event handler
-$('#nav li a').on('click', function (e) {
+$("a[role='tab']").on('click', function (e) {
     e.preventDefault();
     // Stop the cycle
     clearInterval(tabCycle);
@@ -135,7 +125,7 @@ $('#nav li a').on('click', function (e) {
     // Start the cycle again in a predefined amount of time
     setTimeout(function () {
         //tabCycle = setInterval(tabChange, 5000);
-    }, 15000);
+    }, 20000);
 });
 
 </script>

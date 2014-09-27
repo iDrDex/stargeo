@@ -166,3 +166,50 @@ Series_Tag_View = db.define_table('series_tag_view',
                                           represent=lambda value, row: listed(value))
                                     for field in session.all_sample_tag_names],
                                   migrate=False)
+
+
+def search_form(self, url):
+    form = \
+        FORM(
+            DIV(
+                DIV(
+                    DIV(
+                        DIV(
+                            INPUT(_name="keywords",
+                                  _id="keywords",
+                                  _value=request.vars.keywords or "",
+                                  _type="text",
+                                  _class="form-control",
+                                  _placeholder="Search..."),
+                            SPAN(BUTTON("Go",
+                                        _class="btn btn-default",
+                                        _type="submit"),
+                                 BUTTON("Clear",
+                                        _class="btn btn-default",
+                                        _type="submit",
+                                        _onclick="$('#keywords').val('');"),
+                                 _class="input-group-btn"),
+                            _class="input-group input-group-lg"),
+                        _class="col-lg-10 col-lg-offset-1")),
+                _class="row"),
+            _method="GET",
+            _action=url
+        )
+    return form
+
+response.files += ["https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css",
+                   "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css",
+                   "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"]
+
+    # def search_form(self, url):
+    # form = FORM(INPUT(_name='keywords',
+    #                           _value=request.get_vars.keywords,
+    #                           # _style='width:200px;',
+    #                           _id='keywords'),
+    #                     INPUT(_name='filter', _type='checkbox', _value="on", _checked=request.get_vars.filter),
+    #                     INPUT(_type='submit', _value=T('Search')),
+    #                     INPUT(_type='submit', _value=T('Clear'),
+    #                           _onclick="jQuery('#keywords').val('');"),
+    #                     _method="GET", _action=url)
+    #
+    #     return form
