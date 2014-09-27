@@ -1,219 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb5f306f-932a-4a9c-b1cd-9bc04b97cbde" name="Default" comment="Styled the  homepage.  Pulled mobile layout">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/series/index.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/plugin_jqmobile/about.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/plugin_jqmobile/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/plugin_jqmobile/layout.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/images/eldirtree.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/images/eldirtree.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/images/elrte-custom-toolbar.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/images/elrte-custom-toolbar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/images/elrte-toolbar.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/images/elrte-toolbar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/images/elrte-toolbar.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/images/elrte-toolbar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/images/loading.gif" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/images/loading.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/images/loading.gif" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/images/loading.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/mediaplayer.swf" afterPath="$PROJECT_DIR$/static/plugin_wiki/mediaplayer.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/images/swf.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/images/swf.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_flat_0_aaaaaa_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_flat_15_cd0a0a_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_flat_15_cd0a0a_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_flat_30_cccccc_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_flat_30_cccccc_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_flat_50_5c5c5c_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_flat_50_5c5c5c_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_flat_55_fbec88_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_flat_55_fbec88_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_flat_75_ffffff_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_flat_75_ffffff_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_glass_20_555555_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_glass_20_555555_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_glass_40_0078a3_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_glass_40_0078a3_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_glass_40_ffc73d_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_glass_40_ffc73d_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_glass_50_3baae3_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_glass_75_d0e5f5_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_glass_75_d0e5f5_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_75_dadada_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_75_dadada_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_75_dadada_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_75_dadada_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_glass_85_dfeffc_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_glass_85_dfeffc_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_glass_95_fef1ec_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_glass_95_fef1ec_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_glass_95_fef1ec_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_gloss-wave_25_333333_500x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_gloss-wave_25_333333_500x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-hard_70_000000_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-hard_70_000000_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-soft_100_deedf7_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-soft_100_deedf7_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-soft_25_ffef8f_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-bg_highlight-soft_25_ffef8f_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_highlight-soft_80_eeeeee_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_highlight-soft_80_eeeeee_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_inset-hard_100_fcfdfd_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-bg_inset-hard_100_fcfdfd_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_inset-soft_25_000000_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_inset-soft_25_000000_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_inset-soft_30_f58400_1x100.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-bg_inset-soft_30_f58400_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_217bc0_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_217bc0_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_222222_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_222222_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_222222_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_2694e8_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_2694e8_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_2e83ff_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_2e83ff_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_2e83ff_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_2e83ff_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_3d80b3_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_3d80b3_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_454545_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_454545_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_454545_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_454545_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_469bdd_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_469bdd_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_4b8e0b_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_4b8e0b_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_6da8d5_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_6da8d5_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_72a7cf_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_72a7cf_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_888888_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_888888_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_888888_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_888888_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_a83300_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_a83300_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_cccccc_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_cccccc_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_cd0a0a_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/images/ui-icons_cd0a0a_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_cd0a0a_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_cd0a0a_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_cd0a0a_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/images/ui-icons_cd0a0a_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_d8e7f3_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_d8e7f3_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_f9bd01_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/images/ui-icons_f9bd01_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_ffffff_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/images/ui-icons_ffffff_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_ffffff_256x240.png" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/images/ui-icons_ffffff_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/Changelog" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/Changelog" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/Makefile" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/README" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Web2Py_Library.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Web2Py_Library.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/anchor.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/anchor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/annotate.py" afterPath="$PROJECT_DIR$/controllers/annotate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/multiselect/apply_web2py.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/multiselect/apply_web2py.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_cas.table" afterPath="$PROJECT_DIR$/databases/auth_cas.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_event.table" afterPath="$PROJECT_DIR$/databases/auth_event.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_group.table" afterPath="$PROJECT_DIR$/databases/auth_group.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_membership.table" afterPath="$PROJECT_DIR$/databases/auth_membership.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_permission.table" afterPath="$PROJECT_DIR$/databases/auth_permission.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_user.table" afterPath="$PROJECT_DIR$/databases/auth_user.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/blockquote.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/blockquote.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/copy.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/copy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/css.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/css.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/default.py" afterPath="$PROJECT_DIR$/controllers/default.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/div.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/div.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/docstructure.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/docstructure.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.DOM.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.DOM.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.filter.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.filter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.history.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.history.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.options.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.options.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.selection.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.selection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.ui.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.ui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.utils.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.w3cRange.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/elRTE.w3cRange.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elcolorpicker.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elcolorpicker.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elcommon.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elcommon.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/eldialogform.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/eldialogform.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/eldialogform.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/eldialogform.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/elfinder.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/elfinder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/eli18n.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/eli18n.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elpaddinginput.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elpaddinginput.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elreset.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elreset.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/css/elrte-inner.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/css/elrte-inner.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/css/elrte-inner.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/css/elrte-inner.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/css/elrte.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/css/elrte.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/i18n/elrte.de.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/i18n/elrte.de.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/i18n/elrte.de.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/i18n/elrte.de.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/css/elrte.full.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/css/elrte.full.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/elrte.full.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/elrte.full.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/elrte.html" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/elrte.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/elrte.min.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/elrte.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/i18n/elrte.ru.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/i18n/elrte.ru.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/i18n/elrte.ru.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/i18n/elrte.ru.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte.src.html" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte.src.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/i18n/elrte.ua.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/i18n/elrte.ua.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/i18n/elrte.ua.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/i18n/elrte.ua.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elselect.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/css/elselect.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/flash.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/flash.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/fontname.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/fontname.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/fontsize.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/fontsize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/forecolor.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/forecolor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/formatblock.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/formatblock.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/fullscreen.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/fullscreen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/horizontalrule.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/horizontalrule.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/image.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/image.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/indent.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/indent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/default/index.html" afterPath="$PROJECT_DIR$/views/default/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/jquery-1.3.2.min.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/jquery-1.3.2.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/jquery-ui-1.7.2.custom.min.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/jquery-ui-1.7.2.custom.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/jquery-ui-1.8.1.custom.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/jqgrid/__MACOSX/ui-darkness/jquery-ui-1.8.1.custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/jquery-ui-1.8.5.custom.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/cupertino/jquery-ui-1.8.5.custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/jquery-ui-1.8.5.custom.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/redmond/jquery-ui-1.8.5.custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/jquery-ui-1.8.5.custom.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/css/smoothness/jquery-ui-1.8.5.custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/ui/js/jquery-ui-1.8.5.custom.min.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/ui/js/jquery-ui-1.8.5.custom.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/jquery-ui.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/jquery-ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/slideshow/jquery.cycle.min.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/slideshow/jquery.cycle.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elborderselect.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elborderselect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elcolorpicker.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elcolorpicker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elpaddinginput.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elpaddinginput.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elselect.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/ellib/js/jquery.elselect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/markitup/jquery.markitup.pack.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/markitup/jquery.markitup.pack.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/justifyleft.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/justifyleft.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/link.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/link.js" />
+    <list default="true" id="bb5f306f-932a-4a9c-b1cd-9bc04b97cbde" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/menu.py" afterPath="$PROJECT_DIR$/models/menu.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/my_db.py" afterPath="$PROJECT_DIR$/models/my_db.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/nbsp.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/nbsp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/outdent.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/outdent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/pasteformattext.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/pasteformattext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/pastetext.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/pastetext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/platform.table" afterPath="$PROJECT_DIR$/databases/platform.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/platform_attribute.table" afterPath="$PROJECT_DIR$/databases/platform_attribute.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/plugin_jqmobile.py" afterPath="$PROJECT_DIR$/controllers/plugin_jqmobile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/post.php" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/post.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/progress.log" afterPath="$PROJECT_DIR$/progress.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/sample.py" afterPath="$PROJECT_DIR$/controllers/sample.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sample.table" afterPath="$PROJECT_DIR$/databases/sample.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sample_attribute.table" afterPath="$PROJECT_DIR$/databases/sample_attribute.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sample_filter.table" afterPath="$PROJECT_DIR$/databases/sample_filter.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sample_tag.table" afterPath="$PROJECT_DIR$/databases/sample_tag.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sample_view_annotation_filter.table" afterPath="$PROJECT_DIR$/databases/sample_view_annotation_filter.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/save.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/save.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/series.py" afterPath="$PROJECT_DIR$/controllers/series.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/series.table" afterPath="$PROJECT_DIR$/databases/series.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/series_attribute.table" afterPath="$PROJECT_DIR$/databases/series_attribute.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/series_tag.table" afterPath="$PROJECT_DIR$/databases/series_tag.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sql.log" afterPath="$PROJECT_DIR$/databases/sql.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/stopfloat.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/stopfloat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/table.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/table.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tablerm.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tablerm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/tag.py" afterPath="$PROJECT_DIR$/controllers/tag.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/tag.table" afterPath="$PROJECT_DIR$/databases/tag.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcellprops.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcellprops.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcellsmerge.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcellsmerge.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcellsplit.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcellsplit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcollbefore.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcollbefore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcolrm.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbcolrm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbrowbefore.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbrowbefore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbrowrm.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/tbrowrm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.accordion.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.accordion.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.all.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.all.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.base.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.core.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.core.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.datepicker.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.datepicker.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.dialog.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.dialog.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.progressbar.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.progressbar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.resizable.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.resizable.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.slider.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.slider.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.tabs.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.tabs.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.theme.css" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/js/ui-themes/base/ui.theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/undo.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/undo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/unlink.js" afterPath="$PROJECT_DIR$/static/plugin_wiki/elrte-1.0rc4/src/elrte/js/ui/unlink.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="star.iws" />
@@ -314,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/models/menu.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.70053476" vertical-offset="443" max-vertical-offset="2565">
-              <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
+              <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -931,7 +720,11 @@
       <created>1411545761211</created>
       <updated>1411545761211</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Styled the  homepage.  Pulled mobile layout">
+      <created>1411832531213</created>
+      <updated>1411832531213</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -940,22 +733,22 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13376252" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25208434" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1667484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.562341" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.48854962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25208434" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1667484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.48854962" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32477877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1663,7 +1456,7 @@
     <entry file="file://$PROJECT_DIR$/models/menu.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.70053476" vertical-offset="443" max-vertical-offset="2565">
-          <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
           <folding />
         </state>
       </provider>
