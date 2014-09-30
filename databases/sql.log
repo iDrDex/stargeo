@@ -1821,3 +1821,50 @@ TRUNCATE TABLE series_filter ;
 success!
 TRUNCATE TABLE sample_filter ;
 success!
+timestamp: 2014-09-30T16:12:06.036902
+ALTER TABLE tag ADD modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE;
+timestamp: 2014-09-30T16:14:07.110933
+CREATE TABLE tag(
+    id SERIAL PRIMARY KEY,
+    tag_name VARCHAR(512) UNIQUE,
+    description VARCHAR(512),
+    is_active CHAR(1),
+    created_on TIMESTAMP,
+    created_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    modified_on TIMESTAMP,
+    modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-09-30T16:14:07.216816
+CREATE TABLE series_tag(
+    id SERIAL PRIMARY KEY,
+    series_id INTEGER REFERENCES series (id) ON DELETE CASCADE,
+    platform_id INTEGER REFERENCES platform (id) ON DELETE CASCADE,
+    tag_id INTEGER REFERENCES tag (id) ON DELETE CASCADE,
+    header VARCHAR(512),
+    regex VARCHAR(512),
+    show_invariant CHAR(1),
+    is_active CHAR(1),
+    created_on TIMESTAMP,
+    created_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    modified_on TIMESTAMP,
+    modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-09-30T16:14:07.249799
+CREATE TABLE sample_tag(
+    id SERIAL PRIMARY KEY,
+    sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
+    series_tag_id INTEGER REFERENCES series_tag (id) ON DELETE CASCADE,
+    annotation TEXT,
+    is_active CHAR(1),
+    created_on TIMESTAMP,
+    created_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    modified_on TIMESTAMP,
+    modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
+);
+success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_view_annotation_filter ;
+success!

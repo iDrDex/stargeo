@@ -106,6 +106,7 @@ Tag = db.define_table('tag',
                       Field('id', 'id', readable=False, writable=False),
                       Field('tag_name', unique=True),
                       Field('description'),
+                      auth.signature,
                       format='%(tag_name)s',
                       migrate='tag.table'
 )
@@ -118,6 +119,7 @@ Series_Tag = db.define_table('series_tag',
                              Field('header'),
                              Field('regex', requires=IS_NOT_EMPTY()),
                              Field('show_invariant', 'boolean', readable=False),
+                             auth.signature,
                              format='%(tag_id.tag_name)s_%(series_id.gse_name)s_%(platform_id.gpl_name)s',
                              migrate="series_tag.table"
 )
@@ -127,6 +129,7 @@ Sample_Tag = db.define_table('sample_tag',
                              Field('sample_id', 'reference sample', writable=False),
                              Field('series_tag_id', 'reference series_tag', writable=False),
                              Field('annotation', 'text'),
+                             auth.signature,
                              format='%(annotation)s',
                              migrate="sample_tag.table"
 )
@@ -168,6 +171,56 @@ Series_Tag_View = db.define_table('series_tag_view',
                                   migrate=False)
 
 
+# def search_form(self, url):
+# form = \
+# FORM(
+# DIV(
+# INPUT(_name="keywords",
+# _id="keywords",
+#                       _value=request.vars.keywords or "",
+#                       _type="text",
+#                       _class="form-control",
+#                       _placeholder="Search...",
+#                       _style="""width: 98%;
+#                                 z-index: 0;
+#                              """
+#                 ),
+#                 SPAN(_class='glyphicon glyphicon-remove-circle',
+#                      _onclick="clearInputField()",
+#                      _style="""
+#                      position: relative;
+#                      left: -25px;
+#                      top: 15px;
+#                      z-index: 1;
+#                      """,
+#                      # _style=""" position: absolute;
+#                      # right: 5px;
+#                      # top: 0;
+#                      # bottom: 0;
+#                      # height: 14px;
+#                      # margin: auto;
+#                      # font-size: 14px;
+#                      # cursor: pointer;
+#                      #            color: #ccc;""",
+#                 ),
+#
+#
+#                 SPAN(
+#                     BUTTON("Go",
+#                            _type="submit",
+#                            _style="""left: -25px;
+#                                  position: relative;""",
+#                            _class="btn btn-default"),
+#                     _class="input-group-btn"
+#                 ),
+#                 _class="input-group input-group-lg"
+#             ),
+#             _method="GET",
+#             _action=url
+#         )
+#     return form
+
+
 def search_form(self, url):
     form = \
         FORM(
@@ -184,10 +237,10 @@ def search_form(self, url):
                             SPAN(BUTTON("Go",
                                         _class="btn btn-default",
                                         _type="submit"),
-                                 BUTTON("Clear",
-                                        _class="btn btn-default",
-                                        _type="submit",
-                                        _onclick="$('#keywords').val('');"),
+                                 SPAN("X",
+                                      _class="btn btn-default",
+                                      _type="submit",
+                                      _onclick="$('#keywords').val('');"),
                                  _class="input-group-btn"),
                             _class="input-group input-group-lg"),
                         _class="col-lg-10 col-lg-offset-1")),
@@ -197,19 +250,50 @@ def search_form(self, url):
         )
     return form
 
+
+def search_form_old(self, url):
+    form = \
+        FORM(
+            DIV(
+                DIV(
+                    DIV(
+                        DIV(
+                            INPUT(_name="keywords",
+                                  _id="keywords",
+                                  _value=request.vars.keywords or "",
+                                  _type="text",
+                                  _class="form-control",
+                                  _placeholder="Search..."),
+                            SPAN(BUTTON("Go",
+                                        _class="btn btn-default",
+                                        _type="submit"),
+                                 SPAN("Clear",
+                                      _class="btn btn-default",
+                                      _type="submit",
+                                      _onclick="$('#keywords').val('');"),
+                                 _class="input-group-btn"),
+                            _class="input-group input-group-lg"),
+                        _class="col-lg-10 col-lg-offset-1")),
+                _class="row"),
+            _method="GET",
+            _action=url
+        )
+    return form
+
+
 response.files += ["https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css",
                    "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css",
                    "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"]
 
-    # def search_form(self, url):
-    # form = FORM(INPUT(_name='keywords',
-    #                           _value=request.get_vars.keywords,
-    #                           # _style='width:200px;',
-    #                           _id='keywords'),
-    #                     INPUT(_name='filter', _type='checkbox', _value="on", _checked=request.get_vars.filter),
-    #                     INPUT(_type='submit', _value=T('Search')),
-    #                     INPUT(_type='submit', _value=T('Clear'),
-    #                           _onclick="jQuery('#keywords').val('');"),
-    #                     _method="GET", _action=url)
-    #
-    #     return form
+# def search_form(self, url):
+# form = FORM(INPUT(_name='keywords',
+# _value=request.get_vars.keywords,
+# # _style='width:200px;',
+# _id='keywords'),
+# INPUT(_name='filter', _type='checkbox', _value="on", _checked=request.get_vars.filter),
+# INPUT(_type='submit', _value=T('Search')),
+# INPUT(_type='submit', _value=T('Clear'),
+# _onclick="jQuery('#keywords').val('');"),
+# _method="GET", _action=url)
+#
+# return form

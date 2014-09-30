@@ -85,7 +85,7 @@ def index():
             annotation=f(row))
     redirect(URL('edit', vars=request.get_vars))
 
-
+@auth.requires_login()
 def save():
     if request.vars.platform_id:
         platform_ids = [request.vars.platform_id]
@@ -96,7 +96,7 @@ def save():
                             .select(Sample_View.platform_id, distinct=True)]
     for platform_id in platform_ids:
         request.vars.platform_id = platform_id
-        toInsert = dict([(var, request.vars[var]) for var in Series_Tag.fields[1:]])
+        toInsert = dict([(var, request.vars[var]) for var in Series_Tag.fields[1:] if (var not in auth.signature.fields)])
         series_tag_id = Series_Tag.insert(**toInsert)
         rows = db((Sample_View_Annotation_Filter.sample_view_id == Sample_View.id) & (
             Sample_View.platform_id == platform_id)).select()

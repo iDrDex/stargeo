@@ -1,6 +1,7 @@
 __author__ = 'dex'
 
 
+@auth.requires_login()
 def add():
     form = SQLFORM(Tag)
     if form.process().accepted:
