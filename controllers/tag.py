@@ -78,7 +78,7 @@ def index():
 
     fields = [Sample_View['sample_id'],
               Sample_View['platform_id']] + \
-             ([Sample_View[request.vars.header]] if request.vars.header \
+             ([Sample_View[session.tag_form_vars.header]] if session.tag_form_vars.header \
                   else [Sample_View[header] for header in session.headers])
 
     form = SQLFORM(Series_Tag,
@@ -97,6 +97,9 @@ def index():
     grid = SQLFORM.grid(query, search_widget=None,
                         fields=fields,
                         maxtextlength=1000,
+                        create=False,
+                        editable=False,
+                        deletable=False,
                         formname='form')
     grid = DIV(grid,
                SCRIPT('''   $("#series_tag_show_invariant").click(function () {
