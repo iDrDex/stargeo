@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb5f306f-932a-4a9c-b1cd-9bc04b97cbde" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/my_db.py" afterPath="$PROJECT_DIR$/models/my_db.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/tag.py" afterPath="$PROJECT_DIR$/controllers/tag.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -15,7 +16,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/star$star.coverage" NAME="star Coverage Results" MODIFIED="1412197861165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
+    <SUITE FILE_PATH="coverage/star$star.coverage" NAME="star Coverage Results" MODIFIED="1412204028202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
     <SUITE FILE_PATH="coverage/star$setup_db.coverage" NAME="setup_db Coverage Results" MODIFIED="1410844870510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -23,39 +24,6 @@
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="star.public.sample_view_annotation_filter" pinned="false" current="false" current-in-tab="false">
-              <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.sample_view_annotation_filter">
-                <provider editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-                    <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                    <folding />
-                  </state>
-                </provider>
-                <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-                  <state />
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="PostgreSQL - star@localhost" pinned="false" current="false" current-in-tab="true">
-              <entry file="dbDummy://db-console:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.08522727" vertical-offset="0" max-vertical-offset="2445">
-                    <caret line="4" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -183,8 +151,8 @@
       <file leaf-file-name="tag.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/tag.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4482289" vertical-offset="871" max-vertical-offset="1920">
-              <caret line="80" column="49" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.33242506" vertical-offset="356" max-vertical-offset="1845">
+              <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -206,18 +174,8 @@
       <file leaf-file-name="my_db.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/my_db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1464" max-vertical-offset="4200">
-              <caret line="117" column="74" selection-start-line="117" selection-start-column="74" selection-end-line="117" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="globals.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../gluon/globals.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5096" max-vertical-offset="17205">
-              <caret line="384" column="0" selection-start-line="384" selection-start-column="0" selection-end-line="384" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1538" max-vertical-offset="4200">
+              <caret line="115" column="68" selection-start-line="115" selection-start-column="68" selection-end-line="115" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -271,8 +229,8 @@
         <option value="dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.sample_tag" />
         <option value="db-console:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/" />
         <option value="$PROJECT_DIR$/controllers/annotate.py" />
-        <option value="$PROJECT_DIR$/models/my_db.py" />
         <option value="dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.series_tag" />
+        <option value="$PROJECT_DIR$/models/my_db.py" />
         <option value="$PROJECT_DIR$/controllers/tag.py" />
       </list>
     </option>
@@ -724,7 +682,11 @@
       <created>1412202150457</created>
       <updated>1412202150457</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="fixed header state issues in tag form">
+      <created>1412202765774</created>
+      <updated>1412202765774</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -779,14 +741,15 @@
     <MESSAGE value="Styled the  homepage.  Pulled mobile layout" />
     <MESSAGE value="added user management" />
     <MESSAGE value="updated tag form logic to maintain its state properly and corrected conflicts with sqlform.grids.  Now pass variables throught session.tag_form_vars instead of regular requests." />
-    <option name="LAST_COMMIT_MESSAGE" value="updated tag form logic to maintain its state properly and corrected conflicts with sqlform.grids.  Now pass variables throught session.tag_form_vars instead of regular requests." />
+    <MESSAGE value="fixed header state issues in tag form" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed header state issues in tag form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="135" />
+      <option name="time" value="148" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1443,14 +1406,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/my_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1464" max-vertical-offset="4200">
-          <caret line="117" column="74" selection-start-line="117" selection-start-column="74" selection-end-line="117" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/ca7a5962/ff44c2f4-aa40-4015-9804-581a68ea31c9/star.public.series_tag">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
@@ -1460,14 +1415,6 @@
       </provider>
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../gluon/globals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5096" max-vertical-offset="17205">
-          <caret line="384" column="0" selection-start-line="384" selection-start-column="0" selection-end-line="384" selection-end-column="0" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/annotate.py">
@@ -1486,10 +1433,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../gluon/globals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35286105" vertical-offset="5096" max-vertical-offset="17205">
+          <caret line="385" column="37" selection-start-line="385" selection-start-column="37" selection-end-line="385" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/my_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1538" max-vertical-offset="4200">
+          <caret line="115" column="68" selection-start-line="115" selection-start-column="68" selection-end-line="115" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/tag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4482289" vertical-offset="871" max-vertical-offset="1920">
-          <caret line="80" column="49" selection-start-line="80" selection-start-column="49" selection-end-line="80" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.33242506" vertical-offset="356" max-vertical-offset="1845">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
           <folding />
         </state>
       </provider>

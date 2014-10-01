@@ -30,20 +30,15 @@ def getHeaders(series_id, minCount=2):
 
 
 def index():
+    print "tag"
     # SERIES ID
-    series_id = request.vars.series_id or \
-                (session.tag_form_vars.series_id \
-                     if 'tag_form_vars' in session \
-                     else redirect(URL('default', 'index')))
+    series_id = session.tag_form_vars.series_id if 'tag_form_vars' in session else redirect(URL('default', 'index'))
 
-    # update form model based on requests
-    for var in request.vars:
-        if var in Series_Tag.fields:
-            session.tag_form_vars[var] = request.vars[var]
-
-    # set defaults based on form model
-    for var in session.tag_form_vars:
-        if var in Series_Tag.fields:
+    # update form model and defaults based on requests
+    for var in Series_Tag.fields[1:]:
+        if var not in auth.signature:
+            if var in request:
+                session.tag_form_vars[var] = request.vars[var]
             Series_Tag[var].default = session.tag_form_vars[var]
 
 
@@ -63,7 +58,7 @@ def index():
     ids = [row.id for row in db(Tag).select(Tag.id, distinct=True) if row.id not in tag_ids]
 
     # https://web2py.wordpress.com/category/web2py-validators/
-    #IS_IN_DB() professional usage to filter is_in_db because is_in_set allows nulls
+    # IS_IN_DB() professional usage to filter is_in_db because is_in_set allows nulls
     Series_Tag.tag_id.requires = IS_IN_DB(db(Tag.id.belongs(ids)),
                                           Tag.id,
                                           Tag._format)
@@ -85,7 +80,7 @@ def index():
                    _id='form')
 
     form.custom.submit['_class'] = 'submit'  # have to use _class for jquery because _name or _id breaks the grid view
-    form.add_button('+', URL('add', vars=request.get_vars))
+    form.add_button('+', URL('add'))
 
     if form.validate(formname='form'):
         # update form model
@@ -102,7 +97,7 @@ def index():
                         deletable=False,
                         formname='form')
     grid = DIV(grid,
-               SCRIPT('''   $("#series_tag_show_invariant").click(function () {
+               SCRIPT('''   $("#series_tag_show_invariant").change(function () {
                                 $('#series_tag_header').val("")
                                 $("input[name='_formkey']").val("")
                                 $('#form').submit()
