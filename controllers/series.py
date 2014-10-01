@@ -105,14 +105,16 @@ def getTags(row):
     return DIV([DIV(tag, _class="badge") for tag in tags])
 
 
+def call_tag():
+    if 'tag_form_vars' not in session:
+        session.tag_form_vars = request.vars
+    else:
+        for var in request.vars:
+            session.tag_form_vars[var] = request.vars[var]
+    redirect(URL('tag', 'index'))
+
 def getButton(row):
-    return A(BUTTON('Tag'), _href=URL("tag", "index",
-                                      # args=row.series_view.series_id,
-                                      vars=dict(
-                                          series_id=row.series_view.series_id
-                                          if 'series_view' in row
-                                          else row.series_id
-                                      )))
+    return A(BUTTON('Tag'), _href=URL("call_tag", vars=dict(series_id=row.series_id)))
 
 
 def index():
@@ -142,7 +144,7 @@ def index():
                              # editable=False,
                              # create=False,
                              field_id=Series_View.id,
-                             search_widget=search_form,
+                             search_widget=None,
                              searchable=searchable,
                              fields=fields,
                              buttons_placement='left',

@@ -115,7 +115,7 @@ Series_Tag = db.define_table('series_tag',
                              Field('id', 'id', readable=False, writable=False),
                              Field('series_id', 'reference series', writable=False),
                              Field('platform_id', 'reference platform'),
-                             Field('tag_id', 'reference tag'),
+                             Field('tag_id', 'reference tag', notnull=True),
                              Field('header'),
                              Field('regex', requires=IS_NOT_EMPTY()),
                              Field('show_invariant', 'boolean', readable=False),
@@ -136,8 +136,12 @@ Sample_Tag = db.define_table('sample_tag',
 
 Sample_View_Annotation_Filter = db.define_table('sample_view_annotation_filter',
                                                 Field('id', 'id', readable=False, writable=False),
-                                                Field('sample_view_id', writable=False),
+                                                Field('sample_view_id', writable=False),  # 'reference sample_view'
                                                 Field('annotation', 'text'),
+                                                Field('session_id', default=response.session_id,
+                                                      readable=False, writable=False),
+                                                Field('created_on', 'datetime', default=request.now, readable=False,
+                                                      writable=False),
                                                 format='%(annotation)s',
                                                 migrate="sample_view_annotation_filter.table"
 )
@@ -177,12 +181,12 @@ Series_Tag_View = db.define_table('series_tag_view',
 # DIV(
 # INPUT(_name="keywords",
 # _id="keywords",
-#                       _value=request.vars.keywords or "",
-#                       _type="text",
-#                       _class="form-control",
-#                       _placeholder="Search...",
-#                       _style="""width: 98%;
-#                                 z-index: 0;
+# _value=request.vars.keywords or "",
+# _type="text",
+# _class="form-control",
+# _placeholder="Search...",
+# _style="""width: 98%;
+# z-index: 0;
 #                              """
 #                 ),
 #                 SPAN(_class='glyphicon glyphicon-remove-circle',
@@ -228,50 +232,22 @@ def search_form(self, url):
                 DIV(
                     DIV(
                         DIV(
+                            SPAN(BUTTON(I(_class="fa fa-times-circle"),
+                                        _class="btn btn-default",
+                                        _type="submit",
+                                        _onclick="$('#keywords').val('');"),
+                                 _class="input-group-btn"),
                             INPUT(_name="keywords",
                                   _id="keywords",
                                   _value=request.vars.keywords or "",
                                   _type="text",
                                   _class="form-control",
                                   _placeholder="Search..."),
-                            SPAN(BUTTON("Go",
+                            SPAN(BUTTON(I(_class="fa fa-search"),
                                         _class="btn btn-default",
                                         _type="submit"),
-                                 SPAN("X",
-                                      _class="btn btn-default",
-                                      _type="submit",
-                                      _onclick="$('#keywords').val('');"),
                                  _class="input-group-btn"),
-                            _class="input-group input-group-lg"),
-                        _class="col-lg-10 col-lg-offset-1")),
-                _class="row"),
-            _method="GET",
-            _action=url
-        )
-    return form
 
-
-def search_form_old(self, url):
-    form = \
-        FORM(
-            DIV(
-                DIV(
-                    DIV(
-                        DIV(
-                            INPUT(_name="keywords",
-                                  _id="keywords",
-                                  _value=request.vars.keywords or "",
-                                  _type="text",
-                                  _class="form-control",
-                                  _placeholder="Search..."),
-                            SPAN(BUTTON("Go",
-                                        _class="btn btn-default",
-                                        _type="submit"),
-                                 SPAN("Clear",
-                                      _class="btn btn-default",
-                                      _type="submit",
-                                      _onclick="$('#keywords').val('');"),
-                                 _class="input-group-btn"),
                             _class="input-group input-group-lg"),
                         _class="col-lg-10 col-lg-offset-1")),
                 _class="row"),

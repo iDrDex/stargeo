@@ -31,6 +31,8 @@ def getSampleTagCrossTab():
     getSeriesTagCrossTab()
     db.commit()
     session.all_sample_tag_names = None
+    session.series_tag_count = None
+    session.sample_tag_count = None
 
 
 def getSeriesTagCrossTab():
@@ -61,13 +63,21 @@ def getSeriesTagCrossTab():
 
 
 def index():
-    query = (Sample_View.series_id == request.vars.series_id)
-    if request.vars.platform_id:
-        query &= query(Sample_View.platform_id == request.vars.platform_id)
+    # SERIES ID
+    series_id = request.vars.series_id or \
+                (session.tag_form_vars.series_id \
+                     if 'tag_form_vars' in session \
+                     else redirect(URL('default', 'index')))
 
-    header = request.vars.header
-    annotation_type = 'text'
-    regex = request.vars.regex
+    query = (Sample_View.series_id == series_id)
+
+    # PLATFORM
+    platform_id = session.tag_form_vars.platform_id
+    if platform_id:
+        query &= query(Sample_View.platform_id == platform_id)
+
+    header = session.tag_form_vars.header
+    regex = session.tag_form_vars.regex
     if header:
         p = re.compile(regex)
         if p.groups:
@@ -78,51 +88,40 @@ def index():
     else:
         f = lambda row: regex
 
-    Sample_View_Annotation_Filter.truncate()
+    # clean out any other concurrent annotations from current sessions
+    db(Sample_View_Annotation_Filter.session_id == response.session_id).delete()
+
     for row in db(query).select():
         Sample_View_Annotation_Filter.insert(
             sample_view_id=row.id,
             annotation=f(row))
-    redirect(URL('edit', vars=request.get_vars))
+    # db.commit()
+    redirect(URL('edit'))
+
 
 @auth.requires_login()
-def save():
-    if request.vars.platform_id:
-        platform_ids = [request.vars.platform_id]
-    else:
-        platform_ids = [row.platform_id
-                        for row in
-                        db(Sample_View.series_id == request.vars.series_id) \
-                            .select(Sample_View.platform_id, distinct=True)]
-    for platform_id in platform_ids:
-        request.vars.platform_id = platform_id
-        toInsert = dict([(var, request.vars[var]) for var in Series_Tag.fields[1:] if (var not in auth.signature.fields)])
-        series_tag_id = Series_Tag.insert(**toInsert)
-        rows = db((Sample_View_Annotation_Filter.sample_view_id == Sample_View.id) & (
-            Sample_View.platform_id == platform_id)).select()
-        rows = [dict(sample_id=row.sample_view.sample_id,
-                     series_tag_id=series_tag_id,
-                     annotation=row.sample_view_annotation_filter.annotation) for row in rows]
-        Sample_Tag.bulk_insert(rows)
-    # from setup_db import getSampleTagCrossTab
-    getSampleTagCrossTab()
-    redirect(URL('tag', 'index', vars=dict(series_id=request.vars.series_id,
-                                           platform_id=request.vars.platform_id,
-                                           header = request.vars.header)))
-
-
 def edit():
+    # SERIES ID
+    series_id = session.tag_form_vars.series_id \
+        if 'tag_form_vars' in session \
+        else redirect(URL('default', 'index'))
+
     headers = session.headers
     fields = [Sample_View['sample_id'],
               Sample_View['platform_id'],
               Sample_View_Annotation_Filter['annotation'],
              ] + \
-             ([Sample_View[request.vars.header]] if request.vars.header \
+             ([Sample_View[session.tag_form_vars.header]] if session.tag_form_vars.header \
                   else [Sample_View[header] for header in headers])
+    form = SQLFORM.factory(submit_button="Save")
+    form.add_button("Cancel", URL('tag', 'index'))
 
-    return dict(form=DIV(A(BUTTON('Save'), _href=URL('save', vars=request.get_vars)),
-                         A(BUTTON('Cancel'), _href=URL('tag', 'index', vars=request.vars))),
-                grid=SQLFORM.grid(Sample_View_Annotation_Filter.sample_view_id == Sample_View.id,
+    if form.process().accepted:
+        return __save()
+
+    return dict(form=form,
+                grid=SQLFORM.grid((Sample_View_Annotation_Filter.sample_view_id == Sample_View.id) & \
+                                  (Sample_View_Annotation_Filter.session_id == response.session_id),
                                   search_widget=None,
                                   details=False,
                                   deletable=False,
@@ -131,5 +130,38 @@ def edit():
                                   user_signature=False,
                                   fields=fields,
                                   maxtextlength=1000))
+
+
+def __save():
+    platform_id = session.tag_form_vars.platform_id
+    platform_ids = [platform_id] if platform_id \
+        else [row.platform_id
+              for row in
+              db(Sample_View.series_id == session.tag_form_vars.series_id) \
+                  .select(Sample_View.platform_id, distinct=True)]
+
+    for platform_id in platform_ids:
+        toInsert = dict(
+            [(var, session.tag_form_vars[var])
+             for var in Series_Tag.fields[1:]
+             if (var not in auth.signature.fields)])
+        toInsert['platform_id'] = platform_id
+        series_tag_id = Series_Tag.insert(**toInsert)
+        rows = db((Sample_View_Annotation_Filter.sample_view_id == Sample_View.id) &
+                  (Sample_View_Annotation_Filter.session_id == response.session_id) &
+                  (Sample_View.platform_id == platform_id)).select()
+        rows = [dict(sample_id=row.sample_view.sample_id,
+                     series_tag_id=series_tag_id,
+                     annotation=row.sample_view_annotation_filter.annotation) for row in rows]
+        Sample_Tag.bulk_insert(rows)
+
+    # from setup_db import getSampleTagCrossTab
+    getSampleTagCrossTab()
+
+    # clear the regex on the form
+    session.tag_form_vars.regex = None
+    session.tag_form_vars.tag_id = None
+
+    redirect(URL('tag', 'index'))
 
 

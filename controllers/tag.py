@@ -4,15 +4,48 @@ __author__ = 'dex'
 @auth.requires_login()
 def add():
     form = SQLFORM(Tag)
+    form.add_button("Cancel", URL('index'))
     if form.process().accepted:
-        request.get_vars.tag_id = form.vars.id
-        redirect(URL('index', vars=request.get_vars))
+        session.tag_form_vars.tag_id = form.vars.id
+        session.tag_count = None
+        redirect(URL('index'))
     return dict(form=form)
+
+
+def getHeaders(series_id, minCount=2):
+    sql = """SELECT
+              attribute_name
+            FROM sample_attribute
+              JOIN sample ON sample.id = sample_id
+            WHERE series_id = %s
+            GROUP BY attribute_name
+            HAVING  count(DISTINCT attribute_value) >= %s
+            ORDER by attribute_name;"""
+
+    query = sql % (series_id, minCount)
+    print query
+    return sorted([row['attribute_name']
+                   for row
+                   in db.executesql(query, as_dict=True)])
 
 
 def index():
     # SERIES ID
-    series_id = request.get_vars.series_id or redirect(URL('default', 'index', vars=None))
+    series_id = request.vars.series_id or \
+                (session.tag_form_vars.series_id \
+                     if 'tag_form_vars' in session \
+                     else redirect(URL('default', 'index')))
+
+    # update form model based on requests
+    for var in request.vars:
+        if var in Series_Tag.fields:
+            session.tag_form_vars[var] = request.vars[var]
+
+    # set defaults based on form model
+    for var in session.tag_form_vars:
+        if var in Series_Tag.fields:
+            Series_Tag[var].default = session.tag_form_vars[var]
+
 
     # PLATFORM
     ids = [row.platform_id for row in db(Sample.series_id == series_id) \
@@ -27,47 +60,26 @@ def index():
     tag_ids = set(row.id
                   for row in
                   db(query).select(Tag.id, distinct=True))
-    # print db._lastsql
     ids = [row.id for row in db(Tag).select(Tag.id, distinct=True) if row.id not in tag_ids]
-    # print db._lastsql
-    labels = [Tag[id].tag_name for id in ids]
-    Series_Tag.tag_id.requires = IS_IN_SET(ids, labels=labels)
+
+    # https://web2py.wordpress.com/category/web2py-validators/
+    #IS_IN_DB() professional usage to filter is_in_db because is_in_set allows nulls
+    Series_Tag.tag_id.requires = IS_IN_DB(db(Tag.id.belongs(ids)),
+                                          Tag.id,
+                                          Tag._format)
 
     # HEADERS
     query = Sample_View.series_id == series_id
-
-    sql = """SELECT
-              attribute_name,
-              count(DISTINCT attribute_value)
-            FROM sample_attribute
-              JOIN sample ON sample.id = sample_id
-            WHERE series_id = %s
-            GROUP BY attribute_name;"""
-
-    attribute_name2count = dict(db.executesql(sql % series_id))
-    # sorted([row.attribute_name
-    # for row in db().select(Sample_Attribute.attribute_name, distinct=True)])
-    # inset = ["all"]+sorted(attribute_name2count.keys())
-    # Series_Tag.header.requires = IS_IN_SET(inset, zero=None)
-    # Series_Tag.header.default = ""
-    headers = sorted([attribute_name
-                      for attribute_name in attribute_name2count
-                      if attribute_name2count[attribute_name] > 1]) \
-        if not request.vars.show_invariant else \
-        sorted([attribute_name
-                for attribute_name in attribute_name2count])
-
-    Series_Tag.header.requires = IS_IN_SET([""] + headers, labels=["all"] + headers, zero=None)
+    minCount = 1 if request.vars.show_invariant else 2
+    session.headers = getHeaders(series_id, minCount)
+    Series_Tag.header.requires = IS_IN_SET([""] + session.headers,
+                                           labels=["all"] + session.headers,
+                                           zero=None)
 
     fields = [Sample_View['sample_id'],
               Sample_View['platform_id']] + \
-             ([Sample_View[request.get_vars.header]] if request.get_vars.header \
-                  else [Sample_View[header] for header in headers])
-
-    for field in Series_Tag.fields:
-        Series_Tag[field].default = request.vars[field][0] \
-            if type(request.vars[field]) == list \
-            else request.vars[field]
+             ([Sample_View[request.vars.header]] if request.vars.header \
+                  else [Sample_View[header] for header in session.headers])
 
     form = SQLFORM(Series_Tag,
                    _id='form')
@@ -76,10 +88,11 @@ def index():
     form.add_button('+', URL('add', vars=request.get_vars))
 
     if form.validate(formname='form'):
-        form.vars.series_id = series_id
-        # return annotate(fields)
-        session.headers = headers
-        redirect(URL('annotate', 'index', vars=form.vars))
+        # update form model
+        for var in form.vars:
+            session.tag_form_vars[var] = form.vars[var]
+
+        redirect(URL('annotate', 'index'))
 
     grid = SQLFORM.grid(query, search_widget=None,
                         fields=fields,

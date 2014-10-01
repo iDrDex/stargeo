@@ -36,7 +36,7 @@ def index():
                                                                                      grouping=True)
     session.series_tag_count = session.series_tag_count or locale.format("%d", db(Series_Tag).count(), grouping=True)
 
-    form = search_form(None, None)
+    search = search_form(None, None)
     # form.attributes['_method'] = "POST" #Hack needed to make it form.process.accept work
 
     if 'keywords' in request.vars:
@@ -44,7 +44,7 @@ def index():
                      vars=dict(keywords=request.vars.keywords)))
 
 
-    return dict(form=form)
+    return dict(search=search)
 
 
 def user():

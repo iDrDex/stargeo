@@ -167,7 +167,7 @@ def index():
                              # editable=False,
                              # create=False,
                              field_id=Sample_View.id,
-                             search_widget=search_form,
+                             search_widget=None,
                              searchable=searchable,
                              fields=fields,
                              buttons_placement='left',
