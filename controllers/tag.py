@@ -90,6 +90,7 @@ def index():
                         editable=False,
                         deletable=False,
                         user_signature=None,
+                        buttons_placement='left',
                         formname='form')
 
     grid = DIV(grid,
