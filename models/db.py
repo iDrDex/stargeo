@@ -13,9 +13,7 @@ if not request.env.web2py_runtime_gae:
     ## if NOT running on Google App Engine use SQLite or other DB
     # db = DAL('sqlite://storage.sqlite',pool_size=1,check_reserved=['all'])
     # https://groups.google.com/forum/#!topic/web2py/QTZBHScUU8w
-    db = DAL("postgres://star:rendez@localhost/star",
-             after_connection=lambda self: (self.execute('set search_path to my_schema, public;'),
-                                            self.execute('set statement_timeout to 100000000;')))
+    db = DAL("postgres://star:rendez@localhost/star")
     # db = DAL("postgres://star:rendez@dexter-db-star.cd8zgucpvgtu.us-west-2.rds.amazonaws.com/star")
 
 else:

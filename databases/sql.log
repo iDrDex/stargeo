@@ -2156,3 +2156,50 @@ CREATE TABLE sample_view_annotation_filter(
     created_on TIMESTAMP
 );
 success!
+timestamp: 2014-10-07T12:22:22.795949
+CREATE TABLE search(
+    id SERIAL PRIMARY KEY,
+    fts_query VARCHAR(512) UNIQUE
+);
+success!
+timestamp: 2014-10-07T12:22:23.084650
+CREATE TABLE user_search(
+    id SERIAL PRIMARY KEY,
+    search_id INTEGER REFERENCES search (id) ON DELETE CASCADE,
+    keywords VARCHAR(512),
+    is_active CHAR(1),
+    created_on TIMESTAMP,
+    created_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    modified_on TIMESTAMP,
+    modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-10-07T12:22:23.168824
+CREATE TABLE series_view_search(
+    id SERIAL PRIMARY KEY,
+    series_view_id INTEGER,
+    search_id INTEGER REFERENCES search (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-10-07T12:26:00.674956
+CREATE TABLE series_view_results(
+    id SERIAL PRIMARY KEY,
+    series_view_id INTEGER,
+    search_id INTEGER REFERENCES search (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-10-07T12:28:58.544652
+ALTER TABLE user_search ADD fts_search VARCHAR(512);
+success!
+timestamp: 2014-10-07T12:29:23.488842
+ALTER TABLE user_search ADD fts_query VARCHAR(512);
+timestamp: 2014-10-07T12:29:23.493114
+ALTER TABLE user_search DROP COLUMN fts_search;
+success!
+timestamp: 2014-10-07T15:07:24.285758
+CREATE TABLE sample_view_results(
+    id SERIAL PRIMARY KEY,
+    sample_view_id INTEGER,
+    search_id INTEGER REFERENCES search (id) ON DELETE CASCADE
+);
+success!

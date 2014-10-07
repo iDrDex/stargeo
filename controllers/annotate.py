@@ -84,7 +84,7 @@ def index():
             f = lambda row: p.search(row[header]) and p.search(row[header]).group(1)
         else:
             annotation_type = 'boolean'
-            f = lambda row: p.search(row[header]) and True
+            f = lambda row: p.search(str(row[header])) and True
     else:
         f = lambda row: regex
 
@@ -122,7 +122,7 @@ def edit():
 
     form = SQLFORM(Series_Tag, submit_button="Save")
     form.add_button("Cancel", URL('tag', 'index', vars = request.get_vars))
-    if form.process().accepted:
+    if form.validate():
         return __save()
 
     return dict(form=form,

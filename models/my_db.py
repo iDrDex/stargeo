@@ -37,6 +37,34 @@ Series_View = db.define_table('series_view',
                                 for field in session.all_series_attribute_names],
                               migrate=False)
 
+
+Search = db.define_table('search',
+                      Field('id', 'id', readable=False, writable=False),
+                      Field('fts_query', unique=True),
+                      format='%(fts_query)s',
+                      migrate='search.table'
+)
+
+
+User_Search = db.define_table('user_search',
+                      Field('id', 'id', readable=False, writable=False),
+                      Field('search_id', "reference search"),
+                      Field('keywords'),
+                      Field('fts_query'),
+                      auth.signature,
+                      format='%(search_id)s_%(auth_user_id)s',
+                      migrate='user_search.table'
+)
+
+Series_View_Results = db.define_table('series_view_results',
+                      Field('id', 'id', readable=False, writable=False),
+                      Field('series_view_id', 'integer'),
+                      Field('search_id', 'reference search'),
+                      format='%(keywords)s',
+                      migrate='series_view_results.table'
+)
+
+
 Platform = db.define_table('platform',
                            Field('id', 'id', readable=False, writable=False),
                            Field('gpl_name', 'text', writable=False),
@@ -88,6 +116,15 @@ Sample_View = db.define_table('sample_view',
                                 for field in session.all_sample_field_names],
                               migrate=False)
 
+Sample_View_Results = db.define_table('sample_view_results',
+                      Field('id', 'id', readable=False, writable=False),
+                      Field('sample_view_id', 'integer'),
+                      Field('search_id', 'reference search'),
+                      format='%(keywords)s',
+                      migrate='sample_view_results.table'
+)
+
+
 Tag = db.define_table('tag',
                       Field('id', 'id', readable=False, writable=False),
                       Field('tag_name', unique=True),
@@ -96,6 +133,8 @@ Tag = db.define_table('tag',
                       format='%(tag_name)s',
                       migrate='tag.table'
 )
+
+
 
 Series_Tag = db.define_table('series_tag',
                              Field('id', 'id', readable=False, writable=False),

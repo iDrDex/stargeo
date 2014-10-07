@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/star.iml" filepath="$PROJECT_DIR$/.idea/star.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/stargeo.iml" filepath="$PROJECT_DIR$/.idea/stargeo.iml" />
     </modules>
   </component>
 </project>

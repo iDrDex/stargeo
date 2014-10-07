@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<component name="dataSourceStorage">
-  <data-source source="LOCAL" name="PostgreSQL - star@localhost" uuid="ff44c2f4-aa40-4015-9804-581a68ea31c9">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
-  </data-source>
-  <data-source source="LOCAL" name="PostgreSQL - star@dexter-db-star.cd8zgucpvgtu.us-west-2.rds.amazonaws.com" uuid="13e1bc5f-11a7-4390-a574-b36b36c4c5de">
-    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
-  </data-source>
-</component>
