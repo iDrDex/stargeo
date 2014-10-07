@@ -1,5 +1,5 @@
 {{extend 'layout.html'}}
-        {{=search}}
+        {{=search_form}}
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="row">
     <div class="jumbotron col-lg-8">
@@ -95,12 +95,9 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">Latest Annotations</div>
-{{
-Series_Tag.tag_id.represent = lambda name, row: DIV(row.tag_id.tag_name, _class = "badge")
-annotations = SQLFORM.grid(Series_Tag, searchable=False, csv=False, orderby=~Series_Tag.id, paginate=7, maxtextlength=100)
-annotations.element('.web2py_console', replace=None)
-annotations.element('.web2py_paginator', replace=None)
-=annotations}}
+{{tags.element('.web2py_console', replace=None)
+tags.element('.web2py_paginator', replace=None)
+=tags}}
 </div>
 
 

@@ -1,5 +1,4 @@
 # coding: utf8
-response.generic_patterns = ['.html']
 
 Series = db.define_table('series',
                          Field('id', 'id', readable=False, writable=False),
@@ -23,29 +22,20 @@ session.all_series_attribute_names = session.all_series_attribute_names or [row.
                                                                                         distinct=True,
                                                                                         orderby=Series_Attribute.attribute_name)]
 
-
-def listed(text):
-    return text or ""
-    # if text:
-    # fields = text.split("|||")
-    # if len(fields) > 1:
-    # text = UL(*[LI(field)
-    # for field in fields])
-    # else: text = ""
-    # return text
+# https://groups.google.com/forum/#!topic/web2py/EzC_V9pyV6s
+# not needed since its views I'm custom searching
+# from gluon.dal import SQLCustomType
+# tsv = SQLCustomType(type='text', native='tsvector')
 
 
 Series_View = db.define_table('series_view',
                               Field('id', 'id', readable=False, writable=False),
+                              # Field('doc', tsv, readable=False, writable=False),
                               Field('series_id', 'reference series', writable=False),
                               *[Field(field, 'text',
-                                      represent=lambda value, row: listed(value))
+                                      represent=lambda value, row: value or "")
                                 for field in session.all_series_attribute_names],
                               migrate=False)
-
-Series_Filter = db.define_table('series_filter',
-                                Field('id', 'id', readable=False, writable=False),
-                                migrate='series_filter.table')
 
 Platform = db.define_table('platform',
                            Field('id', 'id', readable=False, writable=False),
@@ -94,13 +84,9 @@ Sample_View = db.define_table('sample_view',
                               Field('sample_id', 'reference sample', writable=False),
                               *[Field(field, 'text',
                                       writable=False,
-                                      represent=lambda value, row: listed(value))
+                                      represent=lambda value, row: value or "")
                                 for field in session.all_sample_field_names],
                               migrate=False)
-
-Sample_Filter = db.define_table('sample_filter',
-                                Field('id', 'id', readable=False, writable=False),
-                                migrate='sample_filter.table')
 
 Tag = db.define_table('tag',
                       Field('id', 'id', readable=False, writable=False),
@@ -159,7 +145,7 @@ Sample_Tag_View = db.define_table('sample_tag_view',
                                   Field('sample_id', 'reference sample', writable=False),
                                   *[Field(field, 'text',
                                           writable=False,
-                                          represent=lambda value, row: listed(value))
+                                          represent=lambda value, row: value or "")
                                     for field in session.all_sample_tag_names],
                                   migrate=False)
 
@@ -170,106 +156,7 @@ Series_Tag_View = db.define_table('series_tag_view',
                                   Field('samples', 'integer', writable=False),
                                   *[Field(field, 'integer',
                                           writable=False,
-                                          represent=lambda value, row: listed(value))
+                                          represent=lambda value, row: value or "")
                                     for field in session.all_sample_tag_names],
                                   migrate=False)
 
-
-# def search_form(self, url):
-# form = \
-# FORM(
-# DIV(
-# INPUT(_name="keywords",
-# _id="keywords",
-# _value=request.vars.keywords or "",
-# _type="text",
-# _class="form-control",
-# _placeholder="Search...",
-# _style="""width: 98%;
-# z-index: 0;
-#                              """
-#                 ),
-#                 SPAN(_class='glyphicon glyphicon-remove-circle',
-#                      _onclick="clearInputField()",
-#                      _style="""
-#                      position: relative;
-#                      left: -25px;
-#                      top: 15px;
-#                      z-index: 1;
-#                      """,
-#                      # _style=""" position: absolute;
-#                      # right: 5px;
-#                      # top: 0;
-#                      # bottom: 0;
-#                      # height: 14px;
-#                      # margin: auto;
-#                      # font-size: 14px;
-#                      # cursor: pointer;
-#                      #            color: #ccc;""",
-#                 ),
-#
-#
-#                 SPAN(
-#                     BUTTON("Go",
-#                            _type="submit",
-#                            _style="""left: -25px;
-#                                  position: relative;""",
-#                            _class="btn btn-default"),
-#                     _class="input-group-btn"
-#                 ),
-#                 _class="input-group input-group-lg"
-#             ),
-#             _method="GET",
-#             _action=url
-#         )
-#     return form
-
-
-def search_form(self, url):
-    form = \
-        FORM(
-            DIV(
-                DIV(
-                    DIV(
-                        DIV(
-                            SPAN(BUTTON(I(_class="fa fa-times-circle"),
-                                        _class="btn btn-default",
-                                        _type="submit",
-                                        _onclick="$('#keywords').val('');"),
-                                 _class="input-group-btn"),
-                            INPUT(_name="keywords",
-                                  _id="keywords",
-                                  _value=request.vars.keywords or "",
-                                  _type="text",
-                                  _class="form-control",
-                                  _placeholder="Search..."),
-                            SPAN(BUTTON(I(_class="fa fa-search"),
-                                        _class="btn btn-default",
-                                        _type="submit"),
-                                 _class="input-group-btn"),
-
-                            _class="input-group input-group-lg"),
-                        _class="col-lg-10 col-lg-offset-1")),
-                _class="row"),
-            _method="GET",
-            _action=url
-        )
-    return form
-
-
-response.files += ["https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css",
-                   "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css",
-                   "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"]
-
-# def search_form(self, url):
-# form = FORM(INPUT(_name='keywords',
-# _value=request.get_vars.keywords,
-# # _style='width:200px;',
-# _id='keywords'),
-# INPUT(_name='filter', _type='checkbox', _value="on", _checked=request.get_vars.filter),
-# INPUT(_type='submit', _value=T('Search')),
-# INPUT(_type='submit', _value=T('Clear'),
-# _onclick="jQuery('#keywords').val('');"),
-# _method="GET", _action=url)
-#
-# return form

@@ -43,9 +43,9 @@ response.menu = [
      URL('series', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
     (T('Samples'), (request.controller == 'sample'),
      URL('sample', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
-    (T('Series Tags'), (request.controller == 'summary'),
+    (T('Series Tags'), (request.controller == 'series_tag'),
      URL('summary', 'index')),
-    (T('Sample Annotations'), (request.controller == 'annotation'),
+    (T('Sample Annotations'), (request.controller == 'sample_annotation'),
      URL('annotation', 'index')),
 ]
 

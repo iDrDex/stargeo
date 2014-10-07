@@ -95,8 +95,8 @@ def index():
         Sample_View_Annotation_Filter.insert(
             sample_view_id=row.id,
             annotation=f(row))
-    # db.commit()
-    redirect(URL('edit'))
+
+    redirect(URL('edit',  vars = request.get_vars))
 
 
 @auth.requires_login()
@@ -106,16 +106,22 @@ def edit():
         if 'tag_form_vars' in session \
         else redirect(URL('default', 'index'))
 
-    headers = session.headers
+    headers = session.tag_form_vars.headers
     fields = [Sample_View['sample_id'],
               Sample_View['platform_id'],
               Sample_View_Annotation_Filter['annotation'],
              ] + \
              ([Sample_View[session.tag_form_vars.header]] if session.tag_form_vars.header \
                   else [Sample_View[header] for header in headers])
-    form = SQLFORM.factory(submit_button="Save")
-    form.add_button("Cancel", URL('tag', 'index'))
 
+
+    #set up form defaults as readonly
+    for field in Series_Tag._fields[1:]:
+        Series_Tag[field].default = session.tag_form_vars[field]
+        Series_Tag[field].writable = False
+
+    form = SQLFORM(Series_Tag, submit_button="Save")
+    form.add_button("Cancel", URL('tag', 'index', vars = request.get_vars))
     if form.process().accepted:
         return __save()
 
@@ -162,6 +168,7 @@ def __save():
     session.tag_form_vars.regex = None
     session.tag_form_vars.tag_id = None
 
-    redirect(URL('tag', 'index'))
-
+    if 'page' in request.get_vars:
+        del(request.get_vars.page)
+    redirect(URL('tag', 'index', vars=request.get_vars))
 

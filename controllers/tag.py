@@ -4,44 +4,33 @@ __author__ = 'dex'
 @auth.requires_login()
 def add():
     form = SQLFORM(Tag)
-    form.add_button("Cancel", URL('index'))
+    form.add_button("Cancel", URL('index', vars = request.get_vars))
     if form.process().accepted:
-        session.tag_form_vars.tag_id = form.vars.id
-        session.tag_count = None
+        getSampleTagCrossTab()  # rebuild tables
         redirect(URL('index'))
     return dict(form=form)
 
 
-def getHeaders(series_id, minCount=2):
-    sql = """SELECT
-              attribute_name
-            FROM sample_attribute
-              JOIN sample ON sample.id = sample_id
-            WHERE series_id = %s
-            GROUP BY attribute_name
-            HAVING  count(DISTINCT attribute_value) >= %s
-            ORDER by attribute_name;"""
-
-    query = sql % (series_id, minCount)
-    print query
-    return sorted([row['attribute_name']
-                   for row
-                   in db.executesql(query, as_dict=True)])
-
-
 def index():
-    print "tag"
-    # SERIES ID
-    series_id = session.tag_form_vars.series_id if 'tag_form_vars' in session else redirect(URL('default', 'index'))
+    from gluon.storage import Storage
 
-    # update form model and defaults based on requests
+    if not session.tag_form_vars:
+        session.tag_form_vars = Storage()
+
+    print "tag"
+    # update form model based on requests if present
     for var in Series_Tag.fields[1:]:
         if var not in auth.signature:
-            if var in request:
+            if var in request.vars:
                 session.tag_form_vars[var] = request.vars[var]
-            Series_Tag[var].default = session.tag_form_vars[var]
+    # checkboxes are special case as only requested when checked
+    session.tag_form_vars.show_invariant = request.vars.show_invariant
 
+    #update the defaults based on form model
+    for var in Series_Tag.fields[1:]:
+        Series_Tag[var].default = session.tag_form_vars[var]
 
+    series_id = session.tag_form_vars.series_id or redirect('default', 'index')
     # PLATFORM
     ids = [row.platform_id for row in db(Sample.series_id == series_id) \
         .select(Sample.platform_id, distinct=True)]
@@ -50,7 +39,7 @@ def index():
 
     # TAGS
     query = (Series_Tag.series_id == series_id) & (Tag.id == Series_Tag.tag_id)
-    if request.get_vars.platform_id:
+    if session.tag_form_vars.platform_id:
         query &= (Series_Tag.platform_id == request.get_vars.platform_id)
     tag_ids = set(row.id
                   for row in
@@ -65,16 +54,17 @@ def index():
 
     # HEADERS
     query = Sample_View.series_id == series_id
-    minCount = 1 if request.vars.show_invariant else 2
-    session.headers = getHeaders(series_id, minCount)
-    Series_Tag.header.requires = IS_IN_SET([""] + session.headers,
-                                           labels=["all"] + session.headers,
-                                           zero=None)
 
-    fields = [Sample_View['sample_id'],
-              Sample_View['platform_id']] + \
-             ([Sample_View[session.tag_form_vars.header]] if session.tag_form_vars.header \
-                  else [Sample_View[header] for header in session.headers])
+    # if request.vars.header:
+    # fields = [Sample_View[request.vars.header]]
+    # else:
+    fields = get_variant_fields(query=query, paginate=paginate, view=Sample_View) \
+        if not session.tag_form_vars.show_invariant else None
+
+    session.tag_form_vars.headers = [field.name for field in fields] if fields else Sample_View.fields[1:]
+    Series_Tag.header.requires = IS_IN_SET([""] + session.tag_form_vars.headers,
+                                           labels=["all"] + session.tag_form_vars.headers,
+                                           zero=None)
 
     form = SQLFORM(Series_Tag,
                    _id='form')
@@ -86,16 +76,22 @@ def index():
         # update form model
         for var in form.vars:
             session.tag_form_vars[var] = form.vars[var]
+        if 'page' in request.get_vars:
+            del(request.get_vars.page)
 
-        redirect(URL('annotate', 'index'))
+        redirect(URL('annotate', 'index', vars=request.get_vars))
 
-    grid = SQLFORM.grid(query, search_widget=None,
-                        fields=fields,
+    grid = SQLFORM.grid(query,
+                        search_widget=None,
+                        searchable=None,
+                        fields=[Sample_View[request.vars.header]] if request.vars.header else fields,
                         maxtextlength=1000,
                         create=False,
                         editable=False,
                         deletable=False,
+                        user_signature=None,
                         formname='form')
+
     grid = DIV(grid,
                SCRIPT('''   $("#series_tag_show_invariant").change(function () {
                                 $('#series_tag_header').val("")
@@ -104,7 +100,6 @@ def index():
                             });
                '''),
                SCRIPT('''   $("#series_tag_header").change(function () {
-                                $('#series_tag_show_invariant').val("")
                                 $("input[name='_formkey']").val("")
                                 $('#form').submit()
                             });'''

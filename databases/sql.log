@@ -2067,3 +2067,92 @@ CREATE TABLE sample_tag(
     modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
 );
 success!
+TRUNCATE TABLE series_filter ;
+success!
+TRUNCATE TABLE sample_filter ;
+success!
+timestamp: 2014-10-03T01:18:44.883688
+CREATE TABLE sample_view_annotation(
+    id SERIAL PRIMARY KEY,
+    sample_view_id VARCHAR(512),
+    annotation TEXT,
+    session_id VARCHAR(512),
+    created_on TIMESTAMP
+);
+success!
+timestamp: 2014-10-04T00:52:09.030144
+CREATE TABLE tag(
+    id SERIAL PRIMARY KEY,
+    tag_name VARCHAR(512) UNIQUE,
+    description VARCHAR(512),
+    is_active CHAR(1),
+    created_on TIMESTAMP,
+    created_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    modified_on TIMESTAMP,
+    modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-10-04T00:52:09.059551
+CREATE TABLE series_tag(
+    id SERIAL PRIMARY KEY,
+    series_id INTEGER REFERENCES series (id) ON DELETE CASCADE,
+    platform_id INTEGER REFERENCES platform (id) ON DELETE CASCADE,
+    tag_id INTEGER REFERENCES tag (id) ON DELETE CASCADE,
+    header VARCHAR(512),
+    regex VARCHAR(512),
+    show_invariant CHAR(1),
+    is_active CHAR(1),
+    created_on TIMESTAMP,
+    created_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    modified_on TIMESTAMP,
+    modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-10-04T00:52:09.071030
+CREATE TABLE sample_tag(
+    id SERIAL PRIMARY KEY,
+    sample_id INTEGER REFERENCES sample (id) ON DELETE CASCADE,
+    series_tag_id INTEGER REFERENCES series_tag (id) ON DELETE CASCADE,
+    annotation TEXT,
+    is_active CHAR(1),
+    created_on TIMESTAMP,
+    created_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    modified_on TIMESTAMP,
+    modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-10-04T00:52:09.081406
+CREATE TABLE sample_view_annotation(
+    id SERIAL PRIMARY KEY,
+    sample_view_id VARCHAR(512),
+    annotation TEXT,
+    session_id VARCHAR(512),
+    created_on TIMESTAMP
+);
+success!
+timestamp: 2014-10-04T08:33:51.228606
+CREATE TABLE sample_view_annotation(
+    id SERIAL PRIMARY KEY,
+    sample_view_id VARCHAR(512),
+    annotation TEXT,
+    session_id VARCHAR(512),
+    created_on TIMESTAMP
+);
+success!
+timestamp: 2014-10-06T11:33:11.585457
+CREATE TABLE sample_view_annotation_filter(
+    id SERIAL PRIMARY KEY,
+    sample_view_id VARCHAR(512),
+    annotation TEXT,
+    session_id VARCHAR(512),
+    created_on TIMESTAMP
+);
+timestamp: 2014-10-06T11:34:23.523500
+CREATE TABLE sample_view_annotation_filter(
+    id SERIAL PRIMARY KEY,
+    sample_view_id VARCHAR(512),
+    annotation TEXT,
+    session_id VARCHAR(512),
+    created_on TIMESTAMP
+);
+success!
