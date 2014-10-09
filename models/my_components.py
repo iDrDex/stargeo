@@ -126,7 +126,7 @@ def get_variant_fields(query, paginate, view):
     df = pd.DataFrame(rows.as_list()) \
         [columns] \
         .set_index('id')  # id column
-    df.to_csv('df.csv')
+    # df.to_csv('df.csv')
     variant_fields = [view[field] for field in df if df[field].nunique() > 1]
 
     return variant_fields
