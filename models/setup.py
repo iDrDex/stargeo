@@ -92,6 +92,7 @@ def getSampleCrossTab():
     # CREATE VIEW
     print "creating view"
     db.executesql("DROP MATERIALIZED VIEW IF EXISTS sample_view CASCADE;")
+    db.executesql("DROP INDEX IF EXISTS sample_view_fts_idx CASCADE;")
     db.executesql("DROP SEQUENCE IF EXISTS sample_attribute_sequence CASCADE;")
     db.executesql("""CREATE SEQUENCE sample_attribute_sequence;""")
     attributesSql = "," \
@@ -114,21 +115,15 @@ def getSampleCrossTab():
                  JOIN series ON series.id = series_id
                  JOIN platform ON platform.id = platform_id
                GROUP BY series_id, platform_id, sample_id;""" % (docSql, attributesSql)
-    print sql
+    # print sql
     db.executesql(sql)
     create_indices_on_postgres([('sample_view', 'id')])
     print "indexing FTS"
-    sql = "CREATE INDEX sample_view_fts_idx ON series_view USING gin(doc);"
+    sql = "CREATE INDEX sample_view_fts_idx ON sample_view USING gin(doc);"
     # print sql
     db.executesql(sql)
 
-    create_indices_on_postgres([('sample_view', 'id')])
-    print "indexing FTS"
-    sql = "CREATE INDEX sample_view_fts_idx ON series_view USING gin(doc);"
-    # print sql
-    db.executesql(sql)
-
-    #reset results
+    # reset results
     Sample_View_Results.truncate()
 
     db.commit()
@@ -142,6 +137,7 @@ def getSeriesCrossTab():
     print "creating view"
     create_indices_on_postgres([('series_attribute', 'series_id, attribute_name')])
     db.executesql("DROP MATERIALIZED VIEW IF EXISTS series_view CASCADE ;")
+    db.executesql("DROP INDEX IF EXISTS series_view_fts_idx CASCADE ;")
     db.executesql("DROP SEQUENCE IF EXISTS series_attribute_sequence CASCADE;")
     db.executesql("CREATE SEQUENCE series_attribute_sequence;")
     attributesSql = "," \
@@ -168,7 +164,7 @@ def getSeriesCrossTab():
     sql = "CREATE INDEX series_view_fts_idx ON series_view USING gin(doc);"
     # print sql
     db.executesql(sql)
-    #reset results
+    # reset results
     Series_View_Results.truncate()
     db.commit()
 
@@ -216,11 +212,12 @@ def getSampleTagCrossTab():
     db.executesql(sql)
 
     getSeriesTagCrossTab()
-    #reset results
+    # reset results
     Sample_Tag_View_Results.truncate()
 
     db.commit()
     session.all_sample_tag_names = None
+
 
 def getSeriesTagCrossTab():
     print "reading tag names"
@@ -271,7 +268,7 @@ def getSeriesTagCrossTab():
     print "indexing FTS"
     sql = "CREATE INDEX series_tag_view_fts_idx ON series_tag_view USING gin(doc);"
     # print sql
-    #reset results
+    # reset results
     Series_Tag_View_Results.truncate()
 
     db.executesql(sql)
@@ -352,6 +349,7 @@ def insertAttributes():
 
 
 if __name__ == '__main__':
-    # getSeriesCrossTab()
+    getSeriesCrossTab()
     getSampleCrossTab()
+    getSampleTagCrossTab()
 

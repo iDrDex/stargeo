@@ -1,5 +1,5 @@
 (dp1
-S'role'
+S'series_tag_view_id'
 p2
 (dp3
 S'length'
@@ -13,14 +13,14 @@ p6
 I2
 sS'sql'
 p7
-S'VARCHAR(512)'
+S'INTEGER'
 p8
 sS'notnull'
 p9
 I00
 sS'type'
 p10
-S'string'
+S'integer'
 p11
 ssS'id'
 p12
@@ -38,21 +38,21 @@ sg9
 I00
 sg10
 g12
-ssS'description'
+ssS'search_id'
 p15
 (dp16
 g4
-I32768
+I512
 sg5
 I00
 sg6
 I3
 sg7
-S'TEXT'
+S'INTEGER REFERENCES search (id) ON DELETE CASCADE'
 p17
 sg9
 I00
 sg10
-S'text'
+S'reference search'
 p18
 ss.
