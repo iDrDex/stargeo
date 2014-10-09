@@ -36,30 +36,6 @@ def getDfFromStream(stream):
     return df
 
 
-#
-# def create_unique_indices_on_postgres(indices):
-# # Modified from http://osdir.com/ml/web2py/2010-09/msg00952.html
-#     '''Creates a set of indices if they do not exist'''
-#     # # Edit this list of table columns to index
-#     # # The format is [('table', 'column1, column2, ...'),...]
-#     print "checking indicies:"
-#     for table, columns in indices:
-#         relname = "%s_%s_idx" % (table.replace("_", ""),
-#                                  columns.replace(" ", "") \
-#                                  .replace("_", "") \
-#                                  .replace(",", "_"))
-#         print "\t%s" % relname,
-#         index_exists = \
-#             db.executesql("select count(*) from pg_class where relname = '%s';" % relname)[0][0] == 1
-#         if not index_exists:
-#             print "CREATING"
-#             db.executesql('create unique index %s on %s (%s);'
-#                           % (relname, table, columns))
-#         db.commit()
-#         print "OK"
-#     print "Done!"
-
-
 def create_indices_on_postgres(indices, unique=True):
     # Modified from http://osdir.com/ml/web2py/2010-09/msg00952.html
     '''Creates a set of indices if they do not exist'''
@@ -82,10 +58,9 @@ def create_indices_on_postgres(indices, unique=True):
             print sql
             db.executesql(sql)
             db.commit()
-    print "OK"
+        print "OK"
 
-
-print "Done!"
+    print "Done!"
 
 
 def getEntity2stream(filename, entities):
@@ -111,9 +86,11 @@ def getSampleCrossTab():
     attribute_names = db().select(Sample_Attribute.attribute_name,
                                   orderby=Sample_Attribute.attribute_name,
                                   distinct=True)
+    # INDEX source attribute
+    create_indices_on_postgres([('sample_attribute', 'sample_id, attribute_name')])
+
     # CREATE VIEW
     print "creating view"
-    create_indices_on_postgres([('sample_attribute', 'sample_id, attribute_name')])
     db.executesql("DROP MATERIALIZED VIEW IF EXISTS sample_view CASCADE;")
     db.executesql("DROP SEQUENCE IF EXISTS sample_attribute_sequence CASCADE;")
     db.executesql("""CREATE SEQUENCE sample_attribute_sequence;""")
@@ -144,47 +121,16 @@ def getSampleCrossTab():
     sql = "CREATE INDEX sample_view_fts_idx ON series_view USING gin(doc);"
     # print sql
     db.executesql(sql)
-    db.commit()
 
-
-def getSampleCrossTab():
-    # print "reading attribute names"
-    # attribute_names = db().select(Sample_Attribute.attribute_name,
-    #                               orderby=Sample_Attribute.attribute_name,
-    #                               distinct=True)
-    # # CREATE VIEW
-    # print "creating view"
-    # create_indices_on_postgres([('sample_attribute', 'sample_id, attribute_name')])
-    # db.executesql("DROP MATERIALIZED VIEW IF EXISTS sample_view CASCADE;")
-    # db.executesql("DROP SEQUENCE IF EXISTS sample_attribute_sequence CASCADE;")
-    # db.executesql("""CREATE SEQUENCE sample_attribute_sequence;""")
-    # attributesSql = "," \
-    #     .join(["""string_agg(CASE attribute_name WHEN '%s' THEN attribute_value END, '///') as %s \n""" \
-    #            % (row['attribute_name'], row['attribute_name'])
-    #            for row in attribute_names])
-    # docSql = "||" \
-    #              .join([
-    #     """to_tsvector('english', coalesce(string_agg(CASE attribute_name WHEN '%s' THEN attribute_value END, '///'), ''))\n""" \
-    #     % (row['attribute_name'])
-    #     for row in attribute_names]) + " AS doc"
-    #
-    # sql = """CREATE MATERIALIZED VIEW sample_view AS
-    #          SELECT NEXTVAL('sample_attribute_sequence') as id,
-    #          %s,
-    #          series_id, platform_id, sample_id,
-    #          %s
-    #          FROM sample
-    #              JOIN sample_attribute ON sample.id = sample_id
-    #              JOIN series ON series.id = series_id
-    #              JOIN platform ON platform.id = platform_id
-    #            GROUP BY series_id, platform_id, sample_id;""" % (docSql, attributesSql)
-    # print sql
-    # db.executesql(sql)
     create_indices_on_postgres([('sample_view', 'id')])
     print "indexing FTS"
     sql = "CREATE INDEX sample_view_fts_idx ON series_view USING gin(doc);"
     # print sql
     db.executesql(sql)
+
+    #reset results
+    Sample_View_Results.truncate()
+
     db.commit()
 
 
@@ -222,99 +168,112 @@ def getSeriesCrossTab():
     sql = "CREATE INDEX series_view_fts_idx ON series_view USING gin(doc);"
     # print sql
     db.executesql(sql)
+    #reset results
+    Series_View_Results.truncate()
     db.commit()
 
 
+def getSampleTagCrossTab():
+    print "reading tag names"
+    rows = db(Tag).select(orderby=Tag.tag_name)
 
+    # CREATE VIEW
+    print "creating view"
+    db.executesql("DROP SEQUENCE IF EXISTS sample_tag_sequence CASCADE;")
+    db.executesql("CREATE SEQUENCE sample_tag_sequence;")
+    db.executesql("DROP MATERIALIZED VIEW IF EXISTS sample_tag_view ;")
 
+    create_indices_on_postgres([('sample_tag', 'sample_id, series_tag_id')])
 
+    # print "creating view"
+    tagsSql = "," \
+        .join(["""string_agg(CASE tag_id WHEN %s THEN annotation END, '|||') as %s \n""" \
+               % (row['id'], row['tag_name'])
+               for row in rows])
 
-# def getSampleTagCrossTab():
-#     print "reading annotation names"
-#     annotation_names = db().select(Sample_Tag_Annotation.annotation_name,
-#                                   orderby=Sample_Tag_Annotation.annotation_name,
-#                                   distinct=True)
-#     # CREATE VIEW
-#     print "creating view"
-#
-#     create_indices_on_postgres([('sample_annotation', 'sample_id, annotation_name')])
-#
-#     db.executesql("DROP SEQUENCE IF EXISTS sample_annotation_sequence CASCADE;")
-#     db.executesql("CREATE SEQUENCE sample_sequence;")
-#     db.executesql("DROP MATERIALIZED VIEW IF EXISTS sample_view CASCADE;")
-#
-#     annotationsSql = "," \
-#         .join(["""string_agg(CASE annotation_name WHEN '%s' THEN annotation_value END, '|||') as %s \n""" \
-#                % (row['annotation_name'], row['annotation_name'])
-#                for row in annotation_names])
-#     db.executesql("""CREATE SEQUENCE sample_annotation_sequence;""")
-#     sql = """CREATE MATERIALIZED VIEW sample_view AS
-#              SELECT NEXTVAL('sample_annotation_sequence') as id, series_id, platform_id, sample_id,""" \
-#           + annotationsSql \
-#           + """ FROM sample
-#                  JOIN sample_annotation ON sample.id = sample_id
-#                  JOIN series ON series.id = series_id
-#                  JOIN platform ON platform.id = platform_id
-#                GROUP BY series_id, platform_id, sample_id;"""
-#     print sql
-#     db.executesql(sql)
-#     create_indices_on_postgres([('sample_view', 'id')])
-#     # db.executesql("CREATE UNIQUE INDEX sample_view_key ON sample_view (id);")
-#
-#     # CREATE FTS
-#     print "creating FTS"
-#     annotationsSql = "||" \
-#         .join(["""to_tsvector('english', coalesce(%s, ''))""" % row['annotation_name']
-#                for row in annotation_names])
-#     sql = """CREATE MATERIALIZED VIEW sample_view_fts AS
-#                 SELECT sample_view.id,
-#                     (
-#                       to_tsvector('english', gse_name)||%s
-#                     ) AS doc
-#                 FROM sample_view
-#                 JOIN series ON series_id = series.id;""" % annotationsSql
-#     print sql
-#     db.executesql(sql)
-#
-#     print "indexing FTS"
-#     sql = "CREATE INDEX sample_view_fts_idx ON sample_view_fts USING gin(doc);"
-#     print sql
-#     db.executesql(sql)
-#
-#     db.executesql("""
-#         CREATE INDEX idx_fts_sample_atribute ON sample_annotation
-#         USING GIN ((
-#           to_tsvector('english', annotation_name) ||
-#           to_tsvector('english', annotation_value)
-#         ));
-#     """)
-#     getSeriesTagCrossTab()
-#     db.commit()
+    docSql = "||" \
+                 .join([
+        """
+        to_tsvector('english', coalesce(string_agg(CASE tag_name WHEN '%s' THEN annotation || ' ' || tag_name ||  ' ' || description END, '///'), ''))
+        """ % (row['tag_name'])
+        for row in rows]) + " AS doc"
+    #
+    sql = """CREATE MATERIALIZED VIEW sample_tag_view AS
+             SELECT NEXTVAL('sample_tag_sequence') as id, \
+            %s,
+             series_id, platform_id, sample_id,
+             %s
 
+             FROM sample_tag
+                 JOIN series_tag ON sample_tag.series_tag_id = series_tag.id
+                 JOIN tag ON tag.id = tag_id
+               GROUP BY series_id, platform_id, sample_id;""" % (docSql, tagsSql)
+    print sql
+    db.executesql(sql)
+    print "indexing FTS"
+    sql = "CREATE INDEX sample_tag_view_fts_idx ON sample_tag_view USING gin(doc);"
+    # print sql
+    db.executesql(sql)
+
+    getSeriesTagCrossTab()
+    #reset results
+    Sample_Tag_View_Results.truncate()
+
+    db.commit()
+    session.all_sample_tag_names = None
 
 def getSeriesTagCrossTab():
     print "reading tag names"
-    tag_names = db().select(Tag.tag_name,
-                            orderby=Tag.tag_name,
-                            distinct=True)
+    rows = db().select(Tag.tag_name,
+                       orderby=Tag.tag_name,
+                       distinct=True)
     # CREATE VIEW
     print "creating view"
     db.executesql("DROP SEQUENCE IF EXISTS series_tag_sequence CASCADE;")
     db.executesql("CREATE SEQUENCE series_tag_sequence;")
     db.executesql("DROP MATERIALIZED VIEW IF EXISTS series_tag_view ;")
 
-    # print "creating view"
+    db.executesql(
+        """
+        CREATE OR REPLACE FUNCTION concat_tsvectors(tsv1 TSVECTOR, tsv2 TSVECTOR)
+          RETURNS TSVECTOR AS $$
+        BEGIN
+          RETURN coalesce(tsv1, to_tsvector('english', ''))
+                 || coalesce(tsv2, to_tsvector('english', ''));
+        END;
+        $$ LANGUAGE plpgsql;
+        """)
+
+    db.executesql("DROP AGGREGATE IF EXISTS tsvector_agg( TSVECTOR );")
+
+    db.executesql("""
+            CREATE AGGREGATE tsvector_agg (
+            BASETYPE = TSVECTOR,
+            SFUNC = concat_tsvectors,
+            STYPE = TSVECTOR,
+            INITCOND = ''
+            );"""
+    )
     tagsSql = "," \
         .join(["""count(%s) as %s \n""" \
                % (row['tag_name'], row['tag_name'])
-               for row in tag_names])
+               for row in rows])
     sql = """CREATE MATERIALIZED VIEW series_tag_view AS
-             SELECT NEXTVAL('series_tag_sequence') as id, series_id, platform_id,
-             count(sample_id) as samples,""" \
+             SELECT NEXTVAL('series_tag_sequence') as id,
+             series_id, platform_id,
+             tsvector_agg(doc) as doc,
+             count(*) as samples,""" \
           + tagsSql \
           + """ FROM sample_tag_view
                GROUP BY series_id, platform_id;"""
     print sql
+    db.executesql(sql)
+    print "indexing FTS"
+    sql = "CREATE INDEX series_tag_view_fts_idx ON series_tag_view USING gin(doc);"
+    # print sql
+    #reset results
+    Series_Tag_View_Results.truncate()
+
     db.executesql(sql)
 
 

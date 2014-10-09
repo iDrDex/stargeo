@@ -7,17 +7,16 @@ def add():
     form.add_button("Cancel", URL('index', vars = request.get_vars))
     if form.process().accepted:
         getSampleTagCrossTab()  # rebuild tables
+        session.tag_form_vars.tag_id = form.vars.id
         redirect(URL('index'))
     return dict(form=form)
 
 
-def index():
+def __update_model():
     from gluon.storage import Storage
-
     if not session.tag_form_vars:
         session.tag_form_vars = Storage()
 
-    print "tag"
     # update form model based on requests if present
     for var in Series_Tag.fields[1:]:
         if var not in auth.signature:
@@ -29,6 +28,13 @@ def index():
     #update the defaults based on form model
     for var in Series_Tag.fields[1:]:
         Series_Tag[var].default = session.tag_form_vars[var]
+
+
+
+
+def index():
+
+    __update_model()
 
     series_id = session.tag_form_vars.series_id or redirect('default', 'index')
     # PLATFORM
@@ -66,6 +72,7 @@ def index():
                                            labels=["all"] + session.tag_form_vars.headers,
                                            zero=None)
 
+    Series_Tag.series_id.writable = False
     form = SQLFORM(Series_Tag,
                    _id='form')
 
@@ -84,7 +91,7 @@ def index():
     grid = SQLFORM.grid(query,
                         search_widget=None,
                         searchable=None,
-                        fields=[Sample_View[request.vars.header]] if request.vars.header else fields,
+                        fields=[Sample_View[session.tag_form_vars.header]] if session.tag_form_vars.header else fields,
                         maxtextlength=1000,
                         create=False,
                         editable=False,

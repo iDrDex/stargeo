@@ -2203,3 +2203,25 @@ CREATE TABLE sample_view_results(
     search_id INTEGER REFERENCES search (id) ON DELETE CASCADE
 );
 success!
+timestamp: 2014-10-08T17:03:19.280938
+CREATE TABLE sample_tag_view_results(
+    id SERIAL PRIMARY KEY,
+    sample_tag_view_id INTEGER,
+    search_id INTEGER REFERENCES search (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-10-08T17:03:19.298784
+CREATE TABLE series_tag_view_results(
+    id SERIAL PRIMARY KEY,
+    series_tag_view_id INTEGER,
+    search_id INTEGER REFERENCES search (id) ON DELETE CASCADE
+);
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!

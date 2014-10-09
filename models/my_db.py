@@ -162,7 +162,8 @@ Sample_Tag = db.define_table('sample_tag',
 Sample_View_Annotation_Filter = db.define_table('sample_view_annotation_filter',
                                                 Field('id', 'id', readable=False, writable=False),
                                                 Field('sample_view_id', writable=False),  # 'reference sample_view'
-                                                Field('annotation', 'text'),
+                                                Field('annotation', 'text',
+                                                      represent=lambda value, row: value or ""),
                                                 Field('session_id', default=response.session_id,
                                                       readable=False, writable=False),
                                                 Field('created_on', 'datetime', default=request.now, readable=False,
@@ -188,6 +189,17 @@ Sample_Tag_View = db.define_table('sample_tag_view',
                                     for field in session.all_sample_tag_names],
                                   migrate=False)
 
+
+
+Sample_Tag_View_Results = db.define_table('sample_tag_view_results',
+                      Field('id', 'id', readable=False, writable=False),
+                      Field('sample_tag_view_id', 'integer'),
+                      Field('search_id', 'reference search'),
+                      format='%(keywords)s',
+                      migrate='sample_tag_view_results.table'
+)
+
+
 Series_Tag_View = db.define_table('series_tag_view',
                                   Field('id', 'id', readable=False, writable=False),
                                   Field('series_id', 'reference series', writable=False),
@@ -199,3 +211,10 @@ Series_Tag_View = db.define_table('series_tag_view',
                                     for field in session.all_sample_tag_names],
                                   migrate=False)
 
+Series_Tag_View_Results = db.define_table('series_tag_view_results',
+                      Field('id', 'id', readable=False, writable=False),
+                      Field('series_tag_view_id', 'integer'),
+                      Field('search_id', 'reference search'),
+                      format='%(keywords)s',
+                      migrate='series_tag_view_results.table'
+)

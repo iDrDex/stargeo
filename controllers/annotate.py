@@ -3,65 +3,6 @@ __author__ = 'dex'
 import re
 
 
-def getSampleTagCrossTab():
-    print "reading tag names"
-    tag_names = db(Tag).select(orderby=Tag.tag_name)
-
-    # CREATE VIEW
-    print "creating view"
-    db.executesql("DROP SEQUENCE IF EXISTS sample_tag_sequence CASCADE;")
-    db.executesql("CREATE SEQUENCE sample_tag_sequence;")
-    db.executesql("DROP MATERIALIZED VIEW IF EXISTS sample_tag_view ;")
-
-    # print "creating view"
-    tagsSql = "," \
-        .join(["""string_agg(CASE tag_id WHEN %s THEN annotation END, '|||') as %s \n""" \
-               % (row['id'], row['tag_name'])
-               for row in tag_names])
-    sql = """CREATE MATERIALIZED VIEW sample_tag_view AS
-             SELECT NEXTVAL('sample_tag_sequence') as id, series_id, platform_id, sample_id,""" \
-          + tagsSql \
-          + """ FROM sample_tag
-                 JOIN series_tag ON sample_tag.series_tag_id = series_tag.id
-                 JOIN tag ON tag.id = tag_id
-               GROUP BY series_id, platform_id, sample_id;"""
-    print sql
-    db.executesql(sql)
-
-    getSeriesTagCrossTab()
-    db.commit()
-    session.all_sample_tag_names = None
-    session.series_tag_count = None
-    session.sample_tag_count = None
-
-
-def getSeriesTagCrossTab():
-    print "reading tag names"
-    tag_names = db().select(Tag.tag_name,
-                            orderby=Tag.tag_name,
-                            distinct=True)
-    # CREATE VIEW
-    print "creating view"
-    db.executesql("DROP SEQUENCE IF EXISTS series_tag_sequence CASCADE;")
-    db.executesql("CREATE SEQUENCE series_tag_sequence;")
-    db.executesql("DROP MATERIALIZED VIEW IF EXISTS series_tag_view ;")
-
-    # print "creating view"
-    tagsSql = "," \
-        .join(["""count(%s) as %s \n""" \
-               % (row['tag_name'], row['tag_name'])
-               for row in tag_names])
-    sql = """CREATE MATERIALIZED VIEW series_tag_view AS
-             SELECT NEXTVAL('series_tag_sequence') as id, series_id, platform_id,
-             count(sample_id) as samples,""" \
-          + tagsSql \
-          + """ FROM sample_tag_view
-               GROUP BY series_id, platform_id;"""
-    print sql
-    db.executesql(sql)
-    db.commit()
-
-
 def index():
     # SERIES ID
     series_id = request.vars.series_id or \
@@ -78,13 +19,15 @@ def index():
 
     header = session.tag_form_vars.header
     regex = session.tag_form_vars.regex
+    tag_id = session.tag_form_vars.tag_id
+    tag_name = Tag(tag_id).tag_name
     if header:
         p = re.compile(regex)
         if p.groups:
             f = lambda row: p.search(row[header]) and p.search(row[header]).group(1)
         else:
             annotation_type = 'boolean'
-            f = lambda row: p.search(str(row[header])) and True
+            f = lambda row: p.search(str(row[header])) and tag_name
     else:
         f = lambda row: regex
 
@@ -96,13 +39,13 @@ def index():
             sample_view_id=row.id,
             annotation=f(row))
 
-    redirect(URL('edit',  vars = request.get_vars))
+    redirect(URL('edit', vars=request.get_vars))
 
 
 @auth.requires_login()
 def edit():
-    # SERIES ID
-    series_id = session.tag_form_vars.series_id \
+    # tag and regex must be defines
+    tag_id, regex = (session.tag_form_vars.tag_id, session.tag_form_vars.regex) \
         if 'tag_form_vars' in session \
         else redirect(URL('default', 'index'))
 
@@ -115,13 +58,13 @@ def edit():
                   else [Sample_View[header] for header in headers])
 
 
-    #set up form defaults as readonly
+    # set up form defaults as readonly
     for field in Series_Tag._fields[1:]:
         Series_Tag[field].default = session.tag_form_vars[field]
         Series_Tag[field].writable = False
 
     form = SQLFORM(Series_Tag, submit_button="Save")
-    form.add_button("Cancel", URL('tag', 'index', vars = request.get_vars))
+    form.add_button("Cancel", URL('tag', 'index', vars=request.get_vars))
     if form.validate():
         return __save()
 
@@ -169,6 +112,6 @@ def __save():
     session.tag_form_vars.tag_id = None
 
     if 'page' in request.get_vars:
-        del(request.get_vars.page)
+        del (request.get_vars.page)
     redirect(URL('tag', 'index', vars=request.get_vars))
 
