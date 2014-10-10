@@ -161,7 +161,7 @@ Sample_Tag = db.define_table('sample_tag',
 
 Sample_View_Annotation_Filter = db.define_table('sample_view_annotation_filter',
                                                 Field('id', 'id', readable=False, writable=False),
-                                                Field('sample_view_id', writable=False),  # 'reference sample_view'
+                                                Field('sample_view_id', 'integer', writable=False),  # 'reference sample_view'
                                                 Field('annotation', 'text',
                                                       represent=lambda value, row: value or ""),
                                                 Field('session_id', default=response.session_id,
@@ -218,3 +218,10 @@ Series_Tag_View_Results = db.define_table('series_tag_view_results',
                       format='%(keywords)s',
                       migrate='series_tag_view_results.table'
 )
+
+def update_sample_cross_tab(form, arg):
+    session.update_tag_cross_tab = True
+
+if session.update_tag_cross_tab: #delete form home page
+    get_sample_tag_cross_tab()
+    session.update_tag_cross_tab = False

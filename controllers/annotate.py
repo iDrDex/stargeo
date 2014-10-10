@@ -104,8 +104,8 @@ def __save():
                      annotation=row.sample_view_annotation_filter.annotation) for row in rows]
         Sample_Tag.bulk_insert(rows)
 
-    # from setup_db import getSampleTagCrossTab
-    getSampleTagCrossTab()
+    # from setup_db import get_sample_tag_cross_tab
+    get_sample_tag_cross_tab()
 
     # clear the regex on the form
     session.tag_form_vars.regex = None

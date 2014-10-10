@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c78504dd-98c4-4eb6-807c-d39a3d3184be" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/clear_results.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/databases/sample_tag_view_results.table" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/databases/series_tag_view_results.table" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/models/my_components.py" afterPath="$PROJECT_DIR$/models/components.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/models/my_db.py" afterPath="$PROJECT_DIR$/models/star_db.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/models/my_setup.py" afterPath="$PROJECT_DIR$/models/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_cas.table" afterPath="$PROJECT_DIR$/databases/auth_cas.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_event.table" afterPath="$PROJECT_DIR$/databases/auth_event.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/user_search.table" afterPath="$PROJECT_DIR$/databases/user_search.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_group.table" afterPath="$PROJECT_DIR$/databases/auth_group.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_membership.table" afterPath="$PROJECT_DIR$/databases/auth_membership.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_permission.table" afterPath="$PROJECT_DIR$/databases/auth_permission.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/auth_user.table" afterPath="$PROJECT_DIR$/databases/auth_user.table" />
+    <list default="true" id="c78504dd-98c4-4eb6-807c-d39a3d3184be" name="Default" comment="Bug fixes and added refresh">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/refresh.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/auth_cas.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/auth_event.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/auth_group.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/auth_membership.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/auth_permission.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/auth_user.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/sample_tag.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/sample_tag_view_results.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/sample_view_annotation_filter.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/sample_view_results.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/search.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/series_tag.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/series_tag_view_results.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/series_view_results.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/sql.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/tag.table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/user_search.table" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/annotate.py" afterPath="$PROJECT_DIR$/controllers/annotate.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/clear_results.py" afterPath="$PROJECT_DIR$/controllers/clear_results.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/db.py" afterPath="$PROJECT_DIR$/models/db.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sample_view_annotation_filter.table" afterPath="$PROJECT_DIR$/databases/sample_view_annotation_filter.table" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sql.log" afterPath="$PROJECT_DIR$/databases/sql.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/default.py" afterPath="$PROJECT_DIR$/controllers/default.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/setup.py" afterPath="$PROJECT_DIR$/models/setup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/star_db.py" afterPath="$PROJECT_DIR$/models/star_db.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/tag.py" afterPath="$PROJECT_DIR$/controllers/tag.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="stargeo.iws" />
@@ -30,8 +39,8 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/stargeo$stargeo.coverage" NAME="stargeo Coverage Results" MODIFIED="1412892552911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
-    <SUITE FILE_PATH="coverage/stargeo$setup.coverage" NAME="setup Coverage Results" MODIFIED="1412883824942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
+    <SUITE FILE_PATH="coverage/stargeo$stargeo.coverage" NAME="stargeo Coverage Results" MODIFIED="1412982391064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
+    <SUITE FILE_PATH="coverage/stargeo$setup.coverage" NAME="setup Coverage Results" MODIFIED="1412979550927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -45,24 +54,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="db.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/db.py">
+      <file leaf-file-name="setup.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="1440">
-              <caret line="16" column="92" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="92" />
+            <state vertical-scroll-proportion="0.32188842" vertical-offset="1170" max-vertical-offset="5460">
+              <caret line="89" column="85" selection-start-line="89" selection-start-column="85" selection-end-line="89" selection-end-column="85" />
+              <folding>
+                <marker date="1412979546000" expanded="true" signature="1699:1749" placeholder="select count..pg_class..." />
+                <marker date="1412979546000" expanded="true" signature="10473:10525" placeholder="select gse_n..series..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/default.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1260">
+              <caret line="21" column="56" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="56" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setup.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/setup.py">
+      <file leaf-file-name="refresh.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/refresh.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3105" max-vertical-offset="5415">
-              <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="135">
+              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sqlhtml.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../gluon/sqlhtml.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="33345" max-vertical-offset="50535">
+              <caret line="2223" column="0" selection-start-line="2223" selection-start-column="0" selection-end-line="2223" selection-end-column="0" />
               <folding>
-                <marker date="1412883398000" expanded="true" signature="1689:1739" placeholder="select count..pg_class..." />
-                <marker date="1412883398000" expanded="true" signature="9956:10008" placeholder="select gse_n..series..." />
+                <marker date="1412750093000" expanded="true" signature="78892:78922" placeholder="select count..missing_value..." />
               </folding>
             </state>
           </provider>
@@ -71,8 +102,28 @@
       <file leaf-file-name="clear_results.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/clear_results.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="135">
+              <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="components.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/components.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2250" max-vertical-offset="2625">
+              <caret line="112" column="4" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tag.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/tag.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1830">
+              <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -81,44 +132,18 @@
       <file leaf-file-name="star_db.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/star_db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-122.88461" vertical-offset="0" max-vertical-offset="3390">
-              <caret line="213" column="23" selection-start-line="213" selection-start-column="11" selection-end-line="213" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3405" max-vertical-offset="3495">
+              <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostgreSQL - star@dexter-db-star.cd8zgucpvgtu.us-west-2.rds.amazonaws.com" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://db-console:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/">
+      <file leaf-file-name="PostgreSQL - star@localhost" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://db-console:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.724138" vertical-offset="0" max-vertical-offset="285">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="star.public.sample_view_results" pinned="false" current="true" current-in-tab="true">
-        <entry file="dbDummy://dbtable:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/star.public.sample_view_results">
-          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="star.public.series_view_results" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/star.public.series_view_results">
-          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105">
+              <caret line="1" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -149,28 +174,49 @@
         <option value="$PROJECT_DIR$/controllers/series_tag.py" />
         <option value="dbtable:/230c0d13/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.series_tag" />
         <option value="dbtable:/230c0d13/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.tag" />
-        <option value="$PROJECT_DIR$/controllers/annotate.py" />
         <option value="$PROJECT_DIR$/models/my_db.py" />
-        <option value="$PROJECT_DIR$/controllers/tag.py" />
         <option value="dbtable:/230c0d13/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.pg_catalog.pg_class" />
         <option value="db-console:/230c0d13/b030e99e-f83b-40b9-8b8b-b98eeb02f642/" />
         <option value="$PROJECT_DIR$/models/my_setup.py" />
         <option value="$PROJECT_DIR$/models/my_components.py" />
-        <option value="$PROJECT_DIR$/models/db.py" />
         <option value="dbtable:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/star.public.sample_view" />
         <option value="dbtable:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/star.public.series_view" />
-        <option value="$PROJECT_DIR$/models/setup.py" />
         <option value="$PROJECT_DIR$/controllers/clear_cache.py" />
-        <option value="db-console:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/" />
         <option value="dbtable:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/star.public.sample_view_results" />
         <option value="dbtable:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/star.public.series_view_results" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.series_tag_view_results" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_view_results" />
+        <option value="db-console:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.user_search" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.user_search_id_seq" />
+        <option value="$PROJECT_DIR$/models/components.py" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.series_tag_view" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_tag_view" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_tag_view_results" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_view" />
+        <option value="$PROJECT_DIR$/controllers/annotate.py" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.tag" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_view_annotation_filter" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_attribute" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.auth_user" />
+        <option value="$PROJECT_DIR$/models/db.py" />
+        <option value="$PROJECT_DIR$/controllers/default.py" />
+        <option value="$PROJECT_DIR$/models/star_db.py" />
+        <option value="$PROJECT_DIR$/controllers/tag.py" />
         <option value="$PROJECT_DIR$/controllers/clear_results.py" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_tag" />
+        <option value="$PROJECT_DIR$/controllers/refresh.py" />
+        <option value="db-console:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/" />
+        <option value="$PROJECT_DIR$/models/setup.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="2560" />
-    <option name="height" value="1440" />
+    <option name="x" value="275" />
+    <option name="y" value="118" />
+    <option name="width" value="2145" />
+    <option name="height" value="797" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -198,7 +244,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -227,26 +272,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stargeo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stargeo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,7 +291,7 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="FullScreen" value="true" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -268,8 +300,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/views" />
       <recent name="$PROJECT_DIR$/controllers" />
+      <recent name="$PROJECT_DIR$/views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/databases_old" />
@@ -360,9 +392,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -384,6 +413,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -468,7 +500,9 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../web2py.py" />
       <option name="PARAMETERS" value="-S stargeo -M -R $PROJECT_DIR$/models/setup.py" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -507,30 +541,34 @@
       <created>1412839956595</created>
       <updated>1412839956595</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added clear results controller to test search indexing">
+      <created>1412894024658</created>
+      <updated>1412894024658</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <frame x="275" y="118" width="2145" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32846716" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.106433675" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39854014" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2532189" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.117156476" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16861314" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30955777" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16785544" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25867808" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39745402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2503536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32531825" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956153" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -554,117 +592,22 @@
     </option>
     <MESSAGE value="Implemented cached search with user tracking" />
     <MESSAGE value="Full  search engine implemented for series and sample tags" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full  search engine implemented for series and sample tags" />
+    <MESSAGE value="Added clear results controller to test search indexing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added clear results controller to test search indexing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/models/setup.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="50" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
-          <caret line="16" column="92" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3105" max-vertical-offset="5415">
-          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
-          <folding>
-            <marker date="1412883398000" expanded="true" signature="1689:1739" placeholder="select count..pg_class..." />
-            <marker date="1412883398000" expanded="true" signature="9956:10008" placeholder="select gse_n..series..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/clear_results.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="165">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/tag.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="1890">
-          <caret line="93" column="70" selection-start-line="93" selection-start-column="69" selection-end-line="93" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3855" max-vertical-offset="5445">
-          <caret line="257" column="33" selection-start-line="257" selection-start-column="33" selection-end-line="257" selection-end-column="33" />
-          <folding>
-            <marker date="1412883398000" expanded="true" signature="1689:1739" placeholder="select count..pg_class..." />
-            <marker date="1412883398000" expanded="true" signature="9956:10008" placeholder="select gse_n..series..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/annotate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1845">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/components.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1710" max-vertical-offset="2625">
-          <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/sample_tag/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="135">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/series_tag/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/tag.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1875">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/star_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3105">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/annotate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="1815">
@@ -677,8 +620,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2865" max-vertical-offset="5655">
           <caret line="208" column="41" selection-start-line="208" selection-start-column="41" selection-end-line="208" selection-end-column="41" />
           <folding>
-            <marker date="1412883398000" expanded="true" signature="1689:1739" placeholder="select count..pg_class..." />
-            <marker date="1412883398000" expanded="true" signature="9956:10008" placeholder="select gse_n..series..." />
+            <marker date="1412979546000" expanded="true" signature="1699:1749" placeholder="select count..pg_class..." />
+            <marker date="1412979546000" expanded="true" signature="10473:10525" placeholder="select gse_n..series..." />
           </folding>
         </state>
       </provider>
@@ -708,7 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5865" max-vertical-offset="17895">
           <caret line="391" column="0" selection-start-line="391" selection-start-column="0" selection-end-line="391" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -716,6 +658,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2625">
           <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -724,8 +667,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3270" max-vertical-offset="6195">
           <caret line="218" column="36" selection-start-line="218" selection-start-column="36" selection-end-line="218" selection-end-column="36" />
           <folding>
-            <marker date="1412883398000" expanded="true" signature="1689:1739" placeholder="select count..pg_class..." />
-            <marker date="1412883398000" expanded="true" signature="9956:10008" placeholder="select gse_n..series..." />
+            <marker date="1412979546000" expanded="true" signature="1699:1749" placeholder="select count..pg_class..." />
+            <marker date="1412979546000" expanded="true" signature="10473:10525" placeholder="select gse_n..series..." />
           </folding>
         </state>
       </provider>
@@ -755,7 +698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5865" max-vertical-offset="17895">
           <caret line="391" column="0" selection-start-line="391" selection-start-column="0" selection-end-line="391" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -763,6 +705,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1456" max-vertical-offset="2625">
           <caret line="106" column="34" selection-start-line="106" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -770,7 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5461" max-vertical-offset="17700">
           <caret line="391" column="0" selection-start-line="391" selection-start-column="0" selection-end-line="391" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -823,99 +765,275 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/components.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.8043478" vertical-offset="0" max-vertical-offset="2625">
-          <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/annotate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2173913" vertical-offset="195" max-vertical-offset="1845">
-          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/tag.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0217392" vertical-offset="0" max-vertical-offset="1890">
-          <caret line="93" column="70" selection-start-line="93" selection-start-column="69" selection-end-line="93" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="1440">
-          <caret line="16" column="92" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/star.public.series_view">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5415">
-          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
-          <folding>
-            <marker date="1412883398000" expanded="true" signature="1689:1739" placeholder="select count..pg_class..." />
-            <marker date="1412883398000" expanded="true" signature="9956:10008" placeholder="select gse_n..series..." />
-          </folding>
+    <entry file="dbDummy://dbtable:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/star.public.series_view_results">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/star.public.sample_view_results">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.series_tag_view_results">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_view_results">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="dbDummy://db-console:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.724138" vertical-offset="0" max-vertical-offset="285">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="285">
+          <caret line="8" column="31" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.user_search_id_seq">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="622">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.user_search">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_tag_view_results">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.series_tag_view">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_view">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_tag_view">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../gluon/custom_import.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="551" max-vertical-offset="3060">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/annotate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1845">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.tag">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_view_annotation_filter">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_attribute">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.auth_user">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="1440">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../gluon/sqlhtml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="33345" max-vertical-offset="50535">
+          <caret line="2223" column="0" selection-start-line="2223" selection-start-column="0" selection-end-line="2223" selection-end-column="0" />
+          <folding>
+            <marker date="1412750093000" expanded="true" signature="78892:78922" placeholder="select count..missing_value..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/components.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="2625">
+          <caret line="112" column="4" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/star_db.py">
+    <entry file="file://$PROJECT_DIR$/controllers/tag.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-122.88461" vertical-offset="0" max-vertical-offset="3390">
-          <caret line="213" column="23" selection-start-line="213" selection-start-column="11" selection-end-line="213" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1830">
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/clear_results.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/star.public.series_view_results">
+    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_tag">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
       </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1260">
+          <caret line="21" column="56" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/star.public.sample_view_results">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    <entry file="file://$PROJECT_DIR$/controllers/refresh.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/star_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3495">
+          <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105">
+          <caret line="1" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32188842" vertical-offset="1170" max-vertical-offset="5460">
+          <caret line="89" column="85" selection-start-line="89" selection-start-column="85" selection-end-line="89" selection-end-column="85" />
+          <folding>
+            <marker date="1412979546000" expanded="true" signature="1699:1749" placeholder="select count..pg_class..." />
+            <marker date="1412979546000" expanded="true" signature="10473:10525" placeholder="select gse_n..series..." />
+          </folding>
         </state>
       </provider>
     </entry>

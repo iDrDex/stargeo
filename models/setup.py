@@ -4,35 +4,35 @@ import re, os, gzip, pandas as pd, subprocess, sys
 from cStringIO import StringIO
 
 
-def uniCat(fields, fieldSep="|\n|"):
+def uni_cat(fields, fieldSep="|\n|"):
     "Unique concatenation of "
     return fieldSep.join(fields.astype(str).unique())
 
 
-def walkFiles(dir, endswith=".gz"):
+def walk_files(dir, endswith=".gz"):
     # traverse root directory, and list directories as dirs and files as files
     for root, dirs, filenames in os.walk(dir):
         for filename in filenames:
             if filename.endswith(endswith): yield os.path.join(root, filename)
 
 
-def getCleanColumns(columns):
+def get_clean_columns(columns):
     p = re.compile('[\W_]+')
     clean = [p.sub('_', col).lower() for col in columns]
     return clean
 
 
-def getDfFromStream(stream):
+def get_df_from_stream(stream):
     stream.seek(0)
     index_col = '%s_title' % entity
     # open("sample.txt", "wb").write(stream.getvalue())
     df = pd.io.parsers.read_table(stream) \
         .dropna(how='all') \
         .groupby(index_col) \
-        .aggregate(uniCat) \
+        .aggregate(uni_cat) \
         .T
     df.index.attribute_name = index_col
-    df.columns = getCleanColumns(df.columns)
+    df.columns = get_clean_columns(df.columns)
     return df
 
 
@@ -63,7 +63,7 @@ def create_indices_on_postgres(indices, unique=True):
     print "Done!"
 
 
-def getEntity2stream(filename, entities):
+def get_entity2stream(filename, entities):
     entity2stream = {}
     try:
         for line in gzip.open(filename, 'rb'):
@@ -81,13 +81,14 @@ def getEntity2stream(filename, entities):
     return entity2stream
 
 
-def getSampleCrossTab():
+def get_sample_cross_tab():
     print "reading attribute names"
     attribute_names = db().select(Sample_Attribute.attribute_name,
                                   orderby=Sample_Attribute.attribute_name,
                                   distinct=True)
     # INDEX source attribute
-    create_indices_on_postgres([('sample_attribute', 'sample_id, attribute_name')])
+    create_indices_on_postgres([('sample_attribute', 'attribute_name')], unique=False)  # for view cols
+    create_indices_on_postgres([('sample_attribute', 'sample_id, attribute_name')])  # for aggregate function
 
     # CREATE VIEW
     print "creating view"
@@ -99,11 +100,11 @@ def getSampleCrossTab():
         .join(["""string_agg(CASE attribute_name WHEN '%s' THEN attribute_value END, '///') as %s \n""" \
                % (row['attribute_name'], row['attribute_name'])
                for row in attribute_names])
-    docSql = "||" \
-                 .join([
-        """to_tsvector('english', coalesce(string_agg(CASE attribute_name WHEN '%s' THEN attribute_value END, '///'), ''))\n""" \
-        % (row['attribute_name'])
-        for row in attribute_names]) + " AS doc"
+    docSql = "to_tsvector('english', gse_name) || " + \
+             "||".join([
+                 """to_tsvector('english', coalesce(string_agg(CASE attribute_name WHEN '%s' THEN attribute_value END, '///'), ''))\n""" \
+                 % (row['attribute_name'])
+                 for row in attribute_names]) + " AS doc"
 
     sql = """CREATE MATERIALIZED VIEW sample_view AS
              SELECT NEXTVAL('sample_attribute_sequence') as id,
@@ -114,7 +115,7 @@ def getSampleCrossTab():
                  JOIN sample_attribute ON sample.id = sample_id
                  JOIN series ON series.id = series_id
                  JOIN platform ON platform.id = platform_id
-               GROUP BY series_id, platform_id, sample_id;""" % (docSql, attributesSql)
+               GROUP BY gse_name, series_id, platform_id, sample_id;""" % (docSql, attributesSql)
     # print sql
     db.executesql(sql)
     create_indices_on_postgres([('sample_view', 'id')])
@@ -129,13 +130,15 @@ def getSampleCrossTab():
     db.commit()
 
 
-def getSeriesCrossTab():
+def get_series_cross_tab():
     print "reading attribute names"
     attribute_names = db().select(Series_Attribute.attribute_name,
                                   orderby=Series_Attribute.attribute_name,
                                   distinct=True)
     print "creating view"
-    create_indices_on_postgres([('series_attribute', 'series_id, attribute_name')])
+    create_indices_on_postgres([('series_attribute', 'attribute_name')], unique=False)  # for view cols
+    create_indices_on_postgres([('series_attribute', 'series_id, attribute_name')])  # for aggregate
+
     db.executesql("DROP MATERIALIZED VIEW IF EXISTS series_view CASCADE ;")
     db.executesql("DROP INDEX IF EXISTS series_view_fts_idx CASCADE ;")
     db.executesql("DROP SEQUENCE IF EXISTS series_attribute_sequence CASCADE;")
@@ -169,7 +172,7 @@ def getSeriesCrossTab():
     db.commit()
 
 
-def getSampleTagCrossTab():
+def get_sample_tag_cross_tab():
     print "reading tag names"
     rows = db(Tag).select(orderby=Tag.tag_name)
 
@@ -179,7 +182,7 @@ def getSampleTagCrossTab():
     db.executesql("CREATE SEQUENCE sample_tag_sequence;")
     db.executesql("DROP MATERIALIZED VIEW IF EXISTS sample_tag_view ;")
 
-    create_indices_on_postgres([('sample_tag', 'sample_id, series_tag_id')])
+    create_indices_on_postgres([('sample_tag', 'sample_id, series_tag_id')])  # for aggregate function
 
     # print "creating view"
     tagsSql = "," \
@@ -187,12 +190,12 @@ def getSampleTagCrossTab():
                % (row['id'], row['tag_name'])
                for row in rows])
 
-    docSql = "||" \
-                 .join([
-        """
-        to_tsvector('english', coalesce(string_agg(CASE tag_name WHEN '%s' THEN annotation || ' ' || tag_name ||  ' ' || description END, '///'), ''))
-        """ % (row['tag_name'])
-        for row in rows]) + " AS doc"
+    docSql = "to_tsvector('english', gse_name) || " + \
+             "||".join([
+                 """
+                 to_tsvector('english', coalesce(string_agg(CASE tag_name WHEN '%s' THEN annotation || ' ' || tag_name ||  ' ' || description END, '///'), ''))
+                 """ % (row['tag_name'])
+                 for row in rows]) + " AS doc"
     #
     sql = """CREATE MATERIALIZED VIEW sample_tag_view AS
              SELECT NEXTVAL('sample_tag_sequence') as id, \
@@ -203,7 +206,8 @@ def getSampleTagCrossTab():
              FROM sample_tag
                  JOIN series_tag ON sample_tag.series_tag_id = series_tag.id
                  JOIN tag ON tag.id = tag_id
-               GROUP BY series_id, platform_id, sample_id;""" % (docSql, tagsSql)
+                 JOIN series ON series.id = series_id
+               GROUP BY gse_name, series_id, platform_id, sample_id;""" % (docSql, tagsSql)
     print sql
     db.executesql(sql)
     print "indexing FTS"
@@ -211,7 +215,7 @@ def getSampleTagCrossTab():
     # print sql
     db.executesql(sql)
 
-    getSeriesTagCrossTab()
+    get_series_tag_cross_tab()
     # reset results
     Sample_Tag_View_Results.truncate()
 
@@ -219,7 +223,7 @@ def getSampleTagCrossTab():
     session.all_sample_tag_names = None
 
 
-def getSeriesTagCrossTab():
+def get_series_tag_cross_tab():
     print "reading tag names"
     rows = db().select(Tag.tag_name,
                        orderby=Tag.tag_name,
@@ -274,13 +278,13 @@ def getSeriesTagCrossTab():
     db.executesql(sql)
 
 
-def insertAttributes():
+def insert_attributes():
     isLast = lastGse = False
     row = db.executesql("select gse_name from series order by id desc limit 1;")
     if row:
         lastGse = row[0][0]
-    # for filename in walkFiles("/Users/dex/geo_mirror/DATA/SeriesMatrix"):
-    for filename in walkFiles("geo_mirror/DATA/SeriesMatrix"):
+    # for filename in walk_files("/Users/dex/geo_mirror/DATA/SeriesMatrix"):
+    for filename in walk_files("geo_mirror/DATA/SeriesMatrix"):
         basename = os.path.basename(filename)
         gse_name = basename.split("_")[0].split("-")[0]
         print basename
@@ -291,10 +295,10 @@ def insertAttributes():
             continue
 
         entities = "Series Platform Sample".split()
-        entity2stream = getEntity2stream(filename, entities)
+        entity2stream = get_entity2stream(filename, entities)
 
         # print "\tbuilding series"
-        series = getDfFromStream(entity2stream['Series'])
+        series = get_df_from_stream(entity2stream['Series'])
         # series.to_csv('series.csv')
         if ('series_type' not in series.columns) or (series.series_type != "Expression profiling by array").any():
             # print "skipping for", ('type' in series.columns) and series.type
@@ -306,7 +310,7 @@ def insertAttributes():
         series_rec = db(Series.gse_name == gse_name).select().first() \
                      or Series(Series.insert(gse_name=gse_name))
         for attribute_name in series.columns:
-            attribute_value = uniCat(series[attribute_name])
+            attribute_value = uni_cat(series[attribute_name])
             # attribute_name = attribute_name.replace("Series_", "")
             series_attribute_rec = db((Series_Attribute.series_id == series_rec.id) & \
                                       (Series_Attribute.attribute_name == attribute_name)).select().first() \
@@ -315,7 +319,7 @@ def insertAttributes():
                                                                                attribute_value=attribute_value))
 
         # print "\tbuilding samples",
-        samples = getDfFromStream(entity2stream['Sample'])
+        samples = get_df_from_stream(entity2stream['Sample'])
         gpls = samples['sample_platform_id'].unique()
         assert len(gpls) == 1
         gpl_name = gpls[0]
@@ -349,7 +353,7 @@ def insertAttributes():
 
 
 if __name__ == '__main__':
-    getSeriesCrossTab()
-    getSampleCrossTab()
-    getSampleTagCrossTab()
+    get_series_cross_tab()
+    get_sample_cross_tab()
+    get_sample_tag_cross_tab()
 

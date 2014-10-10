@@ -4,20 +4,23 @@ __author__ = 'dex'
 @auth.requires_login()
 def add():
     form = SQLFORM(Tag)
-    form.add_button("Cancel", URL('index', vars = request.get_vars))
+    form.add_button("Cancel", URL('index', vars=request.get_vars))
     if form.process().accepted:
-        getSampleTagCrossTab()  # rebuild tables
+        get_sample_tag_cross_tab()  # rebuild tables
         session.tag_form_vars.tag_id = form.vars.id
-        redirect(URL('index'))
+        redirect(URL('index', vars=request.get_vars))
     return dict(form=form)
 
 
-def __update_model():
+
+def index():
     from gluon.storage import Storage
+
+    #build a new form model for this series_id if none exists or new series_id
     if not session.tag_form_vars:
         session.tag_form_vars = Storage()
 
-    # update form model based on requests if present
+    # update model from requests if same series_id
     for var in Series_Tag.fields[1:]:
         if var not in auth.signature:
             if var in request.vars:
@@ -25,16 +28,9 @@ def __update_model():
     # checkboxes are special case as only requested when checked
     session.tag_form_vars.show_invariant = request.vars.show_invariant
 
-    #update the defaults based on form model
+    # update the defaults based on form model
     for var in Series_Tag.fields[1:]:
         Series_Tag[var].default = session.tag_form_vars[var]
-
-
-
-
-def index():
-
-    __update_model()
 
     series_id = session.tag_form_vars.series_id or redirect('default', 'index')
     # PLATFORM
@@ -77,21 +73,21 @@ def index():
                    _id='form')
 
     form.custom.submit['_class'] = 'submit'  # have to use _class for jquery because _name or _id breaks the grid view
-    form.add_button('+', URL('add'))
+    form.add_button('+', URL('add', vars=request.get_vars))
 
     if form.validate(formname='form'):
         # update form model
         for var in form.vars:
             session.tag_form_vars[var] = form.vars[var]
         if 'page' in request.get_vars:
-            del(request.get_vars.page)
+            del (request.get_vars.page)
 
         redirect(URL('annotate', 'index', vars=request.get_vars))
 
     grid = SQLFORM.grid(query,
                         search_widget=None,
                         searchable=None,
-                        fields=[Sample_View[session.tag_form_vars.header]] if session.tag_form_vars.header else fields,
+                        fields=[Sample_View[Series_Tag.header.default]] if Series_Tag.header.default in session.tag_form_vars.headers else fields,
                         maxtextlength=1000,
                         create=False,
                         editable=False,

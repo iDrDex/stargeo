@@ -9,9 +9,17 @@
 ## - api is an example of Hypermedia API support and access control
 #########################################################################
 
+
 def index():
+
     Series_Tag.tag_id.represent = lambda name, row: DIV(row.tag_id.tag_name, _class = "badge")
-    tags = SQLFORM.grid(Series_Tag, searchable=False, csv=False, orderby=~Series_Tag.id, paginate=7, maxtextlength=100)
+    tags = SQLFORM.grid(Series_Tag,
+                        searchable=False,
+                        csv=False,
+                        orderby=~Series_Tag.id,
+                        paginate=7,
+                        maxtextlength=100,
+                        ondelete=update_sample_cross_tab)
 
     search_form = search_widget(url=URL('series', 'index', vars=dict(keywords=request.vars.keywords)))
 
