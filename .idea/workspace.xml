@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c78504dd-98c4-4eb6-807c-d39a3d3184be" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="stargeo.iws" />
@@ -31,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="setup.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="setup.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1919" max-vertical-offset="5460">
-              <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3398533" vertical-offset="1901" max-vertical-offset="5460">
+              <caret line="137" column="25" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
               <folding>
                 <marker date="1412982583000" expanded="true" signature="1699:1749" placeholder="select count..pg_class..." />
                 <marker date="1412982583000" expanded="true" signature="10473:10525" placeholder="select gse_n..series..." />
@@ -44,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="default.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/default.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1260">
@@ -526,7 +524,11 @@
       <created>1412982482735</created>
       <updated>1412982482735</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Bug Fixes">
+      <created>1412982635830</created>
+      <updated>1412982635830</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1002,22 +1004,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1919" max-vertical-offset="5460">
-          <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-          <folding>
-            <marker date="1412982583000" expanded="true" signature="1699:1749" placeholder="select count..pg_class..." />
-            <marker date="1412982583000" expanded="true" signature="10473:10525" placeholder="select gse_n..series..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/default.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1260">
           <caret line="21" column="56" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="56" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3398533" vertical-offset="1901" max-vertical-offset="5460">
+          <caret line="137" column="25" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
+          <folding>
+            <marker date="1412982583000" expanded="true" signature="1699:1749" placeholder="select count..pg_class..." />
+            <marker date="1412982583000" expanded="true" signature="10473:10525" placeholder="select gse_n..series..." />
+          </folding>
         </state>
       </provider>
     </entry>
