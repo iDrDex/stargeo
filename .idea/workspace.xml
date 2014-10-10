@@ -1,32 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c78504dd-98c4-4eb6-807c-d39a3d3184be" name="Default" comment="Bug fixes and added refresh">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/refresh.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/auth_cas.table" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/auth_event.table" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/auth_group.table" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/auth_membership.table" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/auth_permission.table" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/auth_user.table" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/sample_tag.table" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/sample_tag_view_results.table" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/sample_view_annotation_filter.table" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/sample_view_results.table" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/search.table" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/series_tag.table" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/series_tag_view_results.table" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/series_view_results.table" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/sql.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/tag.table" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databases/user_search.table" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/annotate.py" afterPath="$PROJECT_DIR$/controllers/annotate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/clear_results.py" afterPath="$PROJECT_DIR$/controllers/clear_results.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/db.py" afterPath="$PROJECT_DIR$/models/db.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/default.py" afterPath="$PROJECT_DIR$/controllers/default.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/setup.py" afterPath="$PROJECT_DIR$/models/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/star_db.py" afterPath="$PROJECT_DIR$/models/star_db.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/tag.py" afterPath="$PROJECT_DIR$/controllers/tag.py" />
+    <list default="true" id="c78504dd-98c4-4eb6-807c-d39a3d3184be" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="stargeo.iws" />
@@ -54,20 +31,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="setup.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="setup.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32188842" vertical-offset="1170" max-vertical-offset="5460">
-              <caret line="89" column="85" selection-start-line="89" selection-start-column="85" selection-end-line="89" selection-end-column="85" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1919" max-vertical-offset="5460">
+              <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
               <folding>
-                <marker date="1412979546000" expanded="true" signature="1699:1749" placeholder="select count..pg_class..." />
-                <marker date="1412979546000" expanded="true" signature="10473:10525" placeholder="select gse_n..series..." />
+                <marker date="1412982583000" expanded="true" signature="1699:1749" placeholder="select count..pg_class..." />
+                <marker date="1412982583000" expanded="true" signature="10473:10525" placeholder="select gse_n..series..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="default.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/default.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1260">
@@ -545,31 +522,35 @@
       <created>1412894024658</created>
       <updated>1412894024658</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Bug fixes and added refresh">
+      <created>1412982482735</created>
+      <updated>1412982482735</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="275" y="118" width="2145" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30955777" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16785544" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25867808" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39745402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2503536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16785544" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25867808" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25106382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32531825" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956153" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -593,7 +574,10 @@
     <MESSAGE value="Implemented cached search with user tracking" />
     <MESSAGE value="Full  search engine implemented for series and sample tags" />
     <MESSAGE value="Added clear results controller to test search indexing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added clear results controller to test search indexing" />
+    <MESSAGE value="Bug fixes and added refresh" />
+    <MESSAGE value="&#10;" />
+    <MESSAGE value="Bug Fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug Fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -620,8 +604,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="2865" max-vertical-offset="5655">
           <caret line="208" column="41" selection-start-line="208" selection-start-column="41" selection-end-line="208" selection-end-column="41" />
           <folding>
-            <marker date="1412979546000" expanded="true" signature="1699:1749" placeholder="select count..pg_class..." />
-            <marker date="1412979546000" expanded="true" signature="10473:10525" placeholder="select gse_n..series..." />
+            <marker date="1412982583000" expanded="true" signature="1699:1749" placeholder="select count..pg_class..." />
+            <marker date="1412982583000" expanded="true" signature="10473:10525" placeholder="select gse_n..series..." />
           </folding>
         </state>
       </provider>
@@ -667,8 +651,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3270" max-vertical-offset="6195">
           <caret line="218" column="36" selection-start-line="218" selection-start-column="36" selection-end-line="218" selection-end-column="36" />
           <folding>
-            <marker date="1412979546000" expanded="true" signature="1699:1749" placeholder="select count..pg_class..." />
-            <marker date="1412979546000" expanded="true" signature="10473:10525" placeholder="select gse_n..series..." />
+            <marker date="1412982583000" expanded="true" signature="1699:1749" placeholder="select count..pg_class..." />
+            <marker date="1412982583000" expanded="true" signature="10473:10525" placeholder="select gse_n..series..." />
           </folding>
         </state>
       </provider>
@@ -994,14 +978,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/default.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1260">
-          <caret line="21" column="56" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/refresh.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
@@ -1028,12 +1004,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32188842" vertical-offset="1170" max-vertical-offset="5460">
-          <caret line="89" column="85" selection-start-line="89" selection-start-column="85" selection-end-line="89" selection-end-column="85" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1919" max-vertical-offset="5460">
+          <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
           <folding>
-            <marker date="1412979546000" expanded="true" signature="1699:1749" placeholder="select count..pg_class..." />
-            <marker date="1412979546000" expanded="true" signature="10473:10525" placeholder="select gse_n..series..." />
+            <marker date="1412982583000" expanded="true" signature="1699:1749" placeholder="select count..pg_class..." />
+            <marker date="1412982583000" expanded="true" signature="10473:10525" placeholder="select gse_n..series..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1260">
+          <caret line="21" column="56" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
