@@ -1,4 +1,6 @@
 __author__ = 'dex'
 def index():
-    get_sample_tag_cross_tab()
+    Series_View_Results.truncate()
+    Sample_View_Results.truncate()
+    db.commit()
     redirect(URL('default', 'index'))
