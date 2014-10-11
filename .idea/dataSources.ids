@@ -2522,6 +2522,7 @@
       <primary-key name="sample_attribute_pkey" columns="id"/>
       <foreign-key name="sample_attribute_sample_id_fkey" columns="sample_id" ref-table="sample" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <index name="sampleattribute_sampleid_attributename_idx" unique="true" columns="sample_id,attribute_name"/>
+      <index name="sampleattribute_attributename_idx" unique="false" columns="attribute_name"/>
     </table>
     <table name="sample_attribute_id_seq" schema="public" catalog="star" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -2606,9 +2607,9 @@
       <column name="series_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="platform_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="sample_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="df" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="dhf" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="dss" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
-      <column name="asdfsadfasdf" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
     <table name="sample_tag_view_results" schema="public" catalog="star" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2FtcGxlX3RhZ192aWV3X3Jlc3VsdHNfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
@@ -2696,10 +2697,10 @@
     </table>
     <table name="sample_view_annotation_filter" schema="public" catalog="star" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2FtcGxlX3ZpZXdfYW5ub3RhdGlvbl9maWx0ZXJfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
-      <column name="sample_view_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="annotation" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="session_id" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
       <column name="created_on" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
+      <column name="sample_view_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="sample_view_annotation_filter_pkey" columns="id"/>
     </table>
     <table name="sample_view_annotation_filter_id_seq" schema="public" catalog="star" type="SEQUENCE">
@@ -2772,6 +2773,7 @@
       <primary-key name="series_attribute_pkey" columns="id"/>
       <foreign-key name="series_attribute_series_id_fkey" columns="series_id" ref-table="series" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <index name="seriesattribute_seriesid_attributename_idx" unique="true" columns="series_id,attribute_name"/>
+      <index name="seriesattribute_attributename_idx" unique="false" columns="attribute_name"/>
     </table>
     <table name="series_attribute_id_seq" schema="public" catalog="star" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -2860,9 +2862,9 @@
       <column name="platform_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="doc" sqlType="tsvector" precision="2147483647" scale="0" nullable="true" jdbcType="1111"/>
       <column name="samples" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="df" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="dhf" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="dss" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <column name="asdfsadfasdf" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
     </table>
     <table name="series_tag_view_results" schema="public" catalog="star" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2VyaWVzX3RhZ192aWV3X3Jlc3VsdHNfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
@@ -2968,12 +2970,12 @@
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgndXNlcl9zZWFyY2hfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
       <column name="search_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="keywords" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
+      <column name="fts_query" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
       <column name="is_active" sqlType="bpchar" precision="1" scale="0" nullable="true" jdbcType="1"/>
       <column name="created_on" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
       <column name="created_by" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="modified_on" sqlType="timestamp" precision="29" scale="6" nullable="true" jdbcType="93"/>
       <column name="modified_by" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="fts_query" sqlType="varchar" precision="512" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="user_search_pkey" columns="id"/>
       <foreign-key name="user_search_created_by_fkey" columns="created_by" ref-table="auth_user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <foreign-key name="user_search_modified_by_fkey" columns="modified_by" ref-table="auth_user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>

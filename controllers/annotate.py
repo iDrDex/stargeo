@@ -35,18 +35,21 @@ def index():
     db(Sample_View_Annotation_Filter.session_id == response.session_id).delete()
 
     for row in db(query).select():
+        annotation = f(row)
         Sample_View_Annotation_Filter.insert(
             sample_view_id=row.id,
-            annotation=f(row))
+            annotation=annotation)
 
     redirect(URL('edit', vars=request.get_vars))
 
 
 @auth.requires_login()
 def edit():
-    # tag and regex must be defines
+    # tag and regex must be defined
     tag_id, regex = (session.tag_form_vars.tag_id, session.tag_form_vars.regex) \
         if 'tag_form_vars' in session \
+           and session.tag_form_vars.tag_id \
+           and session.tag_form_vars.regex \
         else redirect(URL('default', 'index'))
 
     headers = session.tag_form_vars.headers
@@ -56,7 +59,6 @@ def edit():
              ] + \
              ([Sample_View[session.tag_form_vars.header]] if session.tag_form_vars.header \
                   else [Sample_View[header] for header in headers])
-
 
     # set up form defaults as readonly
     for field in Series_Tag._fields[1:]:
@@ -68,17 +70,19 @@ def edit():
     if form.validate():
         return __save()
 
-    return dict(form=form,
-                grid=SQLFORM.grid((Sample_View_Annotation_Filter.sample_view_id == Sample_View.id) & \
-                                  (Sample_View_Annotation_Filter.session_id == response.session_id),
-                                  search_widget=None,
-                                  details=False,
-                                  deletable=False,
-                                  editable=True,
-                                  create=False,
-                                  user_signature=False,
-                                  fields=fields,
-                                  maxtextlength=1000))
+    return dict(
+        form=form,
+        grid=SQLFORM.grid((Sample_View_Annotation_Filter.sample_view_id == Sample_View.id) & \
+                          (Sample_View_Annotation_Filter.session_id == response.session_id),
+                          searchable=None,
+                          search_widget=None,
+                          details=False,
+                          deletable=False,
+                          create=False,
+                          user_signature=False,
+                          maxtextlength=1000 if fields else 20,
+                          fields=fields)
+    )
 
 
 def __save():

@@ -70,10 +70,12 @@ def index():
 
     Series_Tag.series_id.writable = False
     form = SQLFORM(Series_Tag,
-                   _id='form')
+                   _id='form',
+                   submit_button="Continue")
 
     form.custom.submit['_class'] = 'submit'  # have to use _class for jquery because _name or _id breaks the grid view
     form.add_button('+', URL('add', vars=request.get_vars))
+    # form.add_button("Cancel", URL('default', 'index', vars=request.get_vars))
 
     if form.validate(formname='form'):
         # update form model

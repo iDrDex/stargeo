@@ -1,0 +1,8 @@
+/** these MUST stay **/
+.web2py-menu-active {
+    font-size: 1.5em;
+    /*text-decoration: underline;*/
+    font-variant: small-caps;
+    font-weight: bold;
+    /*vertical-align: center;*/
+}

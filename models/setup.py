@@ -190,7 +190,9 @@ def get_sample_tag_cross_tab():
                % (row['id'], row['tag_name'])
                for row in rows])
 
-    docSql = "to_tsvector('english', gse_name) || " + \
+    docSql = """to_tsvector('english', gse_name) ||
+                to_tsvector('english', gpl_name) ||
+                to_tsvector('english', gsm_name) || """ + \
              "||".join([
                  """
                  to_tsvector('english', coalesce(string_agg(CASE tag_name WHEN '%s' THEN annotation || ' ' || tag_name ||  ' ' || description END, '///'), ''))
@@ -200,14 +202,18 @@ def get_sample_tag_cross_tab():
     sql = """CREATE MATERIALIZED VIEW sample_tag_view AS
              SELECT NEXTVAL('sample_tag_sequence') as id, \
             %s,
-             series_id, platform_id, sample_id,
+             series.id as series_id,
+             platform.id as platform_id,
+             sample.id as sample_id,
              %s
 
              FROM sample_tag
                  JOIN series_tag ON sample_tag.series_tag_id = series_tag.id
                  JOIN tag ON tag.id = tag_id
-                 JOIN series ON series.id = series_id
-               GROUP BY gse_name, series_id, platform_id, sample_id;""" % (docSql, tagsSql)
+                 JOIN series ON series.id = series_tag.series_id
+                 JOIN platform ON platform.id = platform_id
+                 JOIN sample ON sample.id = sample_id
+               GROUP BY gse_name, gpl_name, gsm_name, series.id, platform.id, sample.id;""" % (docSql, tagsSql)
     print sql
     db.executesql(sql)
     print "indexing FTS"

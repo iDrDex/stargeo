@@ -1,3 +1,18 @@
 {{extend 'layout.html'}}
 {{=form}}
 {{=grid}}
+<script>
+
+    jQuery(function () {
+        var path = location.pathname.substring(1);
+        if (path) {
+            var els = jQuery('ul.nav a[href$="' + path + '"]').filter("[rel!=nofollow]");
+            if (els.length != 0) {
+
+                els.find('span').addClass('highlighted');
+            } else {
+                jQuery('#default_highlighted').find('span').addClass('highlighted');
+            }
+        }
+    })
+</script>
