@@ -116,8 +116,8 @@ def get_sample_cross_tab():
                  JOIN series ON series.id = series_id
                  JOIN platform ON platform.id = platform_id
                GROUP BY gse_name, series_id, platform_id, sample_id;""" % (docSql, attributesSql)
-    # print sql
-    db.executesql(sql)
+    print sql
+    # db.executesql(sql)
     create_indices_on_postgres([('sample_view', 'id')])
     print "indexing FTS"
     sql = "CREATE INDEX sample_view_fts_idx ON sample_view USING gin(doc);"
@@ -353,7 +353,7 @@ def insert_attributes():
 
 
 if __name__ == '__main__':
-    get_series_cross_tab()
+    # get_series_cross_tab()
     get_sample_cross_tab()
-    get_sample_tag_cross_tab()
+    # get_sample_tag_cross_tab()
 
