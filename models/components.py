@@ -1,9 +1,9 @@
 __author__ = 'dex'
 response.generic_patterns = ['.html']
-# response.files += ["https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css",
-#                    "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css",
-#                    "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"]
-# response.files += ["//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"]
+response.files += ["https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css",
+                   "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css",
+                   "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"]
+response.files += ["//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"]
 response.files += [URL('static','css/my.css')]
 
 
@@ -13,13 +13,13 @@ def search_widget(fields=None, url=None):
                DIV(  # _class='row'
                      DIV(  # _class="col-lg-6",
                            DIV(  # _class="input-group input-group-lg"
-                                 SPAN(INPUT(_name="invariant",
-                                            _type='checkbox',
-                                            _checked=request.vars.invariant,
-                                            _onclick="""
-                                                $('#search_form').submit();
-                                            """),
-                                      _class="input-group-addon"),
+                                 # SPAN(INPUT(_name="invariant",
+                                 #            _type='checkbox',
+                                 #            _checked=request.vars.invariant,
+                                 #            _onclick="""
+                                 #                $('#search_form').submit();
+                                 #            """),
+                                 #      _class="input-group-addon"),
                                  INPUT(_class="form-control",
                                        _name="keywords",
                                        _type="text",
