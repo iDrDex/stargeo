@@ -4,7 +4,7 @@ response.files += ["https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstra
                    "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css",
                    "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"]
 response.files += ["//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"]
-response.files += [URL('static','css/my.css')]
+response.files += [URL('static', 'css/my.css')]
 
 
 def search_widget(fields=None, url=None):
@@ -13,13 +13,16 @@ def search_widget(fields=None, url=None):
                DIV(  # _class='row'
                      DIV(  # _class="col-lg-6",
                            DIV(  # _class="input-group input-group-lg"
-                                 # SPAN(INPUT(_name="invariant",
-                                 #            _type='checkbox',
-                                 #            _checked=request.vars.invariant,
-                                 #            _onclick="""
-                                 #                $('#search_form').submit();
-                                 #            """),
-                                 #      _class="input-group-addon"),
+                                 SPAN(INPUT(_name="invariant",
+                                            _type='checkbox',
+                                            _checked=request.vars.invariant,
+                                            _disabled=True if request.controller == "series_tag" \
+                                                              or request.controller == 'default' \
+                                                else False,
+                                            _onclick="""
+                                                     $('#search_form').submit();
+                                                     """),
+                                      _class="input-group-addon"),
                                  INPUT(_class="form-control",
                                        _name="keywords",
                                        _type="text",
@@ -49,7 +52,11 @@ def search_widget(fields=None, url=None):
 def get_fts_query(search_text):
     import re
 
-    search_text = search_text or ""
+    search_text = search_text \
+        .strip() \
+        .lower() \
+        if search_text \
+        else ""
     search_text = search_text.lower()
 
     fts_query = re.sub(r'\s+',
@@ -88,16 +95,35 @@ def searchable(fields, keywords):
     return query
 
 
+def get_fields(view, query, paginate):
+    index_field_names = ['series_id', 'sample_id', 'platform_id']
+    index_fields = [view[name] for name in index_field_names if name in view.fields]
+    remove_field_names = ['series_geo_accession', 'sample_geo_accession']
+    exclude_field_names = set(index_field_names + remove_field_names)
+    variant_fields = get_variant_fields(query, paginate, view)
+    filtered_variant_fields = [field for field in variant_fields
+                               if field.name not in exclude_field_names]
+    fields = index_fields + filtered_variant_fields
+    return fields
+
+
 paginate = 10
 
 
 def get_grid():
     import time
+
     view = db["%s_view" % request.controller]
     session.start_time = time.time()  # sets the counter
-    grid = SQLFORM.grid(searchable(fields=view, keywords=request.vars.keywords),
+    query = searchable(fields=view, keywords=request.vars.keywords)
+    fields = None if request.controller == 'default' \
+                     or request.controller == 'series_tag' \
+        else get_fields(view, query, paginate) \
+        if not request.vars.invariant \
+        else None
+    grid = SQLFORM.grid(query,
                         field_id=view.id,
-                        fields = view,
+                        fields=fields,
                         search_widget=None,
                         searchable=searchable,
                         paginate=paginate,
@@ -111,9 +137,11 @@ def get_grid():
     response.flash = T("That took about %.2f seconds!" % (time.time() - session.start_time))
     return grid
 
-def get_variant_fields(query, paginate, view):
-    import pandas as pd
 
+import pandas as pd
+
+
+def get_nunique(query, view, paginate):
     limitby = None
     if paginate:
         try:
@@ -124,12 +152,36 @@ def get_variant_fields(query, paginate, view):
 
     rows = db(query).select(view.ALL, limitby=limitby)
     columns = [re.sub(r".+_view.", "", col) for col in rows.colnames]
-    df = pd.DataFrame(rows.as_list()) \
+    df = pd.DataFrame(rows.as_list())
+    df.to_csv('df.csv')
+    nunique = pd.DataFrame(rows.as_list()) \
         [columns] \
-        .set_index('id')  # id column
-    # df.to_csv('df.csv')
-    variant_fields = [view[field] for field in df if df[field].nunique() > 1]
+        .set_index('id') \
+        .fillna("") \
+        .count()
+    return nunique
 
+
+def get_variant_fields(query, paginate, view):
+    limitby = None
+    if paginate:
+        try:
+            page = int(request.vars.page or 1) - 1
+        except ValueError:
+            page = 0
+        limitby = (paginate * page, paginate * (page + 1))
+
+    rows = db(query).select(view.ALL, limitby=limitby)
+    columns = [re.sub(r".+_view.", "", col) for col in rows.colnames]
+    variant_fields = []
+    if rows:
+        df = pd.DataFrame(rows.as_list()) \
+            [columns] \
+            .fillna("") \
+            .set_index('id')  # id column
+
+        # df.to_csv('df.csv')
+        variant_fields = [view[field] for field in df if df[field].nunique() > 1]
     return variant_fields
 
 
@@ -164,7 +216,8 @@ def get_tag_button(row):
     series_id = get_series_id(row)
     if 'page' in request.get_vars:
         del (request.get_vars.page)
-    return FORM(BUTTON('Tag'),
+    return FORM(BUTTON('Tag',
+                       _class="button btn btn-default"),
                 hidden=dict(series_id=series_id),
-                _action=URL("tag", "index", vars=request.get_vars))
+                _action=URL("tag", "index", vars=request.get_vars), )
 

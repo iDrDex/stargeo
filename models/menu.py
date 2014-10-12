@@ -43,10 +43,10 @@ response.menu = [
      URL('series', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
     (T('Samples'), (request.controller == 'sample') or (request.controller == 'tag') or (request.controller == 'annotate'),
      URL('sample', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
-    (T('Series Tags'), (request.controller == 'series_tag'),
-     URL('series_tag', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
-    (T('Sample Annotations'), (request.controller == 'sample_tag'),
+    (T('Annotations'), (request.controller == 'sample_tag'),
      URL('sample_tag', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
+    (T('Summary'), (request.controller == 'series_tag'),
+     URL('series_tag', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
 ]
 
 DEVELOPMENT_MENU = False
