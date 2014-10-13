@@ -3,6 +3,7 @@ __author__ = 'dex'
 import re
 
 
+@auth.requires_login()
 def index():
     # SERIES ID
     series_id = request.vars.series_id or \
@@ -85,6 +86,7 @@ def edit():
     )
 
 
+@auth.requires_login()
 def __save():
     platform_id = session.tag_form_vars.platform_id
     platform_ids = [platform_id] if platform_id \

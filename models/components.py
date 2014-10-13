@@ -138,28 +138,28 @@ def get_grid():
     return grid
 
 
-import pandas as pd
-
-
-def get_nunique(query, view, paginate):
-    limitby = None
-    if paginate:
-        try:
-            page = int(request.vars.page or 1) - 1
-        except ValueError:
-            page = 0
-        limitby = (paginate * page, paginate * (page + 1))
-
-    rows = db(query).select(view.ALL, limitby=limitby)
-    columns = [re.sub(r".+_view.", "", col) for col in rows.colnames]
-    df = pd.DataFrame(rows.as_list())
-    df.to_csv('df.csv')
-    nunique = pd.DataFrame(rows.as_list()) \
-        [columns] \
-        .set_index('id') \
-        .fillna("") \
-        .count()
-    return nunique
+# import pandas as pd
+#
+#
+# def get_nunique(query, view, paginate):
+#     limitby = None
+#     if paginate:
+#         try:
+#             page = int(request.vars.page or 1) - 1
+#         except ValueError:
+#             page = 0
+#         limitby = (paginate * page, paginate * (page + 1))
+#
+#     rows = db(query).select(view.ALL, limitby=limitby)
+#     columns = [re.sub(r".+_view.", "", col) for col in rows.colnames]
+#     df = pd.DataFrame(rows.as_list())
+#     df.to_csv('df.csv')
+#     nunique = pd.DataFrame(rows.as_list()) \
+#         [columns] \
+#         .set_index('id') \
+#         .fillna("") \
+#         .count()
+#     return nunique
 
 
 def get_variant_fields(query, paginate, view):
@@ -171,17 +171,16 @@ def get_variant_fields(query, paginate, view):
             page = 0
         limitby = (paginate * page, paginate * (page + 1))
 
-    rows = db(query).select(view.ALL, limitby=limitby)
-    columns = [re.sub(r".+_view.", "", col) for col in rows.colnames]
-    variant_fields = []
-    if rows:
-        df = pd.DataFrame(rows.as_list()) \
-            [columns] \
-            .fillna("") \
-            .set_index('id')  # id column
+    field2set = {}
+    for row in  db(query).select(view.ALL, limitby=limitby).as_list():
+        for field in row:
+            if field not in field2set.keys():
+                field2set[field] = set()
+            field2set[field].add(row[field])
 
-        # df.to_csv('df.csv')
-        variant_fields = [view[field] for field in df if df[field].nunique() > 1]
+    variant_fields = []
+    if field2set:
+        variant_fields = [view[field] for field in sorted(field2set.keys()) if len(field2set[field]) > 1]
     return variant_fields
 
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1831769818">
+  <component name="DataSourceManagerImpl" format="xml" hash="3463722890">
     <data-source source="LOCAL" name="PostgreSQL - star@localhost" uuid="b030e99e-f83b-40b9-8b8b-b98eeb02f642">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
@@ -16,6 +16,15 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://dexter-db-star.cd8zgucpvgtu.us-west-2.rds.amazonaws.com:5432/star</jdbc-url>
       <user-name>star</user-name>
+      <user-password>dfd8dfcfdfc4dfcedfcfdfd0</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="AWS-postgres" uuid="548efccb-7351-4d6d-835c-f289871df2b8">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://star.cwxuiazqnkkn.us-west-2.rds.amazonaws.com:5432/star</jdbc-url>
+      <user-name>postgres</user-name>
       <user-password>dfd8dfcfdfc4dfcedfcfdfd0</user-password>
       <libraries />
     </data-source>
