@@ -225,6 +225,10 @@ def get_sample_tag_cross_tab():
     # reset results
     Sample_Tag_View_Results.truncate()
 
+
+
+
+
     db.commit()
     session.all_sample_tag_names = None
 

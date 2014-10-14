@@ -334,3 +334,67 @@ TRUNCATE TABLE series_tag_view_results ;
 success!
 TRUNCATE TABLE sample_tag_view_results ;
 success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE series_view_results ;
+success!
+TRUNCATE TABLE sample_view_results ;
+success!
+TRUNCATE TABLE series_view_results ;
+success!
+TRUNCATE TABLE sample_view_results ;
+success!
+TRUNCATE TABLE series_view_results ;
+success!
+TRUNCATE TABLE sample_view_results ;
+success!
+TRUNCATE TABLE series_view_results ;
+success!
+TRUNCATE TABLE sample_view_results ;
+success!
+TRUNCATE TABLE series_view_results ;
+success!
+TRUNCATE TABLE sample_view_results ;
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE series_view_results ;
+success!
+TRUNCATE TABLE sample_view_results ;
+success!

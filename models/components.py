@@ -85,10 +85,30 @@ def searchable(fields, keywords):
         results = db["%s_view_results" % request.controller]
         query = (results.search_id == search.id) & (results[view_id] == view.id)
         if db(query).isempty():
-            doc_query = "%s_view.doc @@ to_tsquery('english', '%s')" % (request.controller, fts_query)
-            rows = [{view_id: row.id,
-                     "search_id": search.id} for row in db(doc_query).select(view.id)]
-            results.bulk_insert(rows)
+            sql = """
+                INSERT INTO %s_view_results
+                SELECT
+                NEXTVAL('%s_view_results_id_seq'),
+                id,
+                %s
+                FROM %s_view
+                WHERE %s_view.doc @@ to_tsquery('english', '%s');
+            """ % (request.controller, request.controller, search.id, request.controller, request.controller, fts_query)
+
+
+            # select_sql  = """NEXTVAL('%s_view_results_id_seq'),
+            # id,
+            #                  %s
+            #                  INTO %s_view_results"""%\
+            #               (request.controller, search.id,request.controller)
+            # from_sql  = "%s_view" % request.controller
+            # where_sql  = "%s_view.doc @@ to_tsquery('english', '%s')" % (request.controller, fts_query)
+            # sql = """SELECT %s
+            #          FROM %s
+            #          WHERE %s;"""%(select_sql, from_sql, where_sql)
+            print sql
+            # 1 / 0
+            db.executesql(sql)
         User_Search.insert(keywords=keywords,
                            fts_query=fts_query)
         db.commit()
@@ -127,6 +147,7 @@ def get_grid():
                         search_widget=None,
                         searchable=searchable,
                         paginate=paginate,
+                        maxtextlength=50,
                         create=False,
                         editable=False,
                         deletable=False,
@@ -142,7 +163,7 @@ def get_grid():
 #
 #
 # def get_nunique(query, view, paginate):
-#     limitby = None
+# limitby = None
 #     if paginate:
 #         try:
 #             page = int(request.vars.page or 1) - 1
@@ -172,15 +193,18 @@ def get_variant_fields(query, paginate, view):
         limitby = (paginate * page, paginate * (page + 1))
 
     field2set = {}
-    for row in  db(query).select(view.ALL, limitby=limitby).as_list():
+    rows = db(query).select(view.ALL, limitby=limitby).as_list()
+    for row in rows:
         for field in row:
             if field not in field2set.keys():
                 field2set[field] = set()
             field2set[field].add(row[field])
 
     variant_fields = []
+    min_count = 1 if len(rows) > 1 else 0
+
     if field2set:
-        variant_fields = [view[field] for field in sorted(field2set.keys()) if len(field2set[field]) > 1]
+        variant_fields = [view[field] for field in sorted(field2set.keys()) if len(field2set[field]) > min_count]
     return variant_fields
 
 

@@ -7,7 +7,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/components.py" afterPath="$PROJECT_DIR$/models/components.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/db.py" afterPath="$PROJECT_DIR$/models/db.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/default.py" afterPath="$PROJECT_DIR$/controllers/default.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/setup.py" afterPath="$PROJECT_DIR$/models/setup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databases/sql.log" afterPath="$PROJECT_DIR$/databases/sql.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/tag.py" afterPath="$PROJECT_DIR$/controllers/tag.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/zh-cn.py" afterPath="$PROJECT_DIR$/languages/zh-cn.py" />
     </list>
     <ignored path="stargeo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,7 +24,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/stargeo$stargeo.coverage" NAME="stargeo Coverage Results" MODIFIED="1413201223977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
+    <SUITE FILE_PATH="coverage/stargeo$stargeo.coverage" NAME="stargeo Coverage Results" MODIFIED="1413271096685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
     <SUITE FILE_PATH="coverage/stargeo$setup.coverage" NAME="setup Coverage Results" MODIFIED="1412994904609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -34,12 +39,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="components.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="components.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/components.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2100" max-vertical-offset="3420">
-              <caret line="140" column="9" selection-start-line="140" selection-start-column="9" selection-end-line="140" selection-end-column="9" />
-              <folding />
+            <state vertical-scroll-proportion="0.17673048" vertical-offset="1230" max-vertical-offset="3780">
+              <caret line="90" column="38" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
+              <folding>
+                <marker date="1413222699000" expanded="true" signature="3768:4002" placeholder="INSERT INTO ..." />
+                <marker date="1413222699000" expanded="true" signature="3812:3973" placeholder="SELECT NEXTV..missing_value_view..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,8 +55,8 @@
       <file leaf-file-name="annotate.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/annotate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1335" max-vertical-offset="1935">
-              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="206" max-vertical-offset="2025">
+              <caret line="126" column="26" selection-start-line="126" selection-start-column="26" selection-end-line="126" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -57,28 +65,18 @@
       <file leaf-file-name="tag.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/tag.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="241" max-vertical-offset="3645">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2981" max-vertical-offset="3660">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AWS-postgres" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://db-console:/f825bda/548efccb-7351-4d6d-835c-f289871df2b8/">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-              <caret line="0" column="36" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="db.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36491677" vertical-offset="0" max-vertical-offset="1470">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1470">
+              <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -87,21 +85,18 @@
       <file leaf-file-name="setup.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="5565">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding>
-                <marker date="1413012020000" expanded="true" signature="1699:1749" placeholder="select count..pg_class..." />
-                <marker date="1413012020000" expanded="true" signature="10793:10845" placeholder="select gse_n..series..." />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="3495" max-vertical-offset="5625">
+              <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="star_db.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/star_db.py">
+      <file leaf-file-name="default.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/default.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1905" max-vertical-offset="3495">
-              <caret line="140" column="45" selection-start-line="140" selection-start-column="36" selection-end-line="140" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1440">
+              <caret line="37" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -130,8 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/controllers/series_tag.py" />
-        <option value="dbtable:/230c0d13/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.series_tag" />
         <option value="dbtable:/230c0d13/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.tag" />
         <option value="$PROJECT_DIR$/models/my_db.py" />
         <option value="dbtable:/230c0d13/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.pg_catalog.pg_class" />
@@ -141,8 +134,6 @@
         <option value="$PROJECT_DIR$/controllers/clear_cache.py" />
         <option value="dbtable:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/star.public.sample_view_results" />
         <option value="dbtable:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/star.public.series_view_results" />
-        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.series_tag_view_results" />
-        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_view_results" />
         <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.user_search" />
         <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.user_search_id_seq" />
         <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.series_tag_view" />
@@ -151,13 +142,10 @@
         <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample" />
         <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_attribute" />
         <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.auth_user" />
-        <option value="$PROJECT_DIR$/controllers/default.py" />
         <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_tag" />
         <option value="$PROJECT_DIR$/controllers/refresh.py" />
         <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_view_annotation_filter" />
         <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_tag_view" />
-        <option value="$PROJECT_DIR$/models/setup.py" />
-        <option value="db-console:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/" />
         <option value="$PROJECT_DIR$/views/sample/index.html" />
         <option value="$PROJECT_DIR$/views/series/index.html" />
         <option value="$PROJECT_DIR$/static/css/my.css" />
@@ -171,22 +159,30 @@
         <option value="$PROJECT_DIR$/views/layout.html" />
         <option value="$PROJECT_DIR$/models/menu.py" />
         <option value="$PROJECT_DIR$/models/star_db.py" />
-        <option value="$PROJECT_DIR$/controllers/tag.py" />
-        <option value="$PROJECT_DIR$/controllers/annotate.py" />
         <option value="db-console:/f825bda/1b464ba0-f813-4162-953a-c3235bc7f9bc/" />
         <option value="dbtable:/f825bda/548efccb-7351-4d6d-835c-f289871df2b8/star.public.sample_view" />
         <option value="dbtable:/f825bda/548efccb-7351-4d6d-835c-f289871df2b8/star.public.sample_tag_view_results" />
         <option value="dbtable:/f825bda/9e7b6962-83bb-432e-9443-f85d114c8ffa/star.public.auth_user" />
         <option value="dbtable:/f825bda/548efccb-7351-4d6d-835c-f289871df2b8/star.public.sample_view_results" />
+        <option value="db-console:/f825bda/548efccb-7351-4d6d-835c-f289871df2b8/" />
+        <option value="$PROJECT_DIR$/controllers/default.py" />
+        <option value="$PROJECT_DIR$/controllers/tag.py" />
+        <option value="$PROJECT_DIR$/models/setup.py" />
+        <option value="$PROJECT_DIR$/controllers/annotate.py" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.series_tag_view_results" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_view_results_id_seq" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_view_results" />
+        <option value="dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.series_view_results" />
+        <option value="db-console:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/" />
         <option value="$PROJECT_DIR$/models/components.py" />
         <option value="$PROJECT_DIR$/models/db.py" />
-        <option value="db-console:/f825bda/548efccb-7351-4d6d-835c-f289871df2b8/" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="y" value="29" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="797" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -223,30 +219,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stargeo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stargeo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stargeo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stargeo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -256,13 +228,13 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../web2py.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="FullScreen" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="get_var&#9;null&#9;null&#10;pandas&#9;null&#9;null&#10;db.&#9;FILE&#9;file:///Users/dex/Dropbox/web2py/applications/stargeo/models/db.py&#10;get_ft&#9;null&#9;null&#10;clear_res&#9;FILE&#9;file:///Users/dex/Dropbox/web2py/applications/stargeo/controllers/clear_results.py&#10;layout&#9;FILE&#9;file:///Users/dex/Dropbox/web2py/applications/stargeo/views/layout.html" />
+    <property name="FullScreen" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="get_sample_tag_cross_tab&#9;null&#9;null&#10;get_var&#9;null&#9;null&#10;pandas&#9;null&#9;null&#10;db.&#9;FILE&#9;file:///Users/dex/Dropbox/web2py/applications/stargeo/models/db.py&#10;get_ft&#9;null&#9;null&#10;clear_res&#9;FILE&#9;file:///Users/dex/Dropbox/web2py/applications/stargeo/controllers/clear_results.py&#10;layout&#9;FILE&#9;file:///Users/dex/Dropbox/web2py/applications/stargeo/views/layout.html" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -271,6 +243,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/views/tag" />
       <recent name="$PROJECT_DIR$/views" />
       <recent name="$PROJECT_DIR$/static/css" />
@@ -367,6 +340,9 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -388,9 +364,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -548,35 +521,66 @@
       <created>1413136206185</created>
       <updated>1413136206185</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="removed pandas requirement">
+      <created>1413216833444</created>
+      <updated>1413216833444</updated>
+    </task>
+    <task id="LOCAL-00015" summary="new server side queries much improved">
+      <created>1413228268409</created>
+      <updated>1413228268409</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="29" width="1440" height="797" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819074" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23891273" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16666667" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2387066" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16642891" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18168813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39543268" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19456366" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39432624" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27403846" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27197802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32409638" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32340425" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956153" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956153" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32340425" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32819074" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956153" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2387066" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39432624" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16642891" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18592487" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27375886" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -601,17 +605,270 @@
     <MESSAGE value="Bug Fixes" />
     <MESSAGE value="New menu highlights and bug fixes" />
     <MESSAGE value="New invariant features added back to search" />
-    <option name="LAST_COMMIT_MESSAGE" value="New invariant features added back to search" />
+    <MESSAGE value="removed pandas requirement" />
+    <MESSAGE value="new server side queries much improved" />
+    <option name="LAST_COMMIT_MESSAGE" value="new server side queries much improved" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/models/components.py</url>
+          <line>86</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="94" />
+      <option name="time" value="95" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/models/components.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3780">
+          <caret line="111" column="22" selection-start-line="111" selection-start-column="22" selection-end-line="111" selection-end-column="22" />
+          <folding>
+            <marker date="1413222699000" expanded="true" signature="3768:4002" placeholder="INSERT INTO ..." />
+            <marker date="1413222699000" expanded="true" signature="3812:3973" placeholder="SELECT NEXTV..missing_value_view..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/annotate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="206" max-vertical-offset="2025">
+          <caret line="126" column="26" selection-start-line="126" selection-start-column="26" selection-end-line="126" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/tag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="3660">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1470">
+          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3495" max-vertical-offset="5625">
+          <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1440">
+          <caret line="37" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="2565">
+          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/components.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3420">
+          <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+          <folding>
+            <marker date="1413222699000" expanded="true" signature="3768:4002" placeholder="INSERT INTO ..." />
+            <marker date="1413222699000" expanded="true" signature="3812:3973" placeholder="SELECT NEXTV..missing_value_view..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/annotate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="1935">
+          <caret line="120" column="26" selection-start-line="120" selection-start-column="26" selection-end-line="120" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/tag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="3645">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1470">
+          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3435" max-vertical-offset="5565">
+          <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1260">
+          <caret line="25" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="2565">
+          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/components.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1290" max-vertical-offset="3780">
+          <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+          <folding>
+            <marker date="1413222699000" expanded="true" signature="3768:4002" placeholder="INSERT INTO ..." />
+            <marker date="1413222699000" expanded="true" signature="3812:3973" placeholder="SELECT NEXTV..missing_value_view..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/annotate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="2025">
+          <caret line="120" column="26" selection-start-line="120" selection-start-column="26" selection-end-line="120" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/tag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="3660">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1470">
+          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3435" max-vertical-offset="5625">
+          <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1440">
+          <caret line="25" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="2565">
+          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/components.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3780">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <marker date="1413222699000" expanded="true" signature="3768:4002" placeholder="INSERT INTO ..." />
+            <marker date="1413222699000" expanded="true" signature="3812:3973" placeholder="SELECT NEXTV..missing_value_view..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/annotate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="2025">
+          <caret line="120" column="26" selection-start-line="120" selection-start-column="26" selection-end-line="120" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/tag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="3660">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1470">
+          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3435" max-vertical-offset="5625">
+          <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1440">
+          <caret line="25" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="2565">
+          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="2565">
+          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/series.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
@@ -640,127 +897,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/star.public.series_view_results">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/star.public.sample_view_results">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.series_tag_view_results">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_view_results">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.user_search_id_seq">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="622">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.user_search">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_tag_view_results">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.series_tag_view">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../gluon/custom_import.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="551" max-vertical-offset="3060">
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.tag">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_attribute">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.auth_user">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -771,60 +911,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_tag">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/default.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1260">
-          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_tag_view">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_view_annotation_filter">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/series_tag/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="135">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="630">
-          <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/annotate/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="509">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -850,78 +939,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/my.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/tag/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="105">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/refresh.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.series_view">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/b030e99e-f83b-40b9-8b8b-b98eeb02f642/star.public.sample_view">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/star.public.sample_view">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/1a3990a6-da09-4b9b-ae25-43d7232b4a95/star.public.series_view">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/clear.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -932,75 +953,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/tag/index.html">
+    <entry file="file://$PROJECT_DIR$/models/star_db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="633">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1905" max-vertical-offset="3495">
+          <caret line="140" column="45" selection-start-line="140" selection-start-column="45" selection-end-line="140" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/pandas/tseries/converter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33273056" vertical-offset="3131" max-vertical-offset="14550">
+          <caret line="244" column="6" selection-start-line="244" selection-start-column="6" selection-end-line="244" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1440">
+          <caret line="37" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="484" max-vertical-offset="5550">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <marker date="1413012020000" expanded="true" signature="1699:1749" placeholder="select count..pg_class..." />
-            <marker date="1413012020000" expanded="true" signature="10793:10845" placeholder="select gse_n..series..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/star_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1905" max-vertical-offset="3495">
-          <caret line="140" column="45" selection-start-line="140" selection-start-column="36" selection-end-line="140" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3495" max-vertical-offset="5625">
+          <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/annotate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1935">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/tag.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="241" max-vertical-offset="3645">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/548efccb-7351-4d6d-835c-f289871df2b8/star.public.sample_view">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/548efccb-7351-4d6d-835c-f289871df2b8/star.public.sample_tag_view_results">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f825bda/548efccb-7351-4d6d-835c-f289871df2b8/star.public.sample_view_results">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1012,34 +991,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://db-console:/f825bda/548efccb-7351-4d6d-835c-f289871df2b8/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
-          <caret line="0" column="36" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda/lib/python2.7/site-packages/pandas/tseries/converter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33273056" vertical-offset="3131" max-vertical-offset="14550">
-          <caret line="244" column="6" selection-start-line="244" selection-start-column="6" selection-end-line="244" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/components.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3420">
-          <caret line="140" column="9" selection-start-line="140" selection-start-column="9" selection-end-line="140" selection-end-column="9" />
-          <folding />
+    <entry file="uml://DATABASE/b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.auth_cas">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.auth_cas</OriginalElement>
+          <nodes>
+            <node x="153.0" y="282.0">b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.sample</node>
+            <node x="46.0" y="6.0">b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.platform_attribute</node>
+            <node x="154.0" y="101.0">b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.platform</node>
+            <node x="293.0" y="96.0">b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.series_tag</node>
+            <node x="48.0" y="387.0">b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.sample_attribute</node>
+            <node x="372.0" y="5.0">b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.tag</node>
+            <node x="304.0" y="283.0">b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.series</node>
+            <node x="212.0" y="193.0">b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.sample_tag</node>
+            <node x="368.0" y="385.0">b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.series_attribute</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.platform_attribute" target="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.platform">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.series_tag" target="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.platform">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.series_tag" target="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.tag">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.sample_tag" target="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.series_tag">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.series_tag" target="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.series">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.sample" target="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.platform">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.sample_attribute" target="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.sample">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.sample_tag" target="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.sample">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.sample" target="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.series">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.series_attribute" target="b030e99e-f83b-40b9-8b8b-b98eeb02f642.table:star.public.series">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-119.0" y="145.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36491677" vertical-offset="0" max-vertical-offset="1470">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1470">
+          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/annotate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="206" max-vertical-offset="2025">
+          <caret line="126" column="26" selection-start-line="126" selection-start-column="26" selection-end-line="126" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/tag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2981" max-vertical-offset="3660">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/components.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17673048" vertical-offset="1230" max-vertical-offset="3780">
+          <caret line="90" column="38" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="38" />
+          <folding>
+            <marker date="1413222699000" expanded="true" signature="3768:4002" placeholder="INSERT INTO ..." />
+            <marker date="1413222699000" expanded="true" signature="3812:3973" placeholder="SELECT NEXTV..missing_value_view..." />
+          </folding>
         </state>
       </provider>
     </entry>

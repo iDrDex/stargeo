@@ -6,8 +6,9 @@ def add():
     form = SQLFORM(Tag)
     form.add_button("Cancel", URL('index', vars=request.get_vars))
     if form.process().accepted:
-        get_sample_tag_cross_tab()  # rebuild tables
+        # get_sample_tag_cross_tab()  # rebuild tables
         session.tag_form_vars.tag_id = form.vars.id
+        session.tag_count = None
         redirect(URL('index', vars=request.get_vars))
     return dict(form=form)
 

@@ -15,8 +15,8 @@ if not request.env.web2py_runtime_gae:
     # https://groups.google.com/forum/#!topic/web2py/QTZBHScUU8w
     # db = DAL("postgres://star:rendez@localhost/star")
     # db = DAL("postgres://star:rendez@dexter-db-star.cd8zgucpvgtu.us-west-2.rds.amazonaws.com/star")
-    # db = DAL("postgres://postgres:rendez@star.cwxuiazqnkkn.us-west-2.rds.amazonaws.com/star")
-    db = DAL("postgres://postgres:rendez@localhost/star")
+    db = DAL("postgres://postgres:rendez@star.cwxuiazqnkkn.us-west-2.rds.amazonaws.com/star")
+    # db = DAL("postgres://postgres:rendez@localhost/star")
 
 else:
     ## connect to Google BigTable (optional 'google:datastore://namespace')
