@@ -1,11 +1,11 @@
 __author__ = 'dex'
 
-import re, os, gzip, pandas as pd, subprocess, sys
+import re, os, gzip, subprocess, sys
 from cStringIO import StringIO
 
 
 def uni_cat(fields, fieldSep="|\n|"):
-    "Unique concatenation of "
+    """Unique concatenation of """
     return fieldSep.join(fields.astype(str).unique())
 
 
@@ -23,6 +23,7 @@ def get_clean_columns(columns):
 
 
 def get_df_from_stream(stream):
+    import pandas as pd
     stream.seek(0)
     index_col = '%s_title' % entity
     # open("sample.txt", "wb").write(stream.getvalue())
@@ -38,7 +39,7 @@ def get_df_from_stream(stream):
 
 def create_indices_on_postgres(indices, unique=True):
     # Modified from http://osdir.com/ml/web2py/2010-09/msg00952.html
-    '''Creates a set of indices if they do not exist'''
+    """Creates a set of indices if they do not exist"""
     # # Edit this list of table columns to index
     # # The format is [('table', 'column1, column2, ...'),...]
     print "checking indicies:"

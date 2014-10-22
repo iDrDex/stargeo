@@ -149,8 +149,9 @@ middle_columns = {0:'span12',1:'span9',2:'span6'}[
                 <div class="center"> <img src="{{=URL('static', 'images/small_butte_lab_logo.png')}}"/></div>
                 <div class="copyright pull-left">{{=T('Copyright')}} &#169; {{=request.now.year}}</div>
                 <div id="poweredBy" class="pull-right">
-                {{=T('Powered by')}}
-                    <a href="http://www.web2py.com/">web2py</a>
+                    <a href="mailto:dexter@stanford.edu"
+                       data_toggle="tooltip"
+                       title="Email Dexter">Dexter Hadley, MD/PhD</a>
                 </div>
             {{end}}
             </div>

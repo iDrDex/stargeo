@@ -21,7 +21,9 @@ def search_widget(fields=None, url=None):
                                                 else False,
                                             _onclick="""
                                                      $('#search_form').submit();
-                                                     """),
+                                                     """,
+                                            _data_toggle="tooltip",
+                                            _title="Toggle invariant fields"),
                                       _class="input-group-addon"),
                                  INPUT(_class="form-control",
                                        _name="keywords",
@@ -30,12 +32,16 @@ def search_widget(fields=None, url=None):
                                        _value=request.vars.keywords or "",
                                        _placeholder="Search...", ),
                                  SPAN(BUTTON(I(_class="fa fa-search"),
-                                             _class="btn btn-default",
-                                             _type="submit"),
+                                             _class="btn btn-primary",
+                                             _type="submit",
+                                             _data_toggle="tooltip",
+                                             _title="Go!"),
                                       A(I(_class="fa fa-times-circle"),
                                         _class="btn btn-default",
                                         _href=URL(), ),
-                                      _class="input-group-btn"),
+                                      _class="input-group-btn",
+                                      _data_toggle="tooltip",
+                                      _title="Clear"),
                                  _class="input-group input-group-lg"),
                            _class="col-lg-10 col-lg-offset-1", ),
                      _class="row"
@@ -98,8 +104,8 @@ def searchable(fields, keywords):
 
             # select_sql  = """NEXTVAL('%s_view_results_id_seq'),
             # id,
-            #                  %s
-            #                  INTO %s_view_results"""%\
+            # %s
+            # INTO %s_view_results"""%\
             #               (request.controller, search.id,request.controller)
             # from_sql  = "%s_view" % request.controller
             # where_sql  = "%s_view.doc @@ to_tsquery('english', '%s')" % (request.controller, fts_query)
@@ -164,8 +170,8 @@ def get_grid():
 #
 # def get_nunique(query, view, paginate):
 # limitby = None
-#     if paginate:
-#         try:
+# if paginate:
+# try:
 #             page = int(request.vars.page or 1) - 1
 #         except ValueError:
 #             page = 0
@@ -240,7 +246,9 @@ def get_tag_button(row):
     if 'page' in request.get_vars:
         del (request.get_vars.page)
     return FORM(BUTTON('Tag',
-                       _class="button btn btn-default"),
+                       _class="button btn btn-primary"),
                 hidden=dict(series_id=series_id),
-                _action=URL("tag", "index", vars=request.get_vars), )
+                _action=URL("tag", "index", vars=request.get_vars),
+                _data_toggle="tooltip",
+                _title="Tag this study")
 
