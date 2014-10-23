@@ -22,7 +22,7 @@ def get_clean_columns(columns):
     return clean
 
 
-def get_df_from_stream(stream):
+def get_df_from_stream(stream, entity):
     import pandas as pd
     stream.seek(0)
     index_col = '%s_title' % entity
@@ -309,7 +309,7 @@ def insert_attributes():
         entity2stream = get_entity2stream(filename, entities)
 
         # print "\tbuilding series"
-        series = get_df_from_stream(entity2stream['Series'])
+        series = get_df_from_stream(entity2stream['Series'], 'Series')
         # series.to_csv('series.csv')
         if ('series_type' not in series.columns) or (series.series_type != "Expression profiling by array").any():
             # print "skipping for", ('type' in series.columns) and series.type
@@ -330,7 +330,7 @@ def insert_attributes():
                                                                                attribute_value=attribute_value))
 
         # print "\tbuilding samples",
-        samples = get_df_from_stream(entity2stream['Sample'])
+        samples = get_df_from_stream(entity2stream['Sample'], 'Sample')
         gpls = samples['sample_platform_id'].unique()
         assert len(gpls) == 1
         gpl_name = gpls[0]
@@ -362,9 +362,96 @@ def insert_attributes():
                                                                                        attribute_value=attribute_value))
         db.commit()
 
+def getFirstMatch(queryGroup, query2mapping):
+    for query in queryGroup:
+        if query in query2mapping:
+            return query2mapping[query]
+
+
+def splitFields(S, toExclude=None):
+    """Strips out all punctuation except toExclude"""
+    from string import translate, maketrans, punctuation
+
+    if toExclude:
+        punctuation = punctuation.replace(toExclude, "")
+    S = str(S)
+    T = maketrans(punctuation, ' ' * len(punctuation))
+    return translate(S, T).split()
+
+def queryMyGeneInfo(probes, identifier, scopes=None):
+    """Queries mygene.info for current entrezid and sym, given an identifier."""
+    import mygene, itertools
+
+    mg = mygene.MyGeneInfo()
+    ids = probes[identifier]
+    toExclude = None
+
+    if scopes == "unigene":
+        toExclude = "."
+    if scopes == "accession":
+        toExclude = "_"
+    idGroups = ids.map(lambda x: splitFields(x, toExclude))
+    allIds = list(set(itertools.chain.from_iterable(idGroups)))
+    out = mg.querymany(allIds, scopes=scopes, species='human')
+    query2entrezgene = dict(pd.DataFrame(out)[['query', 'entrezgene']].dropna().itertuples(index=False))
+    query2symbol = dict(pd.DataFrame(out)[['query', 'symbol']].dropna().itertuples(index=False))
+    probes['myGeneId'] = idGroups.map(lambda queryGroup: getFirstMatch(queryGroup, query2entrezgene))
+    probes['myGeneSym'] = idGroups.map(lambda queryGroup: getFirstMatch(queryGroup, query2symbol))
+    return probes
+
+
+
+def filter_stream(inStream, beginToken="!platform_table_begin", endToken="!platform_table_end"):
+    """filters out lines of a file stream that are delimited by 2 tokens, a start and stop.
+    Tokens have to match the beginning of a line."""
+    import StringIO
+    outStream = StringIO.StringIO()
+    inSlice = False
+    for line in inStream:
+        if inSlice:
+            if line.startswith(endToken):
+                break
+            outStream.write(line)
+        elif line.startswith(beginToken):
+            inSlice = True
+            continue
+    outStream.seek(0)
+    return outStream
+
+
+def get_probes(gpl_name):
+    import glob, pandas as pd
+    #faster to read annotation if available
+    gpl_filename = "geo_mirror/DATA/annotation/platforms/%s.annot.gz" % gpl_name
+    if not glob.glob(gpl_filename):
+        #slower to load full family gene
+        gpl_filename = "geo_mirror/DATA/SOFT/by_platform/%s/%s_family.soft.gz" % (gpl_name, gpl_name)
+
+    #set up probes
+    inStream = gzip.open(gpl_filename)
+    stream = filter_stream(inStream)
+    df = pd.io.parsers.read_table(stream)
+    return df
+
+def insert_myGenes():
+    # for row in db(Platform).select():
+    gpl_name = 'GPL6104'
+    probes = get_probes(gpl_name).head()
+    probes.columns = [col.lower() for col in probes.columns]
+    scopes = myGene_ids = myGene_syms = None
+    if "platform_sequence" in probes.columns:
+        scopes = "dna"
+        myGene_probes = queryMyGeneInfo(probes, 'platform_sequence', scopes)
+    elif "gene id" in probes.columns:
+        scopes = "entrezgene"
+        myGene_ids, myGene_syms = queryMyGeneInfo(probes, 'gene_id', scopes)
+    print scopes, myGene_ids, myGene_syms
+
 
 if __name__ == '__main__':
+    insert_myGenes()
+    # get_probes('GPL6104')
     # get_series_cross_tab()
-    get_sample_cross_tab()
+    # get_sample_cross_tab()
     # get_sample_tag_cross_tab()
 

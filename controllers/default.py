@@ -3,33 +3,29 @@
 
 # ########################################################################
 # # This is a sample controller
-## - index is the default action of any application
+# # - index is the default action of any application
 ## - user is required for authentication and authorization
 ## - download is for downloading files uploaded in the db (does streaming)
 ## - api is an example of Hypermedia API support and access control
 #########################################################################
 
-import locale
-
 def index():
     #cache counts
-    session.platform_count = session.platform_count or locale.format("%d", db(Platform).count(), grouping=True)
-    session.tag_count = session.tag_count or locale.format("%d", db(Tag).count(), grouping=True)
-    session.sample_count = session.sample_count or locale.format("%d", db(Sample).count(), grouping=True)
-    session.sample_attribute_count = session.sample_attribute_count or locale.format("%d", db(Sample_Attribute).count(),
-                                                                                     grouping=True)
-    session.sample_tag_count = session.sample_tag_count or locale.format("%d", db(Sample_Tag).count(), grouping=True)
-    session.series_count = session.series_count or locale.format("%d", db(Series).count(), grouping=True)
-    session.series_attribute_count = session.series_attribute_count or locale.format("%d", db(Series_Attribute).count(),
-                                                                                     grouping=True)
-    session.series_tag_count = session.series_tag_count or locale.format("%d", db(Series_Tag).count(), grouping=True)
+    session.platform_count = session.platform_count or "{:,}".format(db(Platform).count())
+    session.tag_count = session.tag_count or "{:,}".format(db(Tag).count())
+    session.sample_count = session.sample_count or "{:,}".format(db(Sample).count())
+    session.sample_attribute_count = session.sample_attribute_count or "{:,}".format(db(Sample_Attribute).count())
+    session.sample_tag_count = session.sample_tag_count or "{:,}".format(db(Sample_Tag).count())
+    session.series_count = session.series_count or "{:,}".format(db(Series).count())
+    session.series_attribute_count = session.series_attribute_count or "{:,}".format(db(Series_Attribute).count())
+    session.series_tag_count = session.series_tag_count or "{:,}".format(db(Series_Tag).count())
 
-    Series_Tag.tag_id.represent = lambda name, row: DIV(row.tag_id.tag_name, _class = "badge")
+    Series_Tag.tag_id.represent = lambda name, row: DIV(row.tag_id.tag_name, _class="badge")
     tags = SQLFORM.grid(Series_Tag,
                         searchable=False,
                         csv=False,
                         orderby=~Series_Tag.id,
-                        paginate=7,
+                        paginate=5,
                         maxtextlength=100,
                         ondelete=update_sample_cross_tab)
 

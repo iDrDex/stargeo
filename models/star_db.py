@@ -219,9 +219,5 @@ Series_Tag_View_Results = db.define_table('series_tag_view_results',
                       migrate='series_tag_view_results.table'
 )
 
-def update_sample_cross_tab(form, arg):
-    session.update_tag_cross_tab = True
-
-if session.update_tag_cross_tab: #delete form home page
+def update_sample_cross_tab(form, arg): #delete form home page
     get_sample_tag_cross_tab()
-    session.update_tag_cross_tab = False

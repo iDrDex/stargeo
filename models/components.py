@@ -17,6 +17,7 @@ def search_widget(fields=None, url=None):
                                             _type='checkbox',
                                             _checked=request.vars.invariant,
                                             _disabled=True if request.controller == "series_tag" \
+                                                              or request.controller == 'sample_tag' \
                                                               or request.controller == 'default' \
                                                 else False,
                                             _onclick="""
@@ -47,7 +48,7 @@ def search_widget(fields=None, url=None):
                      _class="row"
                ),
                formname='search_form',
-               _id='search_form',  # needed for invariant onclickw
+               _id='search_form',  # needed for invariant onclick
                _method="GET",
                _action=url or URL(),
         )
@@ -84,7 +85,7 @@ def searchable(fields, keywords):
     view = db["%s_view" % request.controller]
     view_id = "%s_view_id" % request.controller
     if not fts_query:
-        query = view
+        query = view.id > 0
     else:
         search = db(Search.fts_query == fts_query).select().first() \
                  or Search(Search.insert(fts_query=fts_query))
@@ -106,11 +107,11 @@ def searchable(fields, keywords):
             # id,
             # %s
             # INTO %s_view_results"""%\
-            #               (request.controller, search.id,request.controller)
+            # (request.controller, search.id,request.controller)
             # from_sql  = "%s_view" % request.controller
             # where_sql  = "%s_view.doc @@ to_tsquery('english', '%s')" % (request.controller, fts_query)
             # sql = """SELECT %s
-            #          FROM %s
+            # FROM %s
             #          WHERE %s;"""%(select_sql, from_sql, where_sql)
             print sql
             # 1 / 0
@@ -122,7 +123,7 @@ def searchable(fields, keywords):
 
 
 def get_fields(view, query, paginate):
-    index_field_names = ['series_id', 'sample_id', 'platform_id']
+    index_field_names = ['series_id', 'platform_id', 'sample_id']
     index_fields = [view[name] for name in index_field_names if name in view.fields]
     remove_field_names = ['series_geo_accession', 'sample_geo_accession']
     exclude_field_names = set(index_field_names + remove_field_names)
@@ -133,20 +134,35 @@ def get_fields(view, query, paginate):
     return fields
 
 
+def get_tag_headers(view, query):
+    """Given a query returns the matching tag fields"""
+    tagQuery = query \
+               & (view['series_id'] == Series_Tag.series_id) \
+               & (view['platform_id'] == Series_Tag.platform_id)
+    rows = db(tagQuery).select(distinct=Series_Tag.tag_id)
+    tag_fields = [view[row.series_tag.tag_id.tag_name] for row in rows]
+
+    index_field_names = ['series_id', 'platform_id', 'sample_id']
+    index_fields = [view[name] for name in index_field_names if name in view.fields]
+    fields = index_fields + tag_fields
+    return fields
+
+
+
 paginate = 10
-
-
 def get_grid():
     import time
 
     view = db["%s_view" % request.controller]
     session.start_time = time.time()  # sets the counter
     query = searchable(fields=view, keywords=request.vars.keywords)
-    fields = None if request.controller == 'default' \
-                     or request.controller == 'series_tag' \
-        else get_fields(view, query, paginate) \
-        if not request.vars.invariant \
-        else None
+    field = None
+    if request.controller.endswith("_tag"):
+        fields = get_tag_headers(view, query)
+    elif not request.vars.invariant:
+        fields = get_fields(view, query, paginate) \
+
+
     grid = SQLFORM.grid(query,
                         field_id=view.id,
                         fields=fields,
@@ -172,7 +188,7 @@ def get_grid():
 # limitby = None
 # if paginate:
 # try:
-#             page = int(request.vars.page or 1) - 1
+# page = int(request.vars.page or 1) - 1
 #         except ValueError:
 #             page = 0
 #         limitby = (paginate * page, paginate * (page + 1))
@@ -223,21 +239,38 @@ def get_series_id(row):
         'sample_id' in row and row.sample_id.series_id or \
         view in row and 'series_id' in row[view] and row[view].series_id or \
         view in row and 'sample_id' in row[view] and row[view].sample_id or \
-        redirect('default', 'index')
+        redirect('default', 'index')  #must have series_id
 
     return series_id
+
+
+def get_platform_id(row):
+    controller = request.controller
+    view = "%s_view" % controller
+
+    platform_id = \
+        'platform_id' in row and row.platform_id or \
+        'sample_id' in row and row.sample_id.platform_id or \
+        view in row and 'platform_id' in row[view] and row[view].platform_id or \
+        view in row and 'sample_id' in row[view] and row[view].sample_id or \
+        None  #may not have platform_id for series views
+
+    return platform_id
 
 
 def get_tags(row):
     series_id = get_series_id(row)
     # series_id = row.series_id if 'series_id' in row else row.sample_id.series_id
+    query = (Series_Tag.series_id == series_id) & (Series_Tag.tag_id == Tag.id)
+    platform_id = get_platform_id(row)
+    if platform_id:
+        query &= (Series_Tag.platform_id == platform_id)
+
     tags = [row.tag_name
             if '%s_view' % request.controller in row
             else row.tag_name
-            for row in db((Series_Tag.series_id == series_id) &
-                          # (Series_Tag.platform_id == row.platform_id) &
-                          (Series_Tag.tag_id == Tag.id)).select(Tag.tag_name,
-                                                                distinct=Series_Tag.tag_id)]
+            for row in db(query).select(Tag.tag_name,
+                                        distinct=Series_Tag.tag_id)]
     return DIV([DIV(tag, _class="badge") for tag in tags])
 
 
@@ -245,10 +278,12 @@ def get_tag_button(row):
     series_id = get_series_id(row)
     if 'page' in request.get_vars:
         del (request.get_vars.page)
-    return FORM(BUTTON('Tag',
-                       _class="button btn btn-primary"),
+    return FORM(BUTTON(I(_class="fa fa-tag"),
+                       'Tag',
+                       _class="button btn btn-default",
+                       _type="submit"),
                 hidden=dict(series_id=series_id),
                 _action=URL("tag", "index", vars=request.get_vars),
                 _data_toggle="tooltip",
-                _title="Tag this study")
+                _title="Tag this GSE")
 
