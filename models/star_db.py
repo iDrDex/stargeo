@@ -68,6 +68,10 @@ Series_View_Results = db.define_table('series_view_results',
 Platform = db.define_table('platform',
                            Field('id', 'id', readable=False, writable=False),
                            Field('gpl_name', 'text', writable=False),
+                           Field('identifier', 'text', writable=False),
+                           Field('scopes', 'text', writable=False),
+                           Field('scopes', 'text', writable=False),
+                           Field('identifier', 'text', writable=False),
                            format='%(gpl_name)s',
                            migrate='platform.table'
 )
@@ -80,6 +84,17 @@ Platform_Attribute = db.define_table('platform_attribute',
                                      format='%(attribute_name)s_%(attribute_value)s',
                                      migrate='platform_attribute.table'
 )
+
+Platform_Probe = db.define_table('platform_probe',
+                                     Field('id', 'id', readable=False, writable=False),
+                                     Field('platform_id', 'reference platform', writable=False),
+                                     Field('probe', 'text', writable=False),
+                                     Field('myGene_sym', 'text', writable=False),
+                                     Field('myGene_entrez', 'integer', writable=False),
+                                     format='%(platform_id)s_%(probe)s',
+                                     migrate='platform_probe.table'
+)
+
 
 Sample = db.define_table('sample',
                          Field('id', 'id', readable=False, writable=False),
@@ -219,5 +234,5 @@ Series_Tag_View_Results = db.define_table('series_tag_view_results',
                       migrate='series_tag_view_results.table'
 )
 
-def update_sample_cross_tab(form, arg): #delete form home page
+def update_sample_cross_tab(form, arg): #delete from home page
     get_sample_tag_cross_tab()

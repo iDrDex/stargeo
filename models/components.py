@@ -135,7 +135,7 @@ def get_fields(view, query, paginate):
 
 
 def get_tag_headers(view, query):
-    """Given a query returns the matching tag fields"""
+    """Given a query returns all the tags annotated for that field"""
     tagQuery = query \
                & (view['series_id'] == Series_Tag.series_id) \
                & (view['platform_id'] == Series_Tag.platform_id)

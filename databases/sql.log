@@ -410,3 +410,68 @@ TRUNCATE TABLE series_tag_view_results ;
 success!
 TRUNCATE TABLE sample_tag_view_results ;
 success!
+timestamp: 2014-10-23T14:45:28.803076
+ALTER TABLE platform_probe ADD mygene_sym TEXT;
+timestamp: 2014-10-23T14:45:45.783017
+ALTER TABLE platform_probe ADD mygene_sym TEXT;
+timestamp: 2014-10-23T14:46:37.939576
+CREATE TABLE platform_probe(
+    id SERIAL PRIMARY KEY,
+    platform_id INTEGER REFERENCES platform (id) ON DELETE CASCADE,
+    probe TEXT,
+    myGene_sym TEXT,
+    myGene_entrez INTEGER
+);
+success!
+timestamp: 2014-10-24T09:44:00.911129
+CREATE TABLE platform_probe(
+    id SERIAL PRIMARY KEY,
+    platform_id INTEGER REFERENCES platform (id) ON DELETE CASCADE,
+    probe TEXT,
+    myGene_sym TEXT,
+    myGene_entrez INTEGER
+);
+success!
+timestamp: 2014-10-24T10:32:49.074599
+ALTER TABLE platform ADD scopes TEXT;
+timestamp: 2014-10-24T10:32:49.077662
+ALTER TABLE platform ADD identifier TEXT;
+timestamp: 2014-10-24T10:32:49.078595
+ALTER TABLE platform DROP COLUMN gpl_name;
+timestamp: 2014-10-24T10:33:00.197441
+ALTER TABLE platform DROP COLUMN gpl_name;
+timestamp: 2014-10-24T10:34:23.063843
+ALTER TABLE platform DROP COLUMN gpl_name;
+timestamp: 2014-10-24T11:50:09.426993
+CREATE TABLE platform(
+    id SERIAL PRIMARY KEY,
+    scopes TEXT,
+    identifier TEXT
+);
+success!
+timestamp: 2014-10-24T11:50:09.436995
+CREATE TABLE platform_probe(
+    id SERIAL PRIMARY KEY,
+    platform_id INTEGER REFERENCES platform (id) ON DELETE CASCADE,
+    probe TEXT,
+    myGene_sym TEXT,
+    myGene_entrez INTEGER
+);
+success!
+timestamp: 2014-10-24T11:57:13.498236
+CREATE TABLE platform(
+    id SERIAL PRIMARY KEY,
+    gpl_name TEXT,
+    identifier TEXT,
+    scopes TEXT
+);
+success!
+timestamp: 2014-10-24T12:02:03.792050
+CREATE TABLE platform_probe(
+    id SERIAL PRIMARY KEY,
+    platform_id INTEGER REFERENCES platform (id) ON DELETE CASCADE,
+    probe TEXT,
+    myGene_sym TEXT,
+    myGene_entrez INTEGER
+);
+success!
