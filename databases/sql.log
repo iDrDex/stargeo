@@ -475,3 +475,1416 @@ CREATE TABLE platform_probe(
     myGene_entrez INTEGER
 );
 success!
+timestamp: 2014-10-31T11:00:25.893925
+CREATE TABLE analysis(
+    id SERIAL PRIMARY KEY,
+    analysis_name VARCHAR(512),
+    description VARCHAR(512),
+    case_query VARCHAR(512),
+    control_query VARCHAR(512),
+    modifier_query VARCHAR(512)
+);
+success!
+timestamp: 2014-10-31T11:00:25.968431
+CREATE TABLE counts(
+    id SERIAL PRIMARY KEY,
+    what VARCHAR(512),
+    count VARCHAR(512)
+);
+success!
+timestamp: 2014-10-31T11:18:35.674741
+CREATE TABLE analysis(
+    id SERIAL PRIMARY KEY,
+    analysis_name VARCHAR(512),
+    description VARCHAR(512),
+    case_query VARCHAR(512),
+    control_query VARCHAR(512),
+    modifier_query VARCHAR(512)
+);
+timestamp: 2014-10-31T11:19:09.293555
+CREATE TABLE analysis(
+    id SERIAL PRIMARY KEY,
+    analysis_name VARCHAR(512),
+    description VARCHAR(512),
+    case_query VARCHAR(512),
+    control_query VARCHAR(512),
+    modifier_query VARCHAR(512)
+);
+success!
+timestamp: 2014-10-31T11:19:09.309571
+CREATE TABLE counts(
+    id SERIAL PRIMARY KEY,
+    what VARCHAR(512),
+    count VARCHAR(512)
+);
+timestamp: 2014-10-31T11:19:39.720245
+CREATE TABLE counts(
+    id SERIAL PRIMARY KEY,
+    what VARCHAR(512),
+    count VARCHAR(512)
+);
+success!
+timestamp: 2014-11-03T11:42:43.260943
+ALTER TABLE platform ADD datafile TEXT;
+success!
+timestamp: 2014-11-04T14:03:15.645703
+ALTER TABLE balanced_meta ADD subset VARCHAR(512);
+timestamp: 2014-11-04T14:03:17.819650
+ALTER TABLE balanced_meta ADD subset VARCHAR(512);
+timestamp: 2014-11-04T14:04:21.887964
+ALTER TABLE balanced_meta ADD subset VARCHAR(512);
+timestamp: 2014-11-04T14:05:07.399809
+CREATE TABLE balanced_meta(
+    id SERIAL PRIMARY KEY,
+    analysis_id INTEGER REFERENCES analysis (id) ON DELETE CASCADE,
+    mygene_sym FLOAT,
+    mygene_entrez FLOAT,
+    C FLOAT,
+    H FLOAT,
+    I2 FLOAT,
+    Q FLOAT,
+    TE FLOAT,
+    TE_fixed FLOAT,
+    TE_random FLOAT,
+    TE_tau FLOAT,
+    bylab FLOAT,
+    byvar FLOAT,
+    call FLOAT,
+    caseDataCount FLOAT,
+    comb_fixed FLOAT,
+    comb_random FLOAT,
+    complab FLOAT,
+    controlDataCount FLOAT,
+    data FLOAT,
+    df_Q FLOAT,
+    df_hakn FLOAT,
+    hakn FLOAT,
+    k FLOAT,
+    label_c FLOAT,
+    label_e FLOAT,
+    label_left FLOAT,
+    label_right FLOAT,
+    level FLOAT,
+    level_comb FLOAT,
+    level_predict FLOAT,
+    lower_H FLOAT,
+    lower_I2 FLOAT,
+    lower_fixed FLOAT,
+    lower_predict FLOAT,
+    lower_random FLOAT,
+    mean_c FLOAT,
+    mean_e FLOAT,
+    method VARCHAR(512),
+    method_bias VARCHAR(512),
+    method_tau VARCHAR(512),
+    n_c FLOAT,
+    n_e FLOAT,
+    outclab FLOAT,
+    prediction FLOAT,
+    print_byvar FLOAT,
+    pval_fixed FLOAT,
+    pval_random FLOAT,
+    sd_c FLOAT,
+    sd_e FLOAT,
+    se_tau2 FLOAT,
+    seTE FLOAT,
+    seTE_fixed FLOAT,
+    seTE_predict FLOAT,
+    seTE_random FLOAT,
+    sm VARCHAR(512),
+    studlab VARCHAR(512),
+    subset VARCHAR(512),
+    tau FLOAT,
+    tau_common FLOAT,
+    tau_preset FLOAT,
+    title VARCHAR(512),
+    upper_H FLOAT,
+    upper_I2 FLOAT,
+    upper_fixed FLOAT,
+    upper_predict FLOAT,
+    upper_random FLOAT,
+    version FLOAT,
+    w_fixed FLOAT,
+    w_random FLOAT,
+    warn CHAR(1),
+    zval_fixed FLOAT,
+    zval_random FLOAT,
+    effect_size FLOAT,
+    direction FLOAT
+);
+success!
+success!
+timestamp: 2014-11-04T14:44:53.027843
+ALTER TABLE balanced_meta ADD label_right__tmp VARCHAR(512);
+UPDATE balanced_meta SET label_right__tmp=label_right;
+ALTER TABLE balanced_meta DROP COLUMN label_right;
+ALTER TABLE balanced_meta ADD label_right VARCHAR(512);
+UPDATE balanced_meta SET label_right=label_right__tmp;
+ALTER TABLE balanced_meta DROP COLUMN label_right__tmp;
+timestamp: 2014-11-04T14:44:53.077118
+ALTER TABLE balanced_meta ADD byvar__tmp VARCHAR(512);
+UPDATE balanced_meta SET byvar__tmp=byvar;
+ALTER TABLE balanced_meta DROP COLUMN byvar;
+ALTER TABLE balanced_meta ADD byvar VARCHAR(512);
+UPDATE balanced_meta SET byvar=byvar__tmp;
+ALTER TABLE balanced_meta DROP COLUMN byvar__tmp;
+timestamp: 2014-11-04T14:44:53.083351
+ALTER TABLE balanced_meta ADD complab__tmp VARCHAR(512);
+UPDATE balanced_meta SET complab__tmp=complab;
+ALTER TABLE balanced_meta DROP COLUMN complab;
+ALTER TABLE balanced_meta ADD complab VARCHAR(512);
+UPDATE balanced_meta SET complab=complab__tmp;
+ALTER TABLE balanced_meta DROP COLUMN complab__tmp;
+timestamp: 2014-11-04T14:44:53.094809
+ALTER TABLE balanced_meta ADD label_e__tmp VARCHAR(512);
+UPDATE balanced_meta SET label_e__tmp=label_e;
+ALTER TABLE balanced_meta DROP COLUMN label_e;
+ALTER TABLE balanced_meta ADD label_e VARCHAR(512);
+UPDATE balanced_meta SET label_e=label_e__tmp;
+ALTER TABLE balanced_meta DROP COLUMN label_e__tmp;
+timestamp: 2014-11-04T14:44:53.124396
+ALTER TABLE balanced_meta ADD label_left__tmp VARCHAR(512);
+UPDATE balanced_meta SET label_left__tmp=label_left;
+ALTER TABLE balanced_meta DROP COLUMN label_left;
+ALTER TABLE balanced_meta ADD label_left VARCHAR(512);
+UPDATE balanced_meta SET label_left=label_left__tmp;
+ALTER TABLE balanced_meta DROP COLUMN label_left__tmp;
+timestamp: 2014-11-04T14:44:53.127072
+ALTER TABLE balanced_meta ADD label_c__tmp VARCHAR(512);
+UPDATE balanced_meta SET label_c__tmp=label_c;
+ALTER TABLE balanced_meta DROP COLUMN label_c;
+ALTER TABLE balanced_meta ADD label_c VARCHAR(512);
+UPDATE balanced_meta SET label_c=label_c__tmp;
+ALTER TABLE balanced_meta DROP COLUMN label_c__tmp;
+timestamp: 2014-11-04T14:44:53.141999
+ALTER TABLE balanced_meta ADD bylab__tmp VARCHAR(512);
+UPDATE balanced_meta SET bylab__tmp=bylab;
+ALTER TABLE balanced_meta DROP COLUMN bylab;
+ALTER TABLE balanced_meta ADD bylab VARCHAR(512);
+UPDATE balanced_meta SET bylab=bylab__tmp;
+ALTER TABLE balanced_meta DROP COLUMN bylab__tmp;
+success!
+timestamp: 2014-11-04T14:45:57.570626
+ALTER TABLE balanced_meta ADD version__tmp VARCHAR(512);
+UPDATE balanced_meta SET version__tmp=version;
+ALTER TABLE balanced_meta DROP COLUMN version;
+ALTER TABLE balanced_meta ADD version VARCHAR(512);
+UPDATE balanced_meta SET version=version__tmp;
+ALTER TABLE balanced_meta DROP COLUMN version__tmp;
+success!
+timestamp: 2014-11-04T14:47:25.371678
+ALTER TABLE balanced_meta ADD direction__tmp VARCHAR(512);
+UPDATE balanced_meta SET direction__tmp=direction;
+ALTER TABLE balanced_meta DROP COLUMN direction;
+ALTER TABLE balanced_meta ADD direction VARCHAR(512);
+UPDATE balanced_meta SET direction=direction__tmp;
+ALTER TABLE balanced_meta DROP COLUMN direction__tmp;
+success!
+timestamp: 2014-11-04T14:53:22.262036
+ALTER TABLE balanced_meta DROP COLUMN subset;
+timestamp: 2014-11-04T14:53:22.264446
+ALTER TABLE balanced_meta DROP COLUMN tau;
+timestamp: 2014-11-04T14:53:22.265014
+ALTER TABLE balanced_meta DROP COLUMN lower_fixed;
+timestamp: 2014-11-04T14:53:22.265696
+ALTER TABLE balanced_meta DROP COLUMN comb_fixed;
+timestamp: 2014-11-04T14:53:22.266396
+ALTER TABLE balanced_meta DROP COLUMN label_right;
+timestamp: 2014-11-04T14:53:22.266993
+ALTER TABLE balanced_meta DROP COLUMN df_hakn;
+timestamp: 2014-11-04T14:53:22.267409
+ALTER TABLE balanced_meta DROP COLUMN prediction;
+timestamp: 2014-11-04T14:53:22.267868
+ALTER TABLE balanced_meta DROP COLUMN method_bias;
+timestamp: 2014-11-04T14:53:22.268441
+ALTER TABLE balanced_meta DROP COLUMN lower_predict;
+timestamp: 2014-11-04T14:53:22.268834
+ALTER TABLE balanced_meta DROP COLUMN lower_h;
+timestamp: 2014-11-04T14:53:22.269225
+ALTER TABLE balanced_meta DROP COLUMN pval_fixed;
+timestamp: 2014-11-04T14:53:22.269654
+ALTER TABLE balanced_meta DROP COLUMN sete_random;
+timestamp: 2014-11-04T14:53:22.270212
+ALTER TABLE balanced_meta DROP COLUMN byvar;
+timestamp: 2014-11-04T14:53:22.270720
+ALTER TABLE balanced_meta DROP COLUMN se_tau2;
+timestamp: 2014-11-04T14:53:22.271208
+ALTER TABLE balanced_meta DROP COLUMN n_e;
+timestamp: 2014-11-04T14:53:22.271673
+ALTER TABLE balanced_meta DROP COLUMN lower_i2;
+timestamp: 2014-11-04T14:53:22.272089
+ALTER TABLE balanced_meta DROP COLUMN n_c;
+timestamp: 2014-11-04T14:53:22.272549
+ALTER TABLE balanced_meta DROP COLUMN level_comb;
+timestamp: 2014-11-04T14:53:22.273099
+ALTER TABLE balanced_meta DROP COLUMN sete_fixed;
+timestamp: 2014-11-04T14:53:22.273553
+ALTER TABLE balanced_meta DROP COLUMN pval_random;
+timestamp: 2014-11-04T14:53:22.273986
+ALTER TABLE balanced_meta DROP COLUMN title;
+timestamp: 2014-11-04T14:53:22.274564
+ALTER TABLE balanced_meta DROP COLUMN mean_e;
+timestamp: 2014-11-04T14:53:22.275067
+ALTER TABLE balanced_meta DROP COLUMN mean_c;
+timestamp: 2014-11-04T14:53:22.275576
+ALTER TABLE balanced_meta DROP COLUMN print_byvar;
+timestamp: 2014-11-04T14:53:22.275988
+ALTER TABLE balanced_meta DROP COLUMN zval_random;
+timestamp: 2014-11-04T14:53:22.276356
+ALTER TABLE balanced_meta DROP COLUMN version;
+timestamp: 2014-11-04T14:53:22.276704
+ALTER TABLE balanced_meta DROP COLUMN call;
+timestamp: 2014-11-04T14:53:22.277017
+ALTER TABLE balanced_meta DROP COLUMN df_q;
+timestamp: 2014-11-04T14:53:22.277332
+ALTER TABLE balanced_meta DROP COLUMN hakn;
+timestamp: 2014-11-04T14:53:22.277667
+ALTER TABLE balanced_meta DROP COLUMN tau_preset;
+timestamp: 2014-11-04T14:53:22.277999
+ALTER TABLE balanced_meta DROP COLUMN comb_random;
+timestamp: 2014-11-04T14:53:22.278316
+ALTER TABLE balanced_meta DROP COLUMN label_e;
+timestamp: 2014-11-04T14:53:22.278653
+ALTER TABLE balanced_meta DROP COLUMN outclab;
+timestamp: 2014-11-04T14:53:22.279166
+ALTER TABLE balanced_meta DROP COLUMN label_left;
+timestamp: 2014-11-04T14:53:22.279497
+ALTER TABLE balanced_meta DROP COLUMN label_c;
+timestamp: 2014-11-04T14:53:22.279875
+ALTER TABLE balanced_meta DROP COLUMN sd_c;
+timestamp: 2014-11-04T14:53:22.280316
+ALTER TABLE balanced_meta DROP COLUMN upper_i2;
+timestamp: 2014-11-04T14:53:22.280634
+ALTER TABLE balanced_meta DROP COLUMN upper_random;
+timestamp: 2014-11-04T14:53:22.281078
+ALTER TABLE balanced_meta DROP COLUMN lower_random;
+timestamp: 2014-11-04T14:53:22.281410
+ALTER TABLE balanced_meta DROP COLUMN warn;
+timestamp: 2014-11-04T14:53:22.281751
+ALTER TABLE balanced_meta DROP COLUMN casedatacount;
+timestamp: 2014-11-04T14:53:22.282064
+ALTER TABLE balanced_meta DROP COLUMN upper_h;
+timestamp: 2014-11-04T14:53:22.282411
+ALTER TABLE balanced_meta DROP COLUMN sd_e;
+timestamp: 2014-11-04T14:53:22.282766
+ALTER TABLE balanced_meta DROP COLUMN w_fixed;
+timestamp: 2014-11-04T14:53:22.283266
+ALTER TABLE balanced_meta DROP COLUMN data;
+timestamp: 2014-11-04T14:53:22.283727
+ALTER TABLE balanced_meta DROP COLUMN complab;
+timestamp: 2014-11-04T14:53:22.284140
+ALTER TABLE balanced_meta DROP COLUMN sete;
+timestamp: 2014-11-04T14:53:22.284602
+ALTER TABLE balanced_meta DROP COLUMN zval_fixed;
+timestamp: 2014-11-04T14:53:22.285089
+ALTER TABLE balanced_meta DROP COLUMN level;
+timestamp: 2014-11-04T14:53:22.285520
+ALTER TABLE balanced_meta DROP COLUMN k;
+timestamp: 2014-11-04T14:53:22.285947
+ALTER TABLE balanced_meta DROP COLUMN controldatacount;
+timestamp: 2014-11-04T14:53:22.286375
+ALTER TABLE balanced_meta DROP COLUMN level_predict;
+timestamp: 2014-11-04T14:53:22.286826
+ALTER TABLE balanced_meta DROP COLUMN method_tau;
+timestamp: 2014-11-04T14:53:22.287210
+ALTER TABLE balanced_meta DROP COLUMN method;
+timestamp: 2014-11-04T14:53:22.287652
+ALTER TABLE balanced_meta DROP COLUMN bylab;
+timestamp: 2014-11-04T14:53:22.288061
+ALTER TABLE balanced_meta DROP COLUMN sete_predict;
+timestamp: 2014-11-04T14:53:22.313964
+ALTER TABLE balanced_meta DROP COLUMN upper_fixed;
+timestamp: 2014-11-04T14:53:22.314669
+ALTER TABLE balanced_meta DROP COLUMN sm;
+timestamp: 2014-11-04T14:53:22.315241
+ALTER TABLE balanced_meta DROP COLUMN upper_predict;
+timestamp: 2014-11-04T14:53:22.315854
+ALTER TABLE balanced_meta DROP COLUMN tau_common;
+timestamp: 2014-11-04T14:53:22.316541
+ALTER TABLE balanced_meta DROP COLUMN studlab;
+timestamp: 2014-11-04T14:53:22.317072
+ALTER TABLE balanced_meta DROP COLUMN w_random;
+success!
+timestamp: 2014-11-04T14:57:55.575194
+ALTER TABLE balanced_meta ADD mygene_entrez__tmp VARCHAR(512);
+UPDATE balanced_meta SET mygene_entrez__tmp=mygene_entrez;
+ALTER TABLE balanced_meta DROP COLUMN mygene_entrez;
+ALTER TABLE balanced_meta ADD mygene_entrez VARCHAR(512);
+UPDATE balanced_meta SET mygene_entrez=mygene_entrez__tmp;
+ALTER TABLE balanced_meta DROP COLUMN mygene_entrez__tmp;
+timestamp: 2014-11-04T14:57:55.583308
+ALTER TABLE balanced_meta ADD mygene_sym__tmp VARCHAR(512);
+UPDATE balanced_meta SET mygene_sym__tmp=mygene_sym;
+ALTER TABLE balanced_meta DROP COLUMN mygene_sym;
+ALTER TABLE balanced_meta ADD mygene_sym VARCHAR(512);
+UPDATE balanced_meta SET mygene_sym=mygene_sym__tmp;
+ALTER TABLE balanced_meta DROP COLUMN mygene_sym__tmp;
+success!
+timestamp: 2014-11-04T15:11:45.333321
+CREATE TABLE analysis(
+    id SERIAL PRIMARY KEY,
+    analysis_name VARCHAR(512),
+    description VARCHAR(512),
+    case_query VARCHAR(512),
+    control_query VARCHAR(512),
+    modifier_query VARCHAR(512)
+);
+success!
+timestamp: 2014-11-04T15:11:45.346937
+CREATE TABLE balanced_meta(
+    id SERIAL PRIMARY KEY,
+    analysis_id INTEGER REFERENCES analysis (id) ON DELETE CASCADE,
+    mygene_sym VARCHAR(512),
+    mygene_entrez VARCHAR(512),
+    C FLOAT8,
+    H FLOAT8,
+    I2 FLOAT8,
+    Q FLOAT8,
+    TE FLOAT8,
+    TE_fixed FLOAT8,
+    TE_random FLOAT8,
+    TE_tau FLOAT8,
+    bylab VARCHAR(512),
+    byvar VARCHAR(512),
+    call FLOAT8,
+    caseDataCount FLOAT8,
+    comb_fixed FLOAT8,
+    comb_random FLOAT8,
+    complab VARCHAR(512),
+    controlDataCount FLOAT8,
+    data FLOAT8,
+    df_Q FLOAT8,
+    df_hakn FLOAT8,
+    hakn FLOAT8,
+    k FLOAT8,
+    label_c VARCHAR(512),
+    label_e VARCHAR(512),
+    label_left VARCHAR(512),
+    label_right VARCHAR(512),
+    level FLOAT8,
+    level_comb FLOAT8,
+    level_predict FLOAT8,
+    lower_H FLOAT8,
+    lower_I2 FLOAT8,
+    lower_fixed FLOAT8,
+    lower_predict FLOAT8,
+    lower_random FLOAT8,
+    mean_c FLOAT8,
+    mean_e FLOAT8,
+    method VARCHAR(512),
+    method_bias VARCHAR(512),
+    method_tau VARCHAR(512),
+    n_c FLOAT8,
+    n_e FLOAT8,
+    outclab FLOAT8,
+    prediction FLOAT8,
+    print_byvar FLOAT8,
+    pval_fixed FLOAT8,
+    pval_random FLOAT8,
+    sd_c FLOAT8,
+    sd_e FLOAT8,
+    se_tau2 FLOAT8,
+    seTE FLOAT8,
+    seTE_fixed FLOAT8,
+    seTE_predict FLOAT8,
+    seTE_random FLOAT8,
+    sm VARCHAR(512),
+    studlab VARCHAR(512),
+    subset VARCHAR(512),
+    tau FLOAT8,
+    tau_common FLOAT8,
+    tau_preset FLOAT8,
+    title VARCHAR(512),
+    upper_H FLOAT8,
+    upper_I2 FLOAT8,
+    upper_fixed FLOAT8,
+    upper_predict FLOAT8,
+    upper_random FLOAT8,
+    version VARCHAR(512),
+    w_fixed FLOAT8,
+    w_random FLOAT8,
+    warn CHAR(1),
+    zval_fixed FLOAT8,
+    zval_random FLOAT8,
+    effect_size FLOAT8,
+    direction VARCHAR(512)
+);
+success!
+timestamp: 2014-11-05T09:35:24.627196
+CREATE TABLE analysis(
+    id SERIAL PRIMARY KEY,
+    analysis_name VARCHAR(512),
+    description VARCHAR(512),
+    case_query VARCHAR(512),
+    control_query VARCHAR(512),
+    modifier_query VARCHAR(512)
+);
+success!
+timestamp: 2014-11-05T09:35:24.817959
+CREATE TABLE balanced_meta(
+    id SERIAL PRIMARY KEY,
+    analysis_id INTEGER REFERENCES analysis (id) ON DELETE CASCADE,
+    mygene_sym VARCHAR(512),
+    mygene_entrez VARCHAR(512),
+    C FLOAT8,
+    H FLOAT8,
+    I2 FLOAT8,
+    Q FLOAT8,
+    TE FLOAT8,
+    TE_fixed FLOAT8,
+    TE_random FLOAT8,
+    TE_tau FLOAT8,
+    bylab VARCHAR(512),
+    byvar VARCHAR(512),
+    call FLOAT8,
+    caseDataCount FLOAT8,
+    comb_fixed FLOAT8,
+    comb_random FLOAT8,
+    complab VARCHAR(512),
+    controlDataCount FLOAT8,
+    data FLOAT8,
+    df_Q FLOAT8,
+    df_hakn FLOAT8,
+    hakn FLOAT8,
+    k FLOAT8,
+    label_c VARCHAR(512),
+    label_e VARCHAR(512),
+    label_left VARCHAR(512),
+    label_right VARCHAR(512),
+    level FLOAT8,
+    level_comb FLOAT8,
+    level_predict FLOAT8,
+    lower_H FLOAT8,
+    lower_I2 FLOAT8,
+    lower_fixed FLOAT8,
+    lower_predict FLOAT8,
+    lower_random FLOAT8,
+    mean_c FLOAT8,
+    mean_e FLOAT8,
+    method VARCHAR(512),
+    method_bias VARCHAR(512),
+    method_tau VARCHAR(512),
+    n_c FLOAT8,
+    n_e FLOAT8,
+    outclab FLOAT8,
+    prediction FLOAT8,
+    print_byvar FLOAT8,
+    pval_fixed FLOAT8,
+    pval_random FLOAT8,
+    sd_c FLOAT8,
+    sd_e FLOAT8,
+    se_tau2 FLOAT8,
+    seTE FLOAT8,
+    seTE_fixed FLOAT8,
+    seTE_predict FLOAT8,
+    seTE_random FLOAT8,
+    sm VARCHAR(512),
+    studlab VARCHAR(512),
+    subset VARCHAR(512),
+    tau FLOAT8,
+    tau_common FLOAT8,
+    tau_preset FLOAT8,
+    title VARCHAR(512),
+    upper_H FLOAT8,
+    upper_I2 FLOAT8,
+    upper_fixed FLOAT8,
+    upper_predict FLOAT8,
+    upper_random FLOAT8,
+    version VARCHAR(512),
+    w_fixed FLOAT8,
+    w_random FLOAT8,
+    warn CHAR(1),
+    zval_fixed FLOAT8,
+    zval_random FLOAT8,
+    effect_size FLOAT8,
+    direction VARCHAR(512)
+);
+success!
+timestamp: 2014-11-05T09:48:25.938370
+ALTER TABLE balanced_meta ADD mygene_entrez__tmp INTEGER;
+UPDATE balanced_meta SET mygene_entrez__tmp=mygene_entrez;
+timestamp: 2014-11-05T09:49:00.155852
+CREATE TABLE balanced_meta(
+    id SERIAL PRIMARY KEY,
+    analysis_id INTEGER REFERENCES analysis (id) ON DELETE CASCADE,
+    mygene_sym VARCHAR(512),
+    mygene_entrez INTEGER,
+    C FLOAT8,
+    H FLOAT8,
+    I2 FLOAT8,
+    Q FLOAT8,
+    TE FLOAT8,
+    TE_fixed FLOAT8,
+    TE_random FLOAT8,
+    TE_tau FLOAT8,
+    bylab VARCHAR(512),
+    byvar VARCHAR(512),
+    call FLOAT8,
+    caseDataCount FLOAT8,
+    comb_fixed FLOAT8,
+    comb_random FLOAT8,
+    complab VARCHAR(512),
+    controlDataCount FLOAT8,
+    data FLOAT8,
+    df_Q FLOAT8,
+    df_hakn FLOAT8,
+    hakn FLOAT8,
+    k FLOAT8,
+    label_c VARCHAR(512),
+    label_e VARCHAR(512),
+    label_left VARCHAR(512),
+    label_right VARCHAR(512),
+    level FLOAT8,
+    level_comb FLOAT8,
+    level_predict FLOAT8,
+    lower_H FLOAT8,
+    lower_I2 FLOAT8,
+    lower_fixed FLOAT8,
+    lower_predict FLOAT8,
+    lower_random FLOAT8,
+    mean_c FLOAT8,
+    mean_e FLOAT8,
+    method VARCHAR(512),
+    method_bias VARCHAR(512),
+    method_tau VARCHAR(512),
+    n_c FLOAT8,
+    n_e FLOAT8,
+    outclab FLOAT8,
+    prediction FLOAT8,
+    print_byvar FLOAT8,
+    pval_fixed FLOAT8,
+    pval_random FLOAT8,
+    sd_c FLOAT8,
+    sd_e FLOAT8,
+    se_tau2 FLOAT8,
+    seTE FLOAT8,
+    seTE_fixed FLOAT8,
+    seTE_predict FLOAT8,
+    seTE_random FLOAT8,
+    sm VARCHAR(512),
+    studlab VARCHAR(512),
+    subset VARCHAR(512),
+    tau FLOAT8,
+    tau_common FLOAT8,
+    tau_preset FLOAT8,
+    title VARCHAR(512),
+    upper_H FLOAT8,
+    upper_I2 FLOAT8,
+    upper_fixed FLOAT8,
+    upper_predict FLOAT8,
+    upper_random FLOAT8,
+    version VARCHAR(512),
+    w_fixed FLOAT8,
+    w_random FLOAT8,
+    warn CHAR(1),
+    zval_fixed FLOAT8,
+    zval_random FLOAT8,
+    effect_size FLOAT8,
+    direction VARCHAR(512)
+);
+timestamp: 2014-11-05T10:46:13.553344
+CREATE TABLE balanced_meta(
+    id SERIAL PRIMARY KEY,
+    analysis_id INTEGER REFERENCES analysis (id) ON DELETE CASCADE,
+    mygene_sym VARCHAR(512),
+    mygene_entrez INTEGER,
+    C FLOAT8,
+    H FLOAT8,
+    I2 FLOAT8,
+    Q FLOAT8,
+    TE FLOAT8,
+    TE_fixed FLOAT8,
+    TE_random FLOAT8,
+    TE_tau FLOAT8,
+    bylab VARCHAR(512),
+    byvar VARCHAR(512),
+    call FLOAT8,
+    caseDataCount FLOAT8,
+    comb_fixed FLOAT8,
+    comb_random FLOAT8,
+    complab VARCHAR(512),
+    controlDataCount FLOAT8,
+    data FLOAT8,
+    df_Q FLOAT8,
+    df_hakn FLOAT8,
+    hakn FLOAT8,
+    k FLOAT8,
+    label_c VARCHAR(512),
+    label_e VARCHAR(512),
+    label_left VARCHAR(512),
+    label_right VARCHAR(512),
+    level FLOAT8,
+    level_comb FLOAT8,
+    level_predict FLOAT8,
+    lower_H FLOAT8,
+    lower_I2 FLOAT8,
+    lower_fixed FLOAT8,
+    lower_predict FLOAT8,
+    lower_random FLOAT8,
+    mean_c FLOAT8,
+    mean_e FLOAT8,
+    method VARCHAR(512),
+    method_bias VARCHAR(512),
+    method_tau VARCHAR(512),
+    n_c FLOAT8,
+    n_e FLOAT8,
+    outclab FLOAT8,
+    prediction FLOAT8,
+    print_byvar FLOAT8,
+    pval_fixed FLOAT8,
+    pval_random FLOAT8,
+    sd_c FLOAT8,
+    sd_e FLOAT8,
+    se_tau2 FLOAT8,
+    seTE FLOAT8,
+    seTE_fixed FLOAT8,
+    seTE_predict FLOAT8,
+    seTE_random FLOAT8,
+    sm VARCHAR(512),
+    studlab VARCHAR(512),
+    subset VARCHAR(512),
+    tau FLOAT8,
+    tau_common FLOAT8,
+    tau_preset FLOAT8,
+    title VARCHAR(512),
+    upper_H FLOAT8,
+    upper_I2 FLOAT8,
+    upper_fixed FLOAT8,
+    upper_predict FLOAT8,
+    upper_random FLOAT8,
+    version VARCHAR(512),
+    w_fixed FLOAT8,
+    w_random FLOAT8,
+    warn CHAR(1),
+    zval_fixed FLOAT8,
+    zval_random FLOAT8,
+    effect_size FLOAT8,
+    direction VARCHAR(512)
+);
+success!
+timestamp: 2014-11-05T10:46:13.646719
+CREATE TABLE scheduler_task(
+    id SERIAL PRIMARY KEY,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args TEXT,
+    vars TEXT,
+    enabled CHAR(1),
+    start_time TIMESTAMP,
+    next_run_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    repeats INTEGER,
+    retry_failed INTEGER,
+    period INTEGER,
+    prevent_drift CHAR(1),
+    timeout INTEGER,
+    sync_output INTEGER,
+    times_run INTEGER,
+    times_failed INTEGER,
+    last_run_time TIMESTAMP,
+    assigned_worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-05T10:46:13.654112
+CREATE TABLE scheduler_run(
+    id SERIAL PRIMARY KEY,
+    task_id INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    status VARCHAR(512),
+    start_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    run_output TEXT,
+    run_result TEXT,
+    traceback TEXT,
+    worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-05T10:46:13.659852
+CREATE TABLE scheduler_worker(
+    id SERIAL PRIMARY KEY,
+    worker_name VARCHAR(255) UNIQUE,
+    first_heartbeat TIMESTAMP,
+    last_heartbeat TIMESTAMP,
+    status VARCHAR(512),
+    is_ticker CHAR(1),
+    group_names TEXT,
+    worker_stats JSON
+);
+success!
+timestamp: 2014-11-05T10:46:13.666456
+CREATE TABLE scheduler_task_deps(
+    id SERIAL PRIMARY KEY,
+    job_name VARCHAR(512),
+    task_parent INTEGER,
+    task_child INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    can_visit CHAR(1)
+);
+success!
+timestamp: 2014-11-05T10:54:52.620211
+CREATE TABLE scheduler_task(
+    id SERIAL PRIMARY KEY,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args TEXT,
+    vars TEXT,
+    enabled CHAR(1),
+    start_time TIMESTAMP,
+    next_run_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    repeats INTEGER,
+    retry_failed INTEGER,
+    period INTEGER,
+    prevent_drift CHAR(1),
+    timeout INTEGER,
+    sync_output INTEGER,
+    times_run INTEGER,
+    times_failed INTEGER,
+    last_run_time TIMESTAMP,
+    assigned_worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-05T10:54:52.631722
+CREATE TABLE scheduler_run(
+    id SERIAL PRIMARY KEY,
+    task_id INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    status VARCHAR(512),
+    start_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    run_output TEXT,
+    run_result TEXT,
+    traceback TEXT,
+    worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-05T10:54:52.637536
+CREATE TABLE scheduler_worker(
+    id SERIAL PRIMARY KEY,
+    worker_name VARCHAR(255) UNIQUE,
+    first_heartbeat TIMESTAMP,
+    last_heartbeat TIMESTAMP,
+    status VARCHAR(512),
+    is_ticker CHAR(1),
+    group_names TEXT,
+    worker_stats JSON
+);
+success!
+timestamp: 2014-11-05T10:54:52.642907
+CREATE TABLE scheduler_task_deps(
+    id SERIAL PRIMARY KEY,
+    job_name VARCHAR(512),
+    task_parent INTEGER,
+    task_child INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    can_visit CHAR(1)
+);
+success!
+timestamp: 2014-11-05T11:15:19.914988
+CREATE TABLE scheduler_task(
+    id SERIAL PRIMARY KEY,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args TEXT,
+    vars TEXT,
+    enabled CHAR(1),
+    start_time TIMESTAMP,
+    next_run_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    repeats INTEGER,
+    retry_failed INTEGER,
+    period INTEGER,
+    prevent_drift CHAR(1),
+    timeout INTEGER,
+    sync_output INTEGER,
+    times_run INTEGER,
+    times_failed INTEGER,
+    last_run_time TIMESTAMP,
+    assigned_worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-05T11:15:19.926557
+CREATE TABLE scheduler_run(
+    id SERIAL PRIMARY KEY,
+    task_id INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    status VARCHAR(512),
+    start_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    run_output TEXT,
+    run_result TEXT,
+    traceback TEXT,
+    worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-05T11:15:19.932463
+CREATE TABLE scheduler_worker(
+    id SERIAL PRIMARY KEY,
+    worker_name VARCHAR(255) UNIQUE,
+    first_heartbeat TIMESTAMP,
+    last_heartbeat TIMESTAMP,
+    status VARCHAR(512),
+    is_ticker CHAR(1),
+    group_names TEXT,
+    worker_stats JSON
+);
+success!
+timestamp: 2014-11-05T11:15:19.937863
+CREATE TABLE scheduler_task_deps(
+    id SERIAL PRIMARY KEY,
+    job_name VARCHAR(512),
+    task_parent INTEGER,
+    task_child INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    can_visit CHAR(1)
+);
+success!
+timestamp: 2014-11-05T15:44:31.633417
+CREATE TABLE scheduler_task(
+    id SERIAL PRIMARY KEY,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args TEXT,
+    vars TEXT,
+    enabled CHAR(1),
+    start_time TIMESTAMP,
+    next_run_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    repeats INTEGER,
+    retry_failed INTEGER,
+    period INTEGER,
+    prevent_drift CHAR(1),
+    timeout INTEGER,
+    sync_output INTEGER,
+    times_run INTEGER,
+    times_failed INTEGER,
+    last_run_time TIMESTAMP,
+    assigned_worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-05T15:44:31.800035
+CREATE TABLE scheduler_run(
+    id SERIAL PRIMARY KEY,
+    task_id INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    status VARCHAR(512),
+    start_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    run_output TEXT,
+    run_result TEXT,
+    traceback TEXT,
+    worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-05T15:44:31.857879
+CREATE TABLE scheduler_worker(
+    id SERIAL PRIMARY KEY,
+    worker_name VARCHAR(255) UNIQUE,
+    first_heartbeat TIMESTAMP,
+    last_heartbeat TIMESTAMP,
+    status VARCHAR(512),
+    is_ticker CHAR(1),
+    group_names TEXT,
+    worker_stats JSON
+);
+success!
+timestamp: 2014-11-05T15:44:31.863137
+CREATE TABLE scheduler_task_deps(
+    id SERIAL PRIMARY KEY,
+    job_name VARCHAR(512),
+    task_parent INTEGER,
+    task_child INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    can_visit CHAR(1)
+);
+success!
+timestamp: 2014-11-06T09:51:25.993930
+CREATE TABLE scheduler_task(
+    id SERIAL PRIMARY KEY,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args TEXT,
+    vars TEXT,
+    enabled CHAR(1),
+    start_time TIMESTAMP,
+    next_run_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    repeats INTEGER,
+    retry_failed INTEGER,
+    period INTEGER,
+    prevent_drift CHAR(1),
+    timeout INTEGER,
+    sync_output INTEGER,
+    times_run INTEGER,
+    times_failed INTEGER,
+    last_run_time TIMESTAMP,
+    assigned_worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-06T09:51:26.635475
+CREATE TABLE scheduler_run(
+    id SERIAL PRIMARY KEY,
+    task_id INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    status VARCHAR(512),
+    start_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    run_output TEXT,
+    run_result TEXT,
+    traceback TEXT,
+    worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-06T09:51:26.712715
+CREATE TABLE scheduler_worker(
+    id SERIAL PRIMARY KEY,
+    worker_name VARCHAR(255) UNIQUE,
+    first_heartbeat TIMESTAMP,
+    last_heartbeat TIMESTAMP,
+    status VARCHAR(512),
+    is_ticker CHAR(1),
+    group_names TEXT,
+    worker_stats JSON
+);
+success!
+timestamp: 2014-11-06T09:51:26.717908
+CREATE TABLE scheduler_task_deps(
+    id SERIAL PRIMARY KEY,
+    job_name VARCHAR(512),
+    task_parent INTEGER,
+    task_child INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    can_visit CHAR(1)
+);
+success!
+timestamp: 2014-11-06T14:58:44.982931
+CREATE TABLE scheduler_task(
+    id SERIAL PRIMARY KEY,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args TEXT,
+    vars TEXT,
+    enabled CHAR(1),
+    start_time TIMESTAMP,
+    next_run_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    repeats INTEGER,
+    retry_failed INTEGER,
+    period INTEGER,
+    prevent_drift CHAR(1),
+    timeout INTEGER,
+    sync_output INTEGER,
+    times_run INTEGER,
+    times_failed INTEGER,
+    last_run_time TIMESTAMP,
+    assigned_worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-06T14:58:45.191763
+CREATE TABLE scheduler_run(
+    id SERIAL PRIMARY KEY,
+    task_id INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    status VARCHAR(512),
+    start_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    run_output TEXT,
+    run_result TEXT,
+    traceback TEXT,
+    worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-06T14:58:45.244062
+CREATE TABLE scheduler_worker(
+    id SERIAL PRIMARY KEY,
+    worker_name VARCHAR(255) UNIQUE,
+    first_heartbeat TIMESTAMP,
+    last_heartbeat TIMESTAMP,
+    status VARCHAR(512),
+    is_ticker CHAR(1),
+    group_names TEXT,
+    worker_stats JSON
+);
+success!
+timestamp: 2014-11-06T14:58:45.251287
+CREATE TABLE scheduler_task_deps(
+    id SERIAL PRIMARY KEY,
+    job_name VARCHAR(512),
+    task_parent INTEGER,
+    task_child INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    can_visit CHAR(1)
+);
+success!
+timestamp: 2014-11-06T15:00:49.082468
+CREATE TABLE scheduler_task(
+    id SERIAL PRIMARY KEY,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args TEXT,
+    vars TEXT,
+    enabled CHAR(1),
+    start_time TIMESTAMP,
+    next_run_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    repeats INTEGER,
+    retry_failed INTEGER,
+    period INTEGER,
+    prevent_drift CHAR(1),
+    timeout INTEGER,
+    sync_output INTEGER,
+    times_run INTEGER,
+    times_failed INTEGER,
+    last_run_time TIMESTAMP,
+    assigned_worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-06T15:00:49.126448
+CREATE TABLE scheduler_run(
+    id SERIAL PRIMARY KEY,
+    task_id INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    status VARCHAR(512),
+    start_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    run_output TEXT,
+    run_result TEXT,
+    traceback TEXT,
+    worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-06T15:00:49.132388
+CREATE TABLE scheduler_worker(
+    id SERIAL PRIMARY KEY,
+    worker_name VARCHAR(255) UNIQUE,
+    first_heartbeat TIMESTAMP,
+    last_heartbeat TIMESTAMP,
+    status VARCHAR(512),
+    is_ticker CHAR(1),
+    group_names TEXT,
+    worker_stats JSON
+);
+success!
+timestamp: 2014-11-06T15:00:49.137324
+CREATE TABLE scheduler_task_deps(
+    id SERIAL PRIMARY KEY,
+    job_name VARCHAR(512),
+    task_parent INTEGER,
+    task_child INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    can_visit CHAR(1)
+);
+success!
+timestamp: 2014-11-06T15:02:56.810405
+CREATE TABLE scheduler_task(
+    id SERIAL PRIMARY KEY,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args TEXT,
+    vars TEXT,
+    enabled CHAR(1),
+    start_time TIMESTAMP,
+    next_run_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    repeats INTEGER,
+    retry_failed INTEGER,
+    period INTEGER,
+    prevent_drift CHAR(1),
+    timeout INTEGER,
+    sync_output INTEGER,
+    times_run INTEGER,
+    times_failed INTEGER,
+    last_run_time TIMESTAMP,
+    assigned_worker_name VARCHAR(512)
+);
+timestamp: 2014-11-06T15:03:49.044126
+CREATE TABLE scheduler_task(
+    id SERIAL PRIMARY KEY,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args TEXT,
+    vars TEXT,
+    enabled CHAR(1),
+    start_time TIMESTAMP,
+    next_run_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    repeats INTEGER,
+    retry_failed INTEGER,
+    period INTEGER,
+    prevent_drift CHAR(1),
+    timeout INTEGER,
+    sync_output INTEGER,
+    times_run INTEGER,
+    times_failed INTEGER,
+    last_run_time TIMESTAMP,
+    assigned_worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-06T15:03:49.053601
+CREATE TABLE scheduler_run(
+    id SERIAL PRIMARY KEY,
+    task_id INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    status VARCHAR(512),
+    start_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    run_output TEXT,
+    run_result TEXT,
+    traceback TEXT,
+    worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-06T15:03:49.060401
+CREATE TABLE scheduler_worker(
+    id SERIAL PRIMARY KEY,
+    worker_name VARCHAR(255) UNIQUE,
+    first_heartbeat TIMESTAMP,
+    last_heartbeat TIMESTAMP,
+    status VARCHAR(512),
+    is_ticker CHAR(1),
+    group_names TEXT,
+    worker_stats JSON
+);
+success!
+timestamp: 2014-11-06T15:03:49.065871
+CREATE TABLE scheduler_task_deps(
+    id SERIAL PRIMARY KEY,
+    job_name VARCHAR(512),
+    task_parent INTEGER,
+    task_child INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    can_visit CHAR(1)
+);
+success!
+timestamp: 2014-11-06T15:05:23.693460
+CREATE TABLE scheduler_task(
+    id SERIAL PRIMARY KEY,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args TEXT,
+    vars TEXT,
+    enabled CHAR(1),
+    start_time TIMESTAMP,
+    next_run_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    repeats INTEGER,
+    retry_failed INTEGER,
+    period INTEGER,
+    prevent_drift CHAR(1),
+    timeout INTEGER,
+    sync_output INTEGER,
+    times_run INTEGER,
+    times_failed INTEGER,
+    last_run_time TIMESTAMP,
+    assigned_worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-06T15:05:23.702175
+CREATE TABLE scheduler_run(
+    id SERIAL PRIMARY KEY,
+    task_id INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    status VARCHAR(512),
+    start_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    run_output TEXT,
+    run_result TEXT,
+    traceback TEXT,
+    worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-06T15:05:23.707997
+CREATE TABLE scheduler_worker(
+    id SERIAL PRIMARY KEY,
+    worker_name VARCHAR(255) UNIQUE,
+    first_heartbeat TIMESTAMP,
+    last_heartbeat TIMESTAMP,
+    status VARCHAR(512),
+    is_ticker CHAR(1),
+    group_names TEXT,
+    worker_stats JSON
+);
+success!
+timestamp: 2014-11-06T15:05:23.713425
+CREATE TABLE scheduler_task_deps(
+    id SERIAL PRIMARY KEY,
+    job_name VARCHAR(512),
+    task_parent INTEGER,
+    task_child INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    can_visit CHAR(1)
+);
+success!
+timestamp: 2014-11-06T15:29:05.301302
+CREATE TABLE analysis(
+    id SERIAL PRIMARY KEY,
+    analysis_name VARCHAR(512),
+    description VARCHAR(512),
+    case_query VARCHAR(512),
+    control_query VARCHAR(512),
+    modifier_query VARCHAR(512)
+);
+success!
+timestamp: 2014-11-06T15:29:05.339565
+CREATE TABLE balanced_meta(
+    id SERIAL PRIMARY KEY,
+    analysis_id INTEGER REFERENCES analysis (id) ON DELETE CASCADE,
+    mygene_sym VARCHAR(512),
+    mygene_entrez INTEGER,
+    C FLOAT8,
+    H FLOAT8,
+    I2 FLOAT8,
+    Q FLOAT8,
+    TE FLOAT8,
+    TE_fixed FLOAT8,
+    TE_random FLOAT8,
+    TE_tau FLOAT8,
+    bylab VARCHAR(512),
+    byvar VARCHAR(512),
+    call FLOAT8,
+    caseDataCount FLOAT8,
+    comb_fixed FLOAT8,
+    comb_random FLOAT8,
+    complab VARCHAR(512),
+    controlDataCount FLOAT8,
+    data FLOAT8,
+    df_Q FLOAT8,
+    df_hakn FLOAT8,
+    hakn FLOAT8,
+    k FLOAT8,
+    label_c VARCHAR(512),
+    label_e VARCHAR(512),
+    label_left VARCHAR(512),
+    label_right VARCHAR(512),
+    level FLOAT8,
+    level_comb FLOAT8,
+    level_predict FLOAT8,
+    lower_H FLOAT8,
+    lower_I2 FLOAT8,
+    lower_fixed FLOAT8,
+    lower_predict FLOAT8,
+    lower_random FLOAT8,
+    mean_c FLOAT8,
+    mean_e FLOAT8,
+    method VARCHAR(512),
+    method_bias VARCHAR(512),
+    method_tau VARCHAR(512),
+    n_c FLOAT8,
+    n_e FLOAT8,
+    outclab FLOAT8,
+    prediction FLOAT8,
+    print_byvar FLOAT8,
+    pval_fixed FLOAT8,
+    pval_random FLOAT8,
+    sd_c FLOAT8,
+    sd_e FLOAT8,
+    se_tau2 FLOAT8,
+    seTE FLOAT8,
+    seTE_fixed FLOAT8,
+    seTE_predict FLOAT8,
+    seTE_random FLOAT8,
+    sm VARCHAR(512),
+    studlab VARCHAR(512),
+    subset VARCHAR(512),
+    tau FLOAT8,
+    tau_common FLOAT8,
+    tau_preset FLOAT8,
+    title VARCHAR(512),
+    upper_H FLOAT8,
+    upper_I2 FLOAT8,
+    upper_fixed FLOAT8,
+    upper_predict FLOAT8,
+    upper_random FLOAT8,
+    version VARCHAR(512),
+    w_fixed FLOAT8,
+    w_random FLOAT8,
+    warn CHAR(1),
+    zval_fixed FLOAT8,
+    zval_random FLOAT8,
+    effect_size FLOAT8,
+    direction VARCHAR(512)
+);
+success!
+timestamp: 2014-11-06T15:29:05.350234
+CREATE TABLE scheduler_task(
+    id SERIAL PRIMARY KEY,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args TEXT,
+    vars TEXT,
+    enabled CHAR(1),
+    start_time TIMESTAMP,
+    next_run_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    repeats INTEGER,
+    retry_failed INTEGER,
+    period INTEGER,
+    prevent_drift CHAR(1),
+    timeout INTEGER,
+    sync_output INTEGER,
+    times_run INTEGER,
+    times_failed INTEGER,
+    last_run_time TIMESTAMP,
+    assigned_worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-06T15:29:05.356314
+CREATE TABLE scheduler_run(
+    id SERIAL PRIMARY KEY,
+    task_id INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    status VARCHAR(512),
+    start_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    run_output TEXT,
+    run_result TEXT,
+    traceback TEXT,
+    worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-06T15:29:05.365331
+CREATE TABLE scheduler_worker(
+    id SERIAL PRIMARY KEY,
+    worker_name VARCHAR(255) UNIQUE,
+    first_heartbeat TIMESTAMP,
+    last_heartbeat TIMESTAMP,
+    status VARCHAR(512),
+    is_ticker CHAR(1),
+    group_names TEXT,
+    worker_stats JSON
+);
+success!
+timestamp: 2014-11-06T15:29:05.370813
+CREATE TABLE scheduler_task_deps(
+    id SERIAL PRIMARY KEY,
+    job_name VARCHAR(512),
+    task_parent INTEGER,
+    task_child INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    can_visit CHAR(1)
+);
+success!

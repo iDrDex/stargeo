@@ -33,7 +33,8 @@ def get_df_from_stream(stream, entity):
         .groupby(index_col) \
         .aggregate(uni_cat) \
         .T
-    df.index.attribute_name = index_col
+    df.index.name = index_col
+    df = df.reset_index() #may want to store title
     df.columns = get_clean_columns(df.columns)
     return df
 
@@ -292,15 +293,15 @@ def insert_attributes():
     if row:
         lastGse = row[0][0]
     # for filename in walk_files("/Users/dex/geo_mirror/DATA/SeriesMatrix"):
-    for filename in walk_files("geo_mirror/DATA/SeriesMatrix"):
+    for filename in walk_files("/Volumes/Archives/geo_mirror/DATA/SeriesMatrix"):
         basename = os.path.basename(filename)
         gse_name = basename.split("_")[0].split("-")[0]
         print basename
-        if (gse_name == lastGse) or not lastGse:
-            isLast = True
-        if not isLast:
-            print "\tskipping"
-            continue
+        # if (gse_name == lastGse) or not lastGse:
+        #     isLast = True
+        # if not isLast:
+        #     print "\tskipping"
+        #     continue
 
         entities = "Series Platform Sample".split()
         entity2stream = get_entity2stream(filename, entities)
@@ -318,6 +319,7 @@ def insert_attributes():
         series_rec = db(Series.gse_name == gse_name).select().first() \
                      or Series(Series.insert(gse_name=gse_name))
         for attribute_name in series.columns:
+            if attribute_name <> "series_title": continue
             attribute_value = uni_cat(series[attribute_name])
             # attribute_name = attribute_name.replace("Series_", "")
             series_attribute_rec = db((Series_Attribute.series_id == series_rec.id) & \
@@ -346,6 +348,8 @@ def insert_attributes():
                                                  platform_id=platform_rec.id))
             attribute_name2value = samples.ix[gsm_name].to_dict()
             for attribute_name in attribute_name2value:
+                if attribute_name <> "sample_title": continue
+
                 attribute_value = attribute_name2value[attribute_name].strip()
                 # if attribute_value:
                 # if type(attribute_value) == str:
@@ -482,7 +486,7 @@ def filter_stream(inStream, beginToken="!platform_table_begin", endToken="!platf
         return outStream
 
 
-def get_probes(gpl_filenames):
+def get_probes_from_files(gpl_filenames):
     import pandas as pd
 
     gpl_filename = gpl_filenames[0]
@@ -716,7 +720,7 @@ def insert_myGenes():
         gpl_filenames, columns, identifier_scopes = get_probe_info(gpl_name)
         myGenes_count = 0
         for identifier, scopes in identifier_scopes:
-            probes = get_probes(gpl_filenames)
+            probes = get_probes_from_files(gpl_filenames)
             probes.columns = columns
             probes = probes.dropna(subset=[identifier])
 
@@ -741,7 +745,8 @@ def insert_myGenes():
                 print "Postgres inserting %s probes..." % myGenes_count
                 rows = myGenes.T.to_dict().values()
                 Platform_Probe.bulk_insert(rows)
-                db(Platform.id == platform_id).update(scopes=scopes, identifier=identifier)
+                datafile = gpl_filenames[0]
+                db(Platform.id == platform_id).update(scopes=scopes, identifier=identifier, datafile = datafile)
                 db.commit()
                 print "done %s probes!" % myGenes_count
                 break
@@ -752,9 +757,8 @@ def insert_myGenes():
 
 
 if __name__ == '__main__':
-    # query_gb(['W86537', 'H09532', 'AA101617', 'AA101616', 'AI252845', 'AI252843', 'AI822026', 'AI252849'])
-    insert_myGenes()
-    # get_probes('GPL6104')
+    insert_attributes()
+    # insert_myGenes()
     # get_series_cross_tab()
     # get_sample_cross_tab()
     # get_sample_tag_cross_tab()

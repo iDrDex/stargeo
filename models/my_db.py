@@ -37,33 +37,30 @@ Series_View = db.define_table('series_view',
                                 for field in session.all_series_attribute_names],
                               migrate=False)
 
-
 Search = db.define_table('search',
-                      Field('id', 'id', readable=False, writable=False),
-                      Field('fts_query', unique=True),
-                      format='%(fts_query)s',
-                      migrate='search.table'
+                         Field('id', 'id', readable=False, writable=False),
+                         Field('fts_query', unique=True),
+                         format='%(fts_query)s',
+                         migrate='search.table'
 )
 
-
 User_Search = db.define_table('user_search',
-                      Field('id', 'id', readable=False, writable=False),
-                      Field('search_id', "reference search"),
-                      Field('keywords'),
-                      Field('fts_query'),
-                      auth.signature,
-                      format='%(search_id)s_%(auth_user_id)s',
-                      migrate='user_search.table'
+                              Field('id', 'id', readable=False, writable=False),
+                              Field('search_id', "reference search"),
+                              Field('keywords'),
+                              Field('fts_query'),
+                              auth.signature,
+                              format='%(search_id)s_%(auth_user_id)s',
+                              migrate='user_search.table'
 )
 
 Series_View_Results = db.define_table('series_view_results',
-                      Field('id', 'id', readable=False, writable=False),
-                      Field('series_view_id', 'integer', readable=False, writable=False),
-                      Field('search_id', 'reference search', readable=False, writable=False),
-                      format='%(keywords)s',
-                      migrate='series_view_results.table'
+                                      Field('id', 'id', readable=False, writable=False),
+                                      Field('series_view_id', 'integer', readable=False, writable=False),
+                                      Field('search_id', 'reference search', readable=False, writable=False),
+                                      format='%(keywords)s',
+                                      migrate='series_view_results.table'
 )
-
 
 Platform = db.define_table('platform',
                            Field('id', 'id', readable=False, writable=False),
@@ -72,6 +69,7 @@ Platform = db.define_table('platform',
                            Field('scopes', 'text', writable=False),
                            Field('scopes', 'text', writable=False),
                            Field('identifier', 'text', writable=False),
+                           Field('datafile', 'text', writable=False),
                            format='%(gpl_name)s',
                            migrate='platform.table'
 )
@@ -86,15 +84,14 @@ Platform_Attribute = db.define_table('platform_attribute',
 )
 
 Platform_Probe = db.define_table('platform_probe',
-                                     Field('id', 'id', readable=False, writable=False),
-                                     Field('platform_id', 'reference platform', writable=False),
-                                     Field('probe', 'text', writable=False),
-                                     Field('myGene_sym', 'text', writable=False),
-                                     Field('myGene_entrez', 'integer', writable=False),
-                                     format='%(platform_id)s_%(probe)s',
-                                     migrate='platform_probe.table'
+                                 Field('id', 'id', readable=False, writable=False),
+                                 Field('platform_id', 'reference platform', writable=False),
+                                 Field('probe', 'text', writable=False),
+                                 Field('myGene_sym', 'text', writable=False),
+                                 Field('myGene_entrez', 'integer', writable=False),
+                                 format='%(platform_id)s_%(probe)s',
+                                 migrate='platform_probe.table'
 )
-
 
 Sample = db.define_table('sample',
                          Field('id', 'id', readable=False, writable=False),
@@ -132,13 +129,12 @@ Sample_View = db.define_table('sample_view',
                               migrate=False)
 
 Sample_View_Results = db.define_table('sample_view_results',
-                      Field('id', 'id', readable=False, writable=False),
-                      Field('sample_view_id', 'integer', readable=False, writable=False),
-                      Field('search_id', 'reference search', readable=False, writable=False),
-                      format='%(keywords)s',
-                      migrate='sample_view_results.table'
+                                      Field('id', 'id', readable=False, writable=False),
+                                      Field('sample_view_id', 'integer', readable=False, writable=False),
+                                      Field('search_id', 'reference search', readable=False, writable=False),
+                                      format='%(keywords)s',
+                                      migrate='sample_view_results.table'
 )
-
 
 Tag = db.define_table('tag',
                       Field('id', 'id', readable=False, writable=False),
@@ -148,8 +144,6 @@ Tag = db.define_table('tag',
                       format='%(tag_name)s',
                       migrate='tag.table'
 )
-
-
 
 Series_Tag = db.define_table('series_tag',
                              Field('id', 'id', readable=False, writable=False),
@@ -204,16 +198,13 @@ Sample_Tag_View = db.define_table('sample_tag_view',
                                     for field in session.all_sample_tag_names],
                                   migrate=False)
 
-
-
 Sample_Tag_View_Results = db.define_table('sample_tag_view_results',
-                      Field('id', 'id', readable=False, writable=False),
-                      Field('sample_tag_view_id', 'integer', readable=False, writable=False),
-                      Field('search_id', 'reference search', readable=False, writable=False),
-                      format='%(keywords)s',
-                      migrate='sample_tag_view_results.table'
+                                          Field('id', 'id', readable=False, writable=False),
+                                          Field('sample_tag_view_id', 'integer', readable=False, writable=False),
+                                          Field('search_id', 'reference search', readable=False, writable=False),
+                                          format='%(keywords)s',
+                                          migrate='sample_tag_view_results.table'
 )
-
 
 Series_Tag_View = db.define_table('series_tag_view',
                                   Field('id', 'id', readable=False, writable=False),
@@ -227,12 +218,139 @@ Series_Tag_View = db.define_table('series_tag_view',
                                   migrate=False)
 
 Series_Tag_View_Results = db.define_table('series_tag_view_results',
-                      Field('id', 'id', readable=False, writable=False),
-                      Field('series_tag_view_id', 'integer', readable=False, writable=False),
-                      Field('search_id', 'reference search', readable=False, writable=False),
-                      format='%(keywords)s',
-                      migrate='series_tag_view_results.table'
+                                          Field('id', 'id', readable=False, writable=False),
+                                          Field('series_tag_view_id', 'integer', readable=False, writable=False),
+                                          Field('search_id', 'reference search', readable=False, writable=False),
+                                          format='%(keywords)s',
+                                          migrate='series_tag_view_results.table'
 )
 
-def update_sample_cross_tab(form, arg): #delete from home page
+
+def update_sample_cross_tab(form, arg):  # delete from home page
     get_sample_tag_cross_tab()
+
+
+
+Counts = db.define_table('counts',
+                         Field('id', 'id', readable=False, writable=False),
+                         Field('what'),
+                         Field('count'),
+                         migrate="counts.table"
+)
+
+# Special pandas processor
+# http://stackoverflow.com/questions/17039699/web2py-webserver-best-way-to-keep-connection-to-external-sql-server
+def pandas_processor(rows, fields, columns, cacheable):
+    from pandas import DataFrame
+
+    # print "Reading PANDAS df"
+    df = DataFrame \
+        .from_records(rows, columns=columns) \
+        .convert_objects(convert_numeric=True)
+    # print "done"
+    return df
+
+class IS_PANDAS_QUERY:
+    def __init__(self, error_message='Must be a valid query'):
+        self.error_message = error_message
+        self.df = get_full_df()
+
+    def __call__(self, value):
+        try:
+            if value:
+                self.df.query(value.lower())
+            return value, None
+        except:
+            return (value, self.error_message)
+
+Analysis = db.define_table('analysis',
+                           Field('id', 'id', readable=False, writable=False),
+                           Field('analysis_name', requires=IS_NOT_EMPTY()),
+                           Field('description'),
+                           Field('case_query', requires=[IS_NOT_EMPTY(), IS_PANDAS_QUERY()]),
+                           Field('control_query', requires=[IS_NOT_EMPTY(), IS_PANDAS_QUERY()]),
+                           Field('modifier_query', requires=IS_PANDAS_QUERY()),
+                           migrate="analysis.table"
+)
+
+Balanced_Meta = db.define_table('balanced_meta',
+                                Field('id', 'id', readable=False, writable=False),
+                                Field('analysis_id', 'reference analysis', readable=False, writable=False),
+                                Field('mygene_sym'),
+                                Field('mygene_entrez', 'integer'),
+                                Field('C', 'double'),
+                                Field('H', 'double'),
+                                Field('I2', 'double'),
+                                Field('Q', 'double'),
+                                Field('TE', 'double'),
+                                Field('TE_fixed', 'double'),
+                                Field('TE_random', 'double'),
+                                Field('TE_tau', 'double'),
+                                Field('bylab'),
+                                Field('byvar'),
+                                Field('call', 'double'),
+                                Field('caseDataCount', 'double'),
+                                Field('comb_fixed', 'double'),
+                                Field('comb_random', 'double'),
+                                Field('complab'),
+                                Field('controlDataCount', 'double'),
+                                Field('data', 'double'),
+                                Field('df_Q', 'double'),
+                                Field('df_hakn', 'double'),
+                                Field('hakn', 'double'),
+                                Field('k', 'double'),
+                                Field('label_c'),
+                                Field('label_e'),
+                                Field('label_left'),
+                                Field('label_right'),
+                                Field('level', 'double'),
+                                Field('level_comb', 'double'),
+                                Field('level_predict', 'double'),
+                                Field('lower_H', 'double'),
+                                Field('lower_I2', 'double'),
+                                Field('lower_fixed', 'double'),
+                                Field('lower_predict', 'double'),
+                                Field('lower_random', 'double'),
+                                Field('mean_c', 'double'),
+                                Field('mean_e', 'double'),
+                                Field('method'),
+                                Field('method_bias'),
+                                Field('method_tau'),
+                                Field('n_c', 'double'),
+                                Field('n_e', 'double'),
+                                Field('outclab', 'double'),
+                                Field('prediction', 'double'),
+                                Field('print_byvar', 'double'),
+                                Field('pval_fixed', 'double'),
+                                Field('pval_random', 'double'),
+                                Field('sd_c', 'double'),
+                                Field('sd_e', 'double'),
+                                Field('se_tau2', 'double'),
+                                Field('seTE', 'double'),
+                                Field('seTE_fixed', 'double'),
+                                Field('seTE_predict', 'double'),
+                                Field('seTE_random', 'double'),
+                                Field('sm'),
+                                Field('studlab'),
+                                Field('subset'),
+                                Field('tau', 'double'),
+                                Field('tau_common', 'double'),
+                                Field('tau_preset', 'double'),
+                                Field('title'),
+                                Field('upper_H', 'double'),
+                                Field('upper_I2', 'double'),
+                                Field('upper_fixed', 'double'),
+                                Field('upper_predict', 'double'),
+                                Field('upper_random', 'double'),
+                                Field('version'),
+                                Field('w_fixed', 'double'),
+                                Field('w_random', 'double'),
+                                Field('warn', 'boolean'),
+                                Field('zval_fixed', 'double'),
+                                Field('zval_random', 'double'),
+                                Field('effect_size', 'double'),
+                                Field('direction'),
+                                format='%(mmygene_sym)s',
+                                migrate='balanced_meta.table'
+
+)
