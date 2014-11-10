@@ -820,15 +820,9 @@ def create_series_attribute_header_view():
     print "Done"
 
 
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
+    get_sample_tag_cross_tab()
+    1/0
     # create_sample_attribute_header_view()
     # create_series_attribute_header_view()
     # insert_attributes()

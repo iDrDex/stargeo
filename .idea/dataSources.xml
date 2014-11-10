@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="385931521">
+    <data-source source="LOCAL" name="PostgreSQL - star@star.cwxuiazqnkkn.us-west-2.rds.amazonaws.com" uuid="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://star.cwxuiazqnkkn.us-west-2.rds.amazonaws.com:5432/star</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfd8dfcfdfc4dfcedfcfdfd0</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

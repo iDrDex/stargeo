@@ -7,8 +7,11 @@ def add():
     form.add_button("Cancel", URL('index', vars=request.get_vars))
     if form.process().accepted:
         # get_sample_tag_cross_tab()  # rebuild tables
-        session.tag_form_vars.tag_id = form.vars.id
-        session.tag_count = None
+        if 'tag_form_vars' not in session:
+            session.tag_form_cars = form.vars
+        else: session.tag_form_vars.tag_id = form.vars.id
+        # session.tag_count = None
+        get_sample_tag_cross_tab()
         redirect(URL('index', vars=request.get_vars))
     return dict(form=form)
 

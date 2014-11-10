@@ -2025,3 +2025,7 @@ CREATE TABLE scheduler_task_deps(
     can_visit CHAR(1)
 );
 success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
