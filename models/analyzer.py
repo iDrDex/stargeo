@@ -1,12 +1,14 @@
-import rpy2.robjects as robjects, pandas.rpy.common as com, numpy as np, pandas as pd
+import  pandas.rpy.common as com, numpy as np, pandas as pd
+import rpy2.robjects as robjects
 r = robjects.r
 
-# print session
 
 def get_full_df():
-    # print "GET FULL DF", session
-
-    tags = [tag.lower() for tag in session.all_sample_tag_names]
+    tags = [row.tag_name.lower()
+            for row in
+            db().select(Tag.tag_name,
+                        distinct=True,
+                        orderby=Tag.tag_name)]
     df = db((Sample_Tag_View.sample_id == Sample.id) &
             (Sample_Tag_View.series_id == Series.id) &
             (Sample_Tag_View.platform_id == Platform.id)) \
@@ -32,6 +34,7 @@ def get_full_df():
             if clean_df.dtypes[col] == object:
                 clean_df[col] = clean_df[col].str.lower()
     return clean_df
+
 
 def get_analysis_df(case_query, control_query, modifier_query):
     df = get_full_df()
@@ -238,16 +241,16 @@ class GseAnalyzer:
                 allResults = pd.concat([allResults, table.reset_index()])
             # Studies with defined SAMPLE CLASS
             else:
-                #at least 2 samples required
+                # at least 2 samples required
                 if len(df.sample_class) < 3:
                     print "skipping for insufficient data", df.sample_class
                     continue
-                #at least 1 case and control required
+                # at least 1 case and control required
                 classes = df.sample_class.unique()
                 if not (0 in classes and 1 in classes):
                     print "skipping for insufficient data", df.sample_class
                     continue
-                #data.to_csv("data.test.csv")
+                # data.to_csv("data.test.csv")
                 sample_class = df.ix[data.columns].sample_class
 
                 if how == 'fc':
@@ -284,7 +287,9 @@ class GseAnalyzer:
                     table['gpl'] = gpl
                     table['gse'] = self.gse.name
                     probes = gse.gpl2probes[gpl]
-                    table = table.join(probes[['mygene_entrez', 'mygene_sym']])
+                    table = table \
+                        .join(probes[['mygene_entrez', 'mygene_sym']]) \
+                        .dropna(subset=['mygene_entrez', 'mygene_sym'])
                     allResults = pd.concat([allResults, table.reset_index()])
         # allResults.index.name = "probe"
         self.results = allResults

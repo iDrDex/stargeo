@@ -16,25 +16,19 @@ Series_Attribute = db.define_table('series_attribute',
                                    migrate='series_attribute.table'
 )
 
-session.all_series_attribute_names = session.all_series_attribute_names or [row.attribute_name
-                                                                            for row in
-                                                                            db().select(Series_Attribute.attribute_name,
-                                                                                        distinct=True,
-                                                                                        orderby=Series_Attribute.attribute_name)]
-
-# https://groups.google.com/forum/#!topic/web2py/EzC_V9pyV6s
-# not needed since its views I'm custom searching
-# from gluon.dal import SQLCustomType
-# tsv = SQLCustomType(type='text', native='tsvector')
-
+Series_Attribute_Header = db.define_table('series_attribute_header',
+                                          Field('id', 'id', readable=False, writable=False),
+                                          Field('header'),
+                                          migrate=False
+)
 
 Series_View = db.define_table('series_view',
                               Field('id', 'id', readable=False, writable=False),
-                              # Field('doc', tsv, readable=False, writable=False),
                               Field('series_id', 'reference series', writable=False),
-                              *[Field(field, 'text',
+                              *[Field(rec.header, 'text',
+                                      writable=False,
                                       represent=lambda value, row: value or "")
-                                for field in session.all_series_attribute_names],
+                                for rec in db(Series_Attribute_Header).select()],
                               migrate=False)
 
 Search = db.define_table('search',
@@ -111,21 +105,22 @@ Sample_Attribute = db.define_table('sample_attribute',
                                    migrate='sample_attribute.table'
 )
 
-session.all_sample_field_names = session.all_sample_field_names or [row.attribute_name
-                                                                    for row in
-                                                                    db().select(Sample_Attribute.attribute_name,
-                                                                                distinct=True,
-                                                                                orderby=Sample_Attribute.attribute_name)]
+Sample_Attribute_Header = db.define_table('sample_attribute_header',
+                                          Field('id', 'id', readable=False, writable=False),
+                                          Field('header'),
+                                          Field('num', 'integer'),
+                                          migrate=False
+)
 
 Sample_View = db.define_table('sample_view',
                               Field('id', 'id', readable=False, writable=False),
                               Field('series_id', 'reference series', writable=False),
                               Field('platform_id', 'reference platform', writable=False),
                               Field('sample_id', 'reference sample', writable=False),
-                              *[Field(field, 'text',
+                              *[Field(rec.header, 'text',
                                       writable=False,
                                       represent=lambda value, row: value or "")
-                                for field in session.all_sample_field_names],
+                                for rec in db(Sample_Attribute_Header).select()],
                               migrate=False)
 
 Sample_View_Results = db.define_table('sample_view_results',
@@ -181,12 +176,6 @@ Sample_View_Annotation_Filter = db.define_table('sample_view_annotation_filter',
                                                 migrate="sample_view_annotation_filter.table"
 )
 
-session.all_sample_tag_names = session.all_sample_tag_names or [row.tag_name
-                                                                for row in
-                                                                db().select(Tag.tag_name,
-                                                                            distinct=True,
-                                                                            orderby=Tag.tag_name)]
-
 Sample_Tag_View = db.define_table('sample_tag_view',
                                   Field('id', 'id', readable=False, writable=False),
                                   Field('series_id', 'reference series', writable=False),
@@ -195,7 +184,11 @@ Sample_Tag_View = db.define_table('sample_tag_view',
                                   *[Field(field, 'text',
                                           writable=False,
                                           represent=lambda value, row: value or "")
-                                    for field in session.all_sample_tag_names],
+                                    for field in [row.tag_name
+                                                  for row in
+                                                  db().select(Tag.tag_name,
+                                                              distinct=True,
+                                                              orderby=Tag.tag_name)]],
                                   migrate=False)
 
 Sample_Tag_View_Results = db.define_table('sample_tag_view_results',
@@ -214,7 +207,11 @@ Series_Tag_View = db.define_table('series_tag_view',
                                   *[Field(field, 'integer',
                                           writable=False,
                                           represent=lambda value, row: value or "")
-                                    for field in session.all_sample_tag_names],
+                                    for field in [row.tag_name
+                                                  for row in
+                                                  db().select(Tag.tag_name,
+                                                              distinct=True,
+                                                              orderby=Tag.tag_name)]],
                                   migrate=False)
 
 Series_Tag_View_Results = db.define_table('series_tag_view_results',
@@ -228,7 +225,6 @@ Series_Tag_View_Results = db.define_table('series_tag_view_results',
 
 def update_sample_cross_tab(form, arg):  # delete from home page
     get_sample_tag_cross_tab()
-
 
 
 Counts = db.define_table('counts',
@@ -250,6 +246,7 @@ def pandas_processor(rows, fields, columns, cacheable):
     # print "done"
     return df
 
+
 class IS_PANDAS_QUERY:
     def __init__(self, error_message='Must be a valid query'):
         self.error_message = error_message
@@ -262,6 +259,7 @@ class IS_PANDAS_QUERY:
             return value, None
         except:
             return (value, self.error_message)
+
 
 Analysis = db.define_table('analysis',
                            Field('id', 'id', readable=False, writable=False),

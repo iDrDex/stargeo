@@ -156,7 +156,7 @@ def get_grid():
     view = db["%s_view" % request.controller]
     session.start_time = time.time()  # sets the counter
     query = searchable(fields=view, keywords=request.vars.keywords)
-    field = None
+    fields = None
     if request.controller.endswith("_tag"):
         fields = get_tag_headers(view, query)
     elif not request.vars.invariant:

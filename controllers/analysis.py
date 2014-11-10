@@ -9,16 +9,18 @@ def index():
                                        fields=[Scheduler_Task.vars, Scheduler_Task.status, Scheduler_Task.start_time],
                                        orderby=~Scheduler_Task.id,
                                        create=None,
-                                       search_widget=None
+                                       search_widget=None,
+                                       searchable=None
                 ),
                 results=SQLFORM.grid(Analysis,
-                                  orderby=~Analysis.id,
-                                  search_widget=None,
-                                  create=None,
-                                  # buttons_placement='left',
-                                  links=[lambda row: A("Results", _href=URL('results',
-                                                                            vars=dict(
-                                                                                analysis_id=row.id)))],
+                                     orderby=~Analysis.id,
+                                     search_widget=None,
+                                     searchable=None,
+                                     create=None,
+                                     # buttons_placement='left',
+                                     links=[lambda row: A("Results", _href=URL('results',
+                                                                               vars=dict(
+                                                                                   analysis_id=row.id)))],
                 )
     )
 
@@ -58,20 +60,17 @@ def analyze():
                  case_query=request.vars.case_query,
                  control_query=request.vars.control_query,
                  modifier_query=request.vars.modifier_query)
-    # task_analyze(**pvars)
-    scheduler.queue_task(
-    task_analyze,
-        pvars=pvars,
-        timeout=3600,
-        immediate=True,
-    )
-
-
-    # scheduler.queue_task('balanced_meta', pvars=dict(analysis_name=request.vars.analysis_name,
-    # description=request.vars.description,
-    #              case_query=request.vars.case_query,
-    #              control_query=request.vars.control_query,
-    #              modifier_query=request.vars.modifier_query)
-    # )
-    session.flash = T("Analysis '%s' queued..." % request.vars.analysis_name)
+    go(pvars, debug=True)
     redirect(URL('index'))
+
+
+def go(pvars, debug=False):
+    task_analyze(**pvars) \
+        if debug else \
+        scheduler.queue_task('balanced_meta', pvars=dict(analysis_name=request.vars.analysis_name,
+                                                         description=request.vars.description,
+                                                         case_query=request.vars.case_query,
+                                                         control_query=request.vars.control_query,
+                                                         modifier_query=request.vars.modifier_query)
+        )
+    session.flash = T("Analysis '%s' queued..." % request.vars.analysis_name)

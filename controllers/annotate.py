@@ -2,9 +2,49 @@ __author__ = 'dex'
 
 import re
 
-
 @auth.requires_login()
 def index():
+    # tag and regex must be defined
+    tag_id, regex = (session.tag_form_vars.tag_id, session.tag_form_vars.regex) \
+        if 'tag_form_vars' in session \
+           and session.tag_form_vars.tag_id \
+           and session.tag_form_vars.regex \
+        else redirect(URL('default', 'index'))
+
+    __setup_filter()
+    headers = session.tag_form_vars.headers
+    fields = [Sample_View['sample_id'],
+              Sample_View['platform_id'],
+              Sample_View_Annotation_Filter['annotation'],
+             ] + \
+             ([Sample_View[session.tag_form_vars.header]] if session.tag_form_vars.header \
+                  else [Sample_View[header] for header in headers])
+
+    # set up form defaults as readonly
+    for field in Series_Tag._fields[1:]:
+        Series_Tag[field].default = session.tag_form_vars[field]
+        Series_Tag[field].writable = False
+
+    form = SQLFORM(Series_Tag, submit_button="Save")
+    form.add_button("Cancel", URL('tag', 'index', vars=request.get_vars))
+    if form.validate():
+        return __save()
+
+    return dict(
+        form=form,
+        grid=SQLFORM.grid((Sample_View_Annotation_Filter.sample_view_id == Sample_View.id) & \
+                          (Sample_View_Annotation_Filter.session_id == response.session_id),
+                          searchable=None,
+                          search_widget=None,
+                          details=False,
+                          deletable=False,
+                          create=False,
+                          user_signature=False,
+                          maxtextlength=1000 if fields else 20,
+                          fields=fields)
+    )
+
+def __setup_filter():
     # SERIES ID
     series_id = request.vars.series_id or \
                 (session.tag_form_vars.series_id \
@@ -41,52 +81,6 @@ def index():
             sample_view_id=row.id,
             annotation=annotation)
 
-    redirect(URL('edit', vars=request.get_vars))
-
-
-@auth.requires_login()
-def edit():
-    # tag and regex must be defined
-    tag_id, regex = (session.tag_form_vars.tag_id, session.tag_form_vars.regex) \
-        if 'tag_form_vars' in session \
-           and session.tag_form_vars.tag_id \
-           and session.tag_form_vars.regex \
-        else redirect(URL('default', 'index'))
-
-    headers = session.tag_form_vars.headers
-    fields = [Sample_View['sample_id'],
-              Sample_View['platform_id'],
-              Sample_View_Annotation_Filter['annotation'],
-             ] + \
-             ([Sample_View[session.tag_form_vars.header]] if session.tag_form_vars.header \
-                  else [Sample_View[header] for header in headers])
-
-    # set up form defaults as readonly
-    for field in Series_Tag._fields[1:]:
-        Series_Tag[field].default = session.tag_form_vars[field]
-        Series_Tag[field].writable = False
-
-    form = SQLFORM(Series_Tag, submit_button="Save")
-    form.add_button("Cancel", URL('tag', 'index', vars=request.get_vars))
-    if form.validate():
-        return __save()
-
-    return dict(
-        form=form,
-        grid=SQLFORM.grid((Sample_View_Annotation_Filter.sample_view_id == Sample_View.id) & \
-                          (Sample_View_Annotation_Filter.session_id == response.session_id),
-                          searchable=None,
-                          search_widget=None,
-                          details=False,
-                          deletable=False,
-                          create=False,
-                          user_signature=False,
-                          maxtextlength=1000 if fields else 20,
-                          fields=fields)
-    )
-
-
-@auth.requires_login()
 def __save():
     platform_id = session.tag_form_vars.platform_id
     platform_ids = [platform_id] if platform_id \

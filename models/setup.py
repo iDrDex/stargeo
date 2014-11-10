@@ -34,7 +34,7 @@ def get_df_from_stream(stream, entity):
         .aggregate(uni_cat) \
         .T
     df.index.name = index_col
-    df = df.reset_index() #may want to store title
+    df = df.reset_index()  # may want to store title
     df.columns = get_clean_columns(df.columns)
     return df
 
@@ -85,29 +85,28 @@ def get_entity2stream(filename, entities):
 
 
 def get_sample_cross_tab():
-    print "reading attribute names"
-    attribute_names = db().select(Sample_Attribute.attribute_name,
-                                  orderby=Sample_Attribute.attribute_name,
-                                  distinct=True)
+    print "creating header view"
+    create_sample_attribute_header_view()
+    headers = db(Sample_Attribute_Header).select(Sample_Attribute_Header.header)
+    print "creating view"
     # INDEX source attribute
     create_indices_on_postgres([('sample_attribute', 'attribute_name')], unique=False)  # for view cols
     create_indices_on_postgres([('sample_attribute', 'sample_id, attribute_name')])  # for aggregate function
 
     # CREATE VIEW
-    print "creating view"
     db.executesql("DROP MATERIALIZED VIEW IF EXISTS sample_view CASCADE;")
     db.executesql("DROP INDEX IF EXISTS sample_view_fts_idx CASCADE;")
     db.executesql("DROP SEQUENCE IF EXISTS sample_attribute_sequence CASCADE;")
     db.executesql("""CREATE SEQUENCE sample_attribute_sequence;""")
     attributesSql = "," \
         .join(["""string_agg(CASE attribute_name WHEN '%s' THEN attribute_value END, '///') as %s \n""" \
-               % (row['attribute_name'], row['attribute_name'])
-               for row in attribute_names])
+               % (row.header, row.header)
+               for row in headers])
     docSql = "to_tsvector('english', gse_name) || " + \
              "||".join([
                  """to_tsvector('english', coalesce(string_agg(CASE attribute_name WHEN '%s' THEN attribute_value END, '///'), ''))\n""" \
-                 % (row['attribute_name'])
-                 for row in attribute_names]) + " AS doc"
+                 % (row.header)
+                 for row in headers]) + " AS doc"
 
     sql = """CREATE MATERIALIZED VIEW sample_view AS
              SELECT NEXTVAL('sample_attribute_sequence') as id,
@@ -120,7 +119,7 @@ def get_sample_cross_tab():
                  JOIN platform ON platform.id = platform_id
                GROUP BY gse_name, series_id, platform_id, sample_id;""" % (docSql, attributesSql)
     print sql
-    # db.executesql(sql)
+    db.executesql(sql)
     create_indices_on_postgres([('sample_view', 'id')])
     print "indexing FTS"
     sql = "CREATE INDEX sample_view_fts_idx ON sample_view USING gin(doc);"
@@ -129,32 +128,31 @@ def get_sample_cross_tab():
 
     # reset results
     Sample_View_Results.truncate()
-
     db.commit()
 
 
 def get_series_cross_tab():
-    print "reading attribute names"
-    attribute_names = db().select(Series_Attribute.attribute_name,
-                                  orderby=Series_Attribute.attribute_name,
-                                  distinct=True)
+    print "creating header view"
+    create_series_attribute_header_view()
+    headers = db(Series_Attribute_Header).select(Series_Attribute_Header.header)
     print "creating view"
+    # INDEX source attribute
     create_indices_on_postgres([('series_attribute', 'attribute_name')], unique=False)  # for view cols
     create_indices_on_postgres([('series_attribute', 'series_id, attribute_name')])  # for aggregate
-
+    # CREATE VIEW
     db.executesql("DROP MATERIALIZED VIEW IF EXISTS series_view CASCADE ;")
     db.executesql("DROP INDEX IF EXISTS series_view_fts_idx CASCADE ;")
     db.executesql("DROP SEQUENCE IF EXISTS series_attribute_sequence CASCADE;")
     db.executesql("CREATE SEQUENCE series_attribute_sequence;")
     attributesSql = "," \
         .join(["""string_agg(CASE attribute_name WHEN '%s' THEN attribute_value END, '///') as %s \n""" \
-               % (row['attribute_name'], row['attribute_name'])
-               for row in attribute_names])
+               % (row.header, row.header)
+               for row in headers])
     docSql = "||" \
                  .join([
         """to_tsvector('english', coalesce(string_agg(CASE attribute_name WHEN '%s' THEN attribute_value END, '///'), ''))\n""" \
-        % (row['attribute_name'])
-        for row in attribute_names]) + " AS doc"
+        % (row.header)
+        for row in headers]) + " AS doc"
 
     sql = """CREATE MATERIALIZED VIEW series_view AS
              SELECT NEXTVAL('series_attribute_sequence') as id,
@@ -163,7 +161,7 @@ def get_series_cross_tab():
              %s
              FROM series_attribute
              GROUP BY series_id;""" % (docSql, attributesSql)
-    # print sql
+    print sql
     db.executesql(sql)
     create_indices_on_postgres([('series_view', 'id')])
     print "indexing FTS"
@@ -172,6 +170,7 @@ def get_series_cross_tab():
     db.executesql(sql)
     # reset results
     Series_View_Results.truncate()
+    # rebuild headers
     db.commit()
 
 
@@ -227,10 +226,7 @@ def get_sample_tag_cross_tab():
     get_series_tag_cross_tab()
     # reset results
     Sample_Tag_View_Results.truncate()
-
     db.commit()
-    session.all_sample_tag_names = None
-
 
 def get_series_tag_cross_tab():
     print "reading tag names"
@@ -298,10 +294,10 @@ def insert_attributes():
         gse_name = basename.split("_")[0].split("-")[0]
         print basename
         # if (gse_name == lastGse) or not lastGse:
-        #     isLast = True
+        # isLast = True
         # if not isLast:
-        #     print "\tskipping"
-        #     continue
+        # print "\tskipping"
+        # continue
 
         entities = "Series Platform Sample".split()
         entity2stream = get_entity2stream(filename, entities)
@@ -319,7 +315,6 @@ def insert_attributes():
         series_rec = db(Series.gse_name == gse_name).select().first() \
                      or Series(Series.insert(gse_name=gse_name))
         for attribute_name in series.columns:
-            if attribute_name <> "series_title": continue
             attribute_value = uni_cat(series[attribute_name])
             # attribute_name = attribute_name.replace("Series_", "")
             series_attribute_rec = db((Series_Attribute.series_id == series_rec.id) & \
@@ -348,8 +343,6 @@ def insert_attributes():
                                                  platform_id=platform_rec.id))
             attribute_name2value = samples.ix[gsm_name].to_dict()
             for attribute_name in attribute_name2value:
-                if attribute_name <> "sample_title": continue
-
                 attribute_value = attribute_name2value[attribute_name].strip()
                 # if attribute_value:
                 # if type(attribute_value) == str:
@@ -606,7 +599,7 @@ def get_identifier_scopes(columns):
         identifier_scopes.append(("compositesequencebiosequencedatabaseentry[geneid]", scopes))
 
 
-    #Ambiguous ORFs
+    # Ambiguous ORFs
     scopes = "entrezgene, retired, ensemblgene, symbol"
     if "orf" in columns:
         identifier_scopes.append(("orf", scopes))
@@ -616,7 +609,7 @@ def get_identifier_scopes(columns):
     if "compositesequencebiosequencedatabaseentry[clusterid]" in columns:
         identifier_scopes.append(("compositesequencebiosequencedatabaseentry[clusterid]", scopes))
 
-    #GB ACCESSIONs
+    # GB ACCESSIONs
     scopes = "accession"
     if "gbacc" in columns:
         identifier_scopes.append(("gbacc", scopes))
@@ -631,7 +624,7 @@ def get_identifier_scopes(columns):
     if "compositesequencebiosequencedatabaseentry[genbankaccession]" in columns:
         identifier_scopes.append(("compositesequencebiosequencedatabaseentry[genbankaccession]", scopes))
 
-    #Syms
+    # Syms
     scopes = "symbol"
     if "gene" in columns:
         identifier_scopes.append(("gene", scopes))
@@ -648,30 +641,32 @@ def query_gb(accs):
     import sys
     from Bio import Entrez
 
-    #define email for entrez login
-    db           = "nucest"
+    # define email for entrez login
+    db = "nucest"
     Entrez.email = "some_email@somedomain.com"
-    batchSize    = 100
-    retmax       = 10**9
+    batchSize = 100
+    retmax = 10 ** 9
 
 
-    #first get GI for query accesions
-    sys.stderr.write( "Fetching %s entries from GenBank: %s\n" % (len(accs), ", ".join(accs[:10])))
-    query  = " ".join(accs)
-    handle = Entrez.esearch( db=db,term=query,retmax=retmax )
+    # first get GI for query accesions
+    sys.stderr.write("Fetching %s entries from GenBank: %s\n" % (len(accs), ", ".join(accs[:10])))
+    query = " ".join(accs)
+    handle = Entrez.esearch(db=db, term=query, retmax=retmax)
     giList = Entrez.read(handle)['IdList']
-    sys.stderr.write( "Found %s GI: %s\n" % (len(giList), ", ".join(giList[:10])))
-    #post NCBI query
-    search_handle     = Entrez.epost(db=db, id=",".join(giList))
-    search_results    = Entrez.read(search_handle)
-    webenv,query_key  = search_results["WebEnv"], search_results["QueryKey"]
+    sys.stderr.write("Found %s GI: %s\n" % (len(giList), ", ".join(giList[:10])))
+    # post NCBI query
+    search_handle = Entrez.epost(db=db, id=",".join(giList))
+    search_results = Entrez.read(search_handle)
+    webenv, query_key = search_results["WebEnv"], search_results["QueryKey"]
     #fecth all results in batch of batchSize entries at once
-    for start in range( 0,len(giList),batchSize ):
-      sys.stderr.write( " %9i" % (start+1,))
-      #fetch entries in batch
-      handle = Entrez.efetch(db=db, rettype="gb", retstart=start, retmax=batchSize, webenv=webenv, query_key=query_key)
-      #print output to stdout
-      sys.stdout.write(handle.read())
+    for start in range(0, len(giList), batchSize):
+        sys.stderr.write(" %9i" % (start + 1,))
+        #fetch entries in batch
+        handle = Entrez.efetch(db=db, rettype="gb", retstart=start, retmax=batchSize, webenv=webenv,
+                               query_key=query_key)
+        #print output to stdout
+        sys.stdout.write(handle.read())
+
 
 def insert_myGenes():
     import pandas as pd, glob
@@ -688,7 +683,7 @@ def insert_myGenes():
             continue
 
         # if gpl_name <> "GPL561":
-        #     continue
+        # continue
         print "%s/%s) Processing %s..." % (i, count, gpl_name)
         if gpl_name in (
                 "GPL9052",  # "NO PLATFORM DESCRIBED"
@@ -708,9 +703,9 @@ def insert_myGenes():
         # "GPL9115",  # pandas CParserError: Passed header=0 but only 0 lines in file
         # "GPL4803"):  # pandas - ValueError: cannot insert probe, already exists
         # print "ERROR: SKIPPING for now!"
-        #     continue
+        # continue
         # if Platform[platform_id].identifier:
-        #     # if db(Platform_Probe.platform_id == platform_id).count():
+        # # if db(Platform_Probe.platform_id == platform_id).count():
         #     print "Already done!"
         #     continue
 
@@ -746,7 +741,7 @@ def insert_myGenes():
                 rows = myGenes.T.to_dict().values()
                 Platform_Probe.bulk_insert(rows)
                 datafile = gpl_filenames[0]
-                db(Platform.id == platform_id).update(scopes=scopes, identifier=identifier, datafile = datafile)
+                db(Platform.id == platform_id).update(scopes=scopes, identifier=identifier, datafile=datafile)
                 db.commit()
                 print "done %s probes!" % myGenes_count
                 break
@@ -756,10 +751,89 @@ def insert_myGenes():
             print "OOPS: No valids identifiers found for", gpl_name
 
 
+def create_sample_attribute_header_view():
+    view_name = "sample_attribute_header"
+    print "creating view", view_name
+    db.executesql("DROP MATERIALIZED VIEW IF EXISTS %s CASCADE;" % view_name)
+    db.executesql("DROP SEQUENCE IF EXISTS %s_sequence CASCADE;" % view_name)
+    db.executesql("CREATE SEQUENCE %s_sequence;" % view_name)
+
+    sql = """CREATE MATERIALIZED VIEW sample_attribute_header AS
+                SELECT
+                  nextval('sample_attribute_header_sequence') as id, *
+                FROM
+                  (SELECT
+                     header,
+                     num
+                   FROM
+                     (
+                       (
+                         SELECT
+                           header        AS header,
+                           count(header) AS num
+                         FROM series_tag
+                         GROUP BY header
+                         ORDER BY num DESC
+                       )
+                       UNION (
+                         SELECT DISTINCT
+                           attribute_name AS header,
+                           0              AS num
+                         FROM sample_attribute
+                         WHERE attribute_name NOT IN
+                               (
+                                 SELECT
+                                   DISTINCT ON (header)
+                                   header
+                                 FROM series_tag
+                               )
+                         ORDER BY header
+                       )
+                     ) AS subquery
+                   ORDER BY num DESC) AS sorted;
+    """
+    print sql
+    db.executesql(sql)
+    print "Done"
+
+
+def create_series_attribute_header_view():
+    view_name = "series_attribute_header"
+    print "creating view", view_name
+    db.executesql("DROP MATERIALIZED VIEW IF EXISTS %s CASCADE;" % view_name)
+    db.executesql("DROP SEQUENCE IF EXISTS %s_sequence CASCADE;" % view_name)
+    db.executesql("CREATE SEQUENCE %s_sequence;" % view_name)
+
+    sql = """CREATE MATERIALIZED VIEW series_attribute_header AS
+                SELECT
+                  nextval('series_attribute_header_sequence') as id,
+                  *
+                FROM
+                  (
+                    SELECT DISTINCT
+                      attribute_name AS header
+                    FROM series_attribute
+                    ORDER BY header) AS subquery
+    """
+    print sql
+    db.executesql(sql)
+    print "Done"
+
+
+
+
+
+
+
+
+
+
 if __name__ == '__main__':
-    insert_attributes()
+    # create_sample_attribute_header_view()
+    # create_series_attribute_header_view()
+    # insert_attributes()
     # insert_myGenes()
     # get_series_cross_tab()
-    # get_sample_cross_tab()
+    get_sample_cross_tab()
     # get_sample_tag_cross_tab()
 
