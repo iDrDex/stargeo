@@ -3,7 +3,7 @@ __author__ = 'dex'
 
 def index():
     Scheduler_Task = db['scheduler_task']
-    return dict(add=A("New Analysis", _href=URL("add"), vars=request.get_vars),
+    return dict(add=A(BUTTON("New Analysis"), _href=URL("add"), vars=request.get_vars),
                 # form=search_widget(),
                 scheduler=SQLFORM.grid(Scheduler_Task.status <> "COMPLETED",
                                        fields=[Scheduler_Task.vars, Scheduler_Task.status, Scheduler_Task.start_time],
@@ -34,7 +34,7 @@ def results():
 
 
 def add():
-    form = SQLFORM.factory(Analysis)
+    form = SQLFORM.factory(Analysis, submit_button="Next")
     form.add_button("Cancel", URL('index', vars=request.get_vars))
     if form.process().accepted:
         session.form_vars = form.vars
@@ -44,13 +44,25 @@ def add():
 
 def submit():
     form_vars = session.form_vars
-    df = get_analysis_df(form_vars.case_query, form_vars.control_query, form_vars.modifier_query)
-    return dict(form_vars=form_vars,
-                go=A("GO", _href=URL("analyze", vars=form_vars)),
-                case_count=len(df.query('sample_class == 1').index),
-                control_count=len(df.query('sample_class == 0').index),
-                error_count=len(df.query('sample_class == -1').index),
-    )
+    for var in form_vars:
+        Analysis[var].default = form_vars[var]
+        Analysis[var].writable = False
+    form = SQLFORM.factory(Analysis, submit_button="Analyze")
+    form.add_button("Cancel", URL('index', vars=request.get_vars))
+
+    if form.validate():
+        redirect(URL("analyze", vars=form_vars))
+
+    df = get_analysis_df(form_vars.case_query,
+                         form_vars.control_query,
+                         form_vars.modifier_query)
+
+    stats = BEAUTIFY(dict(case_count=len(df.query('sample_class == 1').index),
+                          control_count=len(df.query('sample_class == 0').index),
+                          error_count=len(df.query('sample_class == -1').index)))
+
+    return dict(stats=stats,
+                form=form)
 
 
 @auth.requires_login()
@@ -60,17 +72,24 @@ def analyze():
                  case_query=request.vars.case_query,
                  control_query=request.vars.control_query,
                  modifier_query=request.vars.modifier_query)
-    go(pvars, debug=True)
+    go(pvars)
     redirect(URL('index'))
 
 
 def go(pvars, debug=False):
-    task_analyze(**pvars) \
-        if debug else \
-        scheduler.queue_task('balanced_meta', pvars=dict(analysis_name=request.vars.analysis_name,
-                                                         description=request.vars.description,
-                                                         case_query=request.vars.case_query,
-                                                         control_query=request.vars.control_query,
-                                                         modifier_query=request.vars.modifier_query)
+    if debug:
+        task_analyze(**pvars)
+    else:
+        from datetime import timedelta as timed
+        scheduler.queue_task('task_analyze',
+                             pvars=dict(analysis_name=request.vars.analysis_name,
+                                        description=request.vars.description,
+                                        case_query=request.vars.case_query,
+                                        control_query=request.vars.control_query,
+                                        modifier_query=request.vars.modifier_query),
+                             timeout = 3600,
+                             start_time = request.utcnow - timed(hours=8), #correct 8 hrs for CA time,
+                             immediate=True
         )
-    session.flash = T("Analysis '%s' queued..." % request.vars.analysis_name)
+        session.flash = T("Analysis '%s' queued..." % request.vars.analysis_name)
+    return True

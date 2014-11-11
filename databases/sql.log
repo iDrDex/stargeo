@@ -2029,3 +2029,198 @@ TRUNCATE TABLE series_tag_view_results ;
 success!
 TRUNCATE TABLE sample_tag_view_results ;
 success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+timestamp: 2014-11-11T09:39:30.287197
+CREATE TABLE scheduler_task(
+    id SERIAL PRIMARY KEY,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args TEXT,
+    vars TEXT,
+    enabled CHAR(1),
+    start_time TIMESTAMP,
+    next_run_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    repeats INTEGER,
+    retry_failed INTEGER,
+    period INTEGER,
+    prevent_drift CHAR(1),
+    timeout INTEGER,
+    sync_output INTEGER,
+    times_run INTEGER,
+    times_failed INTEGER,
+    last_run_time TIMESTAMP,
+    assigned_worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-11T09:39:30.361002
+CREATE TABLE scheduler_run(
+    id SERIAL PRIMARY KEY,
+    task_id INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    status VARCHAR(512),
+    start_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    run_output TEXT,
+    run_result TEXT,
+    traceback TEXT,
+    worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-11T09:39:33.420636
+CREATE TABLE scheduler_worker(
+    id SERIAL PRIMARY KEY,
+    worker_name VARCHAR(255) UNIQUE,
+    first_heartbeat TIMESTAMP,
+    last_heartbeat TIMESTAMP,
+    status VARCHAR(512),
+    is_ticker CHAR(1),
+    group_names TEXT,
+    worker_stats JSON
+);
+success!
+timestamp: 2014-11-11T09:39:33.510769
+CREATE TABLE scheduler_task_deps(
+    id SERIAL PRIMARY KEY,
+    job_name VARCHAR(512),
+    task_parent INTEGER,
+    task_child INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    can_visit CHAR(1)
+);
+success!
+timestamp: 2014-11-11T09:46:19.868683
+CREATE TABLE scheduler_task(
+    id SERIAL PRIMARY KEY,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args TEXT,
+    vars TEXT,
+    enabled CHAR(1),
+    start_time TIMESTAMP,
+    next_run_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    repeats INTEGER,
+    retry_failed INTEGER,
+    period INTEGER,
+    prevent_drift CHAR(1),
+    timeout INTEGER,
+    sync_output INTEGER,
+    times_run INTEGER,
+    times_failed INTEGER,
+    last_run_time TIMESTAMP,
+    assigned_worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-11T09:46:19.939243
+CREATE TABLE scheduler_run(
+    id SERIAL PRIMARY KEY,
+    task_id INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    status VARCHAR(512),
+    start_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    run_output TEXT,
+    run_result TEXT,
+    traceback TEXT,
+    worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-11T09:46:20.027756
+CREATE TABLE scheduler_worker(
+    id SERIAL PRIMARY KEY,
+    worker_name VARCHAR(255) UNIQUE,
+    first_heartbeat TIMESTAMP,
+    last_heartbeat TIMESTAMP,
+    status VARCHAR(512),
+    is_ticker CHAR(1),
+    group_names TEXT,
+    worker_stats JSON
+);
+success!
+timestamp: 2014-11-11T09:46:20.133036
+CREATE TABLE scheduler_task_deps(
+    id SERIAL PRIMARY KEY,
+    job_name VARCHAR(512),
+    task_parent INTEGER,
+    task_child INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    can_visit CHAR(1)
+);
+success!
+timestamp: 2014-11-11T10:22:55.930230
+CREATE TABLE scheduler_task(
+    id SERIAL PRIMARY KEY,
+    application_name VARCHAR(512),
+    task_name VARCHAR(512),
+    group_name VARCHAR(512),
+    status VARCHAR(512),
+    function_name VARCHAR(512),
+    uuid VARCHAR(255) UNIQUE,
+    args TEXT,
+    vars TEXT,
+    enabled CHAR(1),
+    start_time TIMESTAMP,
+    next_run_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    repeats INTEGER,
+    retry_failed INTEGER,
+    period INTEGER,
+    prevent_drift CHAR(1),
+    timeout INTEGER,
+    sync_output INTEGER,
+    times_run INTEGER,
+    times_failed INTEGER,
+    last_run_time TIMESTAMP,
+    assigned_worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-11T10:22:56.001595
+CREATE TABLE scheduler_run(
+    id SERIAL PRIMARY KEY,
+    task_id INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    status VARCHAR(512),
+    start_time TIMESTAMP,
+    stop_time TIMESTAMP,
+    run_output TEXT,
+    run_result TEXT,
+    traceback TEXT,
+    worker_name VARCHAR(512)
+);
+success!
+timestamp: 2014-11-11T10:22:56.088640
+CREATE TABLE scheduler_worker(
+    id SERIAL PRIMARY KEY,
+    worker_name VARCHAR(255) UNIQUE,
+    first_heartbeat TIMESTAMP,
+    last_heartbeat TIMESTAMP,
+    status VARCHAR(512),
+    is_ticker CHAR(1),
+    group_names TEXT,
+    worker_stats JSON
+);
+success!
+timestamp: 2014-11-11T10:22:56.177037
+CREATE TABLE scheduler_task_deps(
+    id SERIAL PRIMARY KEY,
+    job_name VARCHAR(512),
+    task_parent INTEGER,
+    task_child INTEGER REFERENCES scheduler_task (id) ON DELETE CASCADE,
+    can_visit CHAR(1)
+);
+success!

@@ -1,8 +1,5 @@
 __author__ = 'dex'
 
-
-
-
 from gluon.scheduler import Scheduler
 
 def task_analyze(analysis_name, description, case_query, control_query, modifier_query):
@@ -41,4 +38,9 @@ def task_analyze(analysis_name, description, case_query, control_query, modifier
     Balanced_Meta.bulk_insert(rows)
     db.commit()
 
-scheduler = Scheduler(db,dict(task_analyze=task_analyze))
+scheduler = Scheduler(db,
+                      dict(task_analyze=task_analyze),
+                      utc_time=True
+)
+
+

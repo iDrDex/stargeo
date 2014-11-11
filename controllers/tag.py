@@ -8,7 +8,7 @@ def add():
     if form.process().accepted:
         # get_sample_tag_cross_tab()  # rebuild tables
         if 'tag_form_vars' not in session:
-            session.tag_form_cars = form.vars
+            session.tag_form_vars = form.vars
         else: session.tag_form_vars.tag_id = form.vars.id
         # session.tag_count = None
         get_sample_tag_cross_tab()
