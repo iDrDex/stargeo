@@ -223,7 +223,7 @@ Series_Tag_View_Results = db.define_table('series_tag_view_results',
 )
 
 
-def update_sample_cross_tab(form, arg):  # delete from home page
+def update_sample_cross_tab(form, arg):  # wrapper for ondelete from home page
     get_sample_tag_cross_tab()
 
 
@@ -268,13 +268,23 @@ Analysis = db.define_table('analysis',
                            Field('case_query', requires=[IS_NOT_EMPTY(), IS_PANDAS_QUERY()]),
                            Field('control_query', requires=[IS_NOT_EMPTY(), IS_PANDAS_QUERY()]),
                            Field('modifier_query', requires=IS_PANDAS_QUERY()),
+                           Field('series_count', 'integer', readable=False, writable=False),
+                           Field('platform_count', 'integer', readable=False, writable=False),
+                           Field('sample_count', 'integer', readable=False, writable=False),
+                           Field('series_ids', 'list:reference series', readable=False, writable=False),
+                           Field('platform_ids', 'list:reference platform', readable=False, writable=False),
+                           Field('sample_ids', 'list:reference sample', readable=False, writable=False),
+                           auth.signature,
                            migrate="analysis.table"
 )
 
 Balanced_Meta = db.define_table('balanced_meta',
                                 Field('id', 'id', readable=False, writable=False),
                                 Field('analysis_id', 'reference analysis', readable=False, writable=False),
-                                Field('mygene_sym'),
+                                Field('mygene_sym',
+                                      represent=lambda name, row: A(name,
+                                                                    _href="http://www.genecards.org/cgi-bin/carddisp.pl?gene=%s" % row.mygene_sym,
+                                                                    _target="blank")),
                                 Field('mygene_entrez', 'integer'),
                                 Field('C', 'double'),
                                 Field('H', 'double'),

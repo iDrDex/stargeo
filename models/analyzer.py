@@ -1,5 +1,6 @@
-import  pandas.rpy.common as com, numpy as np, pandas as pd
+import pandas.rpy.common as com, numpy as np, pandas as pd
 import rpy2.robjects as robjects
+
 r = robjects.r
 
 
@@ -94,7 +95,6 @@ def get_data(series_id, platform_id):
     data.index.name = "probe"
     for column in data.columns:
         data[column] = data[column].astype(np.float64)
-    # return data.head()
     return data
 
 
@@ -113,28 +113,28 @@ class Gse:
         self.gpl2probes = gpl2probes
 
 
-def getFullMetaAnalysis(fcResults):
+def getFullMetaAnalysis(fcResults, debug=False):
     import glob
 
+    debug and fcResults.to_csv("%s.fc.csv" % debug)
     all = []
     i = 0
-    allGeneEstimates = fcResults.sort('p').drop_duplicates(['gse', 'gpl', 'mygene_sym', 'mygene_entrez', 'subset'])
+    allGeneEstimates = fcResults.sort('p') \
+        .drop_duplicates(['gse', 'gpl', 'mygene_sym', 'mygene_entrez', 'subset']) \
+        .dropna()
+    debug and allGeneEstimates.to_csv("%s.geneestimates.csv"%debug)
     for group, geneEstimates in allGeneEstimates.groupby(['mygene_sym', 'mygene_entrez']):
         mygene_sym, mygene_entrez = group
-        # if i > 100:
-        # continue
-        # bestGeneEstimates.to_csv("%s.csv"%mygene_sym)
-        # print i, group
+        if debug:
+            print i, group
         i += 1
         geneEstimates.title = mygene_sym
+        debug and geneEstimates.to_csv("%s.%s.fc.csv" % (debug, mygene_sym))
         metaAnalysis = getMetaAnalysis(geneEstimates)
-
         metaAnalysis['caseDataCount'] = geneEstimates['caseDataCount'].sum()
         metaAnalysis['controlDataCount'] = geneEstimates['controlDataCount'].sum()
         metaAnalysis['mygene_sym'] = mygene_sym
         metaAnalysis['mygene_entrez'] = mygene_entrez
-
-        # meta = pd.DataFrame(metaAnalysis, index=pd.MultiIndex.from_tuples([group], names=['mygene_sym', 'mygene_entrez', 'subset']))
         all.append(metaAnalysis)
     allMetaAnalysis = pd.DataFrame(all).set_index(['mygene_sym', 'mygene_entrez'])
     allMetaAnalysis['effect_size'] = allMetaAnalysis['TE.random']
@@ -194,7 +194,7 @@ class GseAnalyzer:
     # r_normalData.rownames = r_data.rownames
     # return r_normalData
 
-    def getResults(self, gpls=None, subsets=None, numPerm=100, how='samr', name=None):
+    def getResults(self, gpls=None, subsets=None, numPerm=100, how='samr', name=None, debug=False):
         gse = self.gse
         samples = gse.samples
 
@@ -254,7 +254,10 @@ class GseAnalyzer:
                 sample_class = df.ix[data.columns].sample_class
 
                 if how == 'fc':
-                    table = getFoldChangeAnalysis(data, sample_class)
+                    debug = debug and debug + ".%s_%s_%s" % (self.gse.name, gpl, subset)
+                    table = getFoldChangeAnalysis(data, sample_class,
+                                                  debug=debug)
+                    debug and table.to_csv("%s.table.csv" % debug)
                     # table['log2foldChange'] = table['fc'] if isLogged(data) else np.log2(table['fc'])
                 else:
                     if how == 'samr':
@@ -262,7 +265,7 @@ class GseAnalyzer:
                         if results:
                             for table in results:
                                 if not table.empty:
-                                    #SAMR returns raw fold changes but Numerator(r) contains the log2 transform
+                                    # SAMR returns raw fold changes but Numerator(r) contains the log2 transform
                                     # table['log2foldChange'] = table['Numerator(r)'] if isLogged(data) else np.log2(table['Numerator(r)'])
                                     table['log2foldChange'] = np.log2(table['Fold Change'])
                                     # print table['log2foldChange']
@@ -271,14 +274,14 @@ class GseAnalyzer:
                         if results:
                             for table in results:
                                 if not table.empty:
-                                    #invert b/c RANKPROD does the goofy condition 1 / condition 2
-                                    #also force RP results in log2 with logged = False in RP call
+                                    # invert b/c RANKPROD does the goofy condition 1 / condition 2
+                                    # also force RP results in log2 with logged = False in RP call
                                     table['log2foldChange'] = -1.0 * table['FC:(class1/class2)'] if isLogged(
                                         data) else np.log2(-1.0 * table['FC:(class1/class2)'])
                     if results:
                         table1, table2 = results
-                        #table1['direction'] = 'up'
-                        #table2['direction'] = 'down'
+                        # table1['direction'] = 'up'
+                        # table2['direction'] = 'down'
                         table = pd.concat([table1, table2])
 
                 if not table.empty:
@@ -302,9 +305,9 @@ class MetaAnalyzer():
         self.allFcResults = None
         self.allRankedResults = None
 
-    def getFc(self):
+    def getFc(self, debug=False):
         print "calculating fold changes"
-        self.allFcResults = pd.concat([GseAnalyzer(gse).getResults(how='fc') for gse in self.gses])
+        self.allFcResults = pd.concat([GseAnalyzer(gse).getResults(how='fc', debug=debug) for gse in self.gses])
         return self.allFcResults
 
     def getRanks(self):
@@ -312,10 +315,10 @@ class MetaAnalyzer():
         self.allRankedResults = pd.concat([GseAnalyzer(gse).getResults(how='ranked') for gse in self.gses])
         return self.allRankedResults
 
-    def getBalancedResults(self):
+    def getBalancedResults(self, debug=False):
         if not type(self.allFcResults) == pd.DataFrame:
-            self.getFc()
-        return getFullMetaAnalysis(self.allFcResults)
+            self.getFc(debug=debug)
+        return getFullMetaAnalysis(self.allFcResults, debug=debug)
 
     def getUnbalancedResults(self, fileName):
         if not type(self.allRankedResults) == pd.DataFrame:
@@ -323,7 +326,7 @@ class MetaAnalyzer():
         return getFullUnbalancedMetaAnalysis(self.allRankedResults, fileName)
 
 
-def getFoldChangeAnalysis(data, sample_class, doPopSize=False):
+def getFoldChangeAnalysis(data, sample_class, doPopSize=False, debug=False):
     from scipy.stats import ttest_ind
 
     data = getNormalize_quantiles(getLogged(data))
@@ -335,11 +338,14 @@ def getFoldChangeAnalysis(data, sample_class, doPopSize=False):
     summary['dataCount'] = data.count(axis="columns")
 
     caseData = data.T[sample_class == 1].T
+    debug and caseData.to_csv("%s.case.data.csv" % debug)
     summary['caseDataMu'] = caseData.mean(axis="columns")
     summary['caseDataSigma'] = caseData.std(axis="columns") if len(caseData.columns) > 1 else 0
     summary['caseDataCount'] = caseData.count(axis="columns")
 
     controlData = data.T[sample_class == 0].T
+    debug and controlData.to_csv("%s.control.data.csv" % debug)
+
     summary['controlDataMu'] = controlData.mean(axis="columns")
     summary['controlDataSigma'] = controlData.std(axis="columns") if len(controlData.columns) > 1 else 0
     summary['controlDataCount'] = controlData.count(axis="columns")
@@ -350,10 +356,20 @@ def getFoldChangeAnalysis(data, sample_class, doPopSize=False):
     # summary['fc'] = np.log2(summary['caseDataMu']/summary['controlDataMu'])
 
     summary['effect_size'] = summary['fc'] / summary['dataSigma']
+    ttest = pd.DataFrame([ttest_ind(caseData.ix[probe].dropna(),
+                                    controlData.ix[probe].dropna())
+                          for probe in data.index],
+                         columns=['ttest', 'p'],
+                         index=data.index)
 
-    ttest = ttest_ind(caseData, controlData, axis=1)
-    summary['ttest'] = ttest[0]
-    summary['p'] = ttest[1]
+    debug and ttest.to_csv("%s.ttest.csv" % debug)
+
+    # mask to deal with missing data: http://stackoverflow.com/questions/23543431/treatment-of-nans
+    # ttest = ttest_ind(caseData[np.isfinite(caseData)],
+    # controlData[np.isfinite(controlData)],
+    #                   axis=1)
+    summary['ttest'] = ttest['ttest']
+    summary['p'] = ttest['p']
     summary['direction'] = summary['effect_size'].map(lambda x: "up" if x >= 0 else "down")
     if doPopSize:
         summary['alpha'] = 0.05
