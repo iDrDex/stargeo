@@ -754,11 +754,11 @@ def insert_myGenes():
 def create_sample_attribute_header_view():
     view_name = "sample_attribute_header"
     print "creating view", view_name
-    db.executesql("DROP MATERIALIZED VIEW IF EXISTS %s CASCADE;" % view_name)
+    db.executesql("DROP TABLE IF EXISTS %s CASCADE;" % view_name)
     db.executesql("DROP SEQUENCE IF EXISTS %s_sequence CASCADE;" % view_name)
     db.executesql("CREATE SEQUENCE %s_sequence;" % view_name)
 
-    sql = """CREATE MATERIALIZED VIEW sample_attribute_header AS
+    sql = """CREATE TABLE sample_attribute_header AS
                 SELECT
                   nextval('sample_attribute_header_sequence') as id, *
                 FROM
@@ -800,11 +800,11 @@ def create_sample_attribute_header_view():
 def create_series_attribute_header_view():
     view_name = "series_attribute_header"
     print "creating view", view_name
-    db.executesql("DROP MATERIALIZED VIEW IF EXISTS %s CASCADE;" % view_name)
+    db.executesql("DROP TABLE IF EXISTS %s CASCADE;" % view_name)
     db.executesql("DROP SEQUENCE IF EXISTS %s_sequence CASCADE;" % view_name)
     db.executesql("CREATE SEQUENCE %s_sequence;" % view_name)
 
-    sql = """CREATE MATERIALIZED VIEW series_attribute_header AS
+    sql = """CREATE TABLE series_attribute_header AS
                 SELECT
                   nextval('series_attribute_header_sequence') as id,
                   *
@@ -821,10 +821,12 @@ def create_series_attribute_header_view():
 
 
 if __name__ == '__main__':
-    get_sample_tag_cross_tab()
+    # get_sample_tag_cross_tab()
+    # 1/0
+    create_sample_attribute_header_view()
+    create_series_attribute_header_view()
+    db.commit()
     1/0
-    # create_sample_attribute_header_view()
-    # create_series_attribute_header_view()
     # insert_attributes()
     # insert_myGenes()
     # get_series_cross_tab()

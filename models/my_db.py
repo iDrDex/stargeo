@@ -19,7 +19,7 @@ Series_Attribute = db.define_table('series_attribute',
 Series_Attribute_Header = db.define_table('series_attribute_header',
                                           Field('id', 'id', readable=False, writable=False),
                                           Field('header'),
-                                          migrate=False
+                                          migrate='series_attribute_header.table'
 )
 
 Series_View = db.define_table('series_view',
@@ -109,7 +109,7 @@ Sample_Attribute_Header = db.define_table('sample_attribute_header',
                                           Field('id', 'id', readable=False, writable=False),
                                           Field('header'),
                                           Field('num', 'integer'),
-                                          migrate=False
+                                          migrate='sample_attribute_header'
 )
 
 Sample_View = db.define_table('sample_view',

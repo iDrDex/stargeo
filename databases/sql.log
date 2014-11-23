@@ -3010,3 +3010,128 @@ ALTER TABLE analysis ADD created_by INTEGER REFERENCES auth_user (id) ON DELETE 
 timestamp: 2014-11-21T09:32:55.688372
 ALTER TABLE analysis ADD modified_on TIMESTAMP;
 success!
+timestamp: 2014-11-21T22:14:19.005464
+CREATE TABLE analysis(
+    id SERIAL PRIMARY KEY,
+    analysis_name VARCHAR(512),
+    description VARCHAR(512),
+    case_query VARCHAR(512),
+    control_query VARCHAR(512),
+    modifier_query VARCHAR(512),
+    series_count INTEGER,
+    platform_count INTEGER,
+    sample_count INTEGER,
+    series_ids TEXT,
+    platform_ids TEXT,
+    sample_ids TEXT,
+    is_active CHAR(1),
+    created_on TIMESTAMP,
+    created_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    modified_on TIMESTAMP,
+    modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-11-21T22:14:19.078918
+CREATE TABLE balanced_meta(
+    id SERIAL PRIMARY KEY,
+    analysis_id INTEGER REFERENCES analysis (id) ON DELETE CASCADE,
+    mygene_sym VARCHAR(512),
+    mygene_entrez INTEGER,
+    C FLOAT8,
+    H FLOAT8,
+    I2 FLOAT8,
+    Q FLOAT8,
+    TE FLOAT8,
+    TE_fixed FLOAT8,
+    TE_random FLOAT8,
+    TE_tau FLOAT8,
+    bylab VARCHAR(512),
+    byvar VARCHAR(512),
+    call FLOAT8,
+    caseDataCount FLOAT8,
+    comb_fixed FLOAT8,
+    comb_random FLOAT8,
+    complab VARCHAR(512),
+    controlDataCount FLOAT8,
+    data FLOAT8,
+    df_Q FLOAT8,
+    df_hakn FLOAT8,
+    hakn FLOAT8,
+    k FLOAT8,
+    label_c VARCHAR(512),
+    label_e VARCHAR(512),
+    label_left VARCHAR(512),
+    label_right VARCHAR(512),
+    level FLOAT8,
+    level_comb FLOAT8,
+    level_predict FLOAT8,
+    lower_H FLOAT8,
+    lower_I2 FLOAT8,
+    lower_fixed FLOAT8,
+    lower_predict FLOAT8,
+    lower_random FLOAT8,
+    mean_c FLOAT8,
+    mean_e FLOAT8,
+    method VARCHAR(512),
+    method_bias VARCHAR(512),
+    method_tau VARCHAR(512),
+    n_c FLOAT8,
+    n_e FLOAT8,
+    outclab FLOAT8,
+    prediction FLOAT8,
+    print_byvar FLOAT8,
+    pval_fixed FLOAT8,
+    pval_random FLOAT8,
+    sd_c FLOAT8,
+    sd_e FLOAT8,
+    se_tau2 FLOAT8,
+    seTE FLOAT8,
+    seTE_fixed FLOAT8,
+    seTE_predict FLOAT8,
+    seTE_random FLOAT8,
+    sm VARCHAR(512),
+    studlab VARCHAR(512),
+    subset VARCHAR(512),
+    tau FLOAT8,
+    tau_common FLOAT8,
+    tau_preset FLOAT8,
+    title VARCHAR(512),
+    upper_H FLOAT8,
+    upper_I2 FLOAT8,
+    upper_fixed FLOAT8,
+    upper_predict FLOAT8,
+    upper_random FLOAT8,
+    version VARCHAR(512),
+    w_fixed FLOAT8,
+    w_random FLOAT8,
+    warn CHAR(1),
+    zval_fixed FLOAT8,
+    zval_random FLOAT8,
+    effect_size FLOAT8,
+    direction VARCHAR(512)
+);
+success!
+timestamp: 2014-11-21T22:25:51.070601
+CREATE TABLE series_attribute_header(
+    id SERIAL PRIMARY KEY,
+    header VARCHAR(512)
+);
+timestamp: 2014-11-21T22:25:51.116176
+CREATE TABLE series_attribute_header(
+    id SERIAL PRIMARY KEY,
+    header VARCHAR(512)
+);
+success!
+timestamp: 2014-11-21T22:25:51.197706
+CREATE TABLE sample_attribute_header(
+    id SERIAL PRIMARY KEY,
+    header VARCHAR(512),
+    num INTEGER
+);
+timestamp: 2014-11-21T22:26:18.850155
+CREATE TABLE sample_attribute_header(
+    id SERIAL PRIMARY KEY,
+    header VARCHAR(512),
+    num INTEGER
+);
+success!
