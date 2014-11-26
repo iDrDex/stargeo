@@ -112,8 +112,7 @@ def index():
                         user_signature=None,
                         formname='form',
                         buttons_placement='left',
-                        links=[lambda row: get_tags(row),
-                               lambda row: get_tag_button(row)])
+                        links=[lambda row: get_tags(row)])
     grid = DIV(grid,
                SCRIPT('''   $("#series_tag_show_invariant").change(function () {
                                 $('#series_tag_header').val("")
