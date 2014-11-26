@@ -4,22 +4,13 @@
 # ########################################################################
 # # This is a sample controller
 # # - index is the default action of any application
-## - user is required for authentication and authorization
+# # - user is required for authentication and authorization
 ## - download is for downloading files uploaded in the db (does streaming)
 ## - api is an example of Hypermedia API support and access control
 #########################################################################
 
 def index():
-    #cache counts
-    session.platform_count = session.platform_count or "{:,}".format(db(Platform).count())
-    session.tag_count = session.tag_count or "{:,}".format(db(Tag).count())
-    session.sample_count = session.sample_count or "{:,}".format(db(Sample).count())
-    session.sample_attribute_count = session.sample_attribute_count or "{:,}".format(db(Sample_Attribute).count())
-    session.sample_tag_count = session.sample_tag_count or "{:,}".format(db(Sample_Tag).count())
-    session.series_count = session.series_count or "{:,}".format(db(Series).count())
-    session.series_attribute_count = session.series_attribute_count or "{:,}".format(db(Series_Attribute).count())
-    session.series_tag_count = session.series_tag_count or "{:,}".format(db(Series_Tag).count())
-
+    stats = get_stats()
     Series_Tag.tag_id.represent = lambda name, row: DIV(row.tag_id.tag_name, _class="badge")
     tags = SQLFORM.grid(Series_Tag,
                         searchable=False,
@@ -29,10 +20,19 @@ def index():
                         maxtextlength=100,
                         ondelete=update_sample_cross_tab)
 
+    analyses = SQLFORM.grid(Analysis,
+                        searchable=False,
+                        csv=False,
+                        orderby=~Analysis.id,
+                        paginate=5,
+                        maxtextlength=100)
+
     search_form = search_widget(url=URL('series', 'index', vars=dict(keywords=request.vars.keywords)))
 
     return dict(search_form=search_form,
-                tags=tags)
+                tags=tags,
+                stats=stats,
+                analyses = analyses)
 
 
 def user():

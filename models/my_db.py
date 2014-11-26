@@ -227,11 +227,11 @@ def update_sample_cross_tab(form, arg):  # wrapper for ondelete from home page
     get_sample_tag_cross_tab()
 
 
-Counts = db.define_table('counts',
+Count = db.define_table('count',
                          Field('id', 'id', readable=False, writable=False),
                          Field('what'),
-                         Field('count'),
-                         migrate="counts.table"
+                         Field('count', 'integer'),
+                         migrate="count.table"
 )
 
 # Special pandas processor

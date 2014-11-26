@@ -10,8 +10,7 @@ def add():
         if 'tag_form_vars' not in session:
             session.tag_form_vars = form.vars
         else: session.tag_form_vars.tag_id = form.vars.id
-        # session.tag_count = None
-        get_sample_tag_cross_tab()
+        update_tag_count()
         redirect(URL('index', vars=request.get_vars))
     return dict(form=form)
 

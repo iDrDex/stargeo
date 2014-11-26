@@ -173,7 +173,6 @@ def get_series_cross_tab():
     # rebuild headers
     db.commit()
 
-
 def get_sample_tag_cross_tab():
     print "reading tag names"
     rows = db(Tag).select(orderby=Tag.tag_name)
@@ -224,9 +223,14 @@ def get_sample_tag_cross_tab():
     db.executesql(sql)
 
     get_series_tag_cross_tab()
+
     # reset results
     Sample_Tag_View_Results.truncate()
+
+    #update  homepage counts
+    update_counts()
     db.commit()
+
 
 def get_series_tag_cross_tab():
     print "reading tag names"
@@ -658,10 +662,10 @@ def query_gb(accs):
     search_handle = Entrez.epost(db=db, id=",".join(giList))
     search_results = Entrez.read(search_handle)
     webenv, query_key = search_results["WebEnv"], search_results["QueryKey"]
-    #fecth all results in batch of batchSize entries at once
+    # fecth all results in batch of batchSize entries at once
     for start in range(0, len(giList), batchSize):
         sys.stderr.write(" %9i" % (start + 1,))
-        #fetch entries in batch
+        # fetch entries in batch
         handle = Entrez.efetch(db=db, rettype="gb", retstart=start, retmax=batchSize, webenv=webenv,
                                query_key=query_key)
         #print output to stdout
@@ -706,8 +710,8 @@ def insert_myGenes():
         # continue
         # if Platform[platform_id].identifier:
         # # if db(Platform_Probe.platform_id == platform_id).count():
-        #     print "Already done!"
-        #     continue
+        # print "Already done!"
+        # continue
 
 
 
@@ -820,13 +824,44 @@ def create_series_attribute_header_view():
     print "Done"
 
 
+def update_counts():
+    Count.truncate()
+    Count.insert(what='analysis', count=db(Analysis).count())
+    Count.insert(what='platform', count=db(Platform).count())
+    Count.insert(what='platform_probe', count=db(Platform_Probe).count())
+    Count.insert(what='tag', count=db(Tag).count())
+    Count.insert(what='sample', count=db(Sample).count())
+    Count.insert(what='sample_attribute', count=db(Sample_Attribute).count())
+    Count.insert(what='sample_tag', count=db(Sample_Tag).count())
+    Count.insert(what='series', count=db(Series).count())
+    Count.insert(what='series_attribute', count=db(Series_Attribute).count())
+    Count.insert(what='series_tag', count=db(Series_Tag).count())
+    Count.insert(what='auth_user', count=db(db['auth_user']).count())
+    db.commit()
+
+
+def get_stats():
+    from gluon.storage import Storage
+
+    stats = Storage([(row.what + "_count", "{:,}".format(row.count)) for row in db(Count).select()])
+    return stats
+
+
+def update_tag_count():
+    rec = db(Count.what == 'tag').select().first().id
+    Count.update_or_insert(id, count=db(Tag).count())
+    return
+
+
 if __name__ == '__main__':
+    update_counts()
+    1 / 0
     # get_sample_tag_cross_tab()
     # 1/0
     create_sample_attribute_header_view()
     create_series_attribute_header_view()
     db.commit()
-    1/0
+    1 / 0
     # insert_attributes()
     # insert_myGenes()
     # get_series_cross_tab()

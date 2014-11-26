@@ -111,12 +111,6 @@ def __save():
     session.tag_form_vars.regex = None
     session.tag_form_vars.tag_id = None
 
-
-    # clear session counts
-    session.tag_count = \
-        session.sample_tag_count = \
-        session.series_tag_count = 0
-
     if 'page' in request.get_vars:
         del (request.get_vars.page)
     redirect(URL('tag', 'index', vars=request.get_vars))

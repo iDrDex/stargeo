@@ -1,11 +1,12 @@
 {{extend 'layout.html'}}
-        {{=search_form}}
+{{=search_form}}
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="row">
     <div class="jumbotron col-lg-8">
         <div class="container">
             <p><b>STAR</b>: The <i>Search Tag & Analyze Resource</i> for collaborative annotation and
-                interpretation of disease from open digital samples from <a href="http://www.ncbi.nlm.nih.gov/geo/" target="_blank">GEO</a>.</p>
+                interpretation of disease from open digital samples from <a href="http://www.ncbi.nlm.nih.gov/geo/"
+                                                                            target="_blank">GEO</a>.</p>
         </div>
         <div class="container">
             <ul id="myTab" class="nav nav-tabs" role="tablist">
@@ -17,27 +18,30 @@
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="search">
                     <p>STAR provides a powerful search engine across samples, experiments, and attributes from GEO.
-                        In all, {{=session.sample_count}} digital samples
-                        described by {{=session.sample_attribute_count}} attributes that are
-                        drawn from {{=session.series_count}} experiments
-                        described by {{=session.series_attribute_count}} attributes are available.</p>
+                        In all, {{=stats.sample_count}} digital samples
+                        described by {{=stats.sample_attribute_count}} attributes that are
+                        drawn from {{=stats.series_count}} experiments
+                        described by {{=stats.series_attribute_count}} attributes are available.</p>
                 </div>
                 <div class="tab-pane fade" id="tag">
                     <p>STAR uses an annotation engine based on a semantic network of crowd-sourced tags that
-                        that represent biological annotations. In all, {{=session.tag_count}} tags have been used
-                        to make  {{=session.series_tag_count}} annotations of digital experiments
-                        representing {{=session.sample_tag_count}} annotations of digital samples.</p>
+                        that represent biological annotations. In all, {{=stats.tag_count}} tags have been used
+                        to make  {{=stats.series_tag_count}} annotations of digital experiments
+                        representing {{=stats.sample_tag_count}} annotations of digital samples.</p>
                 </div>
                 <div class="tab-pane fade" id="analyze">
                     <p>STAR enables meta-analysis of digitally tagged samples for robust gene signatures
-                        across {{=session.platform_count}} platforms. Meta-effects are calculated by standard
-                        fixed and random models of effect sizes and visualized by Forrest plots for each gene.</p>
+                        using {{=stats.platform_probe_count}} gene probes across {{=stats.platform_count}} platforms
+                        within
+                        GEO. In all {{=stats.analysis_count}} meta-analyses of standard fixed and random models have
+                        been
+                        run with corresponding Forrest plots available.</p>
                 </div>
                 <div class="tab-pane fade" id="resource">
                     <p>STAR represents an annotation layer built on open public data provided by GEO. It is provided as
-                        an open
-                        resource for the scientific community as a tool to derive robust gene signatures from public
-                        functional genomics data.</p>
+                        an open resource for the scientific community as a tool to derive robust gene signatures from
+                        public
+                        functional genomics data. Currently {{=stats.auth_user_count}} users have contributed.</p>
                 </div>
             </div>
         </div>
@@ -49,42 +53,42 @@
             <ul class="nav">
                 <li>
                     <a><b>Tags
-                        <span class="badge pull-right">{{=session.tag_count}}</span>
+                        <span class="badge pull-right">{{=stats.tag_count}}</span>
                     </b></a>
                 </li>
                 <li>
                     <a><b>Samples
-                        <span class="badge pull-right">{{=session.sample_count}}</span>
+                        <span class="badge pull-right">{{=stats.sample_count}}</span>
                     </b></a>
                 </li>
                 <li style="margin-left: 1em">
                     <a><b> Attributes
-                        <span class="badge pull-right">{{=session.sample_attribute_count}}</span>
+                        <span class="badge pull-right">{{=stats.sample_attribute_count}}</span>
                     </b></a>
                 </li>
                 <li style="margin-left: 1em">
                     <a><b>Annotations
-                        <span class="badge pull-right">{{=session.sample_tag_count}}</span>
+                        <span class="badge pull-right">{{=stats.sample_tag_count}}</span>
                     </b></a>
                 </li>
                 <li>
                     <a><b>Series
-                        <span class="badge pull-right">{{=session.series_count}}</span>
+                        <span class="badge pull-right">{{=stats.series_count}}</span>
                     </b></a>
                 </li>
                 <li style="margin-left: 1em">
                     <a><b>Attributes
-                        <span class="badge pull-right">{{=session.series_attribute_count}}</span>
+                        <span class="badge pull-right">{{=stats.series_attribute_count}}</span>
                     </b></a>
                 </li>
                 <li style="margin-left: 1em">
                     <a><b>Annotations
-                        <span class="badge pull-right">{{=session.series_tag_count}}</span>
+                        <span class="badge pull-right">{{=stats.series_tag_count}}</span>
                     </b></a>
                 </li>
                 <li>
                     <a><b>Platforms
-                        <span class="badge pull-right">{{=session.platform_count}}</span>
+                        <span class="badge pull-right">{{=stats.platform_count}}</span>
                     </b></a>
                 </li>
             </ul>
@@ -100,6 +104,12 @@ tags.element('.web2py_paginator', replace=None)
 =tags}}
 </div>
 
+<div class="panel panel-default">
+    <div class="panel-heading">Latest Analyses</div>
+{{tags.element('.web2py_console', replace=None)
+tags.element('.web2py_paginator', replace=None)
+=analyses}}
+</div>
 
 <!--http://stackoverflow.com/questions/18606773/automatic-bootstrap-tabs-->
 <script>var tabChange = function () {

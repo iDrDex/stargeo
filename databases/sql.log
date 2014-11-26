@@ -3135,3 +3135,32 @@ CREATE TABLE sample_attribute_header(
     num INTEGER
 );
 success!
+timestamp: 2014-11-24T15:05:51.814581
+CREATE TABLE counts(
+    id SERIAL PRIMARY KEY,
+    what VARCHAR(512),
+    count VARCHAR(512)
+);
+success!
+TRUNCATE TABLE counts ;
+success!
+timestamp: 2014-11-24T15:06:39.845537
+CREATE TABLE count(
+    id SERIAL PRIMARY KEY,
+    what VARCHAR(512),
+    count VARCHAR(512)
+);
+success!
+TRUNCATE TABLE count ;
+success!
+TRUNCATE TABLE count ;
+success!
+timestamp: 2014-11-24T15:17:59.124125
+CREATE TABLE count(
+    id SERIAL PRIMARY KEY,
+    what VARCHAR(512),
+    count INTEGER
+);
+success!
+TRUNCATE TABLE count ;
+success!
