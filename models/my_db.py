@@ -258,11 +258,12 @@ class IS_PANDAS_QUERY:
     def __call__(self, value):
         try:
             if value:
-                self.df.query(value.lower())
+                print "df"
+                print self.df.query(value.lower()).head()
+                print "QUERY"
+                self.df.query(value.lower()).head()
             return value, None
         except:
-            print "ERROR:", value, "FAILED!"
-            print self.df.query(value.lower()
             return (value, self.error_message)
 
 
