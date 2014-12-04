@@ -261,6 +261,8 @@ class IS_PANDAS_QUERY:
                 self.df.query(value.lower())
             return value, None
         except:
+            print "ERROR:", value, "FAILED!"
+            print self.df.query(value.lower()
             return (value, self.error_message)
 
 
@@ -274,9 +276,9 @@ Analysis = db.define_table('analysis',
                            # Field('case_query', requires=[IS_NOT_EMPTY()]),
                            # Field('control_query', requires=[IS_NOT_EMPTY()]),
                            # Field('modifier_query', requires=[]),
-                           Field('series_count', 'integer', readable=False, writable=False),
-                           Field('platform_count', 'integer', readable=False, writable=False),
-                           Field('sample_count', 'integer', readable=False, writable=False),
+                           Field('series_count', 'integer', writable=False),
+                           Field('platform_count', 'integer', writable=False),
+                           Field('sample_count', 'integer',  writable=False),
                            Field('series_ids', 'list:reference series', readable=False, writable=False),
                            Field('platform_ids', 'list:reference platform', readable=False, writable=False),
                            Field('sample_ids', 'list:reference sample', readable=False, writable=False),

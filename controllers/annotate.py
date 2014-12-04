@@ -2,7 +2,7 @@ __author__ = 'dex'
 
 import re
 
-
+@auth.requires_login()
 def index():
     # tag and regex must be defined
     tag_id, regex = (session.tag_form_vars.tag_id, session.tag_form_vars.regex) \

@@ -5,8 +5,8 @@
 # # This is a sample controller
 # # - index is the default action of any application
 # # - user is required for authentication and authorization
-## - download is for downloading files uploaded in the db (does streaming)
-## - api is an example of Hypermedia API support and access control
+# # - download is for downloading files uploaded in the db (does streaming)
+# # - api is an example of Hypermedia API support and access control
 #########################################################################
 
 def index():
@@ -20,19 +20,34 @@ def index():
                         maxtextlength=100,
                         ondelete=update_sample_cross_tab)
 
-    analyses = SQLFORM.grid(Analysis,
-                        searchable=False,
-                        csv=False,
+    grid = SQLFORM.grid(Analysis,
+                        fields=[Analysis.analysis_name,
+                                Analysis.description,
+                                Analysis.case_query,
+                                Analysis.control_query,
+                                Analysis.modifier_query,
+                                Analysis.series_count,
+                                Analysis.platform_count,
+                                Analysis.sample_count],
                         orderby=~Analysis.id,
+                        search_widget=None,
+                        searchable=None,
+                        create=None,
+                        details=None,
+                        csv=False,
                         paginate=5,
-                        maxtextlength=100)
+                        maxtextlength=100,
+                        links=[lambda row: A(BUTTON("Results"), _href=URL('analysis', 'results',
+                                                                          vars=dict(
+                                                                              analysis_id=row.id)))]
+    )
 
     search_form = search_widget(url=URL('series', 'index', vars=dict(keywords=request.vars.keywords)))
 
     return dict(search_form=search_form,
                 tags=tags,
                 stats=stats,
-                analyses = analyses)
+                analyses=grid)
 
 
 def user():
