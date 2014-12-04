@@ -3390,3 +3390,29 @@ TRUNCATE TABLE sample_tag_view_results ;
 success!
 TRUNCATE TABLE count ;
 success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE count ;
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE count ;
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE count ;
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE count ;
+success!
+TRUNCATE TABLE count ;
+success!

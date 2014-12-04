@@ -226,6 +226,7 @@ def get_sample_tag_cross_tab():
 
     # reset results
     Sample_Tag_View_Results.truncate()
+    db.commit()
 
     #update  homepage counts
     update_counts()
@@ -854,6 +855,8 @@ def update_tag_count():
 
 
 if __name__ == '__main__':
+    update_counts()
+    1/0
     get_sample_tag_cross_tab()
     1 / 0
     # get_sample_tag_cross_tab()

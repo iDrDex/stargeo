@@ -223,7 +223,10 @@ Series_Tag_View_Results = db.define_table('series_tag_view_results',
 )
 
 
-def update_sample_cross_tab(form, arg):  # wrapper for ondelete from home page
+def update_sample_cross_tab(form, arg):  # wrapper for ondelete onupdate froms
+    get_sample_tag_cross_tab()
+
+def add_sample_cross_tab(form):  # wrapper for oncreate froms
     get_sample_tag_cross_tab()
 
 
