@@ -22,19 +22,22 @@ def index():
                         search_widget=None,
                         searchable=None,
                         create=None,
+                        details=None,
                         # buttons_placement='left',
-                        links=[lambda row: A("Results", _href=URL('results',
+                        links=[lambda row: A(BUTTON("Results"), _href=URL('results',
                                                                   vars=dict(
-                                                                      analysis_id=row.id)))],
-                        formname='results'
+                                                                      analysis_id=row.id)))]
     )
     num_incomplete = db(Scheduler_Task.status <> "COMPLETED").count()
     queue = A("%s %s in queue" % (
         num_incomplete, "analysis" if num_incomplete == 1 else "analyses") if num_incomplete else "",
               _href=URL('queue'),
-              _target="blank")
-    return dict(add=A(BUTTON("New Analysis"), _href=URL("add"), vars=request.get_vars),
-                # form=search_widget(),
+              _target="blank",
+              _class="pull-right")
+    add = A(BUTTON("New Analysis"),
+            _href=URL("add"),
+            vars=request.get_vars)
+    return dict(add=add,
                 queue=queue,
                 grid=grid
     )

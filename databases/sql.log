@@ -3227,3 +3227,166 @@ CREATE TABLE scheduler_task_deps(
 success!
 TRUNCATE TABLE count ;
 success!
+TRUNCATE TABLE count ;
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE count ;
+success!
+timestamp: 2014-11-26T12:26:10.657571
+CREATE TABLE sample_view_annotation_filter(
+    id SERIAL PRIMARY KEY,
+    sample_view_id INTEGER,
+    annotation TEXT,
+    session_id VARCHAR(512),
+    created_on TIMESTAMP
+);
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE count ;
+success!
+timestamp: 2014-11-26T12:52:50.819520
+ALTER TABLE balanced_meta DROP COLUMN subset;
+timestamp: 2014-11-26T12:52:50.849486
+ALTER TABLE balanced_meta DROP COLUMN label_right;
+timestamp: 2014-11-26T12:52:50.875808
+ALTER TABLE balanced_meta DROP COLUMN df_hakn;
+timestamp: 2014-11-26T12:52:50.902171
+ALTER TABLE balanced_meta DROP COLUMN prediction;
+timestamp: 2014-11-26T12:52:50.928237
+ALTER TABLE balanced_meta DROP COLUMN method_bias;
+timestamp: 2014-11-26T12:52:50.954769
+ALTER TABLE balanced_meta DROP COLUMN byvar;
+timestamp: 2014-11-26T12:52:50.980817
+ALTER TABLE balanced_meta DROP COLUMN upper_i2;
+timestamp: 2014-11-26T12:52:51.007135
+ALTER TABLE balanced_meta DROP COLUMN level_comb;
+timestamp: 2014-11-26T12:52:51.033250
+ALTER TABLE balanced_meta DROP COLUMN complab;
+timestamp: 2014-11-26T12:52:51.059466
+ALTER TABLE balanced_meta DROP COLUMN title;
+timestamp: 2014-11-26T12:52:51.085996
+ALTER TABLE balanced_meta DROP COLUMN effect_size;
+timestamp: 2014-11-26T12:52:51.112482
+ALTER TABLE balanced_meta DROP COLUMN print_byvar;
+timestamp: 2014-11-26T12:52:51.138960
+ALTER TABLE balanced_meta DROP COLUMN call;
+timestamp: 2014-11-26T12:52:51.165077
+ALTER TABLE balanced_meta DROP COLUMN hakn;
+timestamp: 2014-11-26T12:52:51.191719
+ALTER TABLE balanced_meta DROP COLUMN tau_preset;
+timestamp: 2014-11-26T12:52:51.217988
+ALTER TABLE balanced_meta DROP COLUMN lower_i2;
+timestamp: 2014-11-26T12:52:51.244387
+ALTER TABLE balanced_meta DROP COLUMN label_e;
+timestamp: 2014-11-26T12:52:51.270728
+ALTER TABLE balanced_meta DROP COLUMN outclab;
+timestamp: 2014-11-26T12:52:51.297031
+ALTER TABLE balanced_meta DROP COLUMN label_left;
+timestamp: 2014-11-26T12:52:51.323332
+ALTER TABLE balanced_meta DROP COLUMN label_c;
+timestamp: 2014-11-26T12:52:51.349446
+ALTER TABLE balanced_meta DROP COLUMN warn;
+timestamp: 2014-11-26T12:52:51.375700
+ALTER TABLE balanced_meta DROP COLUMN upper_h;
+timestamp: 2014-11-26T12:52:51.402096
+ALTER TABLE balanced_meta DROP COLUMN lower_h;
+timestamp: 2014-11-26T12:52:51.428380
+ALTER TABLE balanced_meta DROP COLUMN level;
+timestamp: 2014-11-26T12:52:51.454840
+ALTER TABLE balanced_meta DROP COLUMN level_predict;
+timestamp: 2014-11-26T12:52:51.481095
+ALTER TABLE balanced_meta DROP COLUMN method_tau;
+timestamp: 2014-11-26T12:52:51.507484
+ALTER TABLE balanced_meta DROP COLUMN method;
+timestamp: 2014-11-26T12:52:51.533924
+ALTER TABLE balanced_meta DROP COLUMN bylab;
+timestamp: 2014-11-26T12:52:51.560352
+ALTER TABLE balanced_meta DROP COLUMN sete_predict;
+timestamp: 2014-11-26T12:52:51.586715
+ALTER TABLE balanced_meta DROP COLUMN sm;
+timestamp: 2014-11-26T12:52:51.613069
+ALTER TABLE balanced_meta DROP COLUMN upper_predict;
+timestamp: 2014-11-26T12:52:51.639411
+ALTER TABLE balanced_meta DROP COLUMN studlab;
+success!
+timestamp: 2014-11-26T12:55:43.811195
+CREATE TABLE analysis(
+    id SERIAL PRIMARY KEY,
+    analysis_name VARCHAR(512),
+    description VARCHAR(512),
+    case_query VARCHAR(512),
+    control_query VARCHAR(512),
+    modifier_query VARCHAR(512),
+    series_count INTEGER,
+    platform_count INTEGER,
+    sample_count INTEGER,
+    series_ids TEXT,
+    platform_ids TEXT,
+    sample_ids TEXT,
+    is_active CHAR(1),
+    created_on TIMESTAMP,
+    created_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    modified_on TIMESTAMP,
+    modified_by INTEGER REFERENCES auth_user (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-11-26T12:55:43.878592
+CREATE TABLE balanced_meta(
+    id SERIAL PRIMARY KEY,
+    analysis_id INTEGER REFERENCES analysis (id) ON DELETE CASCADE,
+    mygene_sym VARCHAR(512),
+    mygene_entrez INTEGER,
+    direction VARCHAR(512),
+    k FLOAT8,
+    TE_fixed FLOAT8,
+    TE_random FLOAT8,
+    pval_fixed FLOAT8,
+    pval_random FLOAT8,
+    C FLOAT8,
+    H FLOAT8,
+    I2 FLOAT8,
+    Q FLOAT8,
+    TE FLOAT8,
+    TE_tau FLOAT8,
+    caseDataCount FLOAT8,
+    comb_fixed FLOAT8,
+    comb_random FLOAT8,
+    controlDataCount FLOAT8,
+    data FLOAT8,
+    df_Q FLOAT8,
+    lower_fixed FLOAT8,
+    lower_predict FLOAT8,
+    lower_random FLOAT8,
+    mean_c FLOAT8,
+    mean_e FLOAT8,
+    n_c FLOAT8,
+    n_e FLOAT8,
+    sd_c FLOAT8,
+    sd_e FLOAT8,
+    se_tau2 FLOAT8,
+    seTE FLOAT8,
+    seTE_fixed FLOAT8,
+    seTE_random FLOAT8,
+    tau FLOAT8,
+    tau_common FLOAT8,
+    upper_fixed FLOAT8,
+    upper_random FLOAT8,
+    version VARCHAR(512),
+    w_fixed FLOAT8,
+    w_random FLOAT8,
+    zval_fixed FLOAT8,
+    zval_random FLOAT8
+);
+success!
+TRUNCATE TABLE series_tag_view_results ;
+success!
+TRUNCATE TABLE sample_tag_view_results ;
+success!
+TRUNCATE TABLE count ;
+success!

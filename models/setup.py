@@ -854,7 +854,7 @@ def update_tag_count():
 
 
 if __name__ == '__main__':
-    update_counts()
+    get_sample_tag_cross_tab()
     1 / 0
     # get_sample_tag_cross_tab()
     # 1/0

@@ -2,7 +2,7 @@ __author__ = 'dex'
 
 import re
 
-@auth.requires_login()
+
 def index():
     # tag and regex must be defined
     tag_id, regex = (session.tag_form_vars.tag_id, session.tag_form_vars.regex) \
@@ -11,13 +11,18 @@ def index():
            and session.tag_form_vars.regex \
         else redirect(URL('default', 'index'))
 
-    __setup_filter()
+    __setup_filter() #must be separate conroller from edit()
+    redirect(URL('edit'))
+
+@auth.requires_login()
+def edit():
     headers = session.tag_form_vars.headers
     fields = [Sample_View['sample_id'],
               Sample_View['platform_id'],
               Sample_View_Annotation_Filter['annotation'],
              ] + \
-             ([Sample_View[session.tag_form_vars.header]] if session.tag_form_vars.header \
+             ([Sample_View[session.tag_form_vars.header]]
+              if session.tag_form_vars.header \
                   else [Sample_View[header] for header in headers])
 
     # set up form defaults as readonly
@@ -30,19 +35,23 @@ def index():
     if form.validate():
         return __save()
 
+    grid = SQLFORM.grid((Sample_View_Annotation_Filter.sample_view_id == Sample_View.id) & \
+                        (Sample_View_Annotation_Filter.session_id == response.session_id),
+                        field_id=Sample_View_Annotation_Filter.id,
+                        searchable=None,
+                        search_widget=None,
+                        details=False,
+                        deletable=False,
+                        create=False,
+                        # user_signature=False,
+                        maxtextlength=1000 if fields else 20,
+                        fields=fields)
+    # grid = SQLFORM.grid(Sample_View_Annotation_Filter)
     return dict(
         form=form,
-        grid=SQLFORM.grid((Sample_View_Annotation_Filter.sample_view_id == Sample_View.id) & \
-                          (Sample_View_Annotation_Filter.session_id == response.session_id),
-                          searchable=None,
-                          search_widget=None,
-                          details=False,
-                          deletable=False,
-                          create=False,
-                          user_signature=False,
-                          maxtextlength=1000 if fields else 20,
-                          fields=fields)
+        grid=grid
     )
+
 
 def __setup_filter():
     # SERIES ID
@@ -80,6 +89,7 @@ def __setup_filter():
         Sample_View_Annotation_Filter.insert(
             sample_view_id=row.id,
             annotation=annotation)
+
 
 def __save():
     platform_id = session.tag_form_vars.platform_id

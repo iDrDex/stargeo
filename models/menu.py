@@ -49,6 +49,8 @@ response.menu = [
      URL('series_tag', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
     (T('Analysis'), (request.controller == 'analysis'),
      URL('analysis', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
+    (T('Tags'), (request.controller == 'tags'),
+     URL('tags', 'index', vars=request.vars.keywords and dict(keywords=request.vars.keywords))),
 ]
 
 DEVELOPMENT_MENU = False
