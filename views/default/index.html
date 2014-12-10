@@ -4,10 +4,14 @@
 <div class="row">
     <div class="jumbotron col-lg-8">
         <div class="container">
-            <p><b>STAR</b>: The <i>Search Tag & Analyze Resource</i> for collaborative annotation and
+            <p>
+                <img class="pull-left" style="margin-right: 1em" src={{=URL('static','images/stanfordlogo.gif')}}>
+                <b>STAR</b>: The <i>Search Tag & Analyze Resource</i> for collaborative annotation and
                 interpretation of disease from open digital samples from <a href="http://www.ncbi.nlm.nih.gov/geo/"
-                                                                            target="_blank">GEO</a>.</p>
+                                                                            target="_blank">GEO</a>.
+            </p>
         </div>
+        <hr/>
         <div class="container">
             <ul id="myTab" class="nav nav-tabs" role="tablist">
                 <li class="active"><a href="#search" role="tab" data-toggle="tab"><b>Search</b></a></li>
@@ -89,6 +93,11 @@
                 <li>
                     <a><b>Platforms
                         <span class="badge pull-right">{{=stats.platform_count}}</span>
+                    </b></a>
+                </li>
+                <li>
+                    <a><b> Gene probes
+                        <span class="badge pull-right">{{=stats.platform_probe_count}}</span>
                     </b></a>
                 </li>
             </ul>

@@ -61,10 +61,10 @@ def get_fts_query(search_text):
 
     search_text = search_text \
         .strip() \
+        .replace("&", " ") \
         .lower() \
         if search_text \
         else ""
-    search_text = search_text.lower()
 
     fts_query = re.sub(r'\s+',
                        r' ',
@@ -112,7 +112,7 @@ def searchable(fields, keywords):
             # where_sql  = "%s_view.doc @@ to_tsquery('english', '%s')" % (request.controller, fts_query)
             # sql = """SELECT %s
             # FROM %s
-            #          WHERE %s;"""%(select_sql, from_sql, where_sql)
+            # WHERE %s;"""%(select_sql, from_sql, where_sql)
             print sql
             # 1 / 0
             db.executesql(sql)
@@ -148,8 +148,9 @@ def get_tag_headers(view, query):
     return fields
 
 
-
 paginate = 10
+
+
 def get_grid():
     import time
 
@@ -160,8 +161,7 @@ def get_grid():
     if request.controller.endswith("_tag"):
         fields = get_tag_headers(view, query)
     elif not request.vars.invariant:
-        fields = get_fields(view, query, paginate) \
-
+        fields = get_fields(view, query, paginate)
 
     grid = SQLFORM.grid(query,
                         field_id=view.id,
@@ -189,8 +189,8 @@ def get_grid():
 # if paginate:
 # try:
 # page = int(request.vars.page or 1) - 1
-#         except ValueError:
-#             page = 0
+# except ValueError:
+# page = 0
 #         limitby = (paginate * page, paginate * (page + 1))
 #
 #     rows = db(query).select(view.ALL, limitby=limitby)

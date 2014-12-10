@@ -5,15 +5,18 @@ r = robjects.r
 
 
 def get_full_df():
+    # print "in get_full_df()"
     tags = [row.tag_name.lower()
             for row in
             db().select(Tag.tag_name,
                         distinct=True,
                         orderby=Tag.tag_name)]
+    # print "Tags", tags
     df = db((Sample_Tag_View.sample_id == Sample.id) &
             (Sample_Tag_View.series_id == Series.id) &
             (Sample_Tag_View.platform_id == Platform.id)) \
         .select(processor=pandas_processor)
+    # print "df", df.head()
     clean_columns = []
     clean_series = []
 
@@ -34,6 +37,8 @@ def get_full_df():
         if col in tags:
             if clean_df.dtypes[col] == object:
                 clean_df[col] = clean_df[col].str.lower()
+
+    # print "clean", clean_df.head()
     return clean_df
 
 
