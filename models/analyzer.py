@@ -5,18 +5,18 @@ r = robjects.r
 
 
 def get_full_df():
-    # print "in get_full_df()"
+
     tags = [row.tag_name.lower()
             for row in
             db().select(Tag.tag_name,
                         distinct=True,
                         orderby=Tag.tag_name)]
-    # print "Tags", tags
+
     df = db((Sample_Tag_View.sample_id == Sample.id) &
             (Sample_Tag_View.series_id == Series.id) &
             (Sample_Tag_View.platform_id == Platform.id)) \
         .select(processor=pandas_processor)
-    # print "df", df.head()
+
     clean_columns = []
     clean_series = []
 
@@ -38,7 +38,6 @@ def get_full_df():
             if clean_df.dtypes[col] == object:
                 clean_df[col] = clean_df[col].str.lower()
 
-    # print "clean", clean_df.head()
     return clean_df
 
 
@@ -100,13 +99,16 @@ def get_data(series_id, platform_id):
     data.index.name = "probe"
     for column in data.columns:
         data[column] = data[column].astype(np.float64)
+    # return data.head(100)
     return data
 
 
 def get_probes(platform_id):
     df = db(Platform_Probe.platform_id == platform_id).select(processor=pandas_processor)
     df.columns = [col.lower().replace("platform_probe.", "") for col in df.columns]
+    df.probe = df.probe.astype(str) #must cast probes as str
     df = df.set_index('probe')
+    # return df
     return df
 
 
@@ -134,7 +136,7 @@ def getFullMetaAnalysis(fcResults, debug=False):
             print i, group
         i += 1
         geneEstimates.title = mygene_sym
-        debug and geneEstimates.to_csv("%s.%s.fc.csv" % (debug, mygene_sym))
+        # debug and geneEstimates.to_csv("%s.%s.fc.csv" % (debug, mygene_sym))
         metaAnalysis = getMetaAnalysis(geneEstimates)
         metaAnalysis['caseDataCount'] = geneEstimates['caseDataCount'].sum()
         metaAnalysis['controlDataCount'] = geneEstimates['controlDataCount'].sum()
@@ -312,8 +314,9 @@ class MetaAnalyzer():
 
     def getFc(self, debug=False):
         print "calculating fold changes"
-        self.allFcResults = pd.concat([GseAnalyzer(gse).getResults(how='fc', debug=debug) for gse in self.gses])
-        debug and self.allFcResults.to_csv("%s.allFcResults.csv")
+        allResults = [GseAnalyzer(gse).getResults(how='fc', debug=debug) for gse in self.gses]
+        self.allFcResults = pd.concat(allResults)
+        debug and self.allFcResults.to_csv("%s.allFcResults.csv"%debug)
         return self.allFcResults
 
     def getRanks(self):
