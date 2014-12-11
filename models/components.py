@@ -4,7 +4,7 @@ response.files += ["https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstra
                    "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css",
                    "https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"]
 response.files += ["//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"]
-response.files += [URL('static', 'css/my.css')]
+# response.files += [URL('static', 'css/my.css')]
 
 
 def search_widget(fields=None, url=None):

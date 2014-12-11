@@ -313,6 +313,7 @@ class MetaAnalyzer():
     def getFc(self, debug=False):
         print "calculating fold changes"
         self.allFcResults = pd.concat([GseAnalyzer(gse).getResults(how='fc', debug=debug) for gse in self.gses])
+        debug and self.allFcResults.to_csv("%s.allFcResults.csv")
         return self.allFcResults
 
     def getRanks(self):
