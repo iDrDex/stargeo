@@ -1,17 +1,28 @@
 {{extend 'layout.html'}}
 {{=search_form}}
+
+<div class="col-lg-10 col-lg-offset-1">
+    <!-- 16:9 aspect ratio -->
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="//www.youtube.com/embed/bK2FNhcSsk4" allowfullscreen></iframe>
+    </div>
+    <hr/>
+</div>
+
+
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="row">
     <div class="jumbotron col-lg-8">
         <div class="container">
             <p>
-                <img class="pull-left" style="margin-right: 1em" src={{=URL('static','images/stanfordlogo.gif')}}>
+                <img class="pull-left" style="margin-right: 1em" src={{=URL('static','images/stanfordlogo_75.gif')}}>
                 <b>STAR</b>: The <i>Search Tag & Analyze Resource</i> for collaborative annotation and
                 interpretation of disease from open digital samples from <a href="http://www.ncbi.nlm.nih.gov/geo/"
                                                                             target="_blank">GEO</a>.
             </p>
         </div>
-        <hr/>
+
+
         <div class="container">
             <ul id="myTab" class="nav nav-tabs" role="tablist">
                 <li class="active"><a href="#search" role="tab" data-toggle="tab"><b>Search</b></a></li>
@@ -103,9 +114,9 @@
             </ul>
         </div>
     </div>
-
 </div>
 
+<!--
 <div class="panel panel-default">
     <div class="panel-heading">Latest Annotations</div>
 {{tags.element('.web2py_console', replace=None)
@@ -119,6 +130,7 @@ tags.element('.web2py_paginator', replace=None)
 analyses.element('.web2py_paginator', replace=None)
 =analyses}}
 </div>
+-->
 
 <!--http://stackoverflow.com/questions/18606773/automatic-bootstrap-tabs-->
 <script>var tabChange = function () {

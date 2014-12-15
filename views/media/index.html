@@ -1,0 +1,19 @@
+{{extend 'layout.html'}}
+<div class="row">
+    <div class="col-lg-6">
+    {{=H1("December 10, 2014")}}
+    {{=H2("UC Berkeley")}}
+    {{=H2(
+    """This talk was presented at the web2py Bay Area developers as a demo of the open source full stack web2py
+    framework. It provides a good introduction and overview to """,
+    A("stargeo.org",_href=URL('default', 'index'))
+    )}}
+
+    </div>
+    <div class="col-lg-6">
+        <!-- 16:9 aspect ratio -->
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="//www.youtube.com/embed/bK2FNhcSsk4" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
