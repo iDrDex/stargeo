@@ -79,7 +79,7 @@ def get_matrix_filename(series_id, platform_id):
     filename = "%s_series_matrix.txt.gz" % gse_name
     if not glob.glob(os.path.join(path, filename)):
         gpl_name = Platform[platform_id].gpl_name
-        filename = "%s-%s.series_matrix.txt.gz" % (gse_name, gpl_name)
+        filename = "%s-%s_series_matrix.txt.gz" % (gse_name, gpl_name)
     filepath = os.path.join(path, filename)
     return filepath
 
