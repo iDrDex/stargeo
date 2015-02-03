@@ -41,6 +41,45 @@ def get_full_df():
     return clean_df
 
 
+
+def saveTree():
+    print "Saving Tree of Death!"
+    #read from db
+    analysis = db(Balanced_Meta).select(processor=pandas_processor)
+    analysis.columns = [col.replace("balanced_meta.","").lower() for col in analysis.columns]
+    # analysis.to_csv("analysis.test.csv")
+    names = db(Analysis).select(processor=pandas_processor)
+    names.columns = [col.replace('analysis.', "") for col in names.columns]
+    # names.to_csv("names.test.csv")
+
+    #make dist_matrix
+    short = analysis[['analysis_id', 'mygene_sym', 'te_fixed']].dropna()
+    gene_counts = analysis.groupby('mygene_sym').count().analysis_id
+    complete_genes = gene_counts[gene_counts == len(names.index)]
+    indexed = short[short.mygene_sym.isin(complete_genes.index)].set_index(['analysis_id', 'mygene_sym']).dropna()
+    dist_matrix = indexed.unstack()
+
+
+    # perform clustering and plot the dendrogram
+    from scipy.cluster.hierarchy import linkage, dendrogram
+    import matplotlib
+    matplotlib.use("Agg")
+    from matplotlib import pyplot as plt
+    # plt.ioff()
+
+    R = dendrogram(linkage(dist_matrix, method='complete'),
+                   labels=list(names.analysis_name + " " +
+                               names.series_count.astype(str) + " gse " +
+                               names.platform_count.astype(str) + " gpl " +
+                               names.sample_count.astype(str) + " gsm"),
+                   orientation = "right",
+                   )
+
+    plt.ylabel('Signature x %s Genes'%len(dist_matrix.columns))
+    plt.xlabel('Functional Distance')
+    plt.tight_layout()
+    plt.savefig("applications/%s/static/tree_of_death.png"%request.application)
+
 def get_analysis_df(case_query, control_query, modifier_query):
     df = get_full_df()
     # df = db(Sample_Tag_View).select(processor=pandas_processor)

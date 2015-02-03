@@ -2,6 +2,11 @@ __author__ = 'dex'
 
 
 def tag():
+
+
+    from gluon.tools import Crud
+    crud = Crud(db)
+
     grid = SQLFORM.grid(Tag,
                         orderby=~Tag.id,
                         maxtextlength=100,
