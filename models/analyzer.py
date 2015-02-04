@@ -52,12 +52,10 @@ def saveTree():
     names.columns = [col.replace('analysis.', "") for col in names.columns]
     # names.to_csv("names.test.csv")
 
-    #make genes x diseases
-    matrix = analysis.groupby(['mygene_entrez'])\
-             .filter(lambda x: x.count() == len(names.index)) \
-             .set_index(['analysis_id', 'mygene_entrez']) \
-             .unstack()
-
+    df = analysis.groupby(['mygene_entrez']) \
+        .filter(lambda x: x.count() == len(names.index)) \
+        .set_index(['analysis_id', 'mygene_entrez']) \
+        .te_fixed.unstack()
 
     # perform clustering and plot the dendrogram
     from scipy.cluster.hierarchy import linkage, dendrogram
@@ -65,7 +63,7 @@ def saveTree():
     matplotlib.use("Agg")
     from matplotlib import pyplot as plt
 
-    R = dendrogram(linkage(matrix, method='complete'),
+    R = dendrogram(linkage(df, method='complete'),
                    labels=list(names.analysis_name + " " +
                                names.series_count.astype(str) + " gse " +
                                names.platform_count.astype(str) + " gpl " +
@@ -73,7 +71,7 @@ def saveTree():
                    orientation = "right",
                    )
 
-    plt.ylabel('Signature x %s Genes'%len(matrix.columns))
+    plt.ylabel('Signature x %s Genes'%len(df.columns))
     plt.xlabel('Functional Distance')
     plt.tight_layout()
     plt.savefig("applications/%s/static/tree_of_death.png"%request.application)
