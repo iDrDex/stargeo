@@ -52,12 +52,11 @@ def saveTree():
     names.columns = [col.replace('analysis.', "") for col in names.columns]
     # names.to_csv("names.test.csv")
 
-    #make dist_matrix
-    short = analysis[['analysis_id', 'mygene_sym', 'te_fixed']].dropna()
-    gene_counts = analysis.groupby('mygene_sym').count().analysis_id
-    complete_genes = gene_counts[gene_counts == len(names.index)]
-    indexed = short[short.mygene_sym.isin(complete_genes.index)].set_index(['analysis_id', 'mygene_sym']).dropna()
-    dist_matrix = indexed.unstack()
+    #make genes x diseases
+    matrix = analysis.groupby(['mygene_entrez'])\
+             .filter(lambda x: x.count() == len(names.index)) \
+             .set_index(['analysis_id', 'mygene_entrez']) \
+             .unstack()
 
 
     # perform clustering and plot the dendrogram
@@ -65,9 +64,8 @@ def saveTree():
     import matplotlib
     matplotlib.use("Agg")
     from matplotlib import pyplot as plt
-    # plt.ioff()
 
-    R = dendrogram(linkage(dist_matrix, method='complete'),
+    R = dendrogram(linkage(matrix, method='complete'),
                    labels=list(names.analysis_name + " " +
                                names.series_count.astype(str) + " gse " +
                                names.platform_count.astype(str) + " gpl " +
@@ -75,7 +73,7 @@ def saveTree():
                    orientation = "right",
                    )
 
-    plt.ylabel('Signature x %s Genes'%len(dist_matrix.columns))
+    plt.ylabel('Signature x %s Genes'%len(matrix.columns))
     plt.xlabel('Functional Distance')
     plt.tight_layout()
     plt.savefig("applications/%s/static/tree_of_death.png"%request.application)
