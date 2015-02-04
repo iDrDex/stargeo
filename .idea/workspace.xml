@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ee8dc95-2578-4981-9dac-61327f1bcdc1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/analyzer.py" afterPath="$PROJECT_DIR$/models/analyzer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/tree.py" afterPath="$PROJECT_DIR$/controllers/tree.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="stargeo.iws" />
@@ -53,8 +53,8 @@
       <file leaf-file-name="analyzer.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/analyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25203252" vertical-offset="369" max-vertical-offset="7395">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.41463414" vertical-offset="369" max-vertical-offset="7395">
+              <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -83,8 +83,8 @@
       <file leaf-file-name="tree.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/tree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="240">
-              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="240">
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -219,7 +219,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -300,6 +299,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -439,9 +439,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -463,6 +460,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -691,7 +691,11 @@
       <created>1423039158598</created>
       <updated>1423039158598</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Tree of Death major feature added!">
+      <created>1423041282494</created>
+      <updated>1423041282494</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -704,7 +708,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1892247" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1918936" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2477004" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25098553" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28429985" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25139666" sideWeight="0.5012837" order="8" side_tool="true" content_ui="tabs" />
@@ -955,8 +959,8 @@
             <node x="590.0" y="1262.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.sample_view</node>
             <node x="248.0" y="186.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.search</node>
             <node x="440.0" y="604.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.sample_tag</node>
-            <node x="325.0" y="296.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.user_search</node>
             <node x="158.0" y="636.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_group</node>
+            <node x="325.0" y="296.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.user_search</node>
             <node x="749.0" y="1262.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series_view</node>
             <node x="956.0" y="961.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.sample_attribute_header</node>
             <node x="636.0" y="841.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.sample_attribute</node>
@@ -971,10 +975,10 @@
             <node x="475.0" y="287.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.analysis</node>
             <node x="0.0" y="1165.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.scheduler_task_deps</node>
             <node x="381.0" y="864.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series_attribute</node>
-            <node x="184.0" y="0.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series_view_results</node>
             <node x="606.0" y="470.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.tag</node>
-            <node x="604.0" y="349.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_event</node>
+            <node x="184.0" y="0.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series_view_results</node>
             <node x="858.0" y="635.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.platform_probe</node>
+            <node x="604.0" y="349.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_event</node>
             <node x="0.0" y="1262.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series_attribute_header</node>
             <node x="587.0" y="580.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series_tag</node>
             <node x="362.0" y="961.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.sample_view_annotation_filter</node>
@@ -983,19 +987,15 @@
           </nodes>
           <notes />
           <edges>
-            <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.user_search" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_user">
-              <point x="3.8608118176842225" y="-3.1771263916359658" />
-              <point x="3.8608118176842225" y="-3.1771263916359764" />
-            </edge>
             <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.sample_view_results" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.search">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.scheduler_run" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.scheduler_task">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+            <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.user_search" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_user">
+              <point x="3.8608118176842225" y="-3.1771263916359658" />
+              <point x="3.8608118176842225" y="-3.1771263916359764" />
             </edge>
-            <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series_attribute" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series">
+            <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.scheduler_run" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.scheduler_task">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1003,11 +1003,15 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_membership" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_group">
+            <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series_attribute" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
             <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.user_search" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.search">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_membership" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_group">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1328,16 +1332,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/tree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="240">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/analyzer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25203252" vertical-offset="369" max-vertical-offset="7395">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.41463414" vertical-offset="369" max-vertical-offset="7395">
+          <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
           <folding />
         </state>
       </provider>

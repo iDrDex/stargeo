@@ -7,4 +7,4 @@ def index():
 
 def redraw():
     saveTree()
-    redirect(URL('index'))
+    redirect(URL('index'), client_side=True)
