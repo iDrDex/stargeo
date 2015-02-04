@@ -5,7 +5,6 @@ r = robjects.r
 
 
 def get_full_df():
-
     tags = [row.tag_name.lower()
             for row in
             db().select(Tag.tag_name,
@@ -41,40 +40,43 @@ def get_full_df():
     return clean_df
 
 
-
 def saveTree():
     print "Saving Tree of Death!"
-    #read from db
+    # read from db
     analysis = db(Balanced_Meta).select(processor=pandas_processor)
-    analysis.columns = [col.replace("balanced_meta.","").lower() for col in analysis.columns]
+    analysis.columns = [col.replace("balanced_meta.", "").lower() for col in analysis.columns]
     # analysis.to_csv("analysis.test.csv")
     names = db(Analysis).select(processor=pandas_processor)
     names.columns = [col.replace('analysis.', "") for col in names.columns]
     # names.to_csv("names.test.csv")
 
     df = analysis.groupby(['mygene_entrez']) \
-        .filter(lambda x: x.count() == len(names.index)) \
+        .filter(lambda x: x.analysis_id.count() == len(names.index)) \
         .set_index(['analysis_id', 'mygene_entrez']) \
         .te_fixed.unstack()
 
     # perform clustering and plot the dendrogram
     from scipy.cluster.hierarchy import linkage, dendrogram
     import matplotlib
+
     matplotlib.use("Agg")
     from matplotlib import pyplot as plt
+
+    plt.Figure(figsize=(100, 10))
 
     R = dendrogram(linkage(df, method='complete'),
                    labels=list(names.analysis_name + " " +
                                names.series_count.astype(str) + " gse " +
                                names.platform_count.astype(str) + " gpl " +
                                names.sample_count.astype(str) + " gsm"),
-                   orientation = "right",
-                   )
+                   orientation="right",
+    )
 
-    plt.ylabel('Signature x %s Genes'%len(df.columns))
+    plt.ylabel('Signature x %s Genes' % len(df.columns))
     plt.xlabel('Functional Distance')
     plt.tight_layout()
-    plt.savefig("applications/%s/static/tree_of_death.png"%request.application)
+    plt.savefig("applications/%s/static/tree_of_death.png" % request.application)
+
 
 def get_analysis_df(case_query, control_query, modifier_query):
     df = get_full_df()
@@ -141,7 +143,7 @@ def get_data(series_id, platform_id):
 def get_probes(platform_id):
     df = db(Platform_Probe.platform_id == platform_id).select(processor=pandas_processor)
     df.columns = [col.lower().replace("platform_probe.", "") for col in df.columns]
-    df.probe = df.probe.astype(str) #must cast probes as str
+    df.probe = df.probe.astype(str)  # must cast probes as str
     df = df.set_index('probe')
     # return df
     return df
@@ -164,7 +166,7 @@ def getFullMetaAnalysis(fcResults, debug=False):
     allGeneEstimates = fcResults.sort('p') \
         .drop_duplicates(['gse', 'gpl', 'mygene_sym', 'mygene_entrez', 'subset']) \
         .dropna()
-    debug and allGeneEstimates.to_csv("%s.geneestimates.csv"%debug)
+    debug and allGeneEstimates.to_csv("%s.geneestimates.csv" % debug)
     for group, geneEstimates in allGeneEstimates.groupby(['mygene_sym', 'mygene_entrez']):
         mygene_sym, mygene_entrez = group
         if debug:
@@ -351,7 +353,7 @@ class MetaAnalyzer():
         print "calculating fold changes"
         allResults = [GseAnalyzer(gse).getResults(how='fc', debug=debug) for gse in self.gses]
         self.allFcResults = pd.concat(allResults)
-        debug and self.allFcResults.to_csv("%s.allFcResults.csv"%debug)
+        debug and self.allFcResults.to_csv("%s.allFcResults.csv" % debug)
         return self.allFcResults
 
     def getRanks(self):
@@ -411,7 +413,7 @@ def getFoldChangeAnalysis(data, sample_class, doPopSize=False, debug=False):
     # mask to deal with missing data: http://stackoverflow.com/questions/23543431/treatment-of-nans
     # ttest = ttest_ind(caseData[np.isfinite(caseData)],
     # controlData[np.isfinite(controlData)],
-    #                   axis=1)
+    # axis=1)
     summary['ttest'] = ttest['ttest']
     summary['p'] = ttest['p']
     summary['direction'] = summary['effect_size'].map(lambda x: "up" if x >= 0 else "down")
