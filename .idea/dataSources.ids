@@ -2743,10 +2743,15 @@
       <column name="series_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="platform_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="sample_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="acc_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="acc_tumor" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="ad" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="age" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="all_cells" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="be_tissue" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="cd" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="chagas" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="chagas_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="df" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="dhf" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="dss" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
@@ -2760,6 +2765,8 @@
       <column name="gb" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="gb_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="gb_yesno" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="gist_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="gist_tissue" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="hcc_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="hcc_non_tumor" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="hcc_tumor" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
@@ -2768,8 +2775,13 @@
       <column name="hnscc_non_tumor" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="hnscc_tumor" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="lcc" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="leishmaniasis" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="leishmaniasis_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="leukemia_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="lymphoma" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="lymphoma_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="malaria" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="malaria_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="mb_cerebellum_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="mb_yn" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="mcc_tumor" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
@@ -2778,6 +2790,8 @@
       <column name="nsclc" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="old" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="pac" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pc_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pc_tissue" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="psoriasis" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="ptb" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="ra" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
@@ -2785,6 +2799,8 @@
       <column name="ruptured" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="scc" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="sclc" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="sle" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="sle_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="species" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="t1d" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="t1d_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
@@ -3174,14 +3190,73 @@
       <column name="platform_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="doc" sqlType="tsvector" precision="2147483647" scale="0" nullable="true" jdbcType="1111"/>
       <column name="samples" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="acc_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="acc_tumor" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="ad" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="age" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="all_cells" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="be_tissue" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="cd" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="chagas" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="chagas_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="df" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="dhf" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="dss" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="eac_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="eac_non_tumor" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="eac_tumor" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="eczema" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="eczema_ctrl" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="escc_tumor" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="ethnicity_african" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="gb" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="gb_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="gb_yesno" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="gist_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="gist_tissue" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="hcc_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="hcc_non_tumor" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="hcc_tumor" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="hd" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="hd_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="hnscc_non_tumor" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="hnscc_tumor" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="lcc" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="leishmaniasis" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="leishmaniasis_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="leukemia_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="lymphoma" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="lymphoma_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="malaria" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="malaria_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="mb_cerebellum_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="mb_yn" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="mcc_tumor" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="ms" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="ms_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="nsclc" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="old" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="pac" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="pc_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="pc_tissue" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="psoriasis" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="ptb" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="ra" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="ra_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="ruptured" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <column name="tregs" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="scc" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="sclc" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="sle" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="sle_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="species" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="t1d" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="t1d_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="tb" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="tissue" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="tissue_normal_lung" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="uc" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="unruptured" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="young" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
     </table>
     <table name="series_tag_view_results" schema="public" catalog="star" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2VyaWVzX3RhZ192aWV3X3Jlc3VsdHNfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>

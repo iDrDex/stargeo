@@ -7,7 +7,7 @@
 # # - user is required for authentication and authorization
 # # - download is for downloading files uploaded in the db (does streaming)
 # # - api is an example of Hypermedia API support and access control
-#########################################################################
+# ########################################################################
 
 def index():
     stats = get_stats()
@@ -47,7 +47,13 @@ def index():
     return dict(search_form=search_form,
                 tags=tags,
                 stats=stats,
-                analyses=grid)
+                analyses=grid,
+                update=A(BUTTON("Update"), _href=URL('update')),
+    )
+
+def update():
+    update_counts()
+    return redirect('index')
 
 
 def user():
