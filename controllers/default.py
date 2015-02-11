@@ -11,7 +11,7 @@
 
 def index():
     stats = get_stats()
-    Series_Tag.tag_id.represent = lambda name, row: DIV(row.tag_id.tag_name, _class="badge")
+    # Series_Tag.tag_id.represent = lambda name, row: DIV(row.tag_id.tag_name, _class="badge")
     tags = SQLFORM.grid(Series_Tag,
                         searchable=False,
                         csv=False,
