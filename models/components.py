@@ -179,7 +179,7 @@ def get_grid():
                         deletable=False,
                         user_signature=None,
                         buttons_placement='left',
-                        links=[lambda row: get_tags(row),
+                        links=[lambda row: get_tags(row), # FIXME: A query for each row, could be slow
                                lambda row: get_tag_button(row)])
     response.flash = T("That took about %.2f seconds!" % (time.time() - session.start_time))
     return grid
