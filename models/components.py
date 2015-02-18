@@ -138,11 +138,13 @@ def get_tag_headers(view, query):
     """Given a query returns all the tags annotated for that field"""
     tagQuery = query \
                & (view['series_id'] == Series_Tag.series_id) \
-               & (view['platform_id'] == Series_Tag.platform_id)
-    rows = db(tagQuery).select(distinct=Series_Tag.tag_id)
+               & (view['platform_id'] == Series_Tag.platform_id) \
+               & (Series_Tag.tag_id == Tag.id)
+    with print_durations('select'):
+        rows = db(tagQuery).select(distinct=Series_Tag.tag_id)
     for row in rows:
-        print "TAG_ID", row.series_tag.tag_id, "TAG_NAME", row.series_tag.tag_id.tag_name
-    tag_fields = [view[row.series_tag.tag_id.tag_name] for row in rows]
+        print "TAG_ID", row.series_tag.tag_id, "TAG_NAME", row.tag.tag_name
+    tag_fields = [view[row.tag.tag_name] for row in rows]
 
     index_field_names = ['series_id', 'platform_id', 'sample_id']
     index_fields = [view[name] for name in index_field_names if name in view.fields]
