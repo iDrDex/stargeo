@@ -250,15 +250,21 @@ def pandas_processor(rows, fields, columns, cacheable):
     return df
 
 
+from funcy import memoize
+
+@memoize
+def get_full_df_header():
+    return get_full_df(header=True)
+
 class IS_PANDAS_QUERY:
     def __init__(self, error_message='Must be a valid query'):
         self.error_message = error_message
-        self.df = get_full_df()
 
     def __call__(self, value):
+        df = get_full_df_header()
         try:
             if value:
-                self.df.query(value.lower()).head()
+                df.query(value.lower()).head()
             return value, None
         except:
             return (value, self.error_message)

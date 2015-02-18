@@ -4,7 +4,7 @@ import rpy2.robjects as robjects
 r = robjects.r
 
 
-def get_full_df():
+def get_full_df(header=False):
     tags = [row.tag_name.lower()
             for row in
             db().select(Tag.tag_name,
@@ -14,7 +14,7 @@ def get_full_df():
     df = db((Sample_Tag_View.sample_id == Sample.id) &
             (Sample_Tag_View.series_id == Series.id) &
             (Sample_Tag_View.platform_id == Platform.id)) \
-        .select(processor=pandas_processor)
+        .select(processor=pandas_processor, limitby=(0, 1) if header else False)
 
     clean_columns = []
     clean_series = []
