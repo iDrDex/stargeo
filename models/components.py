@@ -140,8 +140,7 @@ def get_tag_headers(view, query):
                & (view['series_id'] == Series_Tag.series_id) \
                & (view['platform_id'] == Series_Tag.platform_id) \
                & (Series_Tag.tag_id == Tag.id)
-    with print_durations('select'):
-        rows = db(tagQuery).select(distinct=Series_Tag.tag_id)
+    rows = db(tagQuery).select(distinct=Series_Tag.tag_id)
     for row in rows:
         print "TAG_ID", row.series_tag.tag_id, "TAG_NAME", row.tag.tag_name
     tag_fields = [view[row.tag.tag_name] for row in rows]
