@@ -79,6 +79,7 @@ def saveTree():
 
 
 def get_analysis_df(case_query, control_query, modifier_query):
+    # NOTE: would be more efficient to select only required data
     df = get_full_df()
     # df = db(Sample_Tag_View).select(processor=pandas_processor)
     case_df = df.query(case_query.lower())
