@@ -62,7 +62,7 @@ def saveTree():
     matplotlib.use("Agg")
     from matplotlib import pyplot as plt
 
-    plt.Figure(figsize=(100, 10))
+    plt.Figure(figsize=(100, 20))
 
     R = dendrogram(linkage(df, method='complete'),
                    labels=list(names.analysis_name + " " +
@@ -75,7 +75,7 @@ def saveTree():
     plt.ylabel('Signature x %s Genes' % len(df.columns))
     plt.xlabel('Functional Distance')
     plt.tight_layout()
-    plt.savefig("applications/%s/static/tree_of_death.png" % request.application)
+    plt.savefig("applications/%s/static/tree_of_death.svg" % request.application)
 
 
 def get_analysis_df(case_query, control_query, modifier_query):

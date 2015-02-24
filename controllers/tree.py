@@ -1,7 +1,7 @@
 __author__ = 'dex'
 
 def index():
-    return dict(tree=IMG(_src=URL('static', 'tree_of_death.png')),
+    return dict(tree=IMG(_src=URL('static', 'tree_of_death.svg')),
                 refresh = A(BUTTON("Redraw"), _href=URL('redraw'))
     )
 
