@@ -121,6 +121,7 @@ def get_sample_cross_tab():
     print sql
     db.executesql(sql)
     create_indices_on_postgres([('sample_view', 'id')])
+    create_indices_on_postgres([('sample_view', 'series_id')], unique=False)
     print "indexing FTS"
     sql = "CREATE INDEX sample_view_fts_idx ON sample_view USING gin(doc);"
     # print sql

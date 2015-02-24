@@ -74,6 +74,7 @@ def __setup_filter():
     if header:
         p = re.compile(regex)
         if p.groups:
+            # R: double search - inefficient
             f = lambda row: p.search(row[header]) and p.search(row[header]).group(1)
         else:
             annotation_type = 'boolean'
