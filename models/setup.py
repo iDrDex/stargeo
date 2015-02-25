@@ -165,6 +165,7 @@ def get_series_cross_tab():
     print sql
     db.executesql(sql)
     create_indices_on_postgres([('series_view', 'id')])
+    create_indices_on_postgres([('series_view', 'series_id')], unique=False)
     print "indexing FTS"
     sql = "CREATE INDEX series_view_fts_idx ON series_view USING gin(doc);"
     # print sql
