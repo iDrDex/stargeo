@@ -88,3 +88,19 @@ use_janrain(auth, filename='private/janrain.key')
 
 ## after defining tables, uncomment below to enable auditing
 # auth.enable_record_versioning(db)
+
+# Save userinfo in cookie
+import re, json, base64
+if 'auth' in session and 'user' in session['auth']:
+    user_data = session['auth']['user'].as_dict()
+else:
+    user_data = {}
+
+response.cookies['stargeo_user'] = base64.b64encode(json.dumps(user_data))
+session_cookie = response.cookies[response.session_id_name]
+response.cookies['stargeo_user']['expires'] = session_cookie['expires']
+response.cookies['stargeo_user']['path'] = session_cookie['path']
+# Pass cookie to subdomains
+m = re.search(r'\w+\.[a-z]+$', request.env.HTTP_HOST)
+if m:
+    response.cookies['stargeo_user']['domain'] = '.' + m.group(0)
