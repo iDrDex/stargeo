@@ -165,7 +165,6 @@ def get_series_cross_tab():
     print sql
     db.executesql(sql)
     create_indices_on_postgres([('series_view', 'id')])
-    create_indices_on_postgres([('series_view', 'series_id')], unique=False)
     print "indexing FTS"
     sql = "CREATE INDEX series_view_fts_idx ON series_view USING gin(doc);"
     # print sql
@@ -855,8 +854,34 @@ def update_tag_count():
     Count.update_or_insert(id, count=db(Tag).count())
     return
 
+def mass_update_annotation(csvFilename):
+    import pandas as pd
+    df = pd.read_csv(csvFilename, index_col=0, dtype = {'annotation':str})
+    df = df.where((pd.notnull(df)), None) #http://stackoverflow.com/questions/14162723/replacing-pandas-or-numpy-nan-with-a-none-to-use-with-mysqldb
+    clean = df.drop_duplicates(['series_id', 'platform_id', 'sample_id'])
+    groups = clean.groupby(['series_id', 'platform_id', 'tag_id', 'header', 'regex'])
+    for (series_id, platform_id, tag_id, header, regex), df in groups:
+        print series_id, platform_id
+        series_tag_id = Series_Tag.insert(series_id = series_id,
+                                          platform_id = platform_id,
+                                          tag_id = tag_id,
+                                          header = header,
+                                          regex = None,
+                                          created_by = 1,
+                                          modified_by = 1)
+
+        df = df[['sample_id', 'annotation']]
+        df['series_tag_id'] = int(series_tag_id)
+        df['created_by'] = 1
+        df['modified_by'] = 1
+        rows = df.T.to_dict().values()
+        print "Inserting..."
+        Sample_Tag.bulk_insert(rows)
+        db.commit()
 
 if __name__ == '__main__':
+    mass_update_annotation("age_results.csv")
+    1/0
     update_counts()
     1/0
     get_sample_tag_cross_tab()
