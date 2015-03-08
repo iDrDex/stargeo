@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ee8dc95-2578-4981-9dac-61327f1bcdc1" name="Default" comment="Removed auto-wide view">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/tree_of_death.svg" />
+    <list default="true" id="8ee8dc95-2578-4981-9dac-61327f1bcdc1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/analyzer.py" afterPath="$PROJECT_DIR$/models/analyzer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/tree.py" afterPath="$PROJECT_DIR$/controllers/tree.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/tree_of_death.svg" afterPath="$PROJECT_DIR$/static/tree_of_death.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="stargeo.iws" />
@@ -19,7 +17,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/stargeo$stargeo.coverage" NAME="stargeo Coverage Results" MODIFIED="1424799153974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
+    <SUITE FILE_PATH="coverage/stargeo$stargeo.coverage" NAME="stargeo Coverage Results" MODIFIED="1425801713428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
     <SUITE FILE_PATH="coverage/stargeo$setup.coverage" NAME="setup Coverage Results" MODIFIED="1418149985405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -37,18 +35,43 @@
       <file leaf-file-name="setup.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="12615" max-vertical-offset="13185">
-              <caret line="841" column="0" selection-start-line="827" selection-start-column="0" selection-end-line="841" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="12990" max-vertical-offset="13590">
+              <caret line="866" column="58" selection-start-line="866" selection-start-column="58" selection-end-line="866" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="analyzer.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="analyzer.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/analyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7395">
-              <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.73630834" vertical-offset="867" max-vertical-offset="8025">
+              <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="star.public.balanced_meta" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/93e922af/5d365ae4-f7bd-4a7f-9577-f08de05fb0f1/star.public.balanced_meta">
+          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PostgreSQL - star@star.cwxuiazqnkkn.us-west-2.rds.amazonaws.com" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://db-console:/93e922af/5d365ae4-f7bd-4a7f-9577-f08de05fb0f1/">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+              <caret line="0" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -59,16 +82,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="2025">
               <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sample_tag.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/sample_tag.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="150">
-              <caret line="3" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -107,17 +120,17 @@
       <file leaf-file-name="my_db.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/my_db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5730">
+            <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="5730">
               <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tree.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="tree.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/tree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22026432" vertical-offset="0" max-vertical-offset="681">
+            <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="240">
               <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
@@ -137,7 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/views/analysis/index.html" />
         <option value="dbtable:/93e922af/5d365ae4-f7bd-4a7f-9577-f08de05fb0f1/star.public.auth_user" />
         <option value="$PROJECT_DIR$/views/analysis/queue.html" />
         <option value="$PROJECT_DIR$/models/db.py" />
@@ -156,7 +168,6 @@
         <option value="dbtable:/93e922af/5d365ae4-f7bd-4a7f-9577-f08de05fb0f1/star.public.search" />
         <option value="$PROJECT_DIR$/controllers/manage_tags.py" />
         <option value="$PROJECT_DIR$/views/manage_tag/index.html" />
-        <option value="$PROJECT_DIR$/models/setup.py" />
         <option value="dbtable:/93e922af/5d365ae4-f7bd-4a7f-9577-f08de05fb0f1/star.public.platform" />
         <option value="$PROJECT_DIR$/static/css/my.css" />
         <option value="$PROJECT_DIR$/controllers/manage_series_tag.py" />
@@ -185,16 +196,18 @@
         <option value="$PROJECT_DIR$/controllers/tag.py" />
         <option value="dbtable:/93e922af/5d365ae4-f7bd-4a7f-9577-f08de05fb0f1/star.public.tag" />
         <option value="$PROJECT_DIR$/views/default/index.html" />
+        <option value="$PROJECT_DIR$/controllers/tree.py" />
+        <option value="$PROJECT_DIR$/models/setup.py" />
+        <option value="dbtable:/93e922af/5d365ae4-f7bd-4a7f-9577-f08de05fb0f1/star.public.balanced_meta" />
         <option value="db-console:/93e922af/5d365ae4-f7bd-4a7f-9577-f08de05fb0f1/" />
         <option value="$PROJECT_DIR$/models/analyzer.py" />
-        <option value="$PROJECT_DIR$/controllers/tree.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1914" />
-    <option name="height" value="1027" />
+    <option name="width" value="1600" />
+    <option name="height" value="821" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -207,7 +220,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -222,6 +235,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -288,7 +302,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -316,7 +329,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1055" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="tree&#9;null&#9;null&#10;get_full_df&#9;null&#9;null&#10;my_db&#9;FILE&#9;file:///Users/dex/Copy/web2py/applications/stargeo/models/my_db.py&#10;update_counts&#9;null&#9;null&#10;get_tag_headers&#9;null&#9;null&#10;saveTree&#9;null&#9;null&#10;layout.h&#9;FILE&#9;file:///Users/dex/Copy/web2py/applications/stargeo/views/layout.html&#10;defaul&#9;FILE&#9;file:///Users/dex/Copy/web2py/applications/stargeo/controllers/default.py&#10;get_data&#9;null&#9;null&#10;get_probes&#9;null&#9;null&#10;update_count&#9;null&#9;null&#10;update_sample_cross_tab&#9;null&#9;null&#10;update&#9;null&#9;null&#10;clear&#9;null&#9;null&#10;get_df_from_stream&#9;null&#9;null&#10;getRnormalize_quantiles&#9;null&#9;null&#10;analyze&#9;null&#9;null&#10;scheduler&#9;FILE&#9;file:///Users/dex/Copy/web2py/applications/stargeo/models/my_scheduler.py&#10;get_tag&#9;null&#9;null&#10;Exporter&#9;null&#9;null&#10;menu&#9;FILE&#9;file:///Users/dex/Copy/web2py/applications/stargeo/models/menu.py" />
+    <property name="SearchEverywhereHistoryKey" value="saveTree&#9;null&#9;null&#10;tree&#9;FILE&#9;file:///Users/dex/Copy/web2py/applications/stargeo/controllers/tree.py&#10;get_full_df&#9;null&#9;null&#10;my_db&#9;FILE&#9;file:///Users/dex/Copy/web2py/applications/stargeo/models/my_db.py&#10;update_counts&#9;null&#9;null&#10;get_tag_headers&#9;null&#9;null&#10;layout.h&#9;FILE&#9;file:///Users/dex/Copy/web2py/applications/stargeo/views/layout.html&#10;defaul&#9;FILE&#9;file:///Users/dex/Copy/web2py/applications/stargeo/controllers/default.py&#10;get_data&#9;null&#9;null&#10;get_probes&#9;null&#9;null&#10;update_count&#9;null&#9;null&#10;update_sample_cross_tab&#9;null&#9;null&#10;update&#9;null&#9;null&#10;clear&#9;null&#9;null&#10;get_df_from_stream&#9;null&#9;null&#10;getRnormalize_quantiles&#9;null&#9;null&#10;analyze&#9;null&#9;null&#10;scheduler&#9;FILE&#9;file:///Users/dex/Copy/web2py/applications/stargeo/models/my_scheduler.py&#10;get_tag&#9;null&#9;null&#10;Exporter&#9;null&#9;null&#10;menu&#9;FILE&#9;file:///Users/dex/Copy/web2py/applications/stargeo/models/menu.py" />
     <property name="FullScreen" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="LayoutCode.rearrangeEntriesPostgreSQL" value="false" />
@@ -362,17 +375,6 @@
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
       <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="INTERPRETER_PATH" value="/bin/bash" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
@@ -439,9 +441,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -463,6 +462,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -711,26 +713,30 @@
       <created>1423691721084</created>
       <updated>1423691721084</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="mass_update_annotations added -- MAJOR FEATURE">
+      <created>1425716820888</created>
+      <updated>1425716820888</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1914" height="1027" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="23" width="1600" height="821" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26396647" sideWeight="0.49974504" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14049146" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1918936" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13928112" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19640565" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20940171" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21181001" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28388473" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25139666" sideWeight="0.5012837" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24332978" sideWeight="0.4987163" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23803009" sideWeight="0.4987163" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38741258" sideWeight="0.4987163" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38709676" sideWeight="0.4987163" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4966038" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -774,19 +780,20 @@
     <MESSAGE value="fixed matrix filename bug" />
     <MESSAGE value="Tree of Death major feature added!" />
     <MESSAGE value="Removed auto-wide view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed auto-wide view" />
+    <MESSAGE value="mass_update_annotations added -- MAJOR FEATURE" />
+    <option name="LAST_COMMIT_MESSAGE" value="mass_update_annotations added -- MAJOR FEATURE" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/models/analyzer.py</url>
-          <line>443</line>
+          <line>483</line>
           <option name="timeStamp" value="176" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/models/analyzer.py</url>
-          <line>125</line>
+          <line>165</line>
           <option name="timeStamp" value="177" />
         </line-breakpoint>
       </breakpoints>
@@ -797,13 +804,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://db-console:/93e922af/2096ca46-f371-4f2a-8ef2-e46c8493e06e/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../gluon/dal.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="28905" max-vertical-offset="175035">
@@ -918,8 +918,8 @@
             <node x="590.0" y="1262.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.sample_view</node>
             <node x="248.0" y="186.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.search</node>
             <node x="440.0" y="604.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.sample_tag</node>
-            <node x="325.0" y="296.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.user_search</node>
             <node x="158.0" y="636.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_group</node>
+            <node x="325.0" y="296.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.user_search</node>
             <node x="749.0" y="1262.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series_view</node>
             <node x="956.0" y="961.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.sample_attribute_header</node>
             <node x="636.0" y="841.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.sample_attribute</node>
@@ -934,10 +934,10 @@
             <node x="475.0" y="287.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.analysis</node>
             <node x="0.0" y="1165.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.scheduler_task_deps</node>
             <node x="381.0" y="864.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series_attribute</node>
-            <node x="184.0" y="0.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series_view_results</node>
             <node x="606.0" y="470.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.tag</node>
-            <node x="604.0" y="349.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_event</node>
+            <node x="184.0" y="0.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series_view_results</node>
             <node x="858.0" y="635.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.platform_probe</node>
+            <node x="604.0" y="349.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_event</node>
             <node x="0.0" y="1262.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series_attribute_header</node>
             <node x="587.0" y="580.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series_tag</node>
             <node x="362.0" y="961.0">5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.sample_view_annotation_filter</node>
@@ -946,19 +946,15 @@
           </nodes>
           <notes />
           <edges>
-            <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.user_search" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_user">
-              <point x="3.8608118176842225" y="-3.1771263916359658" />
-              <point x="3.8608118176842225" y="-3.1771263916359764" />
-            </edge>
             <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.sample_view_results" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.search">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.scheduler_run" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.scheduler_task">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
+            <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.user_search" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_user">
+              <point x="3.8608118176842225" y="-3.1771263916359658" />
+              <point x="3.8608118176842225" y="-3.1771263916359764" />
             </edge>
-            <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series_attribute" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series">
+            <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.scheduler_run" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.scheduler_task">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -966,11 +962,15 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_membership" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_group">
+            <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series_attribute" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.series">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
             <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.user_search" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.search">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_membership" target="5d365ae4-f7bd-4a7f-9577-f08de05fb0f1.table:star.public.auth_group">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1287,14 +1287,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="12096" max-vertical-offset="13170">
-          <caret line="841" column="0" selection-start-line="827" selection-start-column="0" selection-end-line="841" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/default.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="166" max-vertical-offset="1695">
@@ -1321,19 +1313,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://db-console:/93e922af/5d365ae4-f7bd-4a7f-9577-f08de05fb0f1/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/default/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="855" max-vertical-offset="2400">
           <caret line="57" column="63" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1349,23 +1332,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/analyzer.py">
+    <entry file="file://$PROJECT_DIR$/models/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="597" max-vertical-offset="7395">
-          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="12990" max-vertical-offset="13590">
+          <caret line="866" column="58" selection-start-line="866" selection-start-column="58" selection-end-line="866" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/tree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22026432" vertical-offset="0" max-vertical-offset="681">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="240">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/93e922af/5d365ae4-f7bd-4a7f-9577-f08de05fb0f1/star.public.balanced_meta">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/93e922af/5d365ae4-f7bd-4a7f-9577-f08de05fb0f1/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
+          <caret line="0" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/analyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73630834" vertical-offset="867" max-vertical-offset="8025">
+          <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

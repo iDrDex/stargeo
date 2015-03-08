@@ -1,4 +1,4 @@
-import pandas.rpy.common as com, numpy as np, pandas as pd
+import pandas.rpy.common as com, numpy as np, pandas as pd, sys
 import rpy2.robjects as robjects
 
 r = robjects.r
@@ -39,8 +39,47 @@ def get_full_df(header=False):
 
     return clean_df
 
-
 def saveTree():
+    print "Saving Tree of Death!"
+    # read from db
+    analysis = db(Balanced_Meta).select(processor=pandas_processor)
+    analysis.columns = [col.replace("balanced_meta.", "").lower() for col in analysis.columns]
+
+
+    analysis['random_signed'] = analysis.pval_random * analysis.apply(lambda x: -1 if x['te_random'] < 0 else 1, axis=1)
+
+    # analysis.to_csv("analysis.test.csv")
+    names = db(Analysis).select(processor=pandas_processor)
+    names.columns = [col.replace('analysis.', "") for col in names.columns]
+    # names.to_csv("names.test.csv")
+
+    df = analysis.groupby(['mygene_entrez']) \
+        .filter(lambda x: x.analysis_id.count() == len(names.index)) \
+        .set_index(['analysis_id', 'mygene_entrez']) \
+        .random_signed.unstack()
+
+    # perform clustering and plot the dendrogram
+    from scipy.cluster.hierarchy import linkage, dendrogram
+
+    # import matplotlib
+    # matplotlib.use("Agg")
+    from matplotlib import pyplot as plt
+    plt.Figure(figsize=(100, 20))
+
+    R = dendrogram(linkage(df, method='complete'),
+                   labels=list(names.analysis_name + " " +
+                               names.series_count.astype(str) + " gse " +
+                               names.platform_count.astype(str) + " gpl " +
+                               names.sample_count.astype(str) + " gsm"),
+                   orientation="right",
+    )
+
+    plt.ylabel('Signature x %s Genes' % len(df.columns))
+    plt.xlabel('Functional Distance')
+    plt.tight_layout()
+    plt.savefig("applications/%s/static/tree_of_death.svg" % request.application)
+
+def saveTree2():
     print "Saving Tree of Death!"
     # read from db
     analysis = db(Balanced_Meta).select(processor=pandas_processor)
@@ -52,8 +91,9 @@ def saveTree():
 
     df = analysis.groupby(['mygene_entrez']) \
         .filter(lambda x: x.analysis_id.count() == len(names.index)) \
-        .set_index(['analysis_id', 'mygene_entrez']) \
-        .te_fixed.unstack()
+        .set_index(['analysis_id', 'mygene_entrez'])
+    from numpy import log2
+    df['random_score'] = df.te_random*log2(df.pval_random)
 
     # perform clustering and plot the dendrogram
     from scipy.cluster.hierarchy import linkage, dendrogram
@@ -63,8 +103,8 @@ def saveTree():
     from matplotlib import pyplot as plt
 
     plt.Figure(figsize=(100, 20))
-
-    R = dendrogram(linkage(df, method='complete'),
+    random_score = df.te_random.unstack()
+    R = dendrogram(linkage(random_score, method='complete'),
                    labels=list(names.analysis_name + " " +
                                names.series_count.astype(str) + " gse " +
                                names.platform_count.astype(str) + " gpl " +
