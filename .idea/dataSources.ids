@@ -2481,12 +2481,15 @@
       <exported-key name="auth_membership_user_id_fkey" table="auth_membership" schema="public" catalog="star" columns="user_id"/>
       <exported-key name="sample_tag_created_by_fkey" table="sample_tag" schema="public" catalog="star" columns="created_by"/>
       <exported-key name="sample_tag_modified_by_fkey" table="sample_tag" schema="public" catalog="star" columns="modified_by"/>
+      <exported-key name="sample_validatio_created_by_id_75ca08cba9e0257d_fk_auth_user_id" table="sample_validation" schema="public" catalog="star" columns="created_by_id"/>
       <exported-key name="series_tag_created_by_fkey" table="series_tag" schema="public" catalog="star" columns="created_by"/>
       <exported-key name="series_tag_modified_by_fkey" table="series_tag" schema="public" catalog="star" columns="modified_by"/>
+      <exported-key name="series_validatio_created_by_id_5a5f4e76ccf95bb2_fk_auth_user_id" table="series_validation" schema="public" catalog="star" columns="created_by_id"/>
       <exported-key name="tag_created_by_fkey" table="tag" schema="public" catalog="star" columns="created_by"/>
       <exported-key name="tag_modified_by_fkey" table="tag" schema="public" catalog="star" columns="modified_by"/>
       <exported-key name="user_search_created_by_fkey" table="user_search" schema="public" catalog="star" columns="created_by"/>
       <exported-key name="user_search_modified_by_fkey" table="user_search" schema="public" catalog="star" columns="modified_by"/>
+      <exported-key name="validation_job_locked_by_id_4266817ff1ad2262_fk_auth_user_id" table="validation_job" schema="public" catalog="star" columns="locked_by_id"/>
     </table>
     <table name="auth_user_id_seq" schema="public" catalog="star" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -2578,6 +2581,25 @@
       <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
       <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
     </table>
+    <table name="django_migrations" schema="public" catalog="star" type="TABLE">
+      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnZGphbmdvX21pZ3JhdGlvbnNfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="app" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="applied" sqlType="timestamptz" precision="35" scale="6" nullable="false" jdbcType="93"/>
+      <primary-key name="django_migrations_pkey" columns="id"/>
+    </table>
+    <table name="django_migrations_id_seq" schema="public" catalog="star" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
     <table name="platform" schema="public" catalog="star" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncGxhdGZvcm1faWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
       <column name="gpl_name" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
@@ -2588,6 +2610,7 @@
       <exported-key name="platform_probe_platform_id_fkey" table="platform_probe" schema="public" catalog="star" columns="platform_id"/>
       <exported-key name="sample_platform_id_fkey" table="sample" schema="public" catalog="star" columns="platform_id"/>
       <exported-key name="series_tag_platform_id_fkey" table="series_tag" schema="public" catalog="star" columns="platform_id"/>
+      <exported-key name="series_validation_platform_id_3a87da320c5df303_fk_platform_id" table="series_validation" schema="public" catalog="star" columns="platform_id"/>
     </table>
     <table name="platform_id_seq" schema="public" catalog="star" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -2632,6 +2655,7 @@
       <foreign-key name="sample_series_id_fkey" columns="series_id" ref-table="series" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <exported-key name="sample_attribute_sample_id_fkey" table="sample_attribute" schema="public" catalog="star" columns="sample_id"/>
       <exported-key name="sample_tag_sample_id_fkey" table="sample_tag" schema="public" catalog="star" columns="sample_id"/>
+      <exported-key name="sample_validation_sample_id_7d362a9b0eabbb6f_fk_sample_id" table="sample_validation" schema="public" catalog="star" columns="sample_id"/>
     </table>
     <table name="sample_attribute" schema="public" catalog="star" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2FtcGxlX2F0dHJpYnV0ZV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
@@ -2748,10 +2772,14 @@
       <column name="ad" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="age" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="all_cells" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="aml_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="aml_tissue" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="be_tissue" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="cd" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="cd_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="chagas" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="chagas_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="dengue_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="df" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="dhf" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="dss" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
@@ -2762,6 +2790,7 @@
       <column name="eczema_ctrl" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="escc_tumor" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="ethnicity_african" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="female" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="gb" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="gb_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="gb_yesno" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
@@ -2783,8 +2812,14 @@
       <column name="malaria" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="malaria_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="mb_cerebellum_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="mb_gender" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="mb_histology" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="mb_originalsubtype" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="mb_yn" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="mcc_tumor" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="melanoma" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="melanoma_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="mg" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="ms" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="ms_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="nsclc" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
@@ -2805,6 +2840,8 @@
       <column name="t1d" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="t1d_control" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="tb" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="thymoma" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
+      <column name="thymoma_ctrl" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="tissue" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="tissue_normal_lung" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="uc" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
@@ -2819,6 +2856,33 @@
       <foreign-key name="sample_tag_view_results_search_id_fkey" columns="search_id" ref-table="search" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
     </table>
     <table name="sample_tag_view_results_id_seq" schema="public" catalog="star" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="sample_validation" schema="public" catalog="star" type="TABLE">
+      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2FtcGxlX3ZhbGlkYXRpb25faWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="annotation" sqlType="text" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_on" sqlType="timestamptz" precision="35" scale="6" nullable="false" jdbcType="93"/>
+      <column name="created_by_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="sample_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="serie_validation_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="sample_validation_pkey" columns="id"/>
+      <foreign-key name="sample_validatio_created_by_id_75ca08cba9e0257d_fk_auth_user_id" columns="created_by_id" ref-table="auth_user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="sample_validation_sample_id_7d362a9b0eabbb6f_fk_sample_id" columns="sample_id" ref-table="sample" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="sa_serie_validation_id_6052500a1209f723_fk_series_validation_id" columns="serie_validation_id" ref-table="series_validation" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <index name="sample_validation_119e48fc" unique="false" columns="serie_validation_id"/>
+      <index name="sample_validation_c09c8085" unique="false" columns="sample_id"/>
+      <index name="sample_validation_e93cb7eb" unique="false" columns="created_by_id"/>
+    </table>
+    <table name="sample_validation_id_seq" schema="public" catalog="star" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
@@ -3076,6 +3140,7 @@
       <exported-key name="sample_series_id_fkey" table="sample" schema="public" catalog="star" columns="series_id"/>
       <exported-key name="series_attribute_series_id_fkey" table="series_attribute" schema="public" catalog="star" columns="series_id"/>
       <exported-key name="series_tag_series_id_fkey" table="series_tag" schema="public" catalog="star" columns="series_id"/>
+      <exported-key name="series_validation_series_id_3ce2300ecf3f4023_fk_series_id" table="series_validation" schema="public" catalog="star" columns="series_id"/>
     </table>
     <table name="series_attribute" schema="public" catalog="star" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2VyaWVzX2F0dHJpYnV0ZV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
@@ -3159,6 +3224,8 @@
       <foreign-key name="series_tag_series_id_fkey" columns="series_id" ref-table="series" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <foreign-key name="series_tag_tag_id_fkey" columns="tag_id" ref-table="tag" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <exported-key name="sample_tag_series_tag_id_fkey" table="sample_tag" schema="public" catalog="star" columns="series_tag_id"/>
+      <exported-key name="series_validati_series_tag_id_5a35d6201a93f3ec_fk_series_tag_id" table="series_validation" schema="public" catalog="star" columns="series_tag_id"/>
+      <exported-key name="validation_job_series_tag_id_753f178d05a7d70f_fk_series_tag_id" table="validation_job" schema="public" catalog="star" columns="series_tag_id"/>
     </table>
     <table name="series_tag_id_seq" schema="public" catalog="star" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -3195,10 +3262,14 @@
       <column name="ad" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="age" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="all_cells" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="aml_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="aml_tissue" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="be_tissue" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="cd" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="cd_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="chagas" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="chagas_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="dengue_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="df" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="dhf" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="dss" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
@@ -3209,6 +3280,7 @@
       <column name="eczema_ctrl" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="escc_tumor" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="ethnicity_african" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="female" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="gb" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="gb_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="gb_yesno" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
@@ -3230,8 +3302,14 @@
       <column name="malaria" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="malaria_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="mb_cerebellum_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="mb_gender" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="mb_histology" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="mb_originalsubtype" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="mb_yn" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="mcc_tumor" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="melanoma" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="melanoma_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="mg" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="ms" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="ms_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="nsclc" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
@@ -3252,6 +3330,8 @@
       <column name="t1d" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="t1d_control" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="tb" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="thymoma" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="thymoma_ctrl" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="tissue" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="tissue_normal_lung" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
       <column name="uc" sqlType="int8" precision="19" scale="0" nullable="true" jdbcType="-5"/>
@@ -3266,6 +3346,41 @@
       <foreign-key name="series_tag_view_results_search_id_fkey" columns="search_id" ref-table="search" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
     </table>
     <table name="series_tag_view_results_id_seq" schema="public" catalog="star" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="series_validation" schema="public" catalog="star" type="TABLE">
+      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnc2VyaWVzX3ZhbGlkYXRpb25faWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="column" sqlType="varchar" precision="512" scale="0" nullable="false" jdbcType="12"/>
+      <column name="regex" sqlType="varchar" precision="512" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_on" sqlType="timestamptz" precision="35" scale="6" nullable="false" jdbcType="93"/>
+      <column name="created_by_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="platform_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="series_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="series_tag_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="tag_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="series_validation_pkey" columns="id"/>
+      <foreign-key name="series_validatio_created_by_id_5a5f4e76ccf95bb2_fk_auth_user_id" columns="created_by_id" ref-table="auth_user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="series_validation_platform_id_3a87da320c5df303_fk_platform_id" columns="platform_id" ref-table="platform" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="series_validation_series_id_3ce2300ecf3f4023_fk_series_id" columns="series_id" ref-table="series" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="series_validati_series_tag_id_5a35d6201a93f3ec_fk_series_tag_id" columns="series_tag_id" ref-table="series_tag" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="2" deferrability="2"/>
+      <foreign-key name="series_validation_tag_id_25b442171edac81_fk_tag_id" columns="tag_id" ref-table="tag" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <exported-key name="sa_serie_validation_id_6052500a1209f723_fk_series_validation_id" table="sample_validation" schema="public" catalog="star" columns="serie_validation_id"/>
+      <index name="series_validation_76f094bc" unique="false" columns="tag_id"/>
+      <index name="series_validation_a08cee2d" unique="false" columns="series_id"/>
+      <index name="series_validation_a0ed57d9" unique="false" columns="series_tag_id"/>
+      <index name="series_validation_cb857215" unique="false" columns="platform_id"/>
+      <index name="series_validation_e93cb7eb" unique="false" columns="created_by_id"/>
+    </table>
+    <table name="series_validation_id_seq" schema="public" catalog="star" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
@@ -3345,6 +3460,7 @@
       <foreign-key name="tag_created_by_fkey" columns="created_by" ref-table="auth_user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <foreign-key name="tag_modified_by_fkey" columns="modified_by" ref-table="auth_user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <exported-key name="series_tag_tag_id_fkey" table="series_tag" schema="public" catalog="star" columns="tag_id"/>
+      <exported-key name="series_validation_tag_id_25b442171edac81_fk_tag_id" table="series_validation" schema="public" catalog="star" columns="tag_id"/>
       <index name="tag_tag_name_key" unique="true" columns="tag_name"/>
     </table>
     <table name="tag_id_seq" schema="public" catalog="star" type="SEQUENCE">
@@ -3375,6 +3491,29 @@
       <foreign-key name="user_search_search_id_fkey" columns="search_id" ref-table="search" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
     </table>
     <table name="user_search_id_seq" schema="public" catalog="star" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="validation_job" schema="public" catalog="star" type="TABLE">
+      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgndmFsaWRhdGlvbl9qb2JfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="locked_on" sqlType="timestamptz" precision="35" scale="6" nullable="true" jdbcType="93"/>
+      <column name="locked_by_id" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="series_tag_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="validation_job_pkey" columns="id"/>
+      <foreign-key name="validation_job_locked_by_id_4266817ff1ad2262_fk_auth_user_id" columns="locked_by_id" ref-table="auth_user" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <foreign-key name="validation_job_series_tag_id_753f178d05a7d70f_fk_series_tag_id" columns="series_tag_id" ref-table="series_tag" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <index name="validation_job_36d90bd2" unique="false" columns="locked_by_id"/>
+      <index name="validation_job_a0ed57d9" unique="false" columns="series_tag_id"/>
+    </table>
+    <table name="validation_job_id_seq" schema="public" catalog="star" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>

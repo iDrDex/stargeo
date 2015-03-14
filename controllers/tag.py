@@ -34,7 +34,7 @@ def __update_form_model():
     for var in Series_Tag.fields[1:]:
         Series_Tag[var].default = session.tag_form_vars[var]
 
-
+@auth.requires_login()
 def index():
     __update_form_model()
 
