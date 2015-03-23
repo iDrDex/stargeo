@@ -47,6 +47,8 @@ response.generic_patterns = ['*'] if request.is_local else []
 from gluon.tools import Auth, Crud, Service, PluginManager, prettydate
 
 auth = Auth(db)
+#disable registration for now
+auth.settings.actions_disabled.append('register')
 crud, service, plugins = Crud(db), Service(), PluginManager()
 
 ## create all tables needed by auth if not custom tables

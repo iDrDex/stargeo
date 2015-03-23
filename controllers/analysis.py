@@ -125,7 +125,7 @@ def analyze():
     redirect(URL('index'))
 
 
-def go(pvars, debug=False):
+def go(pvars, debug=True):
     if debug:
         task_analyze(debug=pvars['analysis_name'], **pvars)
     else:
