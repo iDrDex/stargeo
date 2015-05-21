@@ -756,6 +756,8 @@ def insert_myGenes():
         if not myGenes_count:
             print "OOPS: No valids identifiers found for", gpl_name
 
+    create_indices_on_postgres([('platform_probe', 'platform_id')], unique=False)
+
 
 def create_sample_attribute_header_view():
     view_name = "sample_attribute_header"
