@@ -1,0 +1,42 @@
+# install homebrew from http://brew.sh
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+
+# install software with homebrew
+brew install postgresql redis graphviz pkg-config
+brew tap homebrew/sciencep
+brew install Caskroom/cask/xquartz
+brew install r
+
+# setup postgresql
+ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+psql -d postgres -c 'create role postgres login createdb superuser'
+psql -d postgres -f stargeo.sql # load database dump
+
+# start redis
+ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+
+
+# install virtualenv/wrapper
+brew install virtualenv virtualenvwrapper
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bash_login
+source /usr/local/bin/virtualenvwrapper.sh
+
+# install python modules
+mkvirtualenv stargeo
+pip install requests[security]
+pip install -r requirements.txt
+
+# Install R packages
+R
+> source("http://bioconductor.org/biocLite.R")
+> biocLite("preprocessCore")
+> install.packages('meta')
+
+# Install web2py and clone/copy/symplink stargeo into applications directory
+# ...
+
+# Run
+python web2py.py python web2py.py -a <password> -K stargeo -X

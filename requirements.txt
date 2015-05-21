@@ -17,3 +17,4 @@ rpy2==2.5.6
 scipy==0.15.1
 singledispatch==3.4.0.3
 six==1.9.0
+numexpr
