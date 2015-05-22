@@ -1,4 +1,12 @@
-import pandas.rpy.common as com, numpy as np, pandas as pd, sys
+import sys
+import gzip
+import urllib2
+import shutil
+from functools import wraps
+
+from funcy import str_join, first
+
+import pandas.rpy.common as com, numpy as np, pandas as pd
 import rpy2.robjects as robjects
 
 r = robjects.r
@@ -149,17 +157,45 @@ def __getMatrixNumHeaderLines(inStream):
             return i
 
 
-def get_matrix_filename(series_id, platform_id):
-    import glob
+SERIES_MATRIX_URL = 'ftp://ftp.ncbi.nih.gov/pub/geo/DATA/SeriesMatrix/'
+SERIES_MATRIX_MIRROR = "/Volumes/Archives/geo_mirror/DATA/SeriesMatrix/"
 
+
+def matrix_filenames(series_id, platform_id):
     gse_name = Series[series_id].gse_name
-    path = "/Volumes/Archives/geo_mirror/DATA/SeriesMatrix/%s/" % gse_name
-    filename = "%s_series_matrix.txt.gz" % gse_name
-    if not glob.glob(os.path.join(path, filename)):
-        gpl_name = Platform[platform_id].gpl_name
-        filename = "%s-%s_series_matrix.txt.gz" % (gse_name, gpl_name)
-    filepath = os.path.join(path, filename)
-    return filepath
+    yield "%s/%s_series_matrix.txt.gz" % (gse_name, gse_name)
+
+    gpl_name = Platform[platform_id].gpl_name
+    yield "%s/%s-%s_series_matrix.txt.gz" % (gse_name, gse_name, gpl_name)
+
+
+def get_matrix_filename(series_id, platform_id):
+    filenames = list(matrix_filenames(series_id, platform_id))
+    mirror_filenames = (os.path.join(SERIES_MATRIX_MIRROR, filename) for filename in filenames)
+    mirror_filename = first(filename for filename in mirror_filenames if os.path.isfile(filename))
+    if mirror_filename:
+        return mirror_filename
+
+    for filename in filenames:
+        print 'Loading URL', SERIES_MATRIX_URL + filename, '...'
+        try:
+            res = urllib2.urlopen(SERIES_MATRIX_URL + filename)
+        except urllib2.URLError:
+            pass
+        else:
+            mirror_filename = os.path.join(SERIES_MATRIX_MIRROR, filename)
+            print 'Cache to', mirror_filename
+
+            directory = os.path.dirname(mirror_filename)
+            if not os.path.exists(directory):
+                os.makedirs(directory)
+            with open(mirror_filename, 'wb') as f:
+                shutil.copyfileobj(res, f)
+
+            return mirror_filename
+
+    raise LookupError("Can't find matrix file for series %s, platform %s"
+                      % (series_id, platform_id))
 
 
 def get_data(series_id, platform_id):
