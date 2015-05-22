@@ -143,7 +143,7 @@ def get_analysis_df(case_query, control_query, modifier_query):
 
 
 def __getMatrixNumHeaderLines(inStream):
-    p = re.compile(r"""ID_REF""")
+    p = re.compile(r'^"ID_REF"')
     for i, line in enumerate(inStream):
         if p.search(line):
             return i
