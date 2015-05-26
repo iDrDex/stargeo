@@ -1,9 +1,15 @@
 __author__ = 'dex'
 
+import logging
+logger = logging.getLogger("stargeo.analysis")
+logger.setLevel(logging.DEBUG)
+
 from gluon.scheduler import Scheduler
 
 def task_analyze(analysis_name, description, case_query, control_query, modifier_query, debug=False):
+    logger.info('Started %s analysis', analysis_name)
     df = get_analysis_df(case_query, control_query, modifier_query)
+    logger.debug('Loaded %s analysis dataframe', analysis_name)
     debug and df.to_csv("%s.analysis_df.csv"%analysis_name)
     # construct the GSEs
     gses = []
