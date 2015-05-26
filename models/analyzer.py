@@ -201,14 +201,24 @@ def get_matrix_filename(series_id, platform_id):
 def get_data(series_id, platform_id):
     matrixFilename = get_matrix_filename(series_id, platform_id)
     # setup data for specific platform
-    headerRows = __getMatrixNumHeaderLines(gzip.open(matrixFilename))
-    na_values = ["null", "NA", "NaN", "N/A", "na", "n/a"]
-    data = pd.io.parsers.read_table(gzip.open(matrixFilename),
-                                    skiprows=headerRows,
-                                    index_col=["ID_REF"],
-                                    na_values=na_values,
-                                    skipfooter=1,
-                                    engine='python')
+    for attempt in (0, 1):
+        try:
+            headerRows = __getMatrixNumHeaderLines(gzip.open(matrixFilename))
+            na_values = ["null", "NA", "NaN", "N/A", "na", "n/a"]
+            data = pd.io.parsers.read_table(gzip.open(matrixFilename),
+                                            skiprows=headerRows,
+                                            index_col=["ID_REF"],
+                                            na_values=na_values,
+                                            skipfooter=1,
+                                            engine='python')
+        except IOError as e:
+            # In case we have cirrupt file
+            print "Failed loading %s: %s" % (matrixFilename, e)
+            os.remove(matrixFilename)
+            if attempt:
+                raise
+            matrixFilename = get_matrix_filename(series_id, platform_id)
+
     data.index = data.index.astype(str)
     data.index.name = "probe"
     for column in data.columns:
