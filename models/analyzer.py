@@ -1,3 +1,5 @@
+import os
+import os.path
 import sys
 import gzip
 import urllib2
