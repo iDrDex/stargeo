@@ -125,19 +125,13 @@ def analyze():
     redirect(URL('index'))
 
 
-def go(pvars, debug=True):
+def go(pvars, debug=False):
     if debug:
         task_analyze(debug=pvars['analysis_name'], **pvars)
     else:
-        # from datetime import timedelta as timed
-
         scheduler.queue_task('task_analyze',
-                             pvars=dict(analysis_name=request.vars.analysis_name,
-                                        description=request.vars.description,
-                                        case_query=request.vars.case_query,
-                                        control_query=request.vars.control_query,
-                                        modifier_query=request.vars.modifier_query),
-                             timeout=3600,
+                             pvars=pvars,
+                             timeout=3600 * 2,
                              # start_time=request.utcnow - timed(hours=8),  # correct 8 hrs for CA time,
                              immediate=True
         )
