@@ -11,6 +11,8 @@ import rpy2.robjects as robjects
 
 r = robjects.r
 
+import conf
+
 
 def get_full_df(header=False):
     tags = [row.tag_name.lower()
@@ -157,10 +159,6 @@ def __getMatrixNumHeaderLines(inStream):
             return i
 
 
-SERIES_MATRIX_URL = 'ftp://ftp.ncbi.nih.gov/pub/geo/DATA/SeriesMatrix/'
-SERIES_MATRIX_MIRROR = "/Volumes/Archives/geo_mirror/DATA/SeriesMatrix/"
-
-
 def matrix_filenames(series_id, platform_id):
     gse_name = Series[series_id].gse_name
     yield "%s/%s_series_matrix.txt.gz" % (gse_name, gse_name)
@@ -171,19 +169,19 @@ def matrix_filenames(series_id, platform_id):
 
 def get_matrix_filename(series_id, platform_id):
     filenames = list(matrix_filenames(series_id, platform_id))
-    mirror_filenames = (os.path.join(SERIES_MATRIX_MIRROR, filename) for filename in filenames)
+    mirror_filenames = (os.path.join(conf.SERIES_MATRIX_MIRROR, filename) for filename in filenames)
     mirror_filename = first(filename for filename in mirror_filenames if os.path.isfile(filename))
     if mirror_filename:
         return mirror_filename
 
     for filename in filenames:
-        print 'Loading URL', SERIES_MATRIX_URL + filename, '...'
+        print 'Loading URL', conf.SERIES_MATRIX_URL + filename, '...'
         try:
-            res = urllib2.urlopen(SERIES_MATRIX_URL + filename)
+            res = urllib2.urlopen(conf.SERIES_MATRIX_URL + filename)
         except urllib2.URLError:
             pass
         else:
-            mirror_filename = os.path.join(SERIES_MATRIX_MIRROR, filename)
+            mirror_filename = os.path.join(conf.SERIES_MATRIX_MIRROR, filename)
             print 'Cache to', mirror_filename
 
             directory = os.path.dirname(mirror_filename)
