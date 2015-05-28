@@ -4,6 +4,8 @@ import logging
 logger = logging.getLogger("stargeo.analysis")
 logger.setLevel(logging.DEBUG)
 
+from itertools import imap
+
 from gluon.scheduler import Scheduler
 
 def task_analyze(analysis_name, description, case_query, control_query, modifier_query, debug=False):
@@ -11,23 +13,17 @@ def task_analyze(analysis_name, description, case_query, control_query, modifier
     df = get_analysis_df(case_query, control_query, modifier_query)
     logger.debug('Loaded %s analysis dataframe', analysis_name)
     debug and df.to_csv("%s.analysis_df.csv"%analysis_name)
-    # construct the GSEs
-    gses = []
-    for series_id in df.series_id.unique():
-        gpl2data = {}
-        gpl2probes = {}
 
-        for platform_id in df.query("""series_id == %s""" % series_id).platform_id.unique():
-            gpl_name = Platform[platform_id].gpl_name
-            gpl2data[gpl_name] = get_data(series_id, platform_id)
-            gpl2probes[gpl_name] = get_probes(platform_id)
-        samples = df.query('series_id == %s' % series_id)
-        gse_name = Series[series_id].gse_name
-        gses.append(Gse(gse_name, samples, gpl2data, gpl2probes))
+    # Load GSE data, make and concat all fold change analyses results.
+    # NOTE: we are doing load_gse() lazily here to avoid loading all matrices at once.
+    print "Calculating fold changes..."
+    gses = (load_gse(df, series_id) for series_id in df.series_id.unique())
+    fold_changes = pd.concat(imap(get_fold_change_analysis, gses))
+    debug and fold_changes.to_csv("%s.fc.csv" % debug)
 
     print "Meta-Analyzing..."
-    analyzer = MetaAnalyzer(gses)
-    balanced = analyzer.getBalancedResults(debug = debug).reset_index()
+    balanced = getFullMetaAnalysis(fold_changes, debug=debug).reset_index()
+    debug and balanced.to_csv("%s.meta.csv" % debug)
 
     balanced.columns = balanced.columns.map(lambda x: x.replace(".", "_"))
     analysis_id = Analysis.insert(analysis_name=analysis_name,
@@ -52,6 +48,23 @@ def task_analyze(analysis_name, description, case_query, control_query, modifier
     Balanced_Meta.bulk_insert(rows)
     db.commit()
     print "DONE!"
+
+
+def get_fold_change_analysis(gse):
+    # TODO: get rid of unneeded OOP interface
+    return GseAnalyzer(gse).getResults(how='fc', debug=False)
+
+def load_gse(df, series_id):
+    gpl2data = {}
+    gpl2probes = {}
+
+    for platform_id in df.query("""series_id == %s""" % series_id).platform_id.unique():
+        gpl_name = Platform[platform_id].gpl_name
+        gpl2data[gpl_name] = get_data(series_id, platform_id)
+        gpl2probes[gpl_name] = get_probes(platform_id)
+    samples = df.query('series_id == %s' % series_id)
+    gse_name = Series[series_id].gse_name
+    return Gse(gse_name, samples, gpl2data, gpl2probes)
 
 
 scheduler = Scheduler(db,
