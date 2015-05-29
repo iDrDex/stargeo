@@ -16,15 +16,16 @@ def task_analyze(analysis_name, description, case_query, control_query, modifier
 
     # Load GSE data, make and concat all fold change analyses results.
     # NOTE: we are doing load_gse() lazily here to avoid loading all matrices at once.
-    print "Calculating fold changes..."
+    logger.info('Calculating fold changes for %s', analysis_name)
     gses = (load_gse(df, series_id) for series_id in df.series_id.unique())
     fold_changes = pd.concat(imap(get_fold_change_analysis, gses))
     debug and fold_changes.to_csv("%s.fc.csv" % debug)
 
-    print "Meta-Analyzing..."
+    logger.info('Meta-Analyzing %s', analysis_name)
     balanced = getFullMetaAnalysis(fold_changes, debug=debug).reset_index()
     debug and balanced.to_csv("%s.meta.csv" % debug)
 
+    logger.info('Inserting %s analysis results', analysis_name)
     balanced.columns = balanced.columns.map(lambda x: x.replace(".", "_"))
     analysis_id = Analysis.insert(analysis_name=analysis_name,
                                   description=description,
@@ -44,17 +45,19 @@ def task_analyze(analysis_name, description, case_query, control_query, modifier
     # http://stackoverflow.com/questions/14162723/replacing-pandas-or-numpy-nan-with-a-none-to-use-with-mysqldb
     balanced = balanced.where((pd.notnull(balanced)), None)
     rows = balanced[Balanced_Meta.fields[1:]].T.to_dict().values()
-    print "Inserting..."
     Balanced_Meta.bulk_insert(rows)
     db.commit()
-    print "DONE!"
+    logger.info('DONE %s analysis', analysis_name)
 
 
 def get_fold_change_analysis(gse):
     # TODO: get rid of unneeded OOP interface
+    logger.debug('Calculating fold change for %s', gse.name)
     return GseAnalyzer(gse).getResults(how='fc', debug=False)
 
 def load_gse(df, series_id):
+    gse_name = Series[series_id].gse_name
+    logger.debug('Loading data for %s, id = %d', gse_name, series_id)
     gpl2data = {}
     gpl2probes = {}
 
@@ -63,7 +66,6 @@ def load_gse(df, series_id):
         gpl2data[gpl_name] = get_data(series_id, platform_id)
         gpl2probes[gpl_name] = get_probes(platform_id)
     samples = df.query('series_id == %s' % series_id)
-    gse_name = Series[series_id].gse_name
     return Gse(gse_name, samples, gpl2data, gpl2probes)
 
 
