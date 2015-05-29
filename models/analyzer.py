@@ -6,7 +6,7 @@ import urllib2
 import shutil
 from functools import wraps
 
-from funcy import str_join, first
+from funcy import str_join, first, log_durations
 
 import pandas.rpy.common as com, numpy as np, pandas as pd
 import rpy2.robjects as robjects
@@ -14,6 +14,10 @@ import rpy2.robjects as robjects
 r = robjects.r
 
 import conf
+
+import logging
+logger = logging.getLogger("stargeo.analysis")
+logger.setLevel(logging.DEBUG)
 
 
 def get_full_df(header=False):
@@ -198,6 +202,7 @@ def get_matrix_filename(series_id, platform_id):
                       % (series_id, platform_id))
 
 
+@log_durations(logger.debug)
 def get_data(series_id, platform_id):
     matrixFilename = get_matrix_filename(series_id, platform_id)
     # setup data for specific platform
@@ -227,6 +232,7 @@ def get_data(series_id, platform_id):
     return data
 
 
+@log_durations(logger.debug)
 def get_probes(platform_id):
     df = db(Platform_Probe.platform_id == platform_id).select(processor=pandas_processor)
     df.columns = [col.lower().replace("platform_probe.", "") for col in df.columns]
@@ -243,6 +249,8 @@ class Gse:
         self.gpl2data = gpl2data
         self.gpl2probes = gpl2probes
 
+    def __str__(self):
+        return '<Gse %r>' % self.name
 
 def getFullMetaAnalysis(fcResults, debug=False):
     import glob
