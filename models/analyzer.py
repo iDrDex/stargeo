@@ -355,6 +355,12 @@ class GseAnalyzer:
             if gpls and gpl not in gpls:
                 print "skipping", gpl
                 continue
+
+            # NOTE: if data has changed then sample ids could be different
+            if not set(df["gsm_name"]) <= set(gse.gpl2data[gpl].columns):
+                print "skipping %s: sample ids mismatch" % gpl
+                continue
+
             df = df.set_index("gsm_name")
             data = gse.gpl2data[gpl][df.index]
             # data = data.dropna(axis=1, thresh=data.shape[0] * .2)  #drop samples with > 80% missing samples
