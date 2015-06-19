@@ -19,7 +19,7 @@ def task_analyze(analysis_name, description, case_query, control_query, modifier
     # Load GSE data, make and concat all fold change analyses results.
     # NOTE: we are doing load_gse() lazily here to avoid loading all matrices at once.
     logger.info('Loading data and calculating fold changes for %s', analysis_name)
-    gses = (load_gse(df, series_id) for series_id in df.series_id.unique())
+    gses = (load_gse(df, series_id) for series_id in sorted(df.series_id.unique()))
     fold_changes = pd.concat(imap(get_fold_change_analysis, gses))
     debug and fold_changes.to_csv("%s.fc.csv" % debug)
 
