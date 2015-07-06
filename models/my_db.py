@@ -92,6 +92,7 @@ Sample = db.define_table('sample',
                          Field('series_id', 'reference series', writable=False),
                          Field('platform_id', 'reference platform', writable=False),
                          Field('gsm_name', 'text', writable=False),
+                         Field('deleted', 'boolean', default=False),
                          format='%(gsm_name)s',  # _%(series_id.gse_name)s_%(platform_id.gpl_name)s',
                          migrate='sample.table'
 )
