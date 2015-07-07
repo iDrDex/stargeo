@@ -9,7 +9,6 @@ from itertools import imap
 from funcy import log_durations
 from gluon.scheduler import Scheduler
 
-
 def task_analyze(analysis_name, description, case_query, control_query, modifier_query, debug=False):
     logger.info('Started %s analysis', analysis_name)
     with log_durations(logger.debug, 'Loading dataframe for %s' % analysis_name):
@@ -24,9 +23,10 @@ def task_analyze(analysis_name, description, case_query, control_query, modifier
     debug and fold_changes.to_csv("%s.fc.csv" % debug)
 
     logger.info('Meta-Analyzing %s', analysis_name)
+    meta = MetaAnalysis(fold_changes)
     balanced = getFullMetaAnalysis(fold_changes, debug=debug).reset_index()
     debug and balanced.to_csv("%s.meta.csv" % debug)
-
+    # if not debug:
     logger.info('Inserting %s analysis results', analysis_name)
     balanced.columns = balanced.columns.map(lambda x: x.replace(".", "_"))
     analysis_id = Analysis.insert(analysis_name=analysis_name,
@@ -46,10 +46,53 @@ def task_analyze(analysis_name, description, case_query, control_query, modifier
     balanced = balanced.replace([np.inf, -np.inf], np.nan)
     # http://stackoverflow.com/questions/14162723/replacing-pandas-or-numpy-nan-with-a-none-to-use-with-mysqldb
     balanced = balanced.where((pd.notnull(balanced)), None)
-    rows = balanced[Balanced_Meta.fields[1:]].T.to_dict().values()
-    Balanced_Meta.bulk_insert(rows)
+    rows = balanced[Meta_Analysis.fields[1:]].T.to_dict().values()
+    Meta_Analysis.bulk_insert(rows)
     db.commit()
     logger.info('DONE %s analysis', analysis_name)
+
+
+
+# def task_analyze(analysis_name, description, case_query, control_query, modifier_query, debug=False):
+#     logger.info('Started %s analysis', analysis_name)
+#     with log_durations(logger.debug, 'Loading dataframe for %s' % analysis_name):
+#         df = get_analysis_df(case_query, control_query, modifier_query)
+#     debug and df.to_csv("%s.analysis_df.csv"%analysis_name)
+#
+#     # Load GSE data, make and concat all fold change analyses results.
+#     # NOTE: we are doing load_gse() lazily here to avoid loading all matrices at once.
+#     logger.info('Loading data and calculating fold changes for %s', analysis_name)
+#     gses = (load_gse(df, series_id) for series_id in sorted(df.series_id.unique()))
+#     fold_changes = pd.concat(imap(get_fold_change_analysis, gses))
+#     debug and fold_changes.to_csv("%s.fc.csv" % debug)
+#
+#     logger.info('Meta-Analyzing %s', analysis_name)
+#     balanced = getFullMetaAnalysis(fold_changes, debug=debug).reset_index()
+#     debug and balanced.to_csv("%s.meta.csv" % debug)
+#
+#     logger.info('Inserting %s analysis results', analysis_name)
+#     balanced.columns = balanced.columns.map(lambda x: x.replace(".", "_"))
+#     analysis_id = Analysis.insert(analysis_name=analysis_name,
+#                                   description=description,
+#                                   case_query=case_query,
+#                                   control_query=control_query,
+#                                   modifier_query=modifier_query,
+#                                   series_count = len(df.series_id.unique()),
+#                                   platform_count = len(df.platform_id.unique()),
+#                                   sample_count = len(df.sample_id.unique()),
+#                                   series_ids = df.series_id.unique().tolist(),
+#                                   platform_ids = df.platform_id.unique().tolist(),
+#                                   sample_ids = df.sample_id.unique().tolist(),
+#                                   )
+#     balanced['analysis_id'] = int(analysis_id)
+#     # replace infs with None for db insert
+#     balanced = balanced.replace([np.inf, -np.inf], np.nan)
+#     # http://stackoverflow.com/questions/14162723/replacing-pandas-or-numpy-nan-with-a-none-to-use-with-mysqldb
+#     balanced = balanced.where((pd.notnull(balanced)), None)
+#     rows = balanced[Balanced_Meta.fields[1:]].T.to_dict().values()
+#     Balanced_Meta.bulk_insert(rows)
+#     db.commit()
+#     logger.info('DONE %s analysis', analysis_name)
 
 
 @log_durations(logger.debug)

@@ -119,7 +119,7 @@ def analyze():
                  control_query=request.vars.control_query,
                  modifier_query=request.vars.modifier_query)
     go(pvars,
-       # debug=True
+       debug=True
     )
     # task_analyze(**pvars)
     redirect(URL('index'))

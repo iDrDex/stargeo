@@ -1,14 +1,12 @@
 import os
 import os.path
-import sys
 import gzip
 import urllib2
 import shutil
-from functools import wraps
 
-from funcy import str_join, first, log_durations
-
-import pandas.rpy.common as com, numpy as np, pandas as pd
+from funcy import first, log_durations
+import numpy as np
+import pandas as pd
 import rpy2.robjects as robjects
 
 r = robjects.r
@@ -88,50 +86,50 @@ def saveTree():
                                names.platform_count.astype(str) + " gpl " +
                                names.sample_count.astype(str) + " gsm"),
                    orientation="right",
-    )
+                   )
 
     plt.ylabel('Signature x %s Genes' % len(df.columns))
     plt.xlabel('Functional Distance')
     plt.tight_layout()
     plt.savefig("applications/%s/static/tree_of_death.svg" % request.application)
 
-def saveTree2():
-    print "Saving Tree of Death!"
-    # read from db
-    analysis = db(Balanced_Meta).select(processor=pandas_processor)
-    analysis.columns = [col.replace("balanced_meta.", "").lower() for col in analysis.columns]
-    # analysis.to_csv("analysis.test.csv")
-    names = db(Analysis).select(processor=pandas_processor)
-    names.columns = [col.replace('analysis.', "") for col in names.columns]
-    # names.to_csv("names.test.csv")
-
-    df = analysis.groupby(['mygene_entrez']) \
-        .filter(lambda x: x.analysis_id.count() == len(names.index)) \
-        .set_index(['analysis_id', 'mygene_entrez'])
-    from numpy import log2
-    df['random_score'] = df.te_random*log2(df.pval_random)
-
-    # perform clustering and plot the dendrogram
-    from scipy.cluster.hierarchy import linkage, dendrogram
-    import matplotlib
-
-    matplotlib.use("Agg")
-    from matplotlib import pyplot as plt
-
-    plt.Figure(figsize=(100, 20))
-    random_score = df.te_random.unstack()
-    R = dendrogram(linkage(random_score, method='complete'),
-                   labels=list(names.analysis_name + " " +
-                               names.series_count.astype(str) + " gse " +
-                               names.platform_count.astype(str) + " gpl " +
-                               names.sample_count.astype(str) + " gsm"),
-                   orientation="right",
-    )
-
-    plt.ylabel('Signature x %s Genes' % len(df.columns))
-    plt.xlabel('Functional Distance')
-    plt.tight_layout()
-    plt.savefig("applications/%s/static/tree_of_death.svg" % request.application)
+# def saveTree2():
+#     print "Saving Tree of Death!"
+#     # read from db
+#     analysis = db(Balanced_Meta).select(processor=pandas_processor)
+#     analysis.columns = [col.replace("balanced_meta.", "").lower() for col in analysis.columns]
+#     # analysis.to_csv("analysis.test.csv")
+#     names = db(Analysis).select(processor=pandas_processor)
+#     names.columns = [col.replace('analysis.', "") for col in names.columns]
+#     # names.to_csv("names.test.csv")
+#
+#     df = analysis.groupby(['mygene_entrez']) \
+#         .filter(lambda x: x.analysis_id.count() == len(names.index)) \
+#         .set_index(['analysis_id', 'mygene_entrez'])
+#     from numpy import log2
+#     df['random_score'] = df.te_random*log2(df.pval_random)
+#
+#     # perform clustering and plot the dendrogram
+#     from scipy.cluster.hierarchy import linkage, dendrogram
+#     import matplotlib
+#
+#     matplotlib.use("Agg")
+#     from matplotlib import pyplot as plt
+#
+#     plt.Figure(figsize=(100, 20))
+#     random_score = df.te_random.unstack()
+#     R = dendrogram(linkage(random_score, method='complete'),
+#                    labels=list(names.analysis_name + " " +
+#                                names.series_count.astype(str) + " gse " +
+#                                names.platform_count.astype(str) + " gpl " +
+#                                names.sample_count.astype(str) + " gsm"),
+#                    orientation="right",
+#     )
+#
+#     plt.ylabel('Signature x %s Genes' % len(df.columns))
+#     plt.xlabel('Functional Distance')
+#     plt.tight_layout()
+#     plt.savefig("applications/%s/static/tree_of_death.svg" % request.application)
 
 
 def get_analysis_df(case_query, control_query, modifier_query):
@@ -253,8 +251,6 @@ class Gse:
         return '<Gse %r>' % self.name
 
 def getFullMetaAnalysis(fcResults, debug=False):
-    import glob
-
     debug and fcResults.to_csv("%s.fc.csv" % debug)
     all = []
     i = 0
@@ -267,17 +263,20 @@ def getFullMetaAnalysis(fcResults, debug=False):
         if debug:
             print i, group
         i += 1
+        # if i > 10:
+        #     break
         geneEstimates.title = mygene_sym
         # debug and geneEstimates.to_csv("%s.%s.fc.csv" % (debug, mygene_sym))
-        metaAnalysis = getMetaAnalysis(geneEstimates)
+        # metaAnalysis = getMetaAnalysis(geneEstimates)
+        metaAnalysis = MetaAnalysis(geneEstimates).get_results()
         metaAnalysis['caseDataCount'] = geneEstimates['caseDataCount'].sum()
         metaAnalysis['controlDataCount'] = geneEstimates['controlDataCount'].sum()
         metaAnalysis['mygene_sym'] = mygene_sym
         metaAnalysis['mygene_entrez'] = mygene_entrez
         all.append(metaAnalysis)
     allMetaAnalysis = pd.DataFrame(all).set_index(['mygene_sym', 'mygene_entrez'])
-    allMetaAnalysis['effect_size'] = allMetaAnalysis['TE.random']
-    allMetaAnalysis['direction'] = allMetaAnalysis['effect_size'].map(lambda x: "up" if x >= 0 else "down")
+    debug and allMetaAnalysis.to_csv('allMetaAnalysis.csv')
+    allMetaAnalysis['direction'] = allMetaAnalysis['random_TE'].map(lambda x: "up" if x >= 0 else "down")
     # allMetaAnalysis.to_csv(filename)
 
     return allMetaAnalysis
@@ -444,6 +443,180 @@ class GseAnalyzer:
         return allResults
 
 
+
+class MetaAnalysis:
+
+    def isquared(self, Q, df, level):
+        ##
+        ## Calculate I-Squared
+        ## Higgins & Thompson (2002), Statistics in Medicine, 21, 1539-58
+        ##
+        from easydict import EasyDict
+
+        tres = self.calcH(Q, df, level)
+        result = EasyDict(TE=None,
+                          lower=None,
+                          upper = None)
+        if tres.TE:
+            t = lambda x: (x**2-1)/x**2
+            result = EasyDict(TE=t(tres.TE),
+                              lower=t(tres.lower),
+                              upper = t(tres.upper))
+        return result
+
+    def calcH(self, Q, df, level):
+        ## Calculate H
+        ## Higgins & Thompson (2002), Statistics in Medicine, 21, 1539-58
+
+        from easydict import EasyDict
+
+
+        k = df+1
+        H = np.sqrt(Q/(k-1))
+
+        result = EasyDict(TE=None,
+                          lower=None,
+                          upper = None)
+        if k>2:
+            if Q<=k:
+                selogH = np.sqrt(1/(2*(k-2))*(1-1/(3*(k-2)**2)))
+            else:
+                selogH = 0.5*(np.log(Q)-np.log(k-1))/(np.sqrt(2*Q)-np.sqrt(2*k-3))
+
+            tres = self.getConfidenceIntervals(np.log(H), selogH, level)
+            result =  EasyDict(TE=1 if np.exp(tres.TE) < 1 else np.exp(tres.TE),
+                               lower=1 if np.exp(tres.lower) < 1 else np.exp(tres.lower),
+                               upper=1 if np.exp(tres.upper) < 1 else np.exp(tres.upper))
+        return result
+
+    def getConfidenceIntervals(self, TE, TE_se, level = .95, df=None):
+        from easydict import EasyDict
+        import scipy.stats as stats
+
+
+
+        alpha = 1-level
+#         print TE, TE_se
+        zscore = TE/TE_se
+        if not df:
+            lower = TE - stats.norm.ppf(1-alpha/2)*TE_se
+            upper  = TE + stats.norm.ppf(1-alpha/2)*TE_se
+            pval   = 2*(1-stats.norm.cdf(abs(zscore)))
+        else:
+            lower = TE - stats.t.ppf(1-alpha/2, df=df)*TE_se
+            upper  = TE + stats.t.ppf(1-alpha/2, df=df)*TE_se
+            pval   = 2*(1-stats.t.cdf(abs(zscore), df=df))
+
+        result = EasyDict(TE=TE,
+                          se=TE_se,
+                          level=level,
+                          df=df,
+                          pval = pval,
+                          zscore = zscore,
+                          upper = upper,
+                          lower = lower)
+
+#         if isinstance(TE_se, collections.Iterable):
+#             result = pd.DataFrame(result)
+        return result
+
+    def __init__(self, gene_stats):
+        from easydict import EasyDict
+
+        gene_stats['TE'] = gene_stats.caseDataMu - gene_stats.controlDataMu
+
+        ## (7) Calculate results for individual studies
+        #MD method
+        gene_stats['TE_se'] = np.sqrt(gene_stats['caseDataSigma']**2/gene_stats['caseDataCount'] + gene_stats['controlDataSigma']**2/gene_stats['controlDataCount'])
+        ## Studies with non-positive variance get zero weight in meta-analysis
+        gene_stats.TE_se[(gene_stats['caseDataSigma'] <= 0) | (gene_stats['controlDataSigma'] <= 0)] = None
+        gene_stats['w_fixed'] = (1/gene_stats.TE_se**2).fillna(0)
+        self.gene_stats = gene_stats
+
+        TE_fixed = np.average(gene_stats.TE, weights=gene_stats.w_fixed)
+        TE_fixed_se = np.sqrt(1/sum(gene_stats.w_fixed))
+        self.fixed = self.getConfidenceIntervals(TE_fixed, TE_fixed_se)
+
+        self.Q = sum(gene_stats.w_fixed * (gene_stats.TE - TE_fixed)**2)
+        self.Q_df = gene_stats.TE_se.dropna().count() - 1
+
+        self.cVal = (sum(gene_stats.w_fixed) - sum(gene_stats.w_fixed**2)/sum(gene_stats.w_fixed))
+        if self.Q<=self.Q_df:
+            self.tau2 = 0
+        else:
+            self.tau2 = (self.Q-self.Q_df)/self.cVal
+        self.tau = np.sqrt(self.tau2)
+        self.tau2_se = None
+        gene_stats['w_random'] = (1/(gene_stats.TE_se**2 + self.tau2)).fillna(0)
+        TE_random = np.average(gene_stats.TE, weights = gene_stats.w_random)
+        TE_random_se = np.sqrt(1/sum(gene_stats.w_random))
+        self.random = self.getConfidenceIntervals(TE_random, TE_random_se)
+
+        ## Prediction interval
+        self.level_predict = 0.95
+        self.k = gene_stats.TE_se.count()
+        self.predict = EasyDict(TE=None,
+                          se=None,
+                          level=None,
+                          df=None,
+                          pval = None,
+                          zscore = None,
+                          upper = None,
+                          lower = None)
+        if self.k>=3:
+            TE_predict_se = np.sqrt(TE_random_se**2 + self.tau2)
+            self.predict = self.getConfidenceIntervals(TE_random, TE_predict_se, self.level_predict, self.k-2)
+
+        ## Calculate H and I-Squared
+        self.level_comb = 0.95
+        self.H = self.calcH(self.Q, self.Q_df, self.level_comb)
+        self.I2 = self.isquared(self.Q, self.Q_df, self.level_comb)
+
+
+    def get_results(self):
+        return dict(
+            k = self.k,
+            fixed_TE = self.fixed.TE,
+            fixed_se = self.fixed.se,
+            fixed_lower = self.fixed.lower,
+            fixed_upper = self.fixed.upper,
+            fixed_pval = self.fixed.pval,
+            fixed_zscore = self.fixed.zscore,
+
+            random_TE = self.random.TE,
+            random_se = self.random.se,
+            random_lower = self.random.lower,
+            random_upper = self.random.upper,
+            random_pval = self.random.pval,
+            random_zscore = self.random.zscore,
+
+
+            predict_TE = self.predict.TE,
+            predict_se = self.predict.se,
+            predict_lower = self.predict.lower,
+            predict_upper = self.predict.upper,
+            predict_pval = self.predict.pval,
+            predict_zscore = self.predict.zscore,
+
+            tau2 = self.tau2,
+            tau2_se = self.tau2_se,
+
+            C = self.cVal,
+
+            H = self.H.TE,
+            H_lower = self.H.lower,
+            H_upper = self.H.upper,
+
+            I2 = self.I2.TE,
+            I2_lower = self.I2.lower,
+            I2_upper = self.I2.upper,
+
+            Q = self.Q,
+            Q_df = self.Q_df
+        )
+
+
+
 class MetaAnalyzer():
     def __init__(self, gses):
         self.gses = gses
@@ -528,21 +701,32 @@ def getFoldChangeAnalysis(data, sample_class, doPopSize=False, debug=False):
     return summary
 
 
-def getNormalize_quantiles(data):
-    rNormData = getRnormalize_quantiles(data)
-    normData = pd.DataFrame(np.asmatrix(rNormData))
-    normData.columns = data.columns
-    normData.index = data.index
-    return normData
+def getNormalize_quantiles(df):
+    """
+    df with samples in the columns and probes across the rows
+    """
+    #http://biopython.org/pipermail/biopython/2010-March/006319.html
+    A=df.values
+    AA = np.zeros_like(A)
+    I = np.argsort(A,axis=0)
+    AA[I,np.arange(A.shape[1])] = np.mean(A[I,np.arange(A.shape[1])],axis=1)[:,np.newaxis]
+    return pd.DataFrame(AA, index = df.index, columns=df.columns)
 
-
-def getRnormalize_quantiles(data):
-    r.library("preprocessCore")
-    r_data = com.convert_to_r_matrix(data)
-    r_normalData = r['normalize.quantiles'](r_data)
-    r_normalData.colnames = r_data.colnames
-    r_normalData.rownames = r_data.rownames
-    return r_normalData
+# def getNormalize_quantiles(data):
+#     rNormData = getRnormalize_quantiles(data)
+#     normData = pd.DataFrame(np.asmatrix(rNormData))
+#     normData.columns = data.columns
+#     normData.index = data.index
+#     return normData
+#
+#
+# def getRnormalize_quantiles(data):
+#     r.library("preprocessCore")
+#     r_data = com.convert_to_r_matrix(data)
+#     r_normalData = r['normalize.quantiles'](r_data)
+#     r_normalData.colnames = r_data.colnames
+#     r_normalData.rownames = r_data.rownames
+#     return r_normalData
 
 
 def isLogged(data):
@@ -562,10 +746,16 @@ def translateNegativeCols(data):
     return transformed
 
 
-def getMetaAnalysis(geneEstimates):
-    m = getMetaAnalysisFromR(geneEstimates)
-    # return _convertMetaAnslysisFromR(m)
-    return parseRListForSingleEntries(m)
+# def getMetaAnalysis(geneEstimates):
+#     ma = MetaAnalysis(geneEstimates)
+#     # return _convertMetaAnslysisFromR(m)
+#     # return parseRListForSingleEntries(m)
+#     return ma.g
+
+# def getMetaAnalysis(geneEstimates):
+#     m = getMetaAnalysisFromR(geneEstimates)
+#     # return _convertMetaAnslysisFromR(m)
+#     return parseRListForSingleEntries(m)
 
 
 def getMetaAnalysisFromR(geneEstimates):
@@ -580,10 +770,20 @@ def getMetaAnalysisFromR(geneEstimates):
                    byvar=robjects.StrVector(geneEstimates.subset),
                    bylab="subset",
                    title=geneEstimates.title
-    )
+                   )
     return m
 
 
 def parseRListForSingleEntries(rListVector):
     return dict(zip(list(rListVector.names),
                     [i[0] if i and len(i) == 1 else None for i in rListVector]))
+
+if __name__ == "__main__":
+    allFc = pd.read_csv("/Users/dex/Copy/web2py.old/HIV resistacnce.geneestimates.csv")
+    df = pd.read_csv("/Users/dex/Copy/web2py.old/HIV resistacnce.analysis_df.csv")
+    myGeneSym = "A1BG"
+    fc = allFc
+    metaGene = fc[fc.mygene_sym == myGeneSym].drop_duplicates(['gpl','gse','subset'])
+    metaGene.title = myGeneSym
+    ma = MetaAnalysis(metaGene)
+    print ma.get_results()

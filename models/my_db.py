@@ -92,7 +92,6 @@ Sample = db.define_table('sample',
                          Field('series_id', 'reference series', writable=False),
                          Field('platform_id', 'reference platform', writable=False),
                          Field('gsm_name', 'text', writable=False),
-                         Field('deleted', 'boolean', default=False),
                          format='%(gsm_name)s',  # _%(series_id.gse_name)s_%(platform_id.gpl_name)s',
                          migrate='sample.table'
 )
@@ -365,8 +364,8 @@ Balanced_Meta = db.define_table('balanced_meta',
                                 # Field('upper_predict', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
                                 Field('upper_random', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
                                 Field('version'),
-                                Field('w_fixed', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
-                                Field('w_random', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                # Field('w_fixed', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                # Field('w_random', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
                                 # Field('warn', 'boolean'),
                                 Field('zval_fixed', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
                                 Field('zval_random', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
@@ -376,3 +375,57 @@ Balanced_Meta = db.define_table('balanced_meta',
                                 migrate='balanced_meta.table'
 
 )
+
+Meta_Analysis = db.define_table('meta_analysis',
+                                Field('id', 'id', readable=False, writable=False),
+                                Field('analysis_id', 'reference analysis', readable=False, writable=False),
+                                Field('mygene_sym'),
+                                Field('mygene_entrez', 'integer'),
+                                Field('direction'),
+                                Field('caseDataCount', 'integer', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('controlDataCount', 'integer', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+
+                                Field('k', 'integer', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+
+                                Field('fixed_TE', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('fixed_se', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('fixed_lower', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('fixed_upper', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('fixed_pval', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('fixed_zscore', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+
+                                Field('random_TE', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('random_se', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('random_lower', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('random_upper', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('random_pval', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('random_zscore', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+
+                                Field('predict_TE', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('predict_se', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('predict_lower', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('predict_upper', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('predict_pval', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('predict_zscore', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+
+                                Field('tau2', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('tau2_se', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+
+                                Field('C', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+
+                                Field('H', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('H_lower', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('H_upper', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+
+                                Field('I2', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('I2_lower', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('I2_upper', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+
+                                Field('Q', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+                                Field('Q_df', 'double', represent=lambda value,row: '%.2f' % value if value <> None else ""),
+
+                                format='%(mygene_sym)s',
+                                migrate='meta_analysis.table'
+                                )
+
+
