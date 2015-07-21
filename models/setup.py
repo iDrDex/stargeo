@@ -117,6 +117,7 @@ def get_sample_cross_tab():
                  JOIN sample_attribute ON sample.id = sample_id
                  JOIN series ON series.id = series_id
                  JOIN platform ON platform.id = platform_id
+               WHERE (sample.deleted is null or sample.deleted = 'F')
                GROUP BY gse_name, series_id, platform_id, sample_id;""" % (docSql, attributesSql)
     print sql
     db.executesql(sql)
@@ -798,6 +799,7 @@ def create_sample_attribute_header_view():
                          ORDER BY header
                        )
                      ) AS subquery
+                   WHERE header != ''
                    ORDER BY num DESC) AS sorted;
     """
     print sql
@@ -882,21 +884,21 @@ def mass_update_annotation(csvFilename):
         db.commit()
 
 if __name__ == '__main__':
-    mass_update_annotation("age_results.csv")
-    1/0
-    update_counts()
-    1/0
-    get_sample_tag_cross_tab()
-    1 / 0
-    # get_sample_tag_cross_tab()
+    # mass_update_annotation("age_results.csv")
     # 1/0
-    create_sample_attribute_header_view()
-    create_series_attribute_header_view()
-    db.commit()
-    1 / 0
+    # update_counts()
+    # 1/0
+    # get_sample_tag_cross_tab()
+    # 1 / 0
+    # # get_sample_tag_cross_tab()
+    # # 1/0
+    # create_sample_attribute_header_view()
+    # create_series_attribute_header_view()
+    # db.commit()
+    # 1 / 0
     # insert_attributes()
     # insert_myGenes()
-    # get_series_cross_tab()
+    get_series_cross_tab()
     get_sample_cross_tab()
     # get_sample_tag_cross_tab()
 
