@@ -290,6 +290,7 @@ Analysis = db.define_table('analysis',
                            Field('series_ids', 'list:reference series', readable=False, writable=False),
                            Field('platform_ids', 'list:reference platform', readable=False, writable=False),
                            Field('sample_ids', 'list:reference sample', readable=False, writable=False),
+                           Field('deleted', 'boolean', default=False),
                            auth.signature,
                            migrate="analysis.table"
 )
